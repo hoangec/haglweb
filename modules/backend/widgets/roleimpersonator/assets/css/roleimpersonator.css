@@ -1,0 +1,25 @@
+.control-roleimpersonator {
+  min-height: 30px;
+  color: white;
+}
+.control-roleimpersonator .roleimpersonator-left,
+.control-roleimpersonator .roleimpersonator-contents,
+.control-roleimpersonator .roleimpersonator-right {
+  padding: 5px 10px;
+}
+.control-roleimpersonator .roleimpersonator-contents {
+  text-align: center;
+  padding-top: 10px;
+}
+.control-roleimpersonator .roleimpersonator-right {
+  text-align: right;
+}
+@media (max-width: 576px) {
+  .control-roleimpersonator .roleimpersonator-left,
+  .control-roleimpersonator .roleimpersonator-contents,
+  .control-roleimpersonator .roleimpersonator-right {
+    padding: 5px;
+    text-align: center;
+  }
+}
+

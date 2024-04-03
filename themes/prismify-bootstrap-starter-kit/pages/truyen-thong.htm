@@ -1,0 +1,146 @@
+url = "/truyen-thong"
+layout = "default"
+title = "Trang tin tức sự kiện tại HAGL"
+description = "Trang tin tức sự kiện tại HAGL"
+meta_title = "Trang tin tức sự kiện tại HAGL"
+meta_description = "Trang tin tức sự kiện tại HAGL"
+
+[collection dsTinTuc]
+handle = "Blog\Post"
+
+==
+{% partial 'site/hero-banner' %}
+
+<section class="catelogy-card">
+  <div class="container px-">
+    <div class="row gx-5 gy-3 justify-content-center align-items-center">
+      <div class="col-sm-12 col-lg-3">
+        <div class="card radius-10 border-start border-0 border-3 border-info">
+          <div class="card-body">
+              <a href="#tin-tuc" class="catelogy-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <p class="mb-0 text-secondary">Tin tức</p>
+                    <!-- <h4 class="my-1 text-info">Sấu riêng 1</h4> -->
+                    <!-- <p class="mb-0 font-13">+2.5% from last week</p> -->
+                  </div>
+                  <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                    <i class="fas fa-arrow-down"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-3">
+        <div class="card radius-10 border-start border-0 border-3 border-info">
+          <div class="card-body">
+              <a href="#su-kien" class="catelogy-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <p class="mb-0 text-secondary">Sự kiện</p>
+                    <!-- <h4 class="my-1 text-info">Sấu riêng 1</h4> -->
+                    <!-- <p class="mb-0 font-13">+2.5% from last week</p> -->
+                  </div>
+                  <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                    <i class="fas fa-arrow-down"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container-xxl py-5 " id="tin-tuc">
+  <div class="container">
+      <div class="section-title text-start wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <h1 class="display-6">Tin tức mới nhất</h1>
+      </div>
+      {%set dsTinTucMoiNhat = dsTinTuc.latest().take(3).get()%}
+      <div class="container">
+        <div class="row gy-3">
+        {% for tinTuc in dsTinTucMoiNhat %}
+          {% partial 'news/tin-tuc-card' tinTuc=tinTuc %}
+        {% endfor %}
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <h3 class="text-strat text-dark px-0 mb-3">Tất cả bảng tin</h3>
+    <div class="col-md-12 d-flex justify-content-center right-bck">
+      <div class="registration-right">
+          <div class="event-list">
+            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5 ">
+  <div class="container">
+      <div  id="su-kien" class="section-title text-start wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <h1 class="display-6">sự kiện mới nhất</h1>
+      </div>
+      {%set dsTinTucMoiNhat = dsTinTuc.latest().take(3).get()%}
+      <div class="container">
+        <div class="row gy-3">
+        {% for tinTuc in dsTinTucMoiNhat %}
+          {% partial 'news/tin-tuc-card' tinTuc=tinTuc %}
+        {% endfor %}
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <h3 class="text-strat text-dark px-0 mb-3">Tất cả sự kiện</h3>
+    <div class="col-md-12 d-flex justify-content-center right-bck">
+      <div class="registration-right">
+          <div class="event-list">
+            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

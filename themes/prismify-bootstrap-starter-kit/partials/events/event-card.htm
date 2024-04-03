@@ -1,0 +1,16 @@
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="card h-100">
+    <a href="#">
+      <!-- <img class="card-img-top" src="{{tinTuc.banner.path}}" alt="Card image cap"> -->
+      <div class="event-card-header  d-flex flex-column align-items-center justify-content-center bg-primary p-4 text-white">
+        <h1 class="fw-bolder text-white">{{ tinTuc.published_at_date|date('j/m') }}</h1>
+        <p class="fw-bolder">{{ tinTuc.published_at_date|date('Y') }}</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{tinTuc.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted"> {{ tinTuc.featured_text }}</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+url = "/"
+layout = "home"
+title = "Home"
+description = "No description provided yet."
+meta_title = "HAGL Group"
+meta_description = "HAGL Group"
+
+[section haglHomePage]
+handle = "HaglHomePage"
+
+[collection dsTinTuc]
+handle = "Blog\Post"
+
+[Files filesCodong]
+category = "cong-bo-thong-tin"
+order = "created_at asc"
+
+[section homePage]
+handle = "HAGL\HomePage"
+==
+{% partial 'blocks/homepage-main-banner' banners = homePage.main_banner %}
+    {% partial 'blocks/homepage-news' dsTinTuc = dsTinTuc %}
+    {% partial 'blocks/homepage-banner-events' bannerEvent = homePage.banner_events %}
+    {% partial 'blocks/homepage-events' dsTinTuc = dsTinTuc %}
+    {% partial 'blocks/homepage-banner-events' bannerEvent = homePage.banner_events %}
+    {% partial 'blocks/homepage-codong' %}
+    {% partial 'blocks/homepage-products' %}
+    {% partial 'blocks/homepage-contact' %}

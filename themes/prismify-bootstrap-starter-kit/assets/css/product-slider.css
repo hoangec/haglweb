@@ -1,0 +1,148 @@
+.product-slider-banner {
+  position: relative;
+}
+
+.product-slider-banner .carousel-item {
+  /* background-image: url(https://www.vinamilk.com.vn/sua-tuoi-vinamilk/wp-content/themes/suanuoc/tpl/trang-chu/images/frames-sky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top; */
+  width: 100%;
+  height: 100vh;
+}
+
+.product-slider-banner .carousel-item>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.7);
+}
+
+.carousel-element {
+  transform: translate(0, -50%);
+  margin-bottom: 50px;
+}
+
+.carousel-element img {
+  border-radius: 1rem;
+  box-shadow: 5px 0px 6px rgba(0, 0, 0, 0.5);
+  /* filter: drop-shadow(1); */
+  filter: brightness(1);
+}
+
+.product-slider-banner .carousel-caption {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin-top: 400px;
+  /* left: 50%; */
+  /* transform: translate(-50%, 50%); */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .product-slider-banner .carousel-caption {
+    margin-top: 300px;
+  }
+}
+
+/** ----- ** ---- **/
+.product-trangtrai-banner {
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .product-trangtrai-banner {
+    height: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-trangtrai-banner {
+    top: 0;
+    height: 300px;
+  }
+}
+.video-container video {
+  position: absolute;
+  z-index: -1;
+  filter: brightness(0.7) contrast(1.2) saturate(1.5);
+}
+.product-trangtrai-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.product-trangtrai-section .map {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+  z-index: 0;
+  width: 15%;
+  position: absolute;
+  margin-top: 3%;
+  top:0;
+  left: 50%;
+
+}
+.product-trangtrai-section .trangtrai-intro {
+  position: absolute;
+  width: 30%;
+  top:0;
+  left: 10%;
+  margin-top: 30px;
+  z-index: 1;
+}
+.product-trangtrai-section .trangtrai-chitiet  {
+  position: absolute;
+  width: 30%;
+  top:0;
+  right: 10%;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+
+.product-trangtrai-section .trangtrai-khuvuc {
+  position: absolute;
+  margin-top: 11%;
+  margin-left: 10%;
+  top: 0;
+  left: 0;
+}
+
+.product-trangtrai-section .trangtrai-khuvuc .trangtrai-khuvuc-chon {
+  cursor: pointer;
+  display: flex;
+}
+
+.product-trangtrai-section .trangtrai-khuvuc .trangtrai-khuvuc-chon div{
+  width: 400px;
+  list-style: none;
+  margin: 5px 0;
+  padding: 10px 30px;
+  border-radius: 36px;
+  transition: 0.2s;
+}
+
+
+.product-trangtrai-section .trangtrai-khuvuc strong{
+  padding: 20px 0 0 13px;
+  font-size: 12.5px;
+  visibility: hidden;
+}
+.product-trangtrai-section .trangtrai-khuvuc strong.s-zone-active{
+  visibility: visible;
+}
+.product-trangtrai-section .trangtrai-khuvuc .trangtrai-khuvuc-chon.active div{
+  background-color: var(--primary);
+  color: var(--secondary)
+}

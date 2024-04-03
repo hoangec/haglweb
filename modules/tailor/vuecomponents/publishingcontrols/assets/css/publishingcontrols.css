@@ -1,0 +1,64 @@
+div.publishing-controls {
+  width: 315px;
+}
+div.publishing-controls .publishing-controls-popover-body {
+  padding: 15px 20px 0;
+}
+div.publishing-controls .enabled-controls {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(149, 165, 166, 0.2);
+}
+div.publishing-controls p.publish-notice {
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+div.publishing-controls .form-group {
+  padding-bottom: 15px;
+}
+div.publishing-controls .date-section {
+  margin-bottom: 10px;
+}
+div.publishing-controls .date-section:last-child {
+  margin-bottom: 0;
+}
+div.publishing-controls .date-section p {
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+div.publishing-controls .date-section p i {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  margin-right: 2px;
+}
+div.publishing-controls .date-section p span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+div.publishing-controls .date-section .label-link,
+div.publishing-controls .slug-section .label-link {
+  text-decoration: underline;
+  cursor: pointer;
+  float: right;
+  margin-bottom: -20px;
+  position: relative;
+  z-index: 1;
+}
+div.publishing-controls .date-section .full-slug,
+div.publishing-controls .slug-section .full-slug {
+  display: block;
+  word-wrap: break-word;
+  font-size: 13px;
+  position: relative;
+  margin-bottom: 5px;
+  top: -10px;
+}
+div.publishing-controls a.js-link,
+div.publishing-controls span.js-link {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+}
+

@@ -1,0 +1,21 @@
+<!-- Products Start -->
+    <div class="container-fluid product py-5 my-5">
+      <div class="container py-5">
+          <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+              <h1 class="display-6">{{block.title_chinh}}</h1>
+              <p class="fs-5 fw-medium fst-italic text-primary">{{block.title_phu}}</p>
+          </div>
+          <div class="owl-carousel product-carousel wow fadeInUp" >
+            {% for nganhNghe in block.ds_nganh_nghe|default([]) %}
+              <a href="{{nganhNghe.static_page_link|staticPage }}" class="d-block product-item rounded">
+                  <img src="{{nganhNghe.anh_dai_dien|media}}" alt="">
+                  <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
+                      <h4 class="text-primary">{{nganhNghe.ten}}</h4>
+                      <span class="text-body">{{nganhNghe.mo_ta}}</span>
+                  </div>
+              </a>
+            {% endfor %}
+          </div>
+      </div>
+  </div>
+  <!-- Products End -->

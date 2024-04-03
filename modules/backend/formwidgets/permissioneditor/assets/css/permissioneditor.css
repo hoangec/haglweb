@@ -1,0 +1,123 @@
+.permissioneditor {
+  position: relative;
+  border-radius: 4px;
+  background: var(--oc-form-control-bg);
+  border: 1px solid var(--bs-border-color);
+}
+.permissioneditor.control-disabled .permissions-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  cursor: not-allowed;
+}
+.permissioneditor.control-disabled > ul {
+  opacity: 0.75;
+}
+.permissioneditor li.permission-section .section-content {
+  color: var(--bs-heading-color);
+  font-weight: normal;
+  display: flex;
+}
+.permissioneditor li.permission-section .tab-title {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 1rem;
+}
+.permissioneditor li.permission-section .tab-controls {
+  padding: 3px;
+  font-size: 0;
+  white-space: nowrap;
+  text-align: right;
+  flex-grow: 1;
+}
+.permissioneditor li.permission-item .item-content {
+  display: flex;
+  padding: 0.6rem 0.4rem;
+}
+.permissioneditor li.permission-item .item-content:hover {
+  color: var(--bs-table-hover-color);
+  background-color: var(--bs-table-hover-bg);
+}
+.permissioneditor li.permission-item .item-content:hover.item-name {
+  color: var(--bs-table-hover-color) !important;
+}
+.permissioneditor li.permission-item .item-value {
+  white-space: nowrap;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.permissioneditor li.permission-item .item-value .form-check-input {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+.permissioneditor li.permission-item .item-name {
+  cursor: pointer;
+  color: var(--bs-secondary-color);
+  width: 100%;
+}
+.permissioneditor p.comment {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.permissioneditor p.comment:empty {
+  display: none;
+}
+.permissioneditor .form-check-input[type=radio][data-radio-color=green]:checked {
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+}
+.permissioneditor .form-check-input[type=radio][data-radio-color=red]:checked {
+  background-color: var(--bs-danger);
+  border-color: var(--bs-danger);
+}
+.permissioneditor > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.permissioneditor > ul > li {
+  border-bottom: 1px solid var(--oc-primary-border);
+}
+.permissioneditor > ul > li:last-child {
+  border-bottom: none;
+}
+.permissioneditor > ul > li.permission-item {
+  vertical-align: top;
+  border-bottom-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.permissioneditor > ul > li.permission-item ul.child-items {
+  list-style: none;
+  padding-left: 2.2rem;
+}
+.permissioneditor > ul > li.permission-item ul.child-items .item-content {
+  margin-top: -0.25rem;
+  margin-bottom: -0.25rem;
+}
+.permissioneditor > ul > li.permission-item ul.child-items .item-content:before {
+  content: "└─";
+  font-size: 12px;
+  color: rgba(var(--bs-body-color-rgb), 0.6);
+  position: relative;
+  top: 1px;
+}
+.permissioneditor > ul > li.permission-item > ul.child-items {
+  padding-bottom: 0.25rem;
+  padding-left: 0.8rem;
+}
+.permissioneditor li.disabled ul.child-items * {
+  cursor: not-allowed;
+}
+.permissioneditor li.disabled ul.child-items > li > .item-content:before {
+  color: rgba(var(--bs-body-color-rgb), 0.2);
+}
+.permissioneditor li.disabled > .item-content > .item-name {
+  color: #AAA;
+}
+

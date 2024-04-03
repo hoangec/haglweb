@@ -1,0 +1,225 @@
+.field-paletteeditor div.control-simplelist.is-selectable-box.color-preset-selector {
+  margin-left: 0;
+  margin-top: 10px;
+  border: none;
+  margin-bottom: -16px;
+}
+.field-paletteeditor div.control-simplelist.is-selectable-box.color-preset-selector li {
+  margin: 0 16px 16px 0;
+  width: 215px;
+}
+.field-paletteeditor div.control-simplelist.is-selectable-box.color-preset-selector li.active .color-preset-box {
+  border-color: var(--oc-accent);
+}
+.field-paletteeditor div.control-simplelist.is-selectable-box.color-preset-selector li .heading {
+  margin: 0;
+  text-align: left;
+  padding: 12px 17px;
+}
+.field-paletteeditor div.control-simplelist.is-selectable-box.color-preset-selector .color-preset-box {
+  display: block;
+  border: 2px solid var(--bs-border-color);
+  background: var(--oc-form-control-bg);
+  border-radius: 10px;
+}
+.field-paletteeditor div.control-simplelist.is-selectable-box.color-preset-selector .color-preset-box .mode-image {
+  display: block;
+  border-bottom: 1px solid var(--bs-border-color);
+  position: relative;
+}
+.field-paletteeditor div.control-simplelist.is-selectable-box.color-preset-selector .color-preset-box .mode-image:before {
+  position: absolute;
+  left: 17px;
+}
+.field-paletteeditor .palette-show-custom {
+  position: relative;
+  border: 1px dashed var(--oc-dropdown-trigger-border);
+  border-radius: 5px;
+  background: var(--oc-dropdown-trigger-bg);
+  display: inline-block;
+}
+.field-paletteeditor .palette-show-custom > a {
+  color: var(--oc-dropdown-trigger-color);
+  text-align: center;
+  text-decoration: none;
+  padding: 7px 15px;
+  font-weight: normal;
+  font-size: 14px;
+  display: block;
+}
+.field-paletteeditor .palette-show-custom > a > i {
+  margin-right: 4px;
+  margin-left: -2px;
+  position: relative;
+  top: 1px;
+}
+.field-paletteeditor .palette-show-custom:hover,
+.field-paletteeditor .palette-show-custom:focus {
+  background-color: var(--oc-dropdown-hover-bg);
+  border-color: transparent;
+}
+.field-paletteeditor .palette-show-custom:hover > a,
+.field-paletteeditor .palette-show-custom:focus > a,
+.field-paletteeditor .palette-show-custom:hover > a > i,
+.field-paletteeditor .palette-show-custom:focus > a > i {
+  color: var(--oc-dropdown-hover-color);
+}
+.field-paletteeditor .preview-placeholder {
+  position: relative;
+  height: 104px;
+}
+.field-paletteeditor .preview-placeholder > .p-header {
+  display: flex;
+  height: 32px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: var(--oc-mainnav-bg);
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav {
+  flex-grow: 1;
+  position: relative;
+  padding-top: 2px;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav > .p-item {
+  position: relative;
+  top: 3px;
+  float: left;
+  opacity: 0.5;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav > .p-item.is-active {
+  opacity: 1;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav > .p-item > * {
+  background: var(--oc-mainnav-color);
+  display: inline-block;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav > .p-item > .p-icon {
+  border-radius: 2px;
+  height: 9px;
+  width: 9px;
+  margin-left: 12px;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav > .p-item > .p-text {
+  border-radius: 4px;
+  height: 4px;
+  width: 20px;
+  position: relative;
+  top: -2px;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav > .p-item:nth-child(1) > .p-icon {
+  margin-left: 7px;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav > .p-item:nth-child(2) > .p-text {
+  width: 28px;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-nav > .p-item:nth-child(3) > .p-text {
+  width: 15px;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-controlpanel {
+  width: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.field-paletteeditor .preview-placeholder > .p-header > .p-controlpanel > .p-avatar {
+  border-radius: 10px;
+  height: 10px;
+  width: 10px;
+  background: #ccc;
+  margin: 0 2px;
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar {
+  height: 72px;
+  width: 58px;
+  background: var(--oc-sidebar-bg);
+  position: relative;
+  float: left;
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar > .p-link {
+  display: block;
+  height: 10px;
+  padding-left: 8px;
+  width: 58px;
+  margin-top: 5px;
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar > .p-link > * {
+  position: relative;
+  float: left;
+  background: var(--oc-sidebar-color);
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar > .p-link.is-active {
+  background: var(--oc-sidebar-active-bg);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 38px;
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar > .p-link.is-active > * {
+  background: var(--oc-sidebar-active-color);
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar > .p-link > .p-icon {
+  border-radius: 2px;
+  height: 5px;
+  width: 5px;
+  top: 2px;
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar > .p-link > .p-text {
+  border-radius: 4px;
+  height: 3px;
+  width: 18px;
+  margin-left: 3px;
+  top: 3px;
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar > .p-link:nth-child(2) > .p-text {
+  width: 28px;
+}
+.field-paletteeditor .preview-placeholder > .p-sidebar > .p-link:nth-child(3) > .p-text {
+  width: 15px;
+}
+.field-paletteeditor .preview-placeholder > .p-content {
+  background: var(--bs-body-bg);
+  margin-left: 58px;
+  height: 72px;
+  display: block;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.field-paletteeditor .preview-placeholder > .p-content > .p-form {
+  flex-grow: 1;
+}
+.field-paletteeditor .preview-placeholder > .p-content > .p-form .p-input {
+  display: block;
+  background: var(--oc-form-control-bg);
+  border: 1px solid var(--bs-border-color);
+  height: 8px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
+.field-paletteeditor .preview-placeholder > .p-content > .p-form .p-input.span-left,
+.field-paletteeditor .preview-placeholder > .p-content > .p-form .p-input.span-right {
+  width: 48%;
+}
+.field-paletteeditor .preview-placeholder > .p-content > .p-form .p-input.span-right {
+  float: right;
+}
+.field-paletteeditor .preview-placeholder > .p-content > .p-form .p-input.size-medium {
+  height: 20px;
+}
+.field-paletteeditor .preview-placeholder > .p-content > .p-buttons {
+  height: 14px;
+}
+.field-paletteeditor .preview-placeholder > .p-content > .p-buttons > .p-button {
+  background: var(--bs-secondary);
+  position: relative;
+  float: left;
+  width: 24px;
+  height: 7px;
+  margin-top: 6px;
+  margin-right: 3px;
+  border-radius: 2px;
+}
+.field-paletteeditor .preview-placeholder > .p-content > .p-buttons > .p-button.is-primary {
+  background: var(--bs-primary);
+}
+

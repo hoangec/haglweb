@@ -1,0 +1,46 @@
+{% set aboutImage = block.image ? block.image|media : 'assets/images/no-image.png'|theme %}
+<!-- About Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+      <div class="row g-5">
+          <div class="col-lg-6">
+              <div class="row g-3">
+                  <div class="col-6 text-end">
+                      <img class="img-fluid bg-white w-100 mb-3 wow fadeIn" data-wow-delay="0.1s" src="{{aboutImage}}" alt="">
+                      <img class="img-fluid bg-white w-50 wow fadeIn" data-wow-delay="0.2s" src="{{aboutImage}}" alt="">
+                  </div>
+                  <div class="col-6">
+                      <img class="img-fluid bg-white w-50 mb-3 wow fadeIn" data-wow-delay="0.3s" src="{{aboutImage}}" alt="">
+                      <img class="img-fluid bg-white w-100 wow fadeIn" data-wow-delay="0.4s" src="{{aboutImage}}" alt="">
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <div class="section-title">
+                  <h1 class="display-6">{{block.title}}</h1>
+                   <p class="fs-5 fw-medium fst-italic text-primary">{{block.content | raw}}</p>
+              </div>
+              <div class="row g-3 mb-4">
+                  <div class="col-sm-4">
+                      <img class="img-fluid bg-white w-100" src="{{aboutImage}}" alt=""> 
+                  </div>
+                  <div class="col-sm-8">
+                      <h5>Sứ mệnh của chúng tôi</h5>
+                      <p class="mb-0">Không ngừng sáng tạo, phấn đấu tạo ra những sản phẩm và dịch vụ chất lượng cao với giá cạnh tranh. Thực hiện chế độ đãi ngộ thỏa đáng về vật chất và tinh thần nhằm khuyến khích cán bộ công nhân viên tạo ra nhiều giá trị mới cho khách hàng, cổ đông và toàn xã hội.</p>
+                  </div>
+              </div>
+              <div class="border-top mb-4"></div>
+              <div class="row g-3">
+                  <div class="col-sm-8">
+                      <h5>Tầm nhìn</h5>
+                      <p class="mb-0">Trở thành Tập đoàn hàng đầu Việt Nam và khu vực trong lĩnh vực nông nghiệp.</p>
+                  </div>
+                  <div class="col-sm-4">
+                      <img class="img-fluid bg-white w-100" src="{{aboutImage}}"  alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- About End -->

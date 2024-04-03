@@ -1,0 +1,23 @@
+// ======================================================================== //
+// Import
+// ======================================================================== //
+.about-hagl {
+  position: relative;
+}
+.about {
+  position: relative;
+}
+.aboutText {
+  position: relative;
+  // margin-left: 20px;
+}
+.harizontalBar {
+  position:relative;
+  top:0;
+  bottom: 0;
+  width: 0.5rem;
+  margin-right: 30px;
+  background-color: rgb(0 174 77);
+  border-bottom-right-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}

@@ -1,0 +1,14 @@
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="card h-100">
+    <a href="#">
+      <img class="card-img-top" src="{{tinTuc.banner.path}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{tinTuc.title}}</h5>
+        <p class="card-text">
+          {{ tinTuc.featured_text }}
+        </p>
+        <p class="card-text"><small class="text-muted"><i class="fas fa-calendar-alt"></i> {{ tinTuc.published_at_date|date('j/m/Y') }}</small></p>
+      </div>
+    </a>
+  </div>
+</div>

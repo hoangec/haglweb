@@ -1,0 +1,33 @@
+uuid: d5fe9bef-bffe-4d2e-9081-ea568cd3f2f5
+name: Nganh nghe
+type: mixin
+handle: Blocks\NganhNghe
+fields:
+    title_chinh:
+        label: Nôi dung chính
+        type: text
+    title_phu:
+        label: Nôi dung phụ
+        type: textarea
+        size: tiny
+    ds_nganh_nghe:
+        label: Danh sách các ngành nghề
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                ten:
+                    label: Tên ngành nghề
+                    span: left
+                mo_ta:
+                    label: Mô tả ngành nghề
+                    type: textarea
+                    size: tiny
+                anh_dai_dien:
+                    label: Ảnh đại diện
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                static_page_link:
+                    label: Trang liên kết
+                    type: staticpagepicker                    

@@ -1,0 +1,44 @@
+description = "Default layout"
+==
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{ this.page.meta_title }} - {{ this.theme.app_name }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="{{ this.theme.config.author }}">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.ico'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/app.css'|theme }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    {% styles %}
+    <script type="text/javascript" src="{{ 'assets/js/manifest.js'|theme }}"></script>
+    <!-- Libraries Stylesheet -->
+    <link href="{{'assets/lib/animate/animate.min.css'|theme}}" rel="stylesheet">
+    <link href="{{'assets/lib/owlcarousel/assets/owl.carousel.min.css'|theme}}" rel="stylesheet">
+    <!--  thu vien js third party-->
+
+    <!-- end thu vien-->
+    <script type="text/javascript" src="{{ 'assets/js/vendor.js'|theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/app.js'|theme }}"></script>
+    {% framework extras turbo %}
+    {% scripts %}
+  </head>
+  <body class="app {{ 'layout-'~this.layout.id }} {{ 'page-'~this.page.id }}">
+    <div class="app-container">
+      {% partial 'app/header' %}
+      <main id="app-content" class="app-content" role="main">
+        {% partial 'app/content' %}
+      </main>
+      <footer id="app-footer" class="app-footer">
+        {% partial 'app/footer' %}
+      </footer>
+    </div>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{'assets/lib/wow/wow.min.js|theme'}}"></script>
+    <script src="{{'assets/lib/easing/easing.min.js'|theme}}"></script>
+    <script src="{{'assets/lib/waypoints/waypoints.min.js'|theme}}"></script>
+    <script src="{{'assets/lib/owlcarousel/owl.carousel.min.js'|theme}}"></script>
+  </body>
+</html>

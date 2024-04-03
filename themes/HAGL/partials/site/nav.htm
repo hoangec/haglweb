@@ -1,0 +1,89 @@
+[backendLink]
+[sitePicker]
+==
+{% set activeNavLink = activeNavLink|default(this.page.id) %}
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Giới thiệu
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Tầm nhìn và sứ mệnh</a></li>
+        <li><a class="dropdown-item" href="#">Định hướng và phát triển</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Thông tin về công ty cổ phần Hoàng Anh Gia Lai</a></li>
+        <li><a class="dropdown-item" href="#">Những cột mốc phát triển</a></li>
+        <li><a class="dropdown-item" href="#">Hội đồng quản trị</a></li>
+        <li><a class="dropdown-item" href="#">Ban Tổng giám đốc</a></li>
+        <li><a class="dropdown-item" href="#">Ban kiểm soát</a></li>
+        <li><a class="dropdown-item" href="#">Liên hệ</a></li>
+    </ul>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Ngành ngề kinh doanh
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Heo ăn chuối</a></li>
+        <li><a class="dropdown-item" href="#">Chuối</a></li>
+        <li><a class="dropdown-item" href="#">Sầu riêng</a></li>
+        <li><a class="dropdown-item" href="#">CLB Bóng đá HAGL</a></li>
+    </ul>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Cổ đông
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Công bố thông tin</a></li>
+        <li><a class="dropdown-item" href="#">Báo cáo tài chính</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Báo cáo thương niên</a></li>
+        <li><a class="dropdown-item" href="#">Nghị quyết Hội Đồng Quản Trị</a></li>
+        <li><a class="dropdown-item" href="#">Đại hội đồng cổ đông</a></li>
+        <li><a class="dropdown-item" href="#">Nghị quyết đại hội đồng cổ đông</a></li>
+        <li><a class="dropdown-item" href="#">Điều lệ</a></li>
+        <li><a class="dropdown-item" href="#">Quy chế</a></li>
+        <li><a class="dropdown-item" href="#">Cáo bạch</a></li>
+    </ul>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ activeNavLink == 'about' ? 'active' }}" href="{{ 'about'|page }}">Tin tức</a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Phát triển bền vững
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Định hướng phát triển bền vững</a></li>
+        <li><a class="dropdown-item" href="#">Phát triển kinh tế</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Bảo vệ môi trường</a></li>
+        <li><a class="dropdown-item" href="#">Phát triển cộng đồng</a></li>
+        <li><a class="dropdown-item" href="#">Người lao động</a></li>
+        <li><a class="dropdown-item" href="#">Báo cáo phát triển bề vững</a></li>
+    </ul>
+</li>
+
+
+{% if sitePicker.isEnabled %}
+    <li class="nav-item dropdown">
+        <a class="btn btn-outline-light dropdown-toggle" href="{{ ''|page }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ this.site.name|default('Sites') }}
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {% for site in sitePicker.sites %}
+                <li><a class="dropdown-item {{ this.site.code == site.code ? 'active' }}" href="{{ site.url }}">{{ site.name }}</a></li>
+            {% endfor %}
+            {% if backendUrl %}
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{{ backendUrl }}">Backend Area</a></li>
+            {% endif %}
+        </ul>
+    </li>
+{% elseif backendUrl %}
+    <li class="nav-item">
+        <a class="btn btn-outline-light" href="{{ backendUrl }}" target="backend">Backend Area</a>
+    </li>
+{% endif %}

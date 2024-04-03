@@ -1,0 +1,12 @@
+name: 'HAGL V2'
+description: "Build responsive, mobile-first themes on the web with the world's most popular front-end component library."
+author: HoangVo
+homepage: 'https://github.com/prismify/oc-bootstrap-theme'
+authorCode: HoangVo
+code: bootstrap-starter-kit
+parent: ''
+database: '0'
+previewImage: assets/images/theme-preview.png
+form: config/f.yaml
+require: config/r.yaml
+translate: config/t.yaml

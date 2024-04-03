@@ -1,0 +1,22 @@
+uuid: 3c94745d-3505-40e8-8968-f81b795c2a6c
+handle: HAGLFields/BannerEvents
+type: mixin
+name: BannerEvents
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    moTa:
+        label: Mô tả 
+        type: text
+    anhNen:
+        label: Ảnh nền
+        type: mediafinder
+        mode: image
+        maxItems: 1
+    videoLink:
+        label: Link video
+        type: text
+        
+

@@ -1,0 +1,13 @@
+{% set files = __SELF__.files %}
+
+{% if files %}
+    <ul>
+        {% for file in files %}
+            <li>
+                <a href="{{ file.file.path }}" target="_blank">
+                    {{ file.name }} {{ file.created_at|date('d m y') }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

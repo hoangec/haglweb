@@ -1,0 +1,167 @@
+description = "App Header"
+
+[staticMenu]
+code = "headermenu"
+
+[section haglHomePage]
+handle = "HAGL\HomePage"
+
+[staticMenu topMenu]
+code = "topmenu"
+==
+{% set activeNavLink = activeNavLink|default(this.page.id) %}
+<header class="container-fluid menu">
+    <div class="bg-white my-navbar">
+      <ul class="nav justify-content-center top-menu">
+        {% for item in topMenu.menuItems %}
+            {% if loop.first %}
+              <a class="nav-link d-flex flex-nowrap p-0 "  href="{{item.url}}">
+                <svg class="main-banner-svg" width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M48 32V0H0C24 2.13277e-10 24 32 48 32Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                <span class="d-flex flex-nowrap main-banner-span text-white fw-bolder  pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">{{item.title}}</span>
+              </a>
+            {% elseif loop.last %}
+              <a class="nav-link d-flex flex-nowrap p-0" href="{{item.url}}">
+                <span class="main-banner-span d-flex flex-nowrap text-white fw-bolder pl-0 pt-1 pb-1 px-4 mx-0  ml-0 h-100 ">{{item.title}}</span>
+                <svg class="main-banner-svg" width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M0 32V0H48C24 2.13277e-10 24 32 0 32Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+              </a>
+            {% else %}
+              <a class="nav-link text-white p-0" href="{{item.url}}">
+                <span class="my-menu d-flex flex-nowrap  main-banner-span fw-bolder l-0 pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">
+                  {{item.title}}
+                </span>
+              </a>
+            {% endif %}
+        {% endfor %}
+      </ul>
+      <nav class="navbar navbar-expand-lg navbar-light py-0 py-lg-0 ">
+        <a href="/" class="navbar navbar-brand">
+            <img class="img-fluid" src="{{ 'assets/images/hagl.png'|theme }}" alt="Logo">
+        </a>
+        <button type="button" class="navbar-toggler ms-auto me-3" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            {% for item in staticMenu.menuItems%}
+            <li class="{{ item.items|length  > 0 ? 'nav-item dropdown' : 'nav-item' }}">
+                <a class="nav-link dropdown-toggle" href="{{item.url}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{item.title}}
+                </a>
+                {% if (item.code == 'mega-menu') %}
+                <div class="dropdown-mega-menu dropdown-menu"  aria-labelledby="navbarDropdown">
+                  {% for childItem in item.items %}
+                    <ul>
+                      <li><a class="dropdown-item" href="{{childItem.url}}" >{{childItem.title}}</a></li>
+                      {% if(childItem.items|length > 0) %}
+                        {% for thirdChildItem in childItem.items %}
+                        <li class="d-flex align-items-center pe-2 m-1 " style="min-width: 300px;">
+                            <a class="dropdown-item" href="{{thirdChildItem.url}}" >{{thirdChildItem.title}}</a>
+                            <i class="fas fa-long-arrow-alt-right" ></i>
+                          </li>
+                        {% endfor %}
+                      {% endif %}
+                    </ul>
+                  {% endfor %}
+                </div>
+                {% endif %}
+                {% if( item.code != 'mega-menu'  and item.items|length > 4) %}
+                <div class="dropdown-menu multi-column columns-2" aria-labelledby="navbarDropdown">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <ul class="multi-column-dropdown ">
+                        {% for childItem in item.items|slice(0,4) %}
+                        <li class="d-flex align-items-center pe-2 " style="min-width: 300px;">
+                            <a class="flex-grow-1" href="{{childItem.url}}" >{{childItem.title}}</a>
+                            <i class="fas fa-long-arrow-alt-right" ></i>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    {% if (item.items| length > 4) %}
+                    <div class="col-sm-6">
+                      <ul class="multi-column-dropdown">
+                        {% for childItem in item.items|slice(4,8) %}
+                        <li class="d-flex align-items-center pe-2 "style="min-width: 300px;">
+                          <a class="flex-grow-1" href="{{childItem.url}}" >{{childItem.title}}</a>
+                          <i class="fas fa-long-arrow-alt-right" ></i>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    {% endif %}
+                  </div>
+                </div>
+                {% endif %}
+            </li>
+            {% endfor %}
+
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                  <i class="fas fa-search"></i>
+              </a>
+              <div class="dropdown-menu dropdown-search ">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <form method="get" action="https://thacoagri.vn/search-results">
+                              <div class="search-box input-group">
+                                  <input type="text" name="query" value="" aria-label="Search" class="form-control" placeholder="Search News">
+                                  <div class="input-group-append">
+                                      <button class="btn btn-secondary" type="submit">
+                                          <i class="fa fa-search"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <ul style="list-style: none;" class="nav-link language-bar-list pl-0 ">
+                  <li class="language-item me-1">
+                    <a class="text-transform-uppercase active" rel="alternate" hreflang="vi" href="https://thacoagri.vn/truyen-thong/tin-tuc-thacoagri">
+                    <img src="https://thacoagri.vn/vendor/core/core/base/images/flags/vn.svg" title="Tiếng Việt" width="16" alt="Tiếng Việt">                                    </a>
+                  </li>
+                  <li class="language-item ">
+                    <a class="text-transform-uppercase " rel="alternate" hreflang="en" href="https://thacoagri.vn/en/news/thagrico-news-1">
+                    <img src="https://thacoagri.vn/vendor/core/core/base/images/flags/gb.svg" title="English" width="16" alt="English">                                    </a>
+                  </li>
+                  <li class="language-item d-none">
+                    <a class="text-transform-uppercase " rel="alternate" hreflang="zh" href="https://thacoagri.vn/zh/truyen-thong/thagrico-news">
+                    <img src="https://thacoagri.vn/vendor/core/core/base/images/flags/cn.svg" title="Chinese" width="16" alt="Chinese">                                    </a>
+                  </li>
+              </ul>
+              <div class="clearfix"></div>
+            </li>
+        </div>
+      </nav>
+      <div class="sub-header shadow d-none d-md-block d-lg-block ">
+        <ul class="nav justify-content-center nav-pills nav-pill mx-2">
+          <li class="nav-item me-2 ">
+            <a class="nav-link active d-flex justify-content-center align-items-center" aria-current="page" href="#">
+              <img class="me-1" src="https://www.vinamilk.com.vn/sua-tuoi-vinamilk/wp-content/uploads/2016/06/cow.png" alt="">
+              <span>Trang trại chuẩn quốc tế</span>
+            </a>
+          </li>
+          <li class="nav-item me-2 ">
+            <a class="nav-link active d-flex justify-content-center align-items-center" aria-current="page" href="#">
+              <img class="me-1" src="https://www.vinamilk.com.vn/sua-tuoi-vinamilk/wp-content/uploads/2016/06/industry.png" alt="">
+              <span>Nhà máy chuẩn quốc tế</span>
+            </a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link active d-flex justify-content-center align-items-center" aria-current="page" href="#">
+              <img class="me-1" src="https://www.vinamilk.com.vn/sua-tuoi-vinamilk/wp-content/uploads/2016/06/cow.png" alt="">
+              <span>Quy trình</span>
+            </a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link active d-flex justify-content-center align-items-center" aria-current="page" href="#">
+              <img class="me-1" src="https://www.vinamilk.com.vn/sua-tuoi-vinamilk/wp-content/uploads/2016/06/cow.png" alt="">
+              <span>Hoạt động</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</header>
