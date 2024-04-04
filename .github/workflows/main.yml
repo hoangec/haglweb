@@ -17,7 +17,7 @@ jobs:
           username: hagl
           password: ${{ secrets.ftp_password }}
           local-dir: ./themes/prismify-bootstrap-starter-kit/
-          server-dir: ./octobercms-files/
+          server-dir: ./octobercms-files/themes/prismify-bootstrap-starter-kit/
           port: 2121
       - name: Dong bo file fu muc plugins
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -26,5 +26,5 @@ jobs:
             username: hagl
             password: ${{ secrets.ftp_password }}
             local-dir: ./plugins/
-            server-dir: ./octobercms-files/
+            server-dir: ./octobercms-files/plugins/
             port: 2121
