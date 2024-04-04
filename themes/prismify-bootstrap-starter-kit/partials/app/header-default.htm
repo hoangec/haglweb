@@ -10,23 +10,23 @@ handle = "HAGL\HomePage"
 code = "topmenu"
 ==
 {% set activeNavLink = activeNavLink|default(this.page.id) %}
-<header class="container-fluid menu">
+<header class="container-fluid main-nav">
     <div class="bg-white my-navbar">
       <ul class="nav justify-content-center top-menu">
         {% for item in topMenu.menuItems %}
             {% if loop.first %}
               <a class="nav-link d-flex flex-nowrap p-0 "  href="{{item.url}}">
-                <svg class="main-banner-svg" width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M48 32V0H0C24 2.13277e-10 24 32 48 32Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                <span class="d-flex flex-nowrap main-banner-span text-white fw-bolder  pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">{{item.title}}</span>
+                <svg class="top-menu-svg" width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M48 32V0H0C24 2.13277e-10 24 32 48 32Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                <span class="d-flex flex-nowrap top-menu-span text-white fw-bolder  pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">{{item.title}}</span>
               </a>
             {% elseif loop.last %}
               <a class="nav-link d-flex flex-nowrap p-0" href="{{item.url}}">
-                <span class="main-banner-span d-flex flex-nowrap text-white fw-bolder pl-0 pt-1 pb-1 px-4 mx-0  ml-0 h-100 ">{{item.title}}</span>
-                <svg class="main-banner-svg" width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M0 32V0H48C24 2.13277e-10 24 32 0 32Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                <span class="top-menu-span d-flex flex-nowrap text-white fw-bolder pl-0 pt-1 pb-1 px-4 mx-0  ml-0 h-100 ">{{item.title}}</span>
+                <svg class="top-menu-svg" width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M0 32V0H48C24 2.13277e-10 24 32 0 32Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
               </a>
             {% else %}
               <a class="nav-link text-white p-0" href="{{item.url}}">
-                <span class="my-menu d-flex flex-nowrap  main-banner-span fw-bolder l-0 pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">
+                <span class="my-menu d-flex flex-nowrap  top-menu-span fw-bolder l-0 pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">
                   {{item.title}}
                 </span>
               </a>

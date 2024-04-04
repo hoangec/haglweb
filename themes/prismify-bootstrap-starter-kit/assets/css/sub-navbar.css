@@ -1,8 +1,0 @@
-.sub-header {
-  background-color: var(--gray);
-}
-.sub-header .nav .nav-item a{
-  background-color: #fff;
-  color: var(--dark);
-  font-weight: 600;
-}

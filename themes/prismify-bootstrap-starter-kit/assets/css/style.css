@@ -1,18 +1,20 @@
 /********** Template CSS **********/
-@import url('mega-menu.css');
-@import url('sub-navbar.css');
+@import url('navbar.css');
 @import url('hero.css');
 @import url('product-slider.css');
 @import url('page.css');
 @import url('footer.css');
 @import url('products.css');
 @import url('truyen-thong.css');
+
 :root {
     --primary: rgb(248, 159, 50);
     --secondary: rgb(116,68,49);
+    --blue: #213382 ;
     --light: #F5F8F2;
     --dark: #252C30;
 }
+
 
 .back-to-top {
     position: fixed;
@@ -105,187 +107,16 @@
 .text-secondary {
   color: var(--secondary) !important;
 }
-
-/*** Navbar ***/
-
-.sticky-top {
-    top: -150px;
-    transition: .5s;
-    margin-left: 1rem;
-    margin-right: 1rem;
+.text-main {
+  color: var(--blue);
 }
-.full-width {
-  margin-left: 0;
-  margin-right: 0;
-  border-radius: 0 !important;
-
-}
-.main-nav {
-  margin-top: 1rem;
-  padding-left: 0;
-  padding-right: 0;
-  border-radius: 1rem;
-}
-
-
-.main-banner-span {
-  background-color: var(--primary);
-  transition: background-color 0.3s ease;
-}
-.main-banner-svg {
-  color: var(--primary);
-  transition: color 0.3s ease;
-}
-/* .my-menu:hover {
-  background-color: var(--secondary)
-}
-.my-menu:hover + .my-menu-svg
-{
-  color: var(--secondary)
-} */
-
-.main-nav .nav .nav-link:hover svg{
-  color: var(--secondary);
-}
-.main-nav .nav .nav-link:hover span{
-  background-color: var(--secondary);
-}
-
-/* Mega-menu */
-
-/* end mega menu */
-
-
-.language-bar-list {
-  display: inline-flex;
-}
-.navbar .navbar-brand {
-    /* position: absolute;
-    padding: 0; */
-    width: 190px;
-    /* height: 135px; */
-    /* top: 0; */
-    margin-left: 5rem;
-}
-
-.navbar .navbar-nav .nav-link {
-    margin: 0px 1rem;
-    padding: 25px 0;
-    color: var(--dark);
-    font-weight: 600;
-    /* text-transform: uppercase; */
-    outline: none;
-}
-
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-}
-
-.navbar .dropdown-toggle::after {
-    border: none;
-    /* content: "\f107"; */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
-}
-
-@media (max-width: 991.98px) {
-    .top-menu {
-      display: none;
-    }
-    .navbar .navbar-brand {
-        width: 126px;
-        height: 70px;
-        margin-top: 0rem;
-        margin-left: 1rem;
-        padding: 0;
-
-    }
-
-    .navbar .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
-    }
-
-    .navbar .navbar-nav {
-        margin-top: 20px;
-        border-top: 1px solid #EEEEEE;
-    }
-}
-
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: flex;
-        flex-grow: 1;
-        border: none;
-        margin-top: .5rem;
-        padding: 1rem;
-        top: 150%;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-        box-shadow:  4px 4px 8px rgba(0,0,0,.23);
-    }
-    .navbar .nav-item:hover .dropdown-menu{
-        top: 100%;
-        /* display: block; */
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
-}
-
-/* multi column dropdown menu */
-.dropdown-menu {
-	min-width: 200px;
-}
-.dropdown-menu.columns-2 {
-	min-width: 650px;
-}
-.dropdown-menu.columns-3 {
-	min-width: 600px;
-}
-.dropdown-menu li a {
-	padding: 5px 15px;
-	font-weight: 300;
-}
-.multi-column-dropdown {
-	list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-.multi-column-dropdown li a {
-	display: block;
-	clear: both;
-	line-height: 1.428571429;
-	color: #333;
-	white-space: normal;
-  transition: color .2s ease-in;
-}
-
-
-.multi-column-dropdown li:hover {
-	text-decoration: none;
-	color: var(--primary);
-	background-color: var(--secondary)
-}
-
-.multi-column-dropdown li a:hover {
-  color: var(--primary);
-}
-@media (max-width: 767px) {
-	.dropdown-menu.multi-column {
-		min-width: 240px !important;
-		overflow-x: hidden;
-	}
-}
-/* end multi*/
-
 /*** Header ***/
 .banner {
-  margin-top: -150px;
+  position: relative;
+}
+.banner .carousel-item {
+  width: 100%;
+  height: 100vh;
 }
 .main-banner-btn {
     color: #fff;
@@ -305,7 +136,7 @@
     /* transition: .2s all; */
 }
 .main-banner-btn:hover {
-  color: var(--primary);
+  color: #fff;
   background-color: var(--secondary);
   border-color: var(--secondary)
   /* transform: scale(1.2) */
@@ -397,6 +228,11 @@
     position: relative;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
+    text-align: left;
+
+}
+.section-title h1 {
+  color: var(--blue);
 }
 
 .section-title::before {
@@ -416,7 +252,7 @@
     height: 28px;
     bottom: -13px;
     left: calc(25% - 13px);
-    background: var(--dark);
+    background: var(--primary);
     border: 10px solid #FFFFFF;
     border-radius: 28px;
 }

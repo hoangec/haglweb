@@ -1,5 +1,5 @@
 url = "/"
-layout = "home"
+layout = "default"
 title = "Home"
 description = "No description provided yet."
 meta_title = "HAGL Group"
@@ -19,10 +19,10 @@ order = "created_at asc"
 handle = "HAGL\HomePage"
 ==
 {% partial 'blocks/homepage-main-banner' banners = homePage.main_banner %}
-    {% partial 'blocks/homepage-news' dsTinTuc = dsTinTuc %}
-    {% partial 'blocks/homepage-banner-events' bannerEvent = homePage.banner_events %}
-    {% partial 'blocks/homepage-events' dsTinTuc = dsTinTuc %}
-    {% partial 'blocks/homepage-banner-events' bannerEvent = homePage.banner_events %}
-    {% partial 'blocks/homepage-codong' %}
-    {% partial 'blocks/homepage-products' %}
-    {% partial 'blocks/homepage-contact' %}
+{% partial 'blocks/homepage-news' dsTinTuc = dsTinTuc %}
+{% partial 'blocks/homepage-banner-events' bannerEvent = homePage.banner_events %}
+{% partial 'blocks/homepage-events' dsTinTuc = dsTinTuc %}
+{% partial 'blocks/homepage-banner-events' bannerEvent = homePage.banner_events %}
+{% partial 'blocks/homepage-codong' %}
+{% partial 'blocks/homepage-products' %}
+{% partial 'blocks/homepage-contact' %}

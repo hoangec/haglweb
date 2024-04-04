@@ -18,11 +18,11 @@
 
     // Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.sticky-top').addClass('full-width').css('top', '0px');
-        } else {
-            $('.sticky-top').removeClass('full-width').css('top', '-150px');
-        }
+        // if ($(this).scrollTop() > 300) {
+        //     $('.sticky-top').addClass('full-width').css('top', '0px');
+        // } else {
+        //     $('.sticky-top').removeClass('full-width').css('top', '-150px');
+        // }
         if ($(window).scrollTop() > 60) {
           $(".my-navbar").addClass("navbar-scroll");
           // $(".my-navbar").addClass("top-0");
