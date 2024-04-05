@@ -5,12 +5,12 @@
       </div>
       {%set dsTinTucMoiNhat = dsTinTuc.latest().take(3).get()%}
       <div class="container">
-        <div class="row gy-3">
-        {% for tinTuc in dsTinTucMoiNhat %}
-          {% partial 'news/tin-tuc-card' tinTuc=tinTuc %}
-        {% endfor %}
+        <div class="row gx-3 gy-3">
+          {% for tinTuc in dsTinTucMoiNhat %}
+            {% partial 'news/tin-tuc-card' tinTuc=tinTuc %}
+          {% endfor %}
         </div>
-        <a href="/truyen-thong" class="mt-3 btn main-banner-btn  btn-sm  py-2 px-2 animated zoomIn fw-bolder">Xem tất cả</a>
+        <a href="/truyen-thong" class="mt-md-4 mt-sm-1 btn main-banner-btn  py-2 px-2 wow zoomIn fw-bolder" data-wow-delay="0.1s">{{'Xem tất cả'|trans}}</a>
       </div>
   </div>
 </div>

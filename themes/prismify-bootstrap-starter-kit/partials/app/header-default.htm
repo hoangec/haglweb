@@ -46,7 +46,7 @@ code = "topmenu"
             <li class="{{ item.items|length  > 0 ? 'nav-item dropdown' : 'nav-item' }}">
                 {% if (item.items|length > 0) %}
                   <a class="nav-link dropdown-toggle" href="{{item.url}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{item.title}}
+                    {{item.title | trans}}
                   </a>
                 {% else %}
                   <a class="nav-link" href="{{item.url}}">{{item.title}}</a>

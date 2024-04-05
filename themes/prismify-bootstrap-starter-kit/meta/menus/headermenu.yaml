@@ -1,13 +1,8 @@
 items:
     -
         title: 'Về HAGL'
-        nesting: null
         type: header
-        url: null
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -317,9 +312,13 @@ items:
             isExternal: '0'
     -
         title: 'Truyền thông'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: truyen-thong
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''

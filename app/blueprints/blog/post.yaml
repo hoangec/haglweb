@@ -2,6 +2,7 @@ uuid: edcd102e-0525-4e4d-b07e-633ae6c18db6
 handle: Blog\Post
 type: stream
 name: Post
+multisite: true
 drafts: true
 
 primaryNavigation:
