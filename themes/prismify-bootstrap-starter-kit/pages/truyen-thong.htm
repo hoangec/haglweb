@@ -11,20 +11,16 @@ handle = "Blog\Post"
 ==
 {% partial 'site/hero-banner' %}
 
-<section class="catelogy-card">
+<section class="catelogy-card mb-5">
   <div class="container px-">
     <div class="row gx-5 gy-3 justify-content-center align-items-center">
       <div class="col-sm-12 col-lg-3">
-        <div class="card radius-10 border-start border-0 border-3 border-info">
+        <div class="card">
           <div class="card-body">
               <a href="#tin-tuc" class="catelogy-item">
                 <div class="d-flex align-items-center">
-                  <div>
-                    <p class="mb-0 text-secondary">Tin tức</p>
-                    <!-- <h4 class="my-1 text-info">Sấu riêng 1</h4> -->
-                    <!-- <p class="mb-0 font-13">+2.5% from last week</p> -->
-                  </div>
-                  <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                  <h3 class="card-title" >Tin tức</h3>
+                  <div class="widgets-icons rounded-circle text-white ms-auto">
                     <i class="fas fa-arrow-down"></i>
                   </div>
                 </div>
@@ -33,16 +29,12 @@ handle = "Blog\Post"
         </div>
       </div>
       <div class="col-sm-12 col-lg-3">
-        <div class="card radius-10 border-start border-0 border-3 border-info">
+        <div class="card ">
           <div class="card-body">
               <a href="#su-kien" class="catelogy-item">
                 <div class="d-flex align-items-center">
-                  <div>
-                    <p class="mb-0 text-secondary">Sự kiện</p>
-                    <!-- <h4 class="my-1 text-info">Sấu riêng 1</h4> -->
-                    <!-- <p class="mb-0 font-13">+2.5% from last week</p> -->
-                  </div>
-                  <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                  <h3 class="card-title">Sự kiện</h3>
+                  <div class="widgets-icons rounded-circle text-white ms-auto">
                     <i class="fas fa-arrow-down"></i>
                   </div>
                 </div>
@@ -53,48 +45,42 @@ handle = "Blog\Post"
     </div>
   </div>
 </section>
-<div class="container-xxl py-5 " id="tin-tuc">
-  <div class="container">
-      <div class="section-title text-start wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-          <h1 class="display-6">Tin tức mới nhất</h1>
-      </div>
-      {%set dsTinTucMoiNhat = dsTinTuc.latest().take(3).get()%}
-      <div class="container">
-        <div class="row gy-3">
-        {% for tinTuc in dsTinTucMoiNhat %}
-          {% partial 'news/tin-tuc-card' tinTuc=tinTuc %}
-        {% endfor %}
-        </div>
-      </div>
-  </div>
-</div>
 
+<div class="container" id="tin-tuc">
+  <div class="section-title wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+    <h1 class="display-6">Tin tức mới nhất</h1>
+  </div>
+  {%set dsTinTucMoiNhat = dsTinTuc.latest().take(3).get()%}
+  <div class="row gy-3">
+    {% for tinTuc in dsTinTucMoiNhat %}
+      {% partial 'news/tin-tuc-card' tinTuc=tinTuc %}
+    {% endfor %}
+    </div>
+</div>
+{% set dsTinTucPaginated = dsTinTuc.paginate(4) %}
 <div class="container mt-5">
-  <div class="row">
-    <h3 class="text-strat text-dark px-0 mb-3">Tất cả bảng tin</h3>
-    <div class="col-md-12 d-flex justify-content-center right-bck">
-      <div class="registration-right">
+  <div class="section-title wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+    <h1 class="display-6">Tất cả bản tin</h1>
+  </div>
+  <div class="row gy-3 all-news-box">
+    {%for tinTuc in dsTinTucPaginated %}
+    <div class="col-md-12 d-flex justify-content-center ">
+        <div class="registration-right">
           <div class="event-list">
-            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
-                <div class="card-body">
-                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-                </div>
-            </div>
-            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
-                <div class="card-body">
-                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-                </div>
-            </div>
-            <div class="card flex-row"><img class="card-img-left img-fluid" src="https://via.placeholder.com/150C/O https://placeholder.com/" />
-                <div class="card-body">
-                    <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>AUG 01 2021</span><i class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59 PM</span> </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-                </div>
+            <div class="card flex-row"><img class="card-img-left img-fluid" src="{{tinTuc.banner.path}}" />
+              <div class="card-body">
+                  <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right" aria-hidden="true"></i><span>{{ tinTuc.published_at_date|date('j/m/Y') }}</span><i class="fas fa-caret-right" aria-hidden="true"></i> </h4>
+                  <h5 class="card-title">{{tinTuc.title}}</h5>
+                  <p class="card-text"> {{ tinTuc.featured_text }}</p>
+                  <a href="{{'tin-tuc'|page({ slug: tinTuc.slug })}}" class="card-link btn btn-primary">Xem chi tiết</a>
+              </div>
             </div>
           </div>
-      </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="col-md-12 d-flex justify-content-center ">
+      {{dsTinTucPaginated.links | raw}}
     </div>
   </div>
 </div>

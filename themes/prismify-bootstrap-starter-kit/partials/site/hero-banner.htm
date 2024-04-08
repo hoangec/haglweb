@@ -1,5 +1,6 @@
 <section class="hero-section">
   <div class="hero-image">
-    <image src="{{'assets/images/homepage-slider-default.jpeg'|theme}}"></image>
+    {% set imageUrl = bannerImage ? bannerImage : 'assets/images/homepage-slider-default.jpeg'|theme %}
+     <image src="{{imageUrl}}"></image>
   </div>
 </section>

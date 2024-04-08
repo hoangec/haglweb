@@ -10,7 +10,7 @@ handle = "HAGL\HomePage"
 code = "topmenu"
 ==
 {% set activeNavLink = activeNavLink|default(this.page.id) %}
-<header class="container-fluid main-nav">
+<header class="container-fluid main-nav no-print">
     <div class="bg-white my-navbar">
       <ul class="nav justify-content-center top-menu">
         {% for item in topMenu.menuItems %}

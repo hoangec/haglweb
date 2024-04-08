@@ -1,0 +1,58 @@
+url = "/truyen-thong/tin-tuc/:slug"
+layout = "default"
+title = "Chi chiết tin tức"
+meta_title = "Chi chiết tin tức"
+meta_description = "Chi chiết tin tức"
+
+[section tinTuc]
+handle = "Blog\Post"
+entrySlug = "{{ :slug }}"
+==
+{% partial 'site/hero-banner' bannerImage = tinTuc.banner.path %}
+<div class="container mt-0">
+  <div class="row gx-1 align-items-start">
+    <div class="col-lg-4 d-none d-sm-none d-lg-block">
+      <div class="news-menu">
+        <h3>TRUYỀN THÔNG</h3>
+        <a href="/truyen-thong#tin-tuc" class="menu-links">
+          <i class="far fa-newspaper"></i>
+          <span class="ms-2">TIN TỨC</span>
+        </a>
+        <a href="/truyen-thong#su-kien" class="menu-links">
+          <i class="fas fa-calendar-alt"></i>
+          <span class="ms-2">SỰ KIỆN</span>
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-8 mt-lg-3 mt-sm-5 p-lg-4 p-sm-5">
+      <div class="dropdown d-lg-none d-md-none text-center news-mobie-menu no-print ">
+        <button class=" w-100 btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          TRUYỀN THÔNG
+        </button>
+        <ul class="w-100 dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
+          <li class="text-center"><a class="dropdown-item" href="/truyen-thong#tin-tuc">Tin tức</a></li>
+          <li><a class="dropdown-item text-center" href="/truyen-thong#su-kien">Sự kiện</a></li>
+        </ul>
+      </div>
+      <h1 class="news-caption-title">{{tinTuc.title}}</h1>
+      <h3 class="news-caption-featured">{{tinTuc.featured_text}}</h3>
+      <div class="row justify-content-center ">
+        <div class="col-md-6 float-start text-start">
+          <p class="news-caption-datetime">{{ tinTuc.published_at_date|date('j/m/Y') }}</p>
+        </div>
+        <div class="col-md-6 float-end text-end no-print">
+          <a class="btn btn-sm btn-social btn-fb" href="https://www.facebook.com/sharer/sharer.php?u={{'tin-tuc'|page({ slug: tinTuc.slug })}}" target="_blank" title="{{tinTuc.title}}">
+            <i class="fab fa-facebook-f" data-fa-transform="grow-2"></i>
+          </a>
+          <button class="btn btn-sm  btn-social btn-fb"  onclick="window.print();">
+            <i class="fas fa-print"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mt-3">
+        {{tinTuc.content|raw}}
+      </div>
+    </div>
+  </div>
+</div>
+

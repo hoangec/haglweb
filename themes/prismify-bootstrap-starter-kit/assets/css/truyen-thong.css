@@ -1,12 +1,16 @@
-.right-bck {
+.all-news-box {
   background-color: #e6f6eb;
   color: #918e84;
+  border-radius: 1rem;
+  padding-top: 10px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 .registration-right {
   width: 95%;
-  padding-top: 50px;
-  padding-bottom: 50px
+  /* padding-top: 10px;
+  padding-bottom: 10px */
 }
 
 .registration-right h2 {
@@ -15,7 +19,7 @@
   padding-bottom: 20px
 }
 
-.registration .btn {
+/* .registration .btn {
   width: 100%
 }
 
@@ -29,7 +33,7 @@
 .far {
   font-family: "Font Awesome 5 Free";
   font-weight: 400
-}
+} */
 
 .event-list .card {
   background-color: #fff;
@@ -38,8 +42,9 @@
 }
 
 .event-list img {
-  width: 77px;
-  height: 77px
+  width: 200px;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .event-list h4 {
@@ -68,3 +73,84 @@
 .event-list .card-title svg {
   color: #ffffff
 }
+
+/** css detail new page **/
+
+.news-menu {
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 7px 10px 1px #3333;
+  margin-top: -55px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.news-menu h3 {
+  color: var(--primary);
+}
+.news-menu .menu-links {
+  transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  border-top: 1px solid var(--primary);
+  padding: 13px 20px;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.news-menu .menu-links:hover {
+  span {
+    animation: bounceIn 0.5s;
+  }
+}
+.news-caption {
+  width: 80%;
+}
+.news-caption-title {
+  color: var(--primary);
+  font-weight: bolder;
+  font-size:xx-large;
+  text-transform:uppercase;
+  margin-top: 20px;
+}
+.news-caption-featured {
+  color: var(--blue);
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  /* letter-spacing: 0.1em; */
+}
+
+.news-caption-datetime {
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 0;
+  color: #999;
+}
+
+
+.btn-social,
+.btn-social:visited,
+.btn-social:focus,
+.btn-social:hover,
+.btn-social:active {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity .15s ease-in-out;
+}
+
+.btn-social:hover,
+.btn-social:active {
+ opacity: .75;
+}
+
+.btn-fb {
+  background-color: #3b5998;
+}
+
+.news-mobie-menu {
+  margin-top: 10px;;
+}
+
