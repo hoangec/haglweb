@@ -19,15 +19,17 @@
 .timeline-item {
   width: 100%;
   margin-bottom: 20px;
-
   &:nth-child(even) {
     .timeline-content {
       float: right;
-
+      margin-right: 130px;
+      box-shadow: 20px 20px 40px 0px rgb(243, 196, 138,1);
       /* padding: 10px 0px 10px 30px; */
       .date {
         right: auto;
         left: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
       }
 
       .timeline-img-header {
@@ -58,7 +60,7 @@
         top: 30px;
         left: -15px;
         border-width: 10px 15px 10px 0;
-        border-color: transparent #f5f5f5 transparent transparent;
+        border-color: transparent #C5CAE9 transparent transparent;
       }
     }
   }
@@ -72,15 +74,16 @@
 
 .timeline-content {
   position: relative;
-  width: 45%;
+  width: 35%;
+  margin-left: 130px;
   padding-top: 0px;
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   background: #f5f5f5;
-  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
-
+  /* box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3); */
+  box-shadow: -20px 20px 40px 0px rgb(243, 196, 138,1);
   &::after {
     content: '';
     position: absolute;
@@ -90,7 +93,7 @@
     top: 30px;
     right: -15px;
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #f5f5f5;
+    border-color: transparent transparent transparent #C5CAE9;
   }
 
   .timeline-img-header {
@@ -102,20 +105,21 @@
   .timeline-img-header img {
     height: 200px;
     width: 100%;
+    border-top-left-radius : 10px;
+    border-top-right-radius : 10px;
   }
 }
 
 .timeline-content .main-caption {
   position: relative;
-  text-transform: uppercase;
+  text-transform:capitalize;
   text-align: right;
   top: 0;
   right: 0;
   margin-top: 20px;
   margin-bottom: 20px;
   color: var(--secondary);
-
-  h3 {
+  h5 {
     color: var(--blue);
   }
 }
@@ -132,7 +136,7 @@
 }
 
 .timeline-content .sub-caption {
-  /* text-transform: uppercase; */
+  /* text-transform: capitalize; */
   font-size: large;
 }
 
@@ -146,6 +150,8 @@
   position: absolute;
   top: 0;
   right: 0;
+  border-top-right-radius : 10px;
+
 }
 
 .timeline-img {
@@ -201,11 +207,13 @@ blockquote {
     &:nth-child(even) {
       .timeline-content {
         float: none;
+        margin-right: 0;
       }
     }
 
     &:nth-child(odd) {
       .timeline-content {
+        box-shadow: 15px 15px 25px 0px rgb(243, 196, 138,1);
         &::after {
           content: '';
           position: absolute;
@@ -316,4 +324,19 @@ blockquote {
 .su-menh-list .su-menh-item:hover {
   pointer-events: none;
 }
-
+/*---- he thong quan tri -----*/
+.quan-tri-caption {
+  padding-left: 20px;
+}
+.quan-tri-bar {
+  /* display: inline-block; */
+  width: 1rem;
+  background-color: var(--primary);
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+@media screen and (max-width: 768px) {
+  .quan-tri-bar {
+    width: 2rem;
+  }
+}

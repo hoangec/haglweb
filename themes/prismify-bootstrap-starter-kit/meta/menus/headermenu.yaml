@@ -19,7 +19,7 @@ items:
                 type: cms-page
                 url: null
                 code: ''
-                reference: gioi-thieu-quatrinh
+                reference: gioi-thieu/lich-su-phat-trien
                 cmsPage: null
                 replace: null
                 viewBag:
@@ -28,9 +28,13 @@ items:
                     isExternal: '0'
             -
                 title: 'Sứ mệnh và tầm nhìn'
+                nesting: null
                 type: cms-page
+                url: null
                 code: ''
-                reference: su-menh-tam-nhin
+                reference: gioi-thieu/su-menh-tam-nhin
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -51,10 +55,10 @@ items:
             -
                 title: 'Hệ thống quản trị'
                 nesting: null
-                type: url
-                url: /
+                type: cms-page
+                url: null
                 code: ''
-                reference: null
+                reference: gioi-thieu/he-thong-quan-tri
                 cmsPage: null
                 replace: null
                 viewBag:
@@ -64,10 +68,10 @@ items:
             -
                 title: 'Nhân sự chủ chốt'
                 nesting: null
-                type: url
-                url: /
+                type: cms-page
+                url: null
                 code: ''
-                reference: null
+                reference: gioi-thieu/nhan-su-chu-chot
                 cmsPage: null
                 replace: null
                 viewBag:
@@ -89,13 +93,9 @@ items:
                     isExternal: '0'
             -
                 title: 'Thành tích nổi bật'
-                nesting: null
-                type: url
-                url: /
+                type: cms-page
                 code: ''
-                reference: null
-                cmsPage: null
-                replace: null
+                reference: gioi-thieu/thanh-tich-noi-bat
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
