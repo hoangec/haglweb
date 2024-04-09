@@ -9,31 +9,8 @@
 
 .registration-right {
   width: 95%;
-  /* padding-top: 10px;
-  padding-bottom: 10px */
 }
 
-.registration-right h2 {
-  color: #ffffff;
-  font-weight: 700;
-  padding-bottom: 20px
-}
-
-/* .registration .btn {
-  width: 100%
-}
-
-.fa,
-.fas,
-.fab {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900
-}
-
-.far {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400
-} */
 
 .event-list .card {
   background-color: #fff;

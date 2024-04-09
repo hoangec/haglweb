@@ -1,8 +1,9 @@
 .card {
-  border-top-left-radius: 2rem !important;
+  /* border-top-left-radius: 2rem !important;
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 2rem !important;
-  border-bottom-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important; */
+  border-radius: 1rem !important;
 }
 
 .card {

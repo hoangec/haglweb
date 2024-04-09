@@ -17,6 +17,13 @@
     --dark: #252C30;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif; /* Thay đổi font cho các tiêu đề */
+}
+
+p {
+  font-family: Georgia, serif; /* Thay đổi font cho đoạn văn bản */
+}
 
 .back-to-top {
     position: fixed;
