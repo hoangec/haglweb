@@ -1,8 +1,13 @@
 items:
     -
         title: 'Về HAGL'
+        nesting: null
         type: header
+        url: null
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -23,13 +28,9 @@ items:
                     isExternal: '0'
             -
                 title: 'Sứ mệnh và tầm nhìn'
-                nesting: 0
-                type: static-page
-                url: null
+                type: cms-page
                 code: ''
                 reference: su-menh-tam-nhin
-                cmsPage: null
-                replace: 0
                 viewBag:
                     isHidden: '0'
                     cssClass: ''

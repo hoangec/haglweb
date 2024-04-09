@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, serif; /* Thay đổi font cho các tiêu đề */
 }
 
-p {
+p,li {
   font-family: Georgia, serif; /* Thay đổi font cho đoạn văn bản */
 }
 
@@ -44,7 +44,9 @@ p {
 .fw-black {
     font-weight: 900;
 }
-
+.fc-blue {
+  color:var(--blue);
+}
 
 /*** Spinner ***/
 #spinner {
@@ -121,7 +123,7 @@ p {
   color: var(--primary) !important;
 }
 .text-secondary {
-  color: var(--secondary) !important;
+  color: var(--blue) !important;
 }
 .text-main {
   color: var(--blue);
