@@ -5,7 +5,7 @@
              {% for banner in banners%}
                   {% set imageUrl = banner.image ? banner.image|media : 'assets/images/default-banner.jpeg'|theme %}
                   <div class="carousel-item {% if loop.index == 1 %} active  {% endif %}" >
-                    <img class="w-100" src="{{imageUrl}}"  alt="Image">
+                    <img class="w-100 " src="{{imageUrl}}"  alt="Image">
                     <div class="carousel-caption">
                       <div class="container">
                         <div class="row mb-5">

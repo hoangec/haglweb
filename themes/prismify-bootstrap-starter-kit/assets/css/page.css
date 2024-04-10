@@ -205,7 +205,6 @@ blockquote {
     }
 
   }
-
   .timeline-item {
 
     &:nth-child(even) {
@@ -413,4 +412,26 @@ blockquote {
 .nhan-su-board .nhan-su-carousel .owl-nav .owl-next:hover {
   background: #FFFFFF;
   color: var(--primary);
+}
+
+.nhan-su-detail {
+  padding: 0px;
+}
+
+.nhan-su-detail_info_img {
+  img {
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+
+.nhan-su-detai_info_name{
+  font-size: 20px;
+  margin-top: 25px;
+  text-transform: capitalize;
+}
+.nhan-su-detai_info_title {
+  font-size: 10px;
+  margin-top: 16px;
 }
