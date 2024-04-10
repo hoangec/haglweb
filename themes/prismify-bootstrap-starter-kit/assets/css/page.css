@@ -234,7 +234,7 @@ blockquote {
   }
 }
 
-/* --------- page thanh tich noi bat */
+/* --------- page thanh tich noi bat ---*/
 .hori-timeline .events {
   border-top: 3px solid #e9ecef;
 }
@@ -371,8 +371,8 @@ blockquote {
   width: 180px;
   height: 180px;
   overflow: hidden;
-  transition: border .5s ease-in-out;
-  border: 1px solid var(--blue);;
+  transition: outline .5s ease-in-out;
+  outline: 1px solid var(--blue);;
 }
 .nhan-su-item .nhan-su-item-ten {
   margin-top: 10px;;
@@ -383,7 +383,7 @@ blockquote {
   text-transform: capitalize;
 }
 .nhan-su-item  .nhan-su-item-img:hover {
-  border: 7px solid var(--blue);
+  outline: 7px solid var(--blue);
 }
 
 .nhan-su-board .nhan-su-carousel .owl-nav {

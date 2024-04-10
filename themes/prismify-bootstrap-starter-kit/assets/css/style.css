@@ -20,15 +20,15 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: roboto, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Roboto, sans-serif; /* Thay đổi font cho các tiêu đề */
+  font-family: roboto, sans-serif; /* Thay đổi font cho các tiêu đề */
 }
 
 p,li {
-  font-family: Roboto, sans-serif; /* Thay đổi font cho đoạn văn bản */
+  font-family: roboto, sans-serif; /* Thay đổi font cho đoạn văn bản */
 }
 
 .back-to-top {
@@ -151,6 +151,10 @@ p,li {
     color: var(--light);
 }
 
+/* -- Chinh modal --*/
+.modal-content {
+  border-radius: 1rem !important;
+}
 /*** Section Title ***/
 .section-title {
     position: relative;
