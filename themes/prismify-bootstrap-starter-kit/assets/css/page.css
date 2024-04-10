@@ -23,7 +23,7 @@
     .timeline-content {
       float: right;
       margin-right: 130px;
-      box-shadow: 20px 20px 40px 0px rgb(243, 196, 138,1);
+      box-shadow: 15px 15px 10px 0px rgb(0,0,0,0.3);
       /* padding: 10px 0px 10px 30px; */
       .date {
         right: auto;
@@ -81,9 +81,10 @@
   padding-right: 0px;
   padding-bottom: 10px;
   border-radius: 10px;
-  background: #f5f5f5;
+  /* background: rgb(245, 164, 66); */
+  background: var(--light-2);
   /* box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3); */
-  box-shadow: -20px 20px 40px 0px rgb(243, 196, 138,1);
+  box-shadow: -15px 15px 10px 0px rgba(0, 0, 0, .3);
   &::after {
     content: '';
     position: absolute;
@@ -121,6 +122,7 @@
   color: var(--secondary);
   h5 {
     color: var(--blue);
+    /* color: #fff; */
   }
 }
 
@@ -129,8 +131,9 @@
   bottom: 0;
   content: '';
   background: var(--primary);
+  /* background: #fff; */
   width: 100%;
-  height: 5px;
+  height: 3px;
   left: 0;
   margin-right: 5px;
 }
@@ -138,6 +141,7 @@
 .timeline-content .sub-caption {
   /* text-transform: capitalize; */
   font-size: large;
+  color: var(--dark)
 }
 
 
@@ -231,7 +235,7 @@ blockquote {
   }
 }
 
-/* --------- */
+/* --------- page thanh tich noi bat */
 .hori-timeline .events {
   border-top: 3px solid #e9ecef;
 }
@@ -339,4 +343,74 @@ blockquote {
   .quan-tri-bar {
     width: 2rem;
   }
+}
+
+/* --- page nhan su chu chot */
+
+
+/* .nhan-su-board {
+  img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    transition: 0.5s ease;
+  }
+} */
+
+.nhan-su-item-img img {
+  width: 100%;
+  height: auto;
+}
+.nhan-su-board .nhan-su-item {
+  h3 {
+    color: var(--blue);
+    text-transform: capitalize;
+  }
+}
+.nhan-su-item  .nhan-su-item-img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  transition: border .5s ease-in-out;
+  border: 1px solid var(--blue);;
+}
+.nhan-su-item .nhan-su-item-ten {
+  margin-top: 10px;;
+}
+.nhan-su-item .nhan-su-item-title {
+  margin-top: 5px;;
+  color: var(--dark);
+  text-transform: capitalize;
+}
+.nhan-su-item  .nhan-su-item-img:hover {
+  border: 7px solid var(--blue);
+}
+
+.nhan-su-board .nhan-su-carousel .owl-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.nhan-su-board .nhan-su-carousel .owl-nav .owl-prev,
+.nhan-su-board .nhan-su-carousel .owl-nav .owl-next {
+  margin: 0 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background: var(--primary);
+  border-radius: 55px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .15);
+  font-size: 25px;
+  transition: .5s;
+}
+
+.nhan-su-board .nhan-su-carousel .owl-nav .owl-prev:hover,
+.nhan-su-board .nhan-su-carousel .owl-nav .owl-next:hover {
+  background: #FFFFFF;
+  color: var(--primary);
 }
