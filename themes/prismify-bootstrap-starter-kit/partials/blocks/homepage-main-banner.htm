@@ -3,13 +3,13 @@
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
              {% for banner in banners%}
-                  {% set imageUrl = banner.image ? banner.image|media : 'assets/images/stock/homepage-slider-default.jpeg'|theme %}
+                  {% set imageUrl = banner.image ? banner.image|media : 'assets/images/default-banner.jpeg'|theme %}
                   <div class="carousel-item {% if loop.index == 1 %} active  {% endif %}" >
                     <img class="w-100" src="{{imageUrl}}"  alt="Image">
                     <div class="carousel-caption">
                       <div class="container">
                         <div class="row mb-5">
-                            <div class="col-lg-7 text-start">
+                            <div class="col-lg-9 text-start">
                                 <h1 class="display-1 caption-h1 mb-4 animated zoomIn text-white ">{{banner.noi_dung1}}</h1>
                                 <p class="caption-p text-white animated zoomIn">{{banner.noi_dung2}}</p>
                                 <a href="gioi-thieu/lich-su-phat-trien" class="btn main-banner-btn  btn-sm  py-2 px-2 animated zoomIn fw-bolder">Về HAGL</a>
