@@ -139,7 +139,6 @@
 }
 
 .timeline-content .sub-caption {
-  /* text-transform: capitalize; */
   font-size: large;
   color: var(--dark)
 }
@@ -413,9 +412,17 @@ blockquote {
   background: #FFFFFF;
   color: var(--primary);
 }
-
-.nhan-su-detail {
-  padding: 0px;
+.nhan-su-modal {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.nhan-su-detail_content {
+  h5 {
+    color: var(--primary);
+  }
+  ul li > h6 {
+    font-weight: bold;
+  }
 }
 
 .nhan-su-detail_info_img {

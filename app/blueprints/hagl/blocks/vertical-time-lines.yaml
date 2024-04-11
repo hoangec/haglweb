@@ -1,0 +1,38 @@
+uuid: 7ac55141-17dc-45e8-8929-497d05059aba
+handle: Hagl\Blocks\VerticalTimeLines
+type: mixin
+name: Block hiển thị nhật ký thời gian theo chiều dọc
+
+fields:
+   title:
+        label: Tựa đề
+        type: text
+        validation: "required"
+   timeLines:
+        label: Mốc thời gian
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                image:
+                    label: Ảnh đại diện
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    size: small
+                mocThoiGian:
+                    label: Mốc thời gian
+                    type: text
+                tuaDeChinh:
+                    label: Tựa đề chính
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                tuaDePhu:
+                    label: Tựa đề phụ
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                noiDung:
+                    label: Nội dung 
+                    type: richeditor

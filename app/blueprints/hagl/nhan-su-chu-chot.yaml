@@ -1,0 +1,23 @@
+uuid: df8b113c-fdc6-474a-9c83-e8077aa20676
+handle: Hagl\NhanSuChuChot
+type: single
+name: Trang nhân sự chủ chốt
+multisite: true
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-group
+    order: 3
+
+fields:
+    pageBanner:
+        label: Ảnh banner cho page
+        tab: Ảnh banner trang
+        type: nestedform
+        form:
+            fields:
+                image:
+                    label: Image
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1

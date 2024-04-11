@@ -1,18 +1,18 @@
 uuid: f530553e-37bb-4f40-b024-5068e47c717b
-handle: HAGL\HomePage
+handle: Hagl\HomePage
 type: single
 name: HomePage
-drafts: true
+multisite: true
 
 primaryNavigation:
     label: HAGL
-    icon: icon-building
+    icon: icon-app-window
     order: 120
 
 navigation:
-    parent: HAGL\HomePage
-    icon: icon-building
-    order: 120
+    parent: Hagl\HomePage
+    icon: icon-components
+    order: 1
 
 fields:
     main_banner:
@@ -32,8 +32,7 @@ fields:
                     type: text
                 noi_dung2:
                     label: Nội dung 2
-                    type: text
-                  
+                    type: text                  
     banner_events:
         type: nestedform
         showPanel: false

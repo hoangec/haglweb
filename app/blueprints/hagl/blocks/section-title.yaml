@@ -1,0 +1,10 @@
+uuid: 334c605b-1557-4010-ad82-9b31e10e9e1c
+handle: Hagl\Blocks\SectionTitle
+type: mixin
+name: Tựa đề cho section
+
+fields:
+    sectionTitle:
+        label: Tựa đề
+        type: text
+        validation: "required"

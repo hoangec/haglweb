@@ -1,0 +1,41 @@
+uuid: 553cb140-e36c-4e3e-866e-048230a99029
+handle: Hagl\LichSuPhatTrien
+type: single
+name: Trang lịch sử phát triển
+multisite: true
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-send
+    order: 2
+
+validation:
+    attributeNames:
+        blockBuilder: sectionTitle
+    customMessages:
+        sectionTitle.required: "Yêu cầu nhập liệu cho tựa đề section"
+    rules:
+        sectionTitle: "required"
+
+fields:
+    pageBanner:
+        label: Ảnh banner cho page
+        tab: Ảnh banner trang
+        type: nestedform
+        form:
+            fields:
+                image:
+                    label: Image
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                caption:
+                    label: Nội dung tiều đề lớn
+                    type: text
+                title:
+                    label: Nội dung tựa đề
+                    type: text
+    blockBuilder:
+        type: mixin
+        source: HaglBlockBuilder
+

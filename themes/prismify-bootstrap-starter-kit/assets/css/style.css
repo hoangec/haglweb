@@ -161,7 +161,6 @@ p,li {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     text-align: left;
-    text-transform: capitalize;
 }
 .section-title h1 {
   color: var(--blue);

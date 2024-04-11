@@ -5,12 +5,11 @@ description = "Trang nội dung lịch sử phát triển HAGL"
 meta_title = "Trang nội dung lịch sử phát triển HAGL"
 meta_description = "Trang nội dung lịch sử phát triển HAGL"
 
-[section haglHomePage]
-handle = "HaglHomePage"
-
-
-[section homePage]
-handle = "HAGL\HomePage"
+[section lichSuPhatTrienPage]
+handle = "Hagl\LichSuPhatTrien"
 ==
-{% partial 'site/hero-banner' %}
-{% partial 'gioithieu/lich-su-phat-trien' %}
+{% partial 'site/hero-banner' banner = lichSuPhatTrienPage.pageBanner %}
+
+{% for block in lichSuPhatTrienPage.blocks %}
+   {% partial 'blocks/' ~ str_slug(block.type) block=block %}
+{% endfor %}
