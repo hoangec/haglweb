@@ -1,12 +1,87 @@
 <section class="mt-5">
   <div class="section-title text-center mx-auto wow fadeInUp " data-wow-delay="0.1s" style="max-width: 500px;">
-    <h1 class="display-6">Nhân sự chủ chốt</h1>
+    <h1 class="display-6">Hội đồng quản trị</h1>
   </div>
   <div class="container">
     <div class="d-flex flex-row">
       <div class="quan-tri-bar"></div>
       <div class="quan-tri-caption">
-        <h3 class="text-primary">Nhấn sự chủ chốt</h3>
+        <h3 class="text-primary">Hội đồng quản trị</h3>
+        <p>
+          Sự lớn mạnh và thành công của HAGL trong suốt 30 năm vừa qua là thành quả từ công sức và tâm huyết của tất cả những thành viên trong công ty, dưới sự chỉ dẫn và lãnh đạo sáng suốt của những nhân sự chủ chốt - những con người tài ba, bản lĩnh và luôn hết mình vì sự nghiệp chung của HAGL.
+        </p>
+      </div>
+    </div>
+    <div class="row nhan-su-board gy-5 ">
+      <div class="col-lg-12">
+        <div class="nhan-su-item">
+          <a href="#" class="d-flex justify-content-center align-items-center flex-column" data-bs-toggle="modal" data-bs-target="#nhan-su-1" class="text-center">
+            <div class="nhan-su-item-img"><img src="{{'assets/images/nguyen-xuan-thang.png'|theme}}"></div>
+            <div class="nhan-su-item-ten"> <h3 >ông nguyễn xuân thắng</h3></div>
+            <div class="nhan-su-item-title"> <p>Tổng giám đốc (bổ nhiệm ngày 7/2/2024)</p></div>
+          </a>
+        </div>
+        <div class="modal fade" id="nhan-su-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Giới thiệu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body nhan-su-modal">
+                <div class="row g-0 nhan-su-detail">
+                  <div class="col-md-4 text-center nhan-su-detail_info text-center">
+                    <div class="nhan-su-detail_info_img">
+                      <img src="{{'assets/images/nguyen-xuan-thang-detail.png'|theme}}" class="img-fluid" alt="...">
+                    </div>
+                    <div class="nhan-su-detai_info_name" >ông nguyễn xuân thắng</div>
+                    <div class="nhan-su-detail_info_title">Tổng giám đốc (bổ nhiệm ngày 7/2/2024)</div>
+                  </div>
+                  <div class="col-md-8 nhan-su-detail_content">
+                    <h5>Trình độ chuyên môn</h5>
+                    <p>Cứ nhân kinh tế</p>
+                    <h5>Quá trính công tác</h5>
+                    <ul>
+                      <li><h6>Từ năm 1999 đến năm 2000: </h6><p>công tác tại công ty cà phê 15, công tác tại công ty cà phê 15</p></li>
+                      <li><h6>Từ năm 1999 đến năm 2000: </h6><p>công tác tại công ty cà phê 15, công tác tại công ty cà phê 15</p></li>
+                      <li><h6>Từ năm 1999 đến năm 2000: </h6><p>công tác tại công ty cà phê 15, công tác tại công ty cà phê 15</p></li>
+                      <li><h6>Từ năm 1999 đến năm 2000: </h6><p>công tác tại công ty cà phê 15, công tác tại công ty cà phê 15</p></li>
+                      <li><h6>Từ năm 1999 đến năm 2000: </h6><p>công tác tại công ty cà phê 15, công tác tại công ty cà phê 15</p></li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 ">
+        <div class="owl-carousel nhan-su-carousel">
+          {% for thanhVien in block.dsThanhVien %}
+            <div class="nhan-su-item p-3">
+              <a href="#" class="d-flex justify-content-center align-items-center flex-column" data-bs-toggle="modal" data-bs-target="#nhan-su-1" class="text-center">
+                <div class="nhan-su-item-img"><img src="{{thanhVien.image|media}}"></div>
+                <div class="nhan-su-item-ten"> <h3 >{{thanhVien.hoTen}}</h3></div>
+                <div class="nhan-su-item-title"> <p>{{thanhVien.chucDanh}}</p></div>
+              </a>
+            </div>
+          { %endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-5">
+  <div class="section-title text-center mx-auto wow fadeInUp " data-wow-delay="0.1s" style="max-width: 500px;">
+    <h1 class="display-6">Ban lãnh đạo</h1>
+  </div>
+  <div class="container">
+    <div class="d-flex flex-row">
+      <div class="quan-tri-bar"></div>
+      <div class="quan-tri-caption">
+        <h3 class="text-primary">Ban lãnh đạo</h3>
         <p>
           Sự lớn mạnh và thành công của HAGL trong suốt 30 năm vừa qua là thành quả từ công sức và tâm huyết của tất cả những thành viên trong công ty, dưới sự chỉ dẫn và lãnh đạo sáng suốt của những nhân sự chủ chốt - những con người tài ba, bản lĩnh và luôn hết mình vì sự nghiệp chung của HAGL.
         </p>
@@ -84,4 +159,5 @@
     </div>
   </div>
 </section>
+
 

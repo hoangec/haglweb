@@ -1,7 +1,7 @@
-uuid: 334c605b-1557-4010-ad82-9b31e10e9e1c
-handle: Hagl\Blocks\SectionTitle
+uuid: e70634f4-ec8c-41e2-b52a-62e56add9eed
+handle: Hagl\Blocks\PageTitle
 type: mixin
-name: Tựa đề cho section
+name: Tựa đề page
 
 fields:
     tuaDe:

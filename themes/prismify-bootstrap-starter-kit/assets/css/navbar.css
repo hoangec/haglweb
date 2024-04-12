@@ -87,15 +87,6 @@
   color: var(--primary);
 }
 
-.navbar .dropdown-toggle::after {
-  border: none;
-  content: "";
-  /* font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  vertical-align: middle;
-  margin-left: 8px; */
-}
-
 @media (max-width: 991.98px) {
   .top-menu {
     display: none;
@@ -141,6 +132,9 @@
     visibility: visible;
     transition: .5s;
     opacity: 1;
+  }
+  .navbar .dropdown-toggle::after {
+    display: none;
   }
 }
 

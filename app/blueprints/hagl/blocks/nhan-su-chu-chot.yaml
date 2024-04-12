@@ -1,0 +1,54 @@
+uuid: 1433593f-abbf-4063-bbb6-9771a012337b
+handle: Hagl\Blocks\NhanSuChuChot
+type: mixin
+name: Block danh sách nhân sự
+
+fields:
+    lanhDao:
+        label: Thông tin lãnh đạo
+        type: nestedform
+        form:
+            fields:
+                image:
+                    label: Ảnh đại diện
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                hoTen:
+                    label: Họ tên
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                chucDanh:
+                    label: Chức danh
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                quaTrinhCongTac:
+                    label: Quá trình công tác
+                    type: richeditor
+    dsThanhVien:
+        label: Danh sách các thành viên
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                image:
+                    label: Ảnh đại diện
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    size: small
+                hoTen:
+                    label: Họ tên
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                chucDanh:
+                    label: Chức danh
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                quaTrinhCongTac:
+                    label: Quá trình công tác
+                    type: richeditor

@@ -1,7 +1,7 @@
-uuid: f530553e-37bb-4f40-b024-5068e47c717b
+uuid: 97ca27a3-2436-41c8-a094-f2b390b0d447
 handle: Hagl\HomePage
 type: single
-name: HomePage
+name: Trang chủ HAGL
 multisite: true
 
 primaryNavigation:

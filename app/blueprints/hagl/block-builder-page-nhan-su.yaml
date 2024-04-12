@@ -1,0 +1,38 @@
+uuid: da7c6c11-3502-4f19-9f18-d3803b6b1b1c
+handle: Hagl\GioiThieu\NhanSu\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page nhan su
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            page_title:
+                name: Tựa  đề cho mỗi section
+                description: Hiển thị nôi dung tựa đề ở giữ page có dấu gạch
+                icon: icon-text-h1
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\PageTitle
+            section_title:
+                name: Block tựa đề
+                description: hiên thị nôi dung tựa đề
+                icon: icon-text-h1
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SectionTitle
+            nhan_su_chu_chot:
+                name: Bock danh sách nhân sự
+                description: Hiển thị danh sách nhân sự
+                icon: icon-group
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\NhanSuChuChot
+

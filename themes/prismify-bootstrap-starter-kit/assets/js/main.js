@@ -111,10 +111,11 @@
     });
 
     $(".nhan-su-carousel").owlCarousel({
-      autoplay: false,
+    //   autoplay: true,
       smartSpeed: 1000,
+      stagePadding: 50,
       margin: 25,
-      loop: true,
+    //   loop: true,
       center: true,
       dots: false,
       nav: true,
@@ -124,17 +125,17 @@
       ],
       responsive: {
         0:{
-                  items:1
-              },
-              576:{
-                  items:1
-              },
-              768:{
-                  items:2
-              },
-              992:{
-                  items:3
-              }
+            items:1
+        },
+        576:{
+            items:1
+        },
+        768:{
+            items:2
+        },
+        992:{
+            items:3
+        }
       }
     });
     // Testimonial carousel

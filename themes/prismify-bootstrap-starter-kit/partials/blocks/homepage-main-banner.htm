@@ -2,7 +2,7 @@
   <div class="container-fluid p-0">
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
-             {% for banner in banners%}
+             {% for banner in banners %}
                   {% set imageUrl = banner.image ? banner.image|media : 'assets/images/default-banner.jpeg'|theme %}
                   <div class="carousel-item {% if loop.index == 1 %} active  {% endif %}" >
                     <img class="w-100 " src="{{imageUrl}}"  alt="Image">

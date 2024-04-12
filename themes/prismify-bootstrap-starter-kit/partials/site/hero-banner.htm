@@ -1,8 +1,8 @@
 <section class="hero-section">
   <div class="hero-image">
     {% set imageUrl = banner.image != "" ? banner.image|media : 'assets/images/default-banner.jpg'|theme %}
-    {% set caption = banner.caption ? banner.caption : 'Hoàng Anh Gia Lai' %}
-    {% set title = banner.title ? banner.title : "Trải qua 30 năm xây dựng và phát triển, Hoàng Anh Gia Lai hiện là công ty hoạt động chuyên về nông nghiệp với tầm nhìn trở thành doanh nghiệp hàng đầu Việt Nam và khu vực trong lĩnh vực nông nghiệp." %}
+    {% set caption = banner.tuaDe ? banner.tuaDe : 'Hoàng Anh Gia Lai' %}
+    {% set title = banner.noiDung ? banner.noiDung : "Trải qua 30 năm xây dựng và phát triển, Hoàng Anh Gia Lai hiện là công ty hoạt động chuyên về nông nghiệp với tầm nhìn trở thành doanh nghiệp hàng đầu Việt Nam và khu vực trong lĩnh vực nông nghiệp." %}
     <image src="{{imageUrl}}" class="img-fluid"></image>
   </div>
   <div class="container">

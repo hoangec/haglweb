@@ -1,0 +1,23 @@
+uuid: 60115fb9-7bb2-4fd9-af97-1f4a8500c0fc
+handle: HAGLFields/PageBanner
+type: mixin
+name: field cho page banner
+
+fields:
+    pageBanner:
+        label: Ảnh banner cho page
+        tab: Cấu hình page banner
+        type: nestedform
+        form:
+            fields:
+                image:
+                    label: Image
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                tuaDe:
+                    label: Tựa đề lớn
+                    type: text
+                noiDung:
+                    label: Nội dung tựa đề
+                    type: text

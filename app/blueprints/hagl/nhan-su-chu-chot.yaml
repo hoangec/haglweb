@@ -9,15 +9,10 @@ navigation:
     icon: icon-group
     order: 3
 
-fields:
-    pageBanner:
-        label: Ảnh banner cho page
-        tab: Ảnh banner trang
-        type: nestedform
-        form:
-            fields:
-                image:
-                    label: Image
-                    type: mediafinder
-                    mode: image
-                    maxItems: 1
+fields: 
+    pageSetting:
+        type: mixin
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source: Hagl\GioiThieu\NhanSu\BlockBuilder

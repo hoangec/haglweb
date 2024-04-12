@@ -18,23 +18,10 @@ validation:
         sectionTitle: "required"
 
 fields:
-    pageBanner:
-        label: Ảnh banner cho page
-        tab: Ảnh banner trang
-        type: nestedform
-        form:
-            fields:
-                image:
-                    label: Image
-                    type: mediafinder
-                    mode: image
-                    maxItems: 1
-                caption:
-                    label: Nội dung tiều đề lớn
-                    type: text
-                title:
-                    label: Nội dung tựa đề
-                    type: text
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
     blockBuilder:
         type: mixin
         source: HaglBlockBuilder
