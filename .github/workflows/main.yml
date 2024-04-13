@@ -19,6 +19,20 @@ jobs:
           local-dir: ./themes/prismify-bootstrap-starter-kit/
           server-dir: ./octobercms-files/themes/prismify-bootstrap-starter-kit/
           port: 2121
+      - name: Dong bo thu muc theme hagl
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: haglgroup.vn
+          username: hagl
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./themes/hagl/
+          server-dir: ./octobercms-files/themes/hagl/
+          port: 2121
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/assets/src/**
       - name: Dong bo file fu muc plugins
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
