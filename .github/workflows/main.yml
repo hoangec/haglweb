@@ -25,8 +25,8 @@ jobs:
           server: haglgroup.vn
           username: hagl
           password: ${{ secrets.ftp_password }}
-          local-dir: ./themes/hagl/
-          server-dir: ./octobercms-files/themes/hagl/
+          local-dir: ./themes/HAGL/
+          server-dir: ./octobercms-files/themes/HAGL/
           port: 2121
           exclude: |
             **/.git*
