@@ -1,0 +1,53 @@
+uuid: 2d5088fa-f645-4e23-bc8d-f08edf13c4ef
+handle: Hagl\GioiThieu\SuMenh\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page su mệnh tầm nhìn
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            page_title:
+                name: Tựa  đề cho mỗi section
+                description: Hiển thị nôi dung tựa đề ở giữ page có dấu gạch
+                icon: icon-text-h1
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\PageTitle
+            section_title:
+                name: Block tựa đề
+                description: hiên thị nôi dung tựa đề
+                icon: icon-text-h1
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SectionTitle
+            danhmuc_menu:
+                name: Block hiển thị menu danh mục đầu trang
+                description: Hiển thị menu để link đến các nội dung con trên page
+                icon: icon-reorder
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DanhMucMenu
+            image_card_content:
+                name: Block hiển thị ảnh cùng nội dung
+                description: Hiển thị anh vơi vị trí trái hoặc phải
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\ImageCardBanner
+            fw_banner:
+                name: Block hiển thị banner ảnh nền full width
+                description: Hiển thị banner voi ảnh nền full chiều rộng
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\FullWidthBanner

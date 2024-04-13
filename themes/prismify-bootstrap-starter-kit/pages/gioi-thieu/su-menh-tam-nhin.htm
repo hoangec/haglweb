@@ -5,12 +5,14 @@ description = "Trang nội dung sứ mệnh và tầm nhìn HAGL"
 meta_title = "Trang nội dung sứ mệnh và tầm nhìn HAGL"
 meta_description = "Trang nội dung sứ mệnh và tầm nhìn HAGL"
 
-[section haglHomePage]
-handle = "HaglHomePage"
 
-
-[section homePage]
-handle = "HAGL\HomePage"
+[section pageSuMenhTamNhin]
+handle = "Hagl\SuMenhTamNhin"
 ==
-{% partial 'site/hero-banner' %}
-{% partial 'gioithieu/su-menh' %}
+{% partial 'site/hero-banner'  banner = pageSuMenhTamNhin.pageBanner %}
+{% for block in pageSuMenhTamNhin.blocks %}
+   {% partial 'blocks/' ~ str_slug(block.type) block=block %}
+{% endfor %}
+
+
+{# {% partial 'gioithieu/su-menh' %} #}

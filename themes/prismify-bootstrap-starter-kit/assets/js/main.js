@@ -116,7 +116,7 @@
       stagePadding: 50,
       margin: 25,
     //   loop: true,
-      center: true,
+      center: false,
       dots: false,
       nav: true,
       navText : [

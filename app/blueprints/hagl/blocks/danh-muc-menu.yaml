@@ -1,0 +1,19 @@
+uuid: 30929c69-3884-4154-a1b4-cf41269a93e8
+handle: Hagl\Blocks\DanhMucMenu
+type: mixin
+name: Menu danh mục link tới các section trong page
+
+fields:
+    menuItems:
+        label: Danh sách các menu
+        type: repeater
+        itemsExpanded: false
+        maxItems: 4
+        form:
+            fields:
+                idSection:
+                    label: Id của section cần link trong page
+                    type: text
+                noiDung:
+                    label: Nội dung 
+                    type: text

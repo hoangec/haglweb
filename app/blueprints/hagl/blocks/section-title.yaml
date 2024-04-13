@@ -10,4 +10,4 @@ fields:
         validation: "required"
     noiDung:
         label: Nội dung
-        type: text
+        type: textarea

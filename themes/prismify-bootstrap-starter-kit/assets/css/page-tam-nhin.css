@@ -1,0 +1,39 @@
+.fw-banner {
+  width: 100%;
+  img {
+    height: 600px;
+    filter: brightness(0.6);
+  }
+}
+.fw-banner .container {
+  position: relative;
+}
+.image-card-content {
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.image-card-content_box .border-all  {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  filter: brightness(0.7);
+}
+.image-card-content_box .border-left  {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  filter: brightness(0.7);
+}
+.image-card-content .image-card-content_box {
+  border-radius: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.image-card-content_box .image-card-content_noidung {
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 48px;
+}

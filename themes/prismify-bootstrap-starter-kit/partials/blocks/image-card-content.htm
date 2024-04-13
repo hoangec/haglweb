@@ -1,0 +1,35 @@
+<section class="image-card-content" id={{block.idSection}}>
+  <div class="container image-card-content_box" style="background-color: {{block.mauNen}};">
+    {% if block.mauNen == '#ffffff' %}
+      {% set theNoiDung = '<h3 class="fw-bolder fc-primary">'~ block.tuaDe ~'</h3><p>'~ block.noiDung~'</p>' %}
+      {% set theHinhAnh = ' <img class="img-fluid border-all " src="' ~ block.image|media ~ '" alt="' ~ block.tuaDe ~ '">' %}
+    {% else %}
+      {% set theHinhAnh = ' <img class="img-fluid border-left" src="' ~ block.image|media ~ '" alt="' ~ block.tuaDe ~ '">' %}
+      {% set theNoiDung = '<h3 class="fw-bolder text-white">'~ block.tuaDe ~'</h3><p class="text-white">'~ block.noiDung ~'</p>'%}
+    {% endif %}
+    <div class="row justify-content-center align-items-start g-0">
+      {% if block.vitriAnh == 'left' %}
+        <div class="col-lg-5">
+          {{theHinhAnh|raw}}
+        </div>
+        <div class="col-lg-7 image-card-content_noidung">
+          {{theNoiDung|raw}}
+        </div>
+      {% elseif block.vitriAnh == 'center' %}
+        <div class="col-lg-6">
+          {{theHinhAnh|raw}}
+        </div>
+        <div class="col-lg-6 image-card-content_noidung">
+          {{theNoiDung|raw}}
+        </div>
+      {% else %}
+         <div class="col-lg-7 image-card-content_noidung">
+          {{theNoiDung|raw}}
+        </div>
+        <div class="col-lg-5">
+           {{theHinhAnh|raw}}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

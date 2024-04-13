@@ -1,0 +1,22 @@
+<section class="catelogy-card">
+  <div class="container ">
+    <div class="row gx-5 gy-3 justify-content-center align-items-center">
+      {% for menuItem in block.menuItems %}
+        <div class="col-sm-12 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+                <a href="{{'#'~ menuItem.idSection}}" class="catelogy-item">
+                  <div class="d-flex align-items-center">
+                    <h3 class="card-title" >{{menuItem.noiDung}}</h3>
+                    <div class="widgets-icons">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

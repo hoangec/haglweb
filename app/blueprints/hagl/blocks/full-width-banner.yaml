@@ -1,0 +1,17 @@
+uuid: b5976ad7-0db5-4d14-ad3e-22b10e77122c
+handle: Hagl\Blocks\FullWidthBanner
+type: mixin
+name: Banner full chiều ngang
+
+fields:
+    bgImage:
+        label: Ảnh nền
+        type: mediafinder
+        mode: image
+        maxItems: 1
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea

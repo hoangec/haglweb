@@ -1,8 +1,8 @@
 name: HAGL
-description: 'HAGL Group'
-author: 'October CMS'
-homepage: 'http://octobercms.com'
-authorCode: ''
-code: ''
+description: 'Theme sử dụng cho website hagl'
+author: 'Hoang Vo'
+homepage: ''
+authorCode: hoangvo
+code: hoangvo-hagl
 parent: ''
 database: '0'

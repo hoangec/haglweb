@@ -53,6 +53,9 @@ p,li {
 .fc-blue {
   color:var(--blue);
 }
+.fc-primary {
+  color: var(--primary);
+}
 
 /*** Spinner ***/
 #spinner {

@@ -6,7 +6,7 @@ multisite: true
 
 navigation:
     parent: Hagl\HomePage
-    icon: icon-send
+    icon: icon-calendar
     order: 2
 
 validation:

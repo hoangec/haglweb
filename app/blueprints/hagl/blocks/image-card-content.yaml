@@ -1,0 +1,37 @@
+uuid: 296fe623-739a-4d9a-9f4f-e3a8ca368ed0
+handle: Hagl\Blocks\ImageCardBanner
+type: mixin
+name: Nội dung hiển thị ảnh với nội dung.
+
+fields:
+    idSection:
+        type: text
+        label: id cho section
+        comment: id này được sử dụng để link với Block Menu danh mục đầu trang
+    image:
+        label: Ảnh nền
+        type: mediafinder
+        mode: image
+        maxItems: 1
+    vitriAnh:
+        type: radio
+        label: Vị trí anh hiên thị trên section
+        default: left
+        options:
+            left: Bên trái
+            center: Chính giữa
+            right: Bên phải
+    mauNen:
+        label: màu nền
+        default: #ffffff
+        type: colorpicker
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-md-6
