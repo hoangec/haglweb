@@ -28,6 +28,8 @@ jobs:
           local-dir: ./themes/HAGL/
           server-dir: ./octobercms-files/themes/HAGL/
           port: 2121
+          exclude: |
+            **/assets/src/**
       - name: Dong bo file fu muc plugins
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
