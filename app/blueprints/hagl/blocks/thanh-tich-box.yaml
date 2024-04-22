@@ -1,13 +1,20 @@
-uuid: 7ac55141-17dc-45e8-8929-497d05059aba
-handle: Hagl\Blocks\VerticalTimeLines
+uuid: 7232298c-a25e-4311-826f-41794b0ac10b
+handle: Hagl\Blocks\ThanhTichBox
 type: mixin
-name: Block hiển thị nhật ký thời gian theo chiều dọc
+name: Block hiển thị thông tin page thành tích
 
 fields:
-   title:
+    tuaDe:
         label: Tựa đề
         type: text
-   timeLines:
+        span: row
+        spanClass: col-md-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-md-6
+    timeLines:
         label: Mốc thời gian
         type: repeater
         itemsExpanded: false
@@ -35,3 +42,4 @@ fields:
                 noiDung:
                     label: Nội dung 
                     type: richeditor
+

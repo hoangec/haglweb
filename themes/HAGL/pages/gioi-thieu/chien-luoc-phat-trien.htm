@@ -1,0 +1,27 @@
+url = "/gioi-thieu/chien-luoc-phat-trien"
+layout = "default"
+title = "Chiến lược phát triển"
+description = "Trang chiến lược phát triển"
+meta_title = "Trang chiến lược phát triển"
+meta_description = "Trang chiến lược phát triển"
+
+[section pageChienLuocPhatTrien]
+handle = "Hagl\ChienLuocPhatTrien"
+==
+{% set breadcrumbs = [
+    {
+        'name':'Về HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Chiến lược phát triển'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pageChienLuocPhatTrien.pageBanner type = "parallax-bg" %}
+
+{% for block in pageChienLuocPhatTrien.blocks %}
+   {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+{% endfor %}

@@ -1,0 +1,21 @@
+uuid: 539187c0-98ae-4a8f-97d5-30473001e6af
+handle: Hagl\GioiThieu\ChienLuoc\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page chiến lược phát triển
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            chien-luoc-phat-trien:
+                name: Block hiển thị nội dung chiến lược phát triển
+                description: Block hiển thị nội dung chiến lược phát triển
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\ChienLuocPhatTrienBox

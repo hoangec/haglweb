@@ -1,0 +1,29 @@
+uuid: d7d371fa-09b9-4735-9a74-279b8665425f
+handle: Hagl\GioiThieu\DonViThanhVien\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page đơn vị thành viên
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            don-vi-thanh-vien:
+                name: Block danh sách đơn vị thành viên
+                description: Hiển thị danh sách đơn vị thành viên
+                icon: icon-group
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DonViThanhVien
+            giatricotloi-style2-box:
+                name: Block hiển thị nội dung section giá trị cốt lõi style 2
+                description: Block hiển thị nội dung section giá trị cốt lõi 2
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\GiaTriCotLoiStyle2Box

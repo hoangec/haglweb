@@ -1,0 +1,63 @@
+uuid: cd39b95f-ec1a-4b9a-a181-48dff5598bd0
+handle: Hagl\Blocks\SanPhamBox
+type: mixin
+name: Hiển thị thông tin sản phẩm
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    tuaDeNhaMay:
+        label: Tựa đề cho mục nhà máy
+        type: text
+        span: row
+        spanClass: col-md-6
+    tuaDeThiTruong:
+        label: Tựa đề cho mục thị trường
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDungNhaMay:
+        label: Nội dung bên trong mục nhà máy
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDungThiTruong:
+        label: Nội dung bên trong mục thị trường
+        type: text
+        span: row
+        spanClass: col-md-6
+    dsSanPham:
+        label: Danh sách các sản phẩm
+        type: repeater
+        itemsExpanded: false
+        maxItems: 5
+        form:
+            fields:
+                tenSanPham:
+                    label: Tên sản phẩm
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                tuaDeSanPham:
+                    label: Từa đề sản phẩm
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                links:
+                    label: Đường dẫn liên kết
+                    type: pagefinder
+                    span: row
+                    spanClass: col-md-6
+                noiDung:
+                    label: Nội dung mô tả sản phẩm
+                    type: textarea
+                    span: row
+                    spanClass: col-md-6                
+                image:
+                    label: Ảnh sản phẩm
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    size: small
+    

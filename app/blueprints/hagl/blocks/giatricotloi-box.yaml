@@ -1,0 +1,46 @@
+uuid: 57c2499f-e80b-487e-807c-ca825c564185
+handle: Hagl\Blocks\GiaTriCotLoiBox
+type: mixin
+name: Block hiển thị thông tin giá trị cốt lõi
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-md-6
+    dauMuc1:
+        label: Tựa đề đầu mục 1
+        type: text
+        span: row
+        spanClass: col-md-4
+    dauMuc2:
+        label: Tựa đề đầu mục 2
+        type: text
+        span: row
+        spanClass: col-md-4
+    dauMuc3:
+        label: Tựa đề đầu mục 3
+        type: text
+        span: row
+        spanClass: col-md-4
+    noiDungdauMuc1:
+        label: Nội dung đầu mục 1
+        type: text
+        span: row
+        spanClass: col-md-4
+    noiDungdauMuc2:
+        label: Nội dung đầu mục 2
+        type: text
+        span: row
+        spanClass: col-md-4
+    noiDungdauMuc3:
+        label: Nội dung đầu mục 3
+        type: text
+        span: row
+        spanClass: col-md-4

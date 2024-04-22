@@ -1,0 +1,20 @@
+uuid: 7d1690f2-360b-4ae2-a9be-a0094fad6f7f
+handle: Hagl\DonViThanhVien
+type: single
+name: Trang đơn vị thành viên
+multisite: true
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-rocket
+    order: 2
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source: Hagl\GioiThieu\DonViThanhVien\BlockBuilder
+

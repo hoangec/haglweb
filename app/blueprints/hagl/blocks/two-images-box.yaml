@@ -1,0 +1,28 @@
+uuid: ee034353-eeb7-4501-b242-d7a665b7fcec
+handle: Hagl\Blocks\TwoImagesBox
+type: mixin
+name: Hiển thị banner với 2 ảnh
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung1:
+        label: Nội dung 1
+        type: text
+    noiDung2:
+        label: Nội dung 2
+        type: text
+    image1:
+        label: Chọn ảnh thứ 1 từ thư viện
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    image2:
+        label: Chọn ảnh thứ 2 từ thư viện
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+

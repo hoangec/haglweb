@@ -1,0 +1,101 @@
+uuid: a5744dac-2988-4c38-8ebb-529711be4af7
+handle: HAGL\PageSettings
+type: global
+name: Thiết lập cho web
+
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-magic
+    order: 10
+
+fields:
+    websiteLogo:
+        label: Logo website
+        tab: Cơ bản
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+
+    defaultBannerImage:
+        label: Ảnh mặc định cho các banner các page
+        tab: Cơ bản
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    _ruler1:
+        type: ruler
+        label: Văn phòng điều hành
+        tab: Liên hệ
+    tenCongTy:
+        label: Tên công ty
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    diaChi:
+        label: Địa chỉ
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    dienThoai:
+        label: Điện thoại
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    email:
+        label: Email
+        tab: Liên hệ
+        type: email
+        span: row
+        spanClass: col-6
+    web:
+        label: Website
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    googleMap:
+        label: Link Google maps
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    _ruler2:
+        type: ruler
+        label: Văn phòng đại diện
+        tab: Liên hệ
+    tenVanPhong:
+        label: Tên văn phòng
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    diaChiVanPhong:
+        label: Địa chỉ
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    dienThoaiVanPhong:
+        label: Điện thoại
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    emailVanPhong:
+        label: Email
+        tab: Liên hệ
+        type: email
+        span: row
+        spanClass: col-6
+    googleMapVanPhong:
+        label: Link Google maps
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6

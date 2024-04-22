@@ -1,0 +1,46 @@
+uuid: b7047db0-081d-4bfe-be23-484eb23e3d14
+handle: Hagl\Blocks\DonViThanhVien
+type: mixin
+name: Block đơn vị thành viên
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    dsDonVi:
+        label: Danh sách các đơn vị thành viên
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                image:
+                    label: Ảnh đại diện
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    size: small
+                tenCongTy:
+                    label: Tên công ty
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                moTaCongTy:
+                    label: Mô tả
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                quocGia:
+                    type: dropdown
+                    label: Quốc gia
+                    default: VN
+                    options:
+                        VN: Việt Nam
+                        LAO: Lào
+                        CAM: Campuchia
+                linhVuc:
+                    type: dropdown
+                    label: Lĩnh vực
+                    default: NN
+                    options:
+                        NN: Nông nghiệp
+                        KH: Khác

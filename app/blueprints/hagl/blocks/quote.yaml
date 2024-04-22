@@ -1,0 +1,18 @@
+uuid: 4a129396-bd77-45bd-90fc-672b7ddffdb9
+handle: Hagl\Blocks\Quote
+type: mixin
+name: Hiển thị câu trích dẫn
+
+fields:
+    tacGia:
+        label: Tác giả
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea
+    image:
+        label: Ảnh minh hoạ
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small

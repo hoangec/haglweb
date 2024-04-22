@@ -1,0 +1,33 @@
+uuid: 5ccf767b-e05c-4f56-b0f6-fa0acdc6da47
+handle: Hagl\Blocks\NganhNgeBox
+type: mixin
+name: Hiển thị thông tin ngành nghề
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-md-6
+    dsNganhNghe:
+        label: Danh sách các ngành nghề
+        type: repeater
+        itemsExpanded: false
+        maxItems: 5
+        form:
+            fields:
+                tenNganhNghe:
+                    label: Tên ngành nghề
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                noiDung:
+                    label: Nội dung ngành nghề
+                    type: textarea
+                    span: row
+                    spanClass: col-md-6

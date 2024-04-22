@@ -1,0 +1,15 @@
+uuid: e1580033-afe5-4a8a-9551-dae076cc6e74
+handle: Hagl\Blocks\Marquee
+type: mixin
+name: Hiển thị dòng chạy nội dung
+
+fields:
+    noiDung:
+        label: Nội dung chữ
+        type: text
+    image:
+        label: Nội dung ảnh
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small

@@ -1,0 +1,22 @@
+uuid: 52ceae28-ea4b-4067-a9b9-fc8f7f01070d
+handle: Hagl\Blocks\PrallaxScrollVideo
+type: mixin
+name: Hiển thị banner với video
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: text
+    videoLink:
+        label: Links video
+        type: text
+    image:
+        label: Chọn ảnh từ thư viện
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    

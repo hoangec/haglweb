@@ -1,0 +1,120 @@
+/* ===================================
+   HAGL Style header
+====================================== */
+.hagl-header {
+    position: relative;
+    width: 93%;
+    top: 0px;
+    z-index: 9999;
+    padding-left:  0px !important;
+    padding-right: 0px !important;
+}
+.hagl-header .navbar {
+    position:  relative !important;
+}
+header.sticky.sticky-active .hagl-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+}
+.hagl-navbar {
+    background-color: #fff;
+    width: 100%;
+    position: absolute !important;
+    top: 16px !important;
+    left: 0;
+    z-index: 999;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    .navbar {
+        border-bottom-left-radius: .5rem ;
+        border-bottom-right-radius: .5rem;
+    }
+}
+
+/*--- top menu --*/
+.top-menu {
+    position: relative;
+    top: 0;
+  }
+.top-menu-span {
+    background-color: var(--base-color);
+    transition: background-color 0.3s ease;
+}
+
+.top-menu-svg {
+    color: var(--base-color);
+    transition: color 0.3s ease;
+}
+.top-menu .nav-link:hover svg {
+    color: var(--secondary-color);
+  }
+
+.top-menu .nav-link:hover span {
+    background-color: var(--secondary-color);
+}
+/* ------------end top menu -------------*/
+
+.hagl-nav .main-menu-navbar .nav-item .nav-link {
+    color: var(--black) !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+.hagl-nav .main-menu-navbar .nav-link:hover {
+    color: var(--base-color);
+}
+
+.main-menu-navbar .multi-column-dropdown li {
+    padding: 5px;
+    a {
+        font-weight: 500 !important;
+        color: var(--dark-gray) !important;
+        opacity: 1 !important;
+    }
+}
+
+.main-menu-navbar .multi-column-dropdown li:hover {
+    background-color: var(--secondary-color);
+    color: var(--base-color) !important;
+    border-radius: .5rem ;
+    a {
+        color: var(--base-color) !important;
+    }
+}
+@media (min-width: 768px) {
+    .main-menu-navbar .nav-item {
+        margin-bottom: -7px;
+    }
+    .main-menu-navbar .multi-column-dropdown {
+        padding: 20px 20px 20px !important;
+        display: none;
+        border-radius: 0.5rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-menu-navbar .multi-column-dropdown {
+        padding: 0 !important;
+        display: none;
+        .col {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+    .hagl-navbar .navbar {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+    .main-menu-navbar .multi-column-dropdown li {
+        padding: 7px !important;
+    }
+    .hagl-nav .navbar-collapse.show {
+        margin-top: 5px !important;
+    }
+}
+

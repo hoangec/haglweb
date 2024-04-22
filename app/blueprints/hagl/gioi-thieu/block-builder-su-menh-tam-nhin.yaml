@@ -43,11 +43,35 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\ImageCardBanner
-            fw_banner:
-                name: Block hiển thị banner ảnh nền full width
-                description: Hiển thị banner voi ảnh nền full chiều rộng
+            sumenh-box:
+                name: Block hiển thị nội dung section sứ mệnh
+                description:  Block hiển thị nội dung section sứ mệnh
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
-                        source: Hagl\Blocks\FullWidthBanner
+                        source: Hagl\Blocks\SuMenhBox
+            tamnhin-box:
+                name: Block hiển thị nội dung section tầm nhìn
+                description: Block hiển thị nội dung section tầm nhìn
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TamNhinBox
+            giatricotloi-box:
+                name: Block hiển thị nội dung section giá trị cốt lõi
+                description: Block hiển thị nội dung section giá trị cốt lõi
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\GiaTriCotLoiBox
+            giatricotloi-style2-box:
+                name: Block hiển thị nội dung section giá trị cốt lõi style 2
+                description: Block hiển thị nội dung section giá trị cốt lõi 2
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\GiaTriCotLoiBox

@@ -1,0 +1,19 @@
+{% set index = 1 %}
+<section class="pt-15px pb-15px border-bottom border-color-extra-medium-gray bg-very-light-gray ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 breadcrumb breadcrumb-style-01 fs-15">
+                <ul>
+                     {% for page in pages %}
+                        {% if not loop.last %}
+                            <li><a href="{{page.url}}">{{page.name}}</a></li>
+                        {% else %}
+                            <li>{{page.name}}</li>
+                        {% endif %}
+                        {% set index = loop.index + 1 %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

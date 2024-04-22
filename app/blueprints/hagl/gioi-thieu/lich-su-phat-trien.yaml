@@ -9,14 +9,6 @@ navigation:
     icon: icon-calendar
     order: 2
 
-validation:
-    attributeNames:
-        blockBuilder: sectionTitle
-    customMessages:
-        sectionTitle.required: "Yêu cầu nhập liệu cho tựa đề section"
-    rules:
-        sectionTitle: "required"
-
 fields:
     pageSetting:
         type: mixin
@@ -24,5 +16,5 @@ fields:
         source: HAGLFields/PageBanner
     blockBuilder:
         type: mixin
-        source: HaglBlockBuilder
+        source:  Hagl\GioiThieu\LichSu\BlockBuilder
 

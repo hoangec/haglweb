@@ -1,0 +1,26 @@
+url = "/gioi-thieu/lich-su-phat-trien"
+layout = "default"
+title = "Lịch sử phát triển HAGL"
+description = "Trang nội dung lịch sử phát triển HAGL"
+meta_title = "Trang nội dung lịch sử phát triển HAGL"
+meta_description = "Trang nội dung lịch sử phát triển HAGL"
+
+[section lichSuPhatTrienPage]
+handle = "Hagl\LichSuPhatTrien"
+==
+{% set breadcrumbs = [
+    {
+        'name':'Về HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Lịch sử phát triển'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = lichSuPhatTrienPage.pageBanner type = "parallax-bg" %}
+{% for block in lichSuPhatTrienPage.blocks %}
+   {% partial 'blocks/' ~ str_slug(block.type) block=block %}
+{% endfor %}

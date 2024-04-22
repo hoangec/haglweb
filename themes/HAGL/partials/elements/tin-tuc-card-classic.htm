@@ -1,0 +1,11 @@
+ <div class="card bg-transparent border-0  h-100">
+    <div class="blog-image position-relative overflow-hidden border-radius-4px">
+        <a href="{{'tin-tuc'|page({ slug: tinTuc.slug })}}"><img src="{{tinTuc.banner.path}}" alt="" /></a>
+    </div>
+    <div class="card-body px-0 pt-30px pb-30px">
+        <span class="fs-13 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Business </a><a href="#" class="blog-date text-dark-gray-hover">{{ tinTuc.published_at_date|date('j/m/Y') }}</a></span>
+        <a href="#" class="card-title mb-15px alt-font fw-500 lh-30 text-dark-gray d-inline-block w-95">{{tinTuc.title}}</a>
+        <p class="mb-15px w-95">{{ tinTuc.featured_text }}</p>
+        <a href="#" class="card-link alt-font fs-13 text-uppercase text-base-color fw-500">More reading<i class="bi bi-arrow-right icon-small"></i></a>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+uuid: f507fd4e-de11-4359-a72c-00af24c3de54
+handle: Hagl\ThanhTichNoiBat
+type: single
+name: Trang thành tích nổi bật
+multisite: true
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-rocket
+    order: 2
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source: Hagl\GioiThieu\ThanhTich\BlockBuilder
+

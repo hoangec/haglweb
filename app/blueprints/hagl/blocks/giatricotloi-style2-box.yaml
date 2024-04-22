@@ -1,0 +1,67 @@
+uuid: 3ad77743-5c98-4782-9645-1f1f6dbb71fb
+handle: Hagl\Blocks\GiaTriCotLoiStyle2Box
+type: mixin
+name: Block hiển thị thông tin giá trị cốt lõi style 2
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-md-6
+    dauMuc1:
+        label: Tựa đề đầu mục 1
+        type: text
+        span: row
+        spanClass: col-md-4
+    dauMuc2:
+        label: Tựa đề đầu mục 2
+        type: text
+        span: row
+        spanClass: col-md-4
+    dauMuc3:
+        label: Tựa đề đầu mục 3
+        type: text
+        span: row
+        spanClass: col-md-4
+    noiDungdauMuc1:
+        label: Nội dung đầu mục 1
+        type: text
+        span: row
+        spanClass: col-md-4
+    noiDungdauMuc2:
+        label: Nội dung đầu mục 2
+        type: text
+        span: row
+        spanClass: col-md-4
+    noiDungdauMuc3:
+        label: Nội dung đầu mục 3
+        type: text
+        span: row
+        spanClass: col-md-4
+    imageDauMuc1:
+        label: Chọn ảnh cho đầu mục 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    imageDauMuc2:
+        label: Chọn ảnh cho đầu mục 2
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    imageDauMuc3:
+        label: Chọn ảnh cho đầu mục 3
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+
+
+

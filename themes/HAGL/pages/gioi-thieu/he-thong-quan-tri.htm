@@ -1,0 +1,27 @@
+url = "/gioi-thieu/he-thong-quan-tri"
+layout = "default"
+title = "Hệ thống quản trị"
+description = "Trang hệ thốngg quản trị HAGL"
+meta_title = "Trang hệ thốngg quản trị HAGL"
+meta_description = "Trang hệ thốngg quản trị HAGL"
+
+[section pageHeThongQuanTri]
+handle = "Hagl\HeThongQuanTri"
+==
+{% set breadcrumbs = [
+    {
+        'name':'Về HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Hệ thống quản trị'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pageHeThongQuanTri.pageBanner type = "parallax-bg" %}
+
+{% for block in pageHeThongQuanTri.blocks %}
+   {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+{% endfor %}

@@ -1,0 +1,20 @@
+[staticMenu mainMenu]
+code = "mainmenu"
+==
+{% for item in mainMenu.menuItems %}
+    {% if item.items|length  > 0  %}
+        {% if item.code == 'basic-menu' %}
+            {% partial 'app/nav-styles/basic-menu' item = item%}
+        {% elseif item.code == 'simple-menu' %}
+            {% partial 'app/nav-styles/simple-menu' item = item %}
+        {% elseif item.code == 'multi-column-menu' %}
+            {% partial 'app/nav-styles/multi-column-menu' item = item %}
+        {% elseif item.code == 'mega-menu' %}
+            {% partial 'app/nav-styles/mega-menu' item = item %}
+        {% endif %}
+    {% else %}
+        <li class="nav-item ">
+          <a class="nav-link" href="{{item.url}}">{{item.title}}</a>
+        </li>
+    {% endif %}
+{% endfor %}

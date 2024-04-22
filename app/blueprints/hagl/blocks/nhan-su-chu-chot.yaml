@@ -4,6 +4,9 @@ type: mixin
 name: Block danh sách nhân sự
 
 fields:
+    tuaDe:
+        label: Tựa đề
+        type: text        
     lanhDao:
         label: Thông tin lãnh đạo
         type: nestedform

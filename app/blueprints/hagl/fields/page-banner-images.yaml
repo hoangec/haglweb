@@ -1,0 +1,23 @@
+uuid: e332f63c-9f38-4f72-81bf-05ffa5bd9ca1
+handle: HAGLFields/PageBannerImageGalerry
+type: mixin
+name: Fields cho Image Gallery
+
+fields:
+    pageBanner:
+        label: Thông tin cho page banner
+        tab: Cấu hình page banner
+        type: nestedform
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                noiDung:
+                    label: Nội dung
+                    type: textarea
+                images:
+                    label: Danh sách ảnh
+                    type: mediafinder
+                    mode: image
+                    maxItems: 5

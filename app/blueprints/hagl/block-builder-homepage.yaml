@@ -1,0 +1,119 @@
+uuid: ae3dcccc-c30b-4ddd-bdd7-f960cd771105
+handle:  Hagl\HomePage\BlockBuilder
+type: mixin
+name: Block builder cho home page
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            page_title:
+                name: Tựa  đề cho mỗi section
+                description: Hiển thị nôi dung tựa đề ở giữ page có dấu gạch
+                icon: icon-text-h1
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\PageTitle
+            section_title:
+                name: Block tựa đề
+                description: hiên thị nôi dung tựa đề
+                icon: icon-text-h1
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SectionTitle
+            tintuc-card:
+                name: Block hiên thị tin tức mới nhất
+                description: Hiên thị 3 tin tức mới nhất dạng thẻ
+                icon: icon-text-code-block
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TinTucCard
+            sukien-card:
+                name: Block hiên thị tin các sự kiện
+                description: Hiên thị 3 sự kiện mới nhất từ danh sách
+                icon: icon-calendar-3
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SuKienCard
+            prallax-scroll-video:
+                name: Block hiên thị banner video
+                description: Block hiên tị banner video
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\PrallaxScrollVideo
+            two-images-box:
+                name: Block hiên thị box có hai ảnh
+                description: Block hiên thị box có hai ảnh
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TwoImagesBox
+            counter-box:
+                name: Block hiên thị số liệu
+                description: Block hiên thị số liệu
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\CounterBox
+            quote:
+                name: Block hiên thị trích dẫn câu nói
+                description:  Block hiên thị trích dẫn câu nói
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\Quote
+            marquee:
+                name: Block hiên thị nội dung chạy
+                description: Block hiên thị nội dung chạy
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\Marquee
+            sanpham-box:
+                name: Block hiên thị thông tin sản phẩm
+                description: Block hiên thị thông tin sản phẩm
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SanPhamBox
+            nganhnghe-box:
+                name: Block hiên thị thông tin ngành nghề
+                description: Block hiên thị thông tin ngành nghề
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\NganhNgeBox
+            codong-box:
+                name: Block hiên thị thông tin cổ đông
+                description: Block hiên thị thông tin cổ đông
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\CoDongBox
+            lienhe-box:
+                name: Block hiên thị thông tin liên hệ
+                description: Block hiên thị thông tin liên hệ
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\LienHeBox
+
+

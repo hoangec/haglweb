@@ -1,0 +1,37 @@
+uuid: ee588f79-261b-4a1e-896a-33f0b3797921
+handle: Hagl\Blocks\HeThongQuanTri
+type: mixin
+name: Hiển thị thông tin hệ thống quản trị
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea
+    image:
+        label: Ảnh nền
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    imageMinhHoa1:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    imageMinhHoa2:
+        label: Ảnh minh hoạ 2
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    imageSoDo:
+        label: Ảnh sở đồ hệ thống quản trị
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+

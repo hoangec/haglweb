@@ -1,0 +1,21 @@
+url = "/"
+layout = "default"
+title = "Home"
+description = "Trang chủ HAGL"
+meta_title = "HAGL Group"
+meta_description = "HAGL Group"
+
+[collection dsTinTuc]
+handle = "Blog\Post"
+
+[Files filesCodong]
+category = "cong-bo-thong-tin"
+order = "created_at asc"
+
+[section haglHomePage]
+handle = "Hagl\HomePage"
+==
+{% partial 'app/page-title' pageBanner = haglHomePage.pageBanner type = "gallery-bg" %}
+{% for block in haglHomePage.blocks %}
+   {% partial 'blocks/' ~ str_slug(block.type) block=block %}
+{% endfor %}

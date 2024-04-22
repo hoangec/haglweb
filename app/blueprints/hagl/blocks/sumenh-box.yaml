@@ -1,0 +1,32 @@
+uuid: 5d4a73e4-86ce-477e-8852-3c2f3ebfdd1d
+handle: Hagl\Blocks\SuMenhBox
+type: mixin
+name: Block hiển thị thông tin sứ mệnh
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-md-6
+    image1:
+        label: Ảnh 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+    image2:
+        label: Ảnh 2
+        type: mediafinder
+        mode: image
+        maxItems: 1
+    image3:
+        label: Ảnh 3
+        type: mediafinder
+        mode: image
+        maxItems: 1
+

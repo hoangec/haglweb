@@ -1,0 +1,19 @@
+uuid: acce24bb-a981-409b-80c3-209de852e7f7
+handle: Hagl\ChienLuocPhatTrien
+type: single
+name: Trang chiến lược phát triển
+multisite: true
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-rocket
+    order: 2
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source: Hagl\GioiThieu\ChienLuoc\BlockBuilder

@@ -1,0 +1,21 @@
+uuid: f9885af0-6298-4f3c-b822-760416150f95
+handle: Hagl\Blocks\TamNhinBox
+type: mixin
+name: Block hiển thị thông tin tầm nhìn
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-md-6
+    image:
+        label: Ảnh nền
+        type: mediafinder
+        mode: image
+        maxItems: 1

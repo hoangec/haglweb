@@ -1,0 +1,19 @@
+uuid: 9db8f865-3e26-481f-ab56-a04af9e05303
+handle: Hagl\Blocks\LienHeBox
+type: mixin
+name: Hiển thị thông tin liên hệ
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea
+    image:
+        label: Ảnh nền
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    

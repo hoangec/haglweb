@@ -1,0 +1,77 @@
+<section class="bg-gradient-very-light-gray">
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <h2 class="fw-700 text-primary ls-minus-1px mb-25px d-block">{{block.tuaDe}}</h2>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center g-0" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            {% for mocThoiGian in block.timeLines %}
+            <div class="col process-step-style-06 text-center last-paragraph-no-margin hover-box md-mb-50px">
+                <h4 class="d-block text-dark-gray mb-0 fw-700 ls-minus-2px">{{mocThoiGian.mocThoiGian}}</h4>
+                <div class="process-step-icon-box position-relative mt-25px mb-25px">
+                    <span class="progress-step-separator bg-dark-gray w-100 separator-line-1px opacity-1"></span>
+                    <div class="step-box d-flex align-items-center justify-content-center bg-white box-shadow-medium-bottom border-radius-100 mx-auto w-30px h-30px">
+                        <span class="w-8px h-8px bg-base-color border-radius-100"></span>
+                    </div>
+                </div>
+                 <div class="d-inline-block position-relative overflow-hidden progress-image w-100">
+                    <img src="{{mocThoiGian.image|media}}" alt="">
+                </div>
+                <span class="d-inline-block fw-600 text-dark-gray fs-18 mb-5px">{{mocThoiGian.tuaDeChinh}}</span>
+                <p class="w-75 sm-w-85 d-inline-block ">{{mocThoiGian.tuaDePhu}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="pt-0">
+    <div class="container">
+        <div class="bg-base-color border-radius-100px pt-4 pb-4 sm-pt-10 sm-pb-10 ps-6 pe-6 xl-ps-4 xl-pe-4">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-xl-3 lg-mb-25px text-center text-xl-start">
+                    <h6 class="text-white fw-600 mb-0">HAGL <span class="highlight-separator" data-shadow-animation="true" data-animation-delay="500">Group </span></h6>
+                </div>
+                <div class="col-xl-9">
+                    <p>Thông tin nội dung 1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-0 big-section overflow-hidden">
+    <div class="container">
+        <div class="row mb-6 sm-mb-50px">
+            <div class="col-md-12 text-center text-md-start" data-anime='{"opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <div class="fs-140 xxl-fs-100 sm-fs-60 fw-600 text-primary alt-font ls-minus-6px sm-ls-minus-2px" data-bottom-top="transform: translate3d(-50px, 0px, 0px);" data-top-bottom="transform: translate3d(50px, 0px, 0px);">Những con số</div>
+            </div>
+        </div>
+        <div class="row g-0 counter-style-04" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="col-lg-3 col-md-6 feature-box text-start hover-box border-start sm-border border-color-extra-medium-gray ps-35px pe-35px pt-25px pb-25px lg-ps-25px lg-pe-25px md-ps-35px md-pe-35px md-mb-50px sm-mb-30px">
+                <div class="feature-box-content">
+                    <p class="text-dark-gray mb-20 sm-mb-10 fw-500 w-90 fs-17 lh-28">Thành tích 1</p>
+                    <h2 class="vertical-counter d-inline-flex text-dark-gray fw-700 ls-minus-2px mt-25 mb-0 ls-minus-1px" data-text="+" data-to="8500"><sup class="text-jade top-0"><i class="feather icon-feather-arrow-up icon-extra-medium"></i></sup></h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-box text-start hover-box border-start sm-border border-color-extra-medium-gray md-border-end ps-35px pe-35px pt-25px pb-25px lg-ps-25px lg-pe-25px md-mb-50px sm-mb-30px">
+                <div class="feature-box-content">
+                    <p class="text-dark-gray mb-20 sm-mb-10 fw-500 w-90 fs-17 lh-28">Thành tích 2 </p>
+                    <h2 class="vertical-counter d-inline-flex text-dark-gray fw-700 ls-minus-2px mt-25 mb-0 ls-minus-1px" data-text="+" data-to="660"><sup class="text-jade top-0"><i class="feather icon-feather-arrow-up icon-extra-medium"></i></sup></h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-box text-start hover-box border-start sm-border border-color-extra-medium-gray ps-35px pe-35px pt-25px pb-25px lg-ps-25px lg-pe-25px sm-mb-30px">
+                <div class="feature-box-content">
+                    <p class="text-dark-gray mb-20 sm-mb-10 fw-500 w-90 fs-17 lh-28">Thanh tích 3</p>
+                    <h2 class="vertical-counter d-inline-flex text-dark-gray fw-700 ls-minus-2px mt-25 mb-0 ls-minus-1px" data-text="+" data-to="6834"><sup class="text-jade top-0"><i class="feather icon-feather-arrow-up icon-extra-medium"></i></sup></h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-box text-start hover-box border-start sm-border border-color-extra-medium-gray md-border-end ps-35px pe-35px pt-25px pb-25px lg-ps-25px lg-pe-25px">
+                <div class="feature-box-content">
+                    <p class="text-dark-gray mb-20 sm-mb-10 fw-500 w-90 fs-17 lh-28">Thanh tích 3</p>
+                    <h2 class="vertical-counter d-inline-flex text-dark-gray fw-700 ls-minus-2px mt-25 mb-0 ls-minus-1px" data-text="%" data-to="38"><sup class="text-jade top-0"><i class="feather icon-feather-arrow-up icon-extra-medium"></i></sup></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

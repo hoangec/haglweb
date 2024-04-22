@@ -1,0 +1,25 @@
+uuid: 21e1b396-2a7f-4df9-9aec-b355d3a19959
+handle: Hagl\Blocks\CounterBox
+type: mixin
+name: Hiển thị 3 cột số liệu
+
+fields:
+    tuaDe1:
+        label: Tựa đề cột 1
+        type: text
+    noiDung1:
+        label: Số liệu cột 1
+        type: text
+    tuaDe2:
+        label: Tựa đề cột 2
+        type: text
+    noiDung2:
+        label: Nội dung 2
+        type: text
+    tuaDe3:
+        label: Tựa đề cột 3
+        type: text
+    noiDung3:
+        label: Nội dung 3
+        type: text
+

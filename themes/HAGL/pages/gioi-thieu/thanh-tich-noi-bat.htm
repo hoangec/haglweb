@@ -1,0 +1,27 @@
+url = "/gioi-thieu/thanh-tich-noi-bat"
+layout = "default"
+title = "Thành tích nổi bật"
+description = "Trang thành tích nổi bật HAGL"
+meta_title = "Trang thành tích nổi bật HAGL"
+meta_description = "Trang thành tích nổi bật HAGL"
+
+[section pageThanhTichNoiBat]
+handle = "Hagl\ThanhTichNoiBat"
+==
+{% set breadcrumbs = [
+    {
+        'name':'Về HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Thành tích nổi bật'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pageThanhTichNoiBat.pageBanner type = "parallax-bg" %}
+
+{% for block in pageThanhTichNoiBat.blocks %}
+   {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+{% endfor %}

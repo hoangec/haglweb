@@ -1,0 +1,37 @@
+uuid: 7eaeec1b-50bb-407d-9c66-eeea1cd8e358
+handle: Hagl\GioiThieu\ThanhTich\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page thành tích nổi bật
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            danhmuc_menu:
+                name: Block hiển thị menu danh mục đầu trang
+                description: Hiển thị menu để link đến các nội dung con trên page
+                icon: icon-reorder
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DanhMucMenu
+            image_card_content:
+                name: Block hiển thị ảnh cùng nội dung
+                description: Hiển thị anh vơi vị trí trái hoặc phải
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\ImageCardBanner
+            thanh-tich-box:
+                name: Block hiển thị thành tích
+                description: Block hiển thị thành tích
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\ThanhTichBox

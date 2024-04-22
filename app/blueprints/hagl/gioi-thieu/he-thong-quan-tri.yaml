@@ -1,0 +1,20 @@
+uuid: 24513796-a6ec-4b15-8746-8dfd0d5dcf87
+handle: Hagl\HeThongQuanTri
+type: single
+name: Trang hệ thống quản trị
+multisite: true
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-rocket
+    order: 2
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source: Hagl\GioiThieu\HeThongQuanTri\BlockBuilder
+

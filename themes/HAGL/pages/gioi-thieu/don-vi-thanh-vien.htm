@@ -1,0 +1,26 @@
+url = "/gioi-thieu/don-vi-thanh-vien"
+layout = "default"
+title = "Đơn vị thành viên"
+description = "Trang nội dung đơn vị thành viên HAGL"
+meta_title = "Trang nội dung đơn vị thành viên HAGL"
+meta_description = "Trang nội dung đơn vị thành viên HAGL"
+
+[section pageDonViThanhVien]
+handle = "Hagl\DonViThanhVien"
+==
+{% set breadcrumbs = [
+    {
+        'name':'Về HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Đơn vị thành viên'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pageDonViThanhVien.pageBanner type = "parallax-bg" %}
+{% for block in pageDonViThanhVien.blocks %}
+   {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+{% endfor %}

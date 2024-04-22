@@ -1,5 +1,5 @@
 uuid: 4973e93d-0a2d-4392-8681-ce75ed3ce55d
-handle: HaglBlockBuilder
+handle: Hagl\GioiThieu\LichSu\BlockBuilder
 type: mixin
 name: Hagl Block Builder
 

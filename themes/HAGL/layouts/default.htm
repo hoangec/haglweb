@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.meta_title }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="{{ this.theme.config.author }}">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.ico'|theme }}">
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="{{'assets/css/vendors.min.css'|theme}}"/>
+    <link rel="stylesheet" href="{{'assets/css/icon.min.css'|theme}}"/>
+    <link rel="stylesheet" href="{{'assets/css/style.css'|theme}}"/>
+    <link rel="stylesheet" href="{{'assets/css/responsive.css'|theme}}"/>
+    <link rel="stylesheet" href="{{'assets/css/hagl.css'|theme}}"/>
+</head>
+    <body data-mobile-nav-style="classic"  class="app {{ 'layout-'~this.layout.id }} {{ 'page-'~this.page.id }}">
+        <div class="page-loader"></div>
+        {% partial 'app/header' %}
+        {% partial 'app/content' %}
+        {% partial 'app/footer' %}
+        {% partial 'app/scroll-top'%}
+        <!-- Template Javascript -->
+        <script type="text/javascript" src="{{'assets/js/jquery.js'|theme}}"></script>
+        <script type="text/javascript" src="{{'assets/js/vendors.min.js'|theme}}"></script>
+        <script type="text/javascript" src="{{'assets/js/main.js'|theme}}"></script>
+     </body>
+</html>

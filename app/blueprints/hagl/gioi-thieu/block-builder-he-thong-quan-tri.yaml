@@ -1,0 +1,21 @@
+uuid: 96f66d45-cd28-495e-abe3-6410b1a7f916
+handle: Hagl\GioiThieu\HeThongQuanTri\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page hệ thống quản trị
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            he-thong-quan-tri:
+                name: Block hiển thị thông tin sơ đồ hệ thống quản trị
+                description: Block hiển thị thông tin sơ đồ hệ thống quản trị
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\HeThongQuanTri

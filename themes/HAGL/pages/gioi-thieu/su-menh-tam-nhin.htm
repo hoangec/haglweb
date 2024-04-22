@@ -1,0 +1,29 @@
+url = "/gioi-thieu/su-menh-tam-nhin"
+layout = "default"
+title = "Sứ mệnh và tầm nhìn"
+description = "Trang nội dung sứ mệnh và tầm nhìn HAGL"
+meta_title = "Trang nội dung sứ mệnh và tầm nhìn HAGL"
+meta_description = "Trang nội dung sứ mệnh và tầm nhìn HAGL"
+
+
+[section pageSuMenhTamNhin]
+handle = "Hagl\SuMenhTamNhin"
+==
+{% set breadcrumbs = [
+    {
+        'name':'Về HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Sứ mệnh tầm nhìn'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = lichSuPhatTrienPage.pageBanner type = "parallax-bg" %}
+
+{% for block in pageSuMenhTamNhin.blocks %}
+   {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+{% endfor %}
+

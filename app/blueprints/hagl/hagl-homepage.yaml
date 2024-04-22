@@ -15,45 +15,11 @@ navigation:
     order: 1
 
 fields:
-    main_banner:
-        label: Ảnh banner chính
-        tab: Mục ảnh banner
-        type: repeater
-        displayMode: builder
-        form:
-            fields:
-                image:
-                    label: Image
-                    type: mediafinder
-                    mode: image
-                    maxItems: 1
-                noi_dung1:
-                    label: Nội dung 1
-                    type: text
-                noi_dung2:
-                    label: Nội dung 2
-                    type: text                  
-    banner_events:
-        type: nestedform
-        showPanel: false
-        tab: Mục banner sự kiện
-        label: Thiết lập nôi dung banner sự kiện
-        form:
-            fields:
-                tuaDe:
-                    label: Tựa đề
-                    type: text
-                moTa:
-                    label: Mô tả 
-                    type: text
-                anhNen:
-                    label: Ảnh nền
-                    type: mediafinder
-                    mode: image
-                    maxItems: 1
-                videoLink:
-                    label: Link video
-                    type: text
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBannerImageGalerry
+    blockBuilder:
+        type: mixin
+        source: Hagl\HomePage\BlockBuilder
 
-    
-                

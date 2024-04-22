@@ -66,6 +66,20 @@ gulp.task('vendors', function(){
     }))
 });
 
+gulp.task('hagl', function() {
+	return src(['assets/src/scss/hagl.scss'])
+			.pipe(sourcemaps.init())
+			.pipe(sass())
+			.pipe(dest('assets/css')) // concatinated css file
+			.pipe(concat('hagl.min.css')) // concatinated css file sass/style.scss
+			.pipe(minifyCSS({processImport: false}))
+			.pipe(sourcemaps.write('.'))
+			.pipe(dest('assets/css')) // minified css file css/style.min.css
+			.pipe(browserSync.reload({
+			stream: true // watched by BrowserSync
+			}))
+	});
+
 // Gulp-concat & gulp-uglify
 gulp.task('concat-vendors', function () {
   src([
@@ -94,8 +108,9 @@ gulp.task('concat-vendors', function () {
 // });
 
 // Gulp watch
-gulp.task('default', gulp.parallel('sass','icon','vendors','concat-vendors','responsive', function (done){
+gulp.task('default', gulp.parallel('sass','icon','vendors','concat-vendors','responsive','hagl', function (done){
   gulp.watch('assets/src/scss/**/*.scss').on('change', gulp.series('sass'));
+  gulp.watch('assets/src/scss/hagl/*.scss').on('change', gulp.series('hagl'));
   gulp.watch('assets/src/scss/icon/*.scss').on('change', gulp.series('icon'));
   gulp.watch('assets/src/scss/vendors/**/*.scss').on('change', gulp.series('vendors'));
   gulp.watch('assets/src/js/vendors/*.js').on('change', gulp.series('concat-vendors'));

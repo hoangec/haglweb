@@ -1,0 +1,190 @@
+items:
+    -
+        title: 'Về HAGL'
+        nesting: null
+        type: header
+        url: null
+        code: multi-column-menu
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Lịch sử phát triển'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: gioi-thieu/lich-su-phat-trien
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Sứ mệnh và tầm nhìn'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: gioi-thieu/su-menh-tam-nhin
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Chiến lược phát triển'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: gioi-thieu/chien-luoc-phat-trien
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Hệ thống quản trị'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: gioi-thieu/he-thong-quan-tri
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Nhân sự chủ chốt'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: gioi-thieu/nhan-su-chu-chot
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Đơn vị thành viên'
+                type: cms-page
+                code: ''
+                reference: gioi-thieu/don-vi-thanh-vien
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Thành tích nổi bật'
+                type: cms-page
+                code: ''
+                reference: gioi-thieu/thanh-tich-noi-bat
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Sản phẩm'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Phát triển bền vững'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Cổ đông'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Truyền thông'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Bóng đá'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Tuyển dụng'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Liên hệ'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: mainMenu
