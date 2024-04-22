@@ -7,6 +7,7 @@ multisite: true
 primaryNavigation:
     label: HAGL
     icon: icon-app-window
+    # iconSvg: modules/tailor/assets/images/blog-icon.svg
     order: 120
 
 navigation:

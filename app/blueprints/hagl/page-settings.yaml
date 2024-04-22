@@ -7,7 +7,7 @@ name: Thiết lập cho web
 navigation:
     parent: Hagl\HomePage
     icon: icon-magic
-    order: 10
+    order: 100
 
 fields:
     websiteLogo:

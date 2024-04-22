@@ -6,10 +6,10 @@ multisite: true
 
 navigation:
     parent: Hagl\HomePage
-    icon: icon-group
-    order: 3
+    icon: icon-pencil-square
+    order: 7
 
-fields: 
+fields:
     pageSetting:
         type: mixin
         source: HAGLFields/PageBanner

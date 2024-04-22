@@ -1,0 +1,12 @@
+uuid: ee386c83-f237-4795-9319-11ef590b02ae
+handle: Hagl\Blocks\PhatTrienBenVung\ConNguoiBox
+type: mixin
+name: Hiển thị thông tin section con người
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea

@@ -1,0 +1,30 @@
+uuid: 3e87e704-d58f-4157-b58f-436c9ced48db
+handle: Hagl\PhatTrienBenVung
+type: single
+name: Trang phát triển bền vững
+multisite: true
+
+navigation:
+    label: Phát triển bền vững
+    parent: Hagl\HomePage
+    icon: icon-user
+    order: 12
+
+extraNavigation:
+    _page_phat_trien_ben_vung_section:
+        itemType: section
+        label: Thiết lập trang trong menu bền vững
+        order: 11
+
+    _page_phat_trien_ben_vung_ruler:
+        itemType: ruler
+        order: 20
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source:  Hagl\PhatTrienBenVung\BlockBuilder
+

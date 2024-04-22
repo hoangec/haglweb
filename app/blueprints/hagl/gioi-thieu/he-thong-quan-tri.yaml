@@ -6,8 +6,8 @@ multisite: true
 
 navigation:
     parent: Hagl\HomePage
-    icon: icon-rocket
-    order: 2
+    icon: icon-pencil-square
+    order: 6
 
 fields:
     pageSetting:

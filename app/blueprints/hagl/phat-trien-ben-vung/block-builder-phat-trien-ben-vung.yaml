@@ -1,0 +1,45 @@
+uuid: d2b7974d-e5dd-4919-8e86-5ec9a809de1e
+handle: Hagl\PhatTrienBenVung\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page phát triển bền vững
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            moi-truong-box:
+                name: Block hiển thị nội dung cho section môi trường
+                description: Block hiển thị nội dung cho section môi trường
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\PhatTrienBenVung\MoiTruongBox
+            con-nguoi-box:
+                name: Block hiển thị nội dung cho section con người
+                description: Block hiển thị nội dung cho section con người
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\PhatTrienBenVung\ConNguoiBox
+            san-pham-box:
+                name: Block hiển thị nội dung cho section sản phẩm
+                description: Block hiển thị nội dung cho section sản phẩm
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\PhatTrienBenVung\SanPhamBox
+            cong-dong-box:
+                name: Block hiển thị nội dung cho section cộng đồng
+                description:  Block hiển thị nội dung cho section cộng đồng
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\PhatTrienBenVung\CongDongBox

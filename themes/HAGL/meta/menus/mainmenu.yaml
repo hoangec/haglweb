@@ -80,18 +80,26 @@ items:
                     isExternal: '0'
             -
                 title: 'Đơn vị thành viên'
+                nesting: null
                 type: cms-page
+                url: null
                 code: ''
                 reference: gioi-thieu/don-vi-thanh-vien
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'Thành tích nổi bật'
+                nesting: null
                 type: cms-page
+                url: null
                 code: ''
                 reference: gioi-thieu/thanh-tich-noi-bat
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -111,13 +119,9 @@ items:
             isExternal: '0'
     -
         title: 'Phát triển bền vững'
-        nesting: null
-        type: header
-        url: null
+        type: cms-page
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
+        reference: phat-trien-ben-vung
         viewBag:
             isHidden: '0'
             cssClass: ''

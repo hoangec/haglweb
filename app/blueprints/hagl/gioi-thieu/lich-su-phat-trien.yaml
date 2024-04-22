@@ -6,9 +6,18 @@ multisite: true
 
 navigation:
     parent: Hagl\HomePage
-    icon: icon-calendar
-    order: 2
+    icon: icon-pencil-square
+    order: 3
 
+extraNavigation:
+    _page_gioi_thieu_section:
+        itemType: section
+        label: Thiết lập trang trong  menu về HAGL
+        order: 2
+
+    _page_gioi_thieu_ruler:
+        itemType: ruler
+        order: 10
 fields:
     pageSetting:
         type: mixin

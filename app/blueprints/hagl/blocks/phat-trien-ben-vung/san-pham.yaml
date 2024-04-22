@@ -1,0 +1,12 @@
+uuid: 0ee54dec-eed7-4b91-944b-6837d9a2bf8a
+handle: Hagl\Blocks\PhatTrienBenVung\SanPhamBox
+type: mixin
+name: Hiển thị thông tin section sản phẩm
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea

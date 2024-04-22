@@ -1,0 +1,12 @@
+uuid: ddc8ceb7-3cfe-40bd-8f7e-92791a882346
+handle: Hagl\Blocks\PhatTrienBenVung\CongDongBox
+type: mixin
+name: Hiển thị thông tin section cộng đồng
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea

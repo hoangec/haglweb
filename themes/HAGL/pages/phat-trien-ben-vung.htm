@@ -1,0 +1,26 @@
+url = "/phat-trien-ben-vung"
+layout = "default"
+title = "Phát triển bền vững"
+description = "Trang nội dung phát triển bền vững HAGL"
+meta_title = "Trang nội dung phát triển bền vững HAGL"
+meta_description = "Trang nội dung phát triển bền vững HAGL"
+
+[section pagePhatTrienBenVung]
+handle = "Hagl\PhatTrienBenVung"
+==
+{% set breadcrumbs = [
+    {
+        'name':'HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Phát triển bền vững'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pagePhatTrienBenVung.pageBanner type = "parallax-bg" %}
+{% for block in pagePhatTrienBenVung.blocks %}
+   {% partial 'blocks/phat-trien-ben-vung/' ~ str_slug(block.type) block=block %}
+{% endfor %}
