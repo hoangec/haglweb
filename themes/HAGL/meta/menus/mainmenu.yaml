@@ -119,9 +119,13 @@ items:
             isExternal: '0'
     -
         title: 'Phát triển bền vững'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: phat-trien-ben-vung
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -129,10 +133,10 @@ items:
     -
         title: 'Cổ đông'
         nesting: null
-        type: header
+        type: cms-page
         url: null
         code: ''
-        reference: null
+        reference: co-dong
         cmsPage: null
         replace: null
         viewBag:
@@ -141,13 +145,9 @@ items:
             isExternal: '0'
     -
         title: 'Truyền thông'
-        nesting: null
-        type: header
-        url: null
+        type: cms-page
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
+        reference: truyen-thong
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -155,10 +155,10 @@ items:
     -
         title: 'Bóng đá'
         nesting: null
-        type: header
+        type: cms-page
         url: null
         code: ''
-        reference: null
+        reference: the-thao
         cmsPage: null
         replace: null
         viewBag:
@@ -168,10 +168,10 @@ items:
     -
         title: 'Tuyển dụng'
         nesting: null
-        type: header
+        type: cms-page
         url: null
         code: ''
-        reference: null
+        reference: tuyen-dung
         cmsPage: null
         replace: null
         viewBag:
@@ -181,10 +181,10 @@ items:
     -
         title: 'Liên hệ'
         nesting: null
-        type: header
+        type: cms-page
         url: null
         code: ''
-        reference: null
+        reference: lien-he
         cmsPage: null
         replace: null
         viewBag:

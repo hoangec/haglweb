@@ -1,0 +1,26 @@
+url = "/the-thao"
+layout = "default"
+title = "Thể thao"
+description = "Thể thao HAGL"
+meta_title = "Thể thao HAGL"
+meta_description = "Thể thao HAGL"
+
+[section pageTheThao]
+handle = "Hagl\TheThao"
+==
+{% set breadcrumbs = [
+    {
+        'name':'HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Bóng đá'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pageTheThao.pageBanner type = "parallax-bg" %}
+{% for block in pageTheThao.blocks %}
+   {% partial 'blocks/the-thao/' ~ str_slug(block.type) block=block %}
+{% endfor %}

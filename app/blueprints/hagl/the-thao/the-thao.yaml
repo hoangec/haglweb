@@ -1,0 +1,30 @@
+uuid: 0ae5f9d8-6883-4036-ba5b-19dcf26e3a0e
+handle: Hagl\TheThao
+type: single
+name: Trang thể thao
+multisite: true
+
+navigation:
+    label: Thể thao
+    parent: Hagl\HomePage
+    icon: icon-user
+    order: 22
+
+extraNavigation:
+    _page_the_thao_section:
+        itemType: section
+        label: Thiết lập trang thể thao
+        order: 21
+
+    _page_the_thao_ruler:
+        itemType: ruler
+        order: 30
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source:  Hagl\TheThao\BlockBuilder
+

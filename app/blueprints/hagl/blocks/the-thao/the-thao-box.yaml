@@ -1,0 +1,19 @@
+uuid: d8445177-466e-4ae8-bcda-a6950a8e57ed
+handle: Hagl\Blocks\TheThao\TheThaoBox
+type: mixin
+name: Hiển thị thông tin section thể thao
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea
+    image1:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6

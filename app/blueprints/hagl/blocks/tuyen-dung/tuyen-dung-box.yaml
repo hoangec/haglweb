@@ -1,0 +1,19 @@
+uuid: 82c4c9f9-c242-465e-9cc8-fc072098ff1b
+handle: Hagl\Blocks\TuyenDung\TuyenDungBox
+type: mixin
+name: Hiển thị thông tin section tuyển dụng
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea
+    image1:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6

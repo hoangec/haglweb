@@ -1,0 +1,21 @@
+uuid: 6a259fd1-3e7f-4fc1-9e77-da566b549813
+handle: Hagl\TruyenThong\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page truyền thông
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            truyen-thong-box:
+                name: Block hiển thị nội dung cho section truyền thông
+                description: Block hiển thị nội dung cho section truyền thông
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TruyenThong\TruyenThongBox

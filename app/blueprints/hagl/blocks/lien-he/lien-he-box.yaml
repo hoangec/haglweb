@@ -1,0 +1,19 @@
+uuid: 0ecf9835-ee42-460b-acdb-e7025ab5f73c
+handle: Hagl\Blocks\LienHe\LienHeBox
+type: mixin
+name: Hiển thị thông tin section liên hệ
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea
+    image1:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6

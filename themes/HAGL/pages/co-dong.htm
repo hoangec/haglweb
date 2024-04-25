@@ -1,0 +1,25 @@
+url = "/co-dong"
+layout = "default"
+title = "Cổ đông"
+meta_title = "Cổ đông HAGL"
+meta_description = "Cổ đông HAGL"
+
+[section pageCoDong]
+handle = "Hagl\CoDong"
+==
+{% set breadcrumbs = [
+    {
+        'name':'HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Cổ đông'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pageCoDong.pageBanner type = "parallax-bg" %}
+{% for block in pageCoDong.blocks %}
+   {% partial 'blocks/the-thao/' ~ str_slug(block.type) block=block %}
+{% endfor %}

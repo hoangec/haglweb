@@ -1,0 +1,31 @@
+uuid: 848a4a88-2436-4713-8344-01cf314c88b9
+
+handle: Hagl\TruyenThong
+type: single
+name: Trang truyền thông
+multisite: true
+
+navigation:
+    label: Truyền thông
+    parent: Hagl\HomePage
+    icon: icon-user
+    order: 62
+
+extraNavigation:
+    _page_truyen_thong_section:
+        itemType: section
+        label: Thiết lập trang truyền thông
+        order: 61
+
+    _page_truyen_thong_ruler:
+        itemType: ruler
+        order: 70
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source:  Hagl\TruyenThong\BlockBuilder
+

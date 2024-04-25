@@ -1,0 +1,21 @@
+uuid: a7caa745-0663-4309-a2d1-d6495fbc8d0e
+handle: Hagl\CoDong\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page cổ đông
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            co-dong-box:
+                name: Block hiển thị nội dung cho section liên hệ
+                description: Block hiển thị nội dung cho section liên hệ
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\CoDong\CoDongBox

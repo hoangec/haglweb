@@ -1,0 +1,21 @@
+uuid: b14ff379-e1c7-4d4e-bfaa-a7e1bdb990b3
+handle: Hagl\LienHe\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page liên hệ
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            lien-he-box:
+                name: Block hiển thị nội dung cho section liên hệ
+                description: Block hiển thị nội dung cho section liên hệ
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\LienHe\LienHeBox

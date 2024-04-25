@@ -1,0 +1,30 @@
+uuid: d28b428f-345c-46b9-97e5-fe184fa7503e
+handle: Hagl\LienHe
+type: single
+name: Trang liên hệ
+multisite: true
+
+navigation:
+    label: Liên hệ
+    parent: Hagl\HomePage
+    icon: icon-user
+    order: 32
+
+extraNavigation:
+    _page_lien_he_section:
+        itemType: section
+        label: Thiết lập trang liên hệ
+        order: 31
+
+    _page_lien_he_ruler:
+        itemType: ruler
+        order: 40
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source:  Hagl\LienHe\BlockBuilder
+

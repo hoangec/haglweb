@@ -1,0 +1,19 @@
+uuid: c670a0bd-a1d3-46e5-9d46-9e479e73ab4f
+handle: Hagl\Blocks\TruyenThong\TruyenThongBox
+type: mixin
+name: Hiển thị thông tin section truyền thông
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea
+    image1:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6

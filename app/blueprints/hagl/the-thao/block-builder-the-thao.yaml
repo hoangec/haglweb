@@ -1,0 +1,21 @@
+uuid: 02b87cfe-55bd-4de2-bd5f-ae3bdd575db7
+handle: Hagl\TheThao\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page thể thao
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:          
+            the-thao-box:
+                name: Block hiển thị nội dung cho section thể thao
+                description: Block hiển thị nội dung cho section thể thao
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TheThao\TheThaoBox

@@ -1,0 +1,30 @@
+uuid: d7b0c9d6-0c0b-4e50-b70d-ee6d39b2a410
+handle: Hagl\TuyenDung
+type: single
+name: Trang tuyển dụng
+multisite: true
+
+navigation:
+    label: Tuyển dụng
+    parent: Hagl\HomePage
+    icon: icon-user
+    order: 42
+
+extraNavigation:
+    _page_tuyen-dung_section:
+        itemType: section
+        label: Thiết lập trang tuyển dụng
+        order: 41
+
+    _page_tuyen_dung_ruler:
+        itemType: ruler
+        order: 50
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source:  Hagl\TuyenDung\BlockBuilder
+

@@ -1,0 +1,21 @@
+uuid: b4764316-bcaa-464d-9372-be9c830be54c
+handle: Hagl\TuyenDung\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page tuyển dụng
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            tuyen-dung-box:
+                name: Block hiển thị nội dung cho section liên hệ
+                description: Block hiển thị nội dung cho section liên hệ
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TuyenDung\TuyenDungBox

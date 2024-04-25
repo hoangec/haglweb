@@ -1,0 +1,30 @@
+uuid: c7ebe1e6-6d8e-49e7-b083-3cd362af3ac4
+handle: Hagl\CoDong
+type: single
+name: Trang cổ đông
+multisite: true
+
+navigation:
+    label: Cổ đông
+    parent: Hagl\HomePage
+    icon: icon-user
+    order: 52
+
+extraNavigation:
+    _page_co-dong_section:
+        itemType: section
+        label: Thiết lập trang cổ đông
+        order: 51
+
+    _page_co-dong_ruler:
+        itemType: ruler
+        order: 60
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source:  Hagl\CoDong\BlockBuilder
+
