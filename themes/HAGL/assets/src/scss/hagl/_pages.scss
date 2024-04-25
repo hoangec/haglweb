@@ -369,3 +369,38 @@ blockquote {
 .nhan-su-chu-chot-style01 {
     box-shadow: 0 20px 20px var(--base-color)
 }
+/* ----Page phat trien ben vung---*/
+.nn-tuan-hoan-phu-pham-animate {
+    position: absolute;
+    top: 300px;
+    left: 0px;
+}
+
+// #animatedPath {
+//     transform-origin: center; /* Chỉ định điểm neo là trung tâm của đường path */
+//     animation: scalePath 2s infinite alternate;
+//   }
+
+//   @keyframes scalePath {
+//     0% {
+//       transform: scale(1); /* Kích thước ban đầu */
+//     }
+//     100% {
+//       transform: scale(1.5); /* Kích thước tăng lên 1.2 lần */
+//     }
+//   }
+.small {
+    width: 18px;
+    height: 18px;
+}
+
+.follow-path {
+    position: absolute;
+    top:15px;
+    left: 25px;
+}
+.square {
+    pointer-events: none;
+    font-size: 14px;
+    background-color: #000;
+}

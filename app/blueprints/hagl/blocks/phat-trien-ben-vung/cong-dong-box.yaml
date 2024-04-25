@@ -10,3 +10,27 @@ fields:
     noiDung:
         label: Nội dung
         type: textarea
+    _section1:
+        type: section
+        label: Thiết lập danh sách các hoạt động cộng đồng
+        comment: Nội dung hiên thị danh sách các hoạt động cộng đồng
+    _ruler1:
+        type: ruler
+    dsHoatDong:
+        label: Danh sách các hoạt động
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                image:
+                    label: Ảnh đại diện
+                    type: mediafinder
+                    mode: image
+                    comment: "kích thước anh 600x405"
+                    maxItems: 1
+                    size: small
+                noiDung:
+                    label: Nội dung
+                    type: text
+                    span: row
+                    spanClass: col-md-6

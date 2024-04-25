@@ -7,6 +7,66 @@ fields:
     tuaDe:
         label: Tựa đề
         type: text
+        span: row
+        spanClass: col-4
     noiDung:
         label: Nội dung
+        type: text
+        span: row
+        spanClass: col-4
+    image:
+        label: Ảnh minh hoạ
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-4
+    _section1:
+        type: section
+        label: Thiết lập chi tiết cho mục cây trồng
+        comment: Nội dung liên quan đến các nội dung sản phẩm cây trồng
+    _ruler1:
+        type: ruler
+    tuaDeSanPham:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+    noiDungSanPham:
+        label: Nội dung
         type: textarea
+        span: row
+        spanClass: col-6
+    _section2:
+        type: section
+        label: Thiết lập chi tiết cho mục vật nuôi
+        comment: Nội dung liên quan đến các nội dung sản phẩm vật nuôi
+    _ruler2:
+        type: ruler
+    tuaDeVatNuoi:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+    noiDUngVatNuoi:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-6
+    vatNuoiMuc1:
+        label: Đề mục 1
+        type: text
+        span: row
+        spanClass: col-4
+    vatNuoiMuc2:
+        label: Đề mục 2
+        type: text
+        span: row
+        spanClass: col-4
+    vatNuoiMuc3:
+        label: Đề mục 3
+        type: text
+        span: row
+        spanClass: col-4
+
+    

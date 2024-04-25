@@ -1,66 +1,83 @@
-<section class="pt-5">
+<section id="down-section" class="background-position-left-top background-no-repeat position-relative" style="background-image: url('images/demo-elearning-02.png')">
+    <div class="position-absolute right-0px top-30px" data-bottom-top="transform: translateY(80px)" data-top-bottom="transform: translateY(-80px)">
+        {# <img src="images/demo-elearning-04.png" alt=""> #}
+    </div>
     <div class="container">
-        <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 justify-content-center" data-anime='{ "el": "childs", "scale":[0.9,1], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-            <!-- start interactive banners item -->
-            <div class="col text-center interactive-banner-style-01 lg-mb-30px">
-                <figure class="m-0 position-relative hover-box border-radius-6px overflow-hidden">
-                    <img src="https://via.placeholder.com/600x600" alt="" />
-                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-5"></div>
-                    <figcaption class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-30px">
-                        <div class="position-relative z-index-1">
-                            <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box w-70px h-70px rounded-circle bg-white mb-50px box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                            <a href="#" class="alt-font fs-18 fw-500 lette text-white d-block text-uppercase">India</a>
+        <div class="text-center position-absolute top-minus-40px left-0px right-0px z-index-1 d-none d-md-inline-block" data-anime='{ "opacity": [0, 1], "translate": [0, 0], "staggervalue": 100, "easing": "easeOutQuad" }'>
+            <a href="#down-section" class="d-block section-link">
+                <div class="d-flex justify-content-center align-items-center mx-auto box-shadow-medium-bottom rounded-circle h-70px w-70px text-dark-gray bg-white">
+                    <i class="bi bi-mouse icon-very-medium lh-0px"></i>
+                </div>
+            </a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-10 position-relative md-mb-40px sm-mb-25px" data-anime='{ "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <div class="icon-with-text-style-08 mb-20px">
+                    <div class="feature-box feature-box-left-icon-middle">
+                        <div class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-green me-15px">
+                            <i class="bi bi-award d-inline-block icon-extra-medium text-white"></i>
                         </div>
-                        <div class="box-overlay bg-dark-gray"></div>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- end interactive banners item -->
-            <!-- start interactive banners item -->
-            <div class="col text-center interactive-banner-style-01 lg-mb-30px">
-                <figure class="m-0 position-relative hover-box border-radius-6px overflow-hidden">
-                    <img src="https://via.placeholder.com/600x600" alt="" />
-                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-5"></div>
-                    <figcaption class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-30px">
-                        <div class="position-relative z-index-1">
-                            <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box w-70px h-70px rounded-circle bg-white mb-50px box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                            <a href="#" class="alt-font fs-18 fw-500 lette text-white d-block text-uppercase">Poland</a>
+                        <div class="feature-box-content last-paragraph-no-margin">
+                            <span class="d-inline-block alt-font fs-19 fw-500 ls-minus-05px text-dark-gray">{{block.noiDung}}</span>
                         </div>
-                        <div class="box-overlay bg-dark-gray"></div>
-                    </figcaption>
-                </figure>
+                    </div>
+                </div>
+                <h2 class="alt-font text-primary fw-600 ls-minus-3px mx-auto">{{block.tuaDe}}</h2>
+                <div class="row">
+                    <h6 class=" fs-20 text-base-color fw-500">{{block.tuaDeSanPham}}</h6>
+                    <div class="divider-style-03 divider-style-03-01 border-color-dark-gray mb-20px w-100"></div>
+                    <p class="text-black">{{block.noiDungSanPham}}</p>
+                </div>
+                <div class="d-flex align-items-center  md-position-relative bottom-0 md-mt-15px"><img src="{{block.image|media}}" alt=""></div>
             </div>
-            <!-- end interactive banners item -->
-            <!-- start interactive banners item -->
-            <div class="col text-center interactive-banner-style-01 lg-mb-30px">
-                <figure class="m-0 position-relative hover-box border-radius-6px overflow-hidden">
-                    <img src="https://via.placeholder.com/600x600" alt="" />
-                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-5"></div>
-                    <figcaption class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-30px">
-                        <div class="position-relative z-index-1">
-                            <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box w-70px h-70px rounded-circle bg-white mb-50px box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                            <a href="#" class="alt-font fs-18 fw-500 lette text-white d-block text-uppercase">Mexico</a>
+            <div class="col-xl-6 col-lg-7 col-md-10 offset-xl-1 position-relative mt-minus-1">
+                <div class="row">
+                    <h6 class=" fs-20 text-base-color fw-500">{{block.tuaDeVatNuoi}}</h6>
+                    <div class="divider-style-03 divider-style-03-01 border-color-dark-gray mb-20px w-100"></div>
+                      <p class="text-black">{{block.noiDungVatNuoi}}</p>
+                </div>
+                <div class="row row-cols-auto row-cols-sm-2" data-anime='{ "el": "childs", "translateX": [30, 0], "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <!-- start features box item -->
+                    <div class="col align-self-start">
+                        <div class="feature-box text-start ps-30px pe-30px xl-pe-5px sm-pe-0">
+                            <div class="feature-box-icon left-0px top-0px">
+                                <h2 class="alt-font fs-100 fw-700 ls-minus-1px text-base-color mb-0">01</h2>
+                            </div>
+                            <div class="feature-box-content last-paragraph-no-margin">
+                                <span class="text-dark-gray fs-20 d-inline-block fw-600 mb-5px">{{block.vatNuoiMuc1}}</span>
+                                <span class="w-60px h-3px bg-yellow d-inline-block"></span>
+                            </div>
                         </div>
-                        <div class="box-overlay bg-dark-gray"></div>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- end interactive banners item -->
-            <!-- start interactive banners item -->
-            <div class="col text-center interactive-banner-style-01">
-                <figure class="m-0 position-relative hover-box border-radius-6px overflow-hidden">
-                    <img src="https://via.placeholder.com/600x600" alt="" />
-                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-5"></div>
-                    <figcaption class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-30px">
-                        <div class="position-relative z-index-1">
-                            <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box w-70px h-70px rounded-circle bg-white mb-50px box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                            <a href="#" class="alt-font fs-18 fw-500 lette text-white d-block text-uppercase">Egypt</a>
+                    </div>
+                    <!-- end features box item -->
+                    <!-- start features box item -->
+                    <div class="col align-self-end mt-25 xs-mt-30px">
+                        <div class="feature-box text-start ps-30px pe-30px xl-pe-5px sm-pe-0">
+                            <div class="feature-box-icon  left-0px top-0px">
+                                <h2 class="alt-font fs-100 fw-700 ls-minus-1px text-base-color mb-0">02</h2>
+                            </div>
+                            <div class="feature-box-content last-paragraph-no-margin ">
+                                <span class="text-dark-gray fs-20 d-inline-block fw-600 mb-5px">{{block.vatNuoiMuc2}}</span>
+                                <span class="w-60px h-3px bg-yellow d-inline-block"></span>
+                            </div>
                         </div>
-                        <div class="box-overlay bg-dark-gray"></div>
-                    </figcaption>
-                </figure>
+                    </div>
+                    <!-- end features box item -->
+                    <!-- start features box item -->
+                    <div class="col align-self-start mt-minus-12 xs-mt-30px">
+                        <div class="feature-box text-start ps-30px pe-30px xl-pe-5px sm-pe-0">
+                            <div class="feature-box-icon left-0px top-0px">
+                                <h2 class="alt-font fs-100 fw-700 ls-minus-1px  mb-0 text-base-color">03</h2>
+                            </div>
+                            <div class="feature-box-content last-paragraph-no-margin ">
+                                <span class="text-dark-gray fs-20 d-inline-block fw-600 mb-5px">{{block.vatNuoiMuc3}}</span>
+                                <span class="w-60px h-3px bg-yellow d-inline-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end features box item -->
+                </div>
             </div>
-            <!-- end interactive banners item -->
         </div>
     </div>
 </section>

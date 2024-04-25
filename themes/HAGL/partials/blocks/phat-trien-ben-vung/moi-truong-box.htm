@@ -1,66 +1,98 @@
-<section class="pt-5">
+<section class="big-section bg-very-light-gray pb-0 pt-0">
     <div class="container">
-        <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 justify-content-center" data-anime='{ "el": "childs", "scale":[0.9,1], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-            <!-- start interactive banners item -->
-            <div class="col text-center interactive-banner-style-01 lg-mb-30px">
-                <figure class="m-0 position-relative hover-box border-radius-6px overflow-hidden">
-                    <img src="https://via.placeholder.com/600x600" alt="" />
-                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-5"></div>
-                    <figcaption class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-30px">
-                        <div class="position-relative z-index-1">
-                            <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box w-70px h-70px rounded-circle bg-white mb-50px box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                            <a href="#" class="alt-font fs-18 fw-500 lette text-white d-block text-uppercase">India</a>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-xl-5 col-lg-6 col-md-10 offset-xl-1">
+                <span class="fs-15 text-uppercase text-gradient-sky-blue-pink fw-600 mb-10px d-inline-block">{{block.tuaDeNho}}</span>
+                <h3 class="fw-700 mb-40px alt-font text-primary ls-minus-1px">{{block.tuaDeLon}}</h3>
+                <div class="accordion accordion-style-01" id="accordion-style-01" data-active-icon="fa-angle-down" data-inactive-icon="fa-angle-right">
+                    <!-- start accordion item -->
+                    <div id="phu-pham" class="accordion-item bg-white">
+                        <div class="accordion-header">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-01-01" aria-expanded="true" data-bs-parent="#accordion-style-01">
+                                <div class="accordion-title position-relative fs-18 d-flex align-items-center pe-20px text-dark-gray fw-600 alt-font mb-0">{{block.noiDung1}}<span><i class="fa-solid fa-angle-right icon-small"></i></span></div>
+                            </a>
                         </div>
-                        <div class="box-overlay bg-dark-gray"></div>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- end interactive banners item -->
-            <!-- start interactive banners item -->
-            <div class="col text-center interactive-banner-style-01 lg-mb-30px">
-                <figure class="m-0 position-relative hover-box border-radius-6px overflow-hidden">
-                    <img src="https://via.placeholder.com/600x600" alt="" />
-                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-5"></div>
-                    <figcaption class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-30px">
-                        <div class="position-relative z-index-1">
-                            <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box w-70px h-70px rounded-circle bg-white mb-50px box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                            <a href="#" class="alt-font fs-18 fw-500 lette text-white d-block text-uppercase">Poland</a>
+                        <div id="accordion-style-01-01" class="accordion-collapse collapse" data-bs-parent="#accordion-style-01">
+                            <div class="accordion-body last-paragraph-no-margin">
+                                <p>{{block.moTa1}}</p>
+                            </div>
                         </div>
-                        <div class="box-overlay bg-dark-gray"></div>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- end interactive banners item -->
-            <!-- start interactive banners item -->
-            <div class="col text-center interactive-banner-style-01 lg-mb-30px">
-                <figure class="m-0 position-relative hover-box border-radius-6px overflow-hidden">
-                    <img src="https://via.placeholder.com/600x600" alt="" />
-                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-5"></div>
-                    <figcaption class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-30px">
-                        <div class="position-relative z-index-1">
-                            <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box w-70px h-70px rounded-circle bg-white mb-50px box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                            <a href="#" class="alt-font fs-18 fw-500 lette text-white d-block text-uppercase">Mexico</a>
+                    </div>
+                    <!-- end accordion item -->
+                    <!-- start accordion item -->
+                    <div id="tai-tao" class="accordion-item bg-white">
+                        <div class="accordion-header">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-01-02" aria-expanded="false" data-bs-parent="#accordion-style-01">
+                                <div class="accordion-title position-relative fs-18 d-flex align-items-center pe-20px text-dark-gray fw-600 alt-font mb-0">{{block.noiDung2}}<span><i class="fa-solid fa-angle-right icon-small"></i></span></div>
+                            </a>
                         </div>
-                        <div class="box-overlay bg-dark-gray"></div>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- end interactive banners item -->
-            <!-- start interactive banners item -->
-            <div class="col text-center interactive-banner-style-01">
-                <figure class="m-0 position-relative hover-box border-radius-6px overflow-hidden">
-                    <img src="https://via.placeholder.com/600x600" alt="" />
-                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-5"></div>
-                    <figcaption class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-30px">
-                        <div class="position-relative z-index-1">
-                            <a href="#" class="d-flex justify-content-center align-items-center mx-auto icon-box w-70px h-70px rounded-circle bg-white mb-50px box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                            <a href="#" class="alt-font fs-18 fw-500 lette text-white d-block text-uppercase">Egypt</a>
+                        <div id="accordion-style-01-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-01">
+                            <div class="accordion-body last-paragraph-no-margin">
+                                <p>{{block.moTa2}}</p>
+                            </div>
                         </div>
-                        <div class="box-overlay bg-dark-gray"></div>
-                    </figcaption>
-                </figure>
+                    </div>
+                    <!-- end accordion item -->
+                    <!-- start accordion item -->
+                    <div id="xuat-khau-item" class="accordion-item bg-white">
+                        <div class="accordion-header">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-01-03" aria-expanded="false" data-bs-parent="#accordion-style-01">
+                                <div class="accordion-title position-relative fs-18 d-flex align-items-center pe-20px text-dark-gray fw-600 alt-font mb-0">{{block.noiDung3}}<span><i class="fa-solid fa-angle-right icon-small"></i></span></div>
+                            </a>
+                        </div>
+                        <div id="accordion-style-01-03" class="accordion-collapse collapse" data-bs-parent="#accordion-style-01">
+                            <div class="accordion-body last-paragraph-no-margin">
+                                <p>{{block.moTa3}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end accordion item -->
+                </div>
             </div>
-            <!-- end interactive banners item -->
+            <div class="col-lg-6 col-md-10 position-relative md-mb-50px md-mb-30px">
+                <object class="w-100" id="demo-animate" type="image/svg+xml" data="{{block.hinhMoHinh|media}}" ></object>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-0 overlap-height position-relative" >
+    <div class="container-fluid">
+        <div class="text-center position-absolute top-minus-40px left-0px right-0px z-index-1 d-none d-md-inline-block" data-anime='{ "opacity": [0, 1], "translate": [0, 0], "staggervalue": 100, "easing": "easeOutQuad" }'>
+            <a href="#down-section-moi-truong" class="d-block section-link">
+                <div class="d-flex justify-content-center align-items-center mx-auto box-shadow-medium-bottom rounded-circle h-70px w-70px text-dark-gray bg-white">
+                    <i class="bi bi-mouse icon-very-medium lh-0px"></i>
+                </div>
+            </a>
+        </div>
+        <div id ="down-section-moi-truong" class="row align-items-center justify-content-center pt-30px">
+            <div class="col-12 col-xl-6 col-lg-8 text-center position-relative page-title-double-large">
+                <div class="d-flex flex-column justify-content-center extra-very-small-screen">
+                    <h1 class="text-primary alt-font ls-minus-1px fw-700 mb-20px">{{block.tuaDe}}</h1>
+                    <h2 class="text-dark-gray d-inline-block fw-400 ls-0px mb-0">{{block.noiDung}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center">
+            {% for moTa in block.dsMoTa %}
+            <div class="col text-center rotate-box-style-01 mb-45px lg-mb-45px">
+                <div class="rm-rotate-box text-center">
+                    <div class="flipper to-left">
+                        <div class="thumb-wrap">
+                            <div class="front overflow-hidden h-250px md-h-250px border-radius-4px overflow-hidden" style="background-image:url('{{moTa.image|media}}')">
+                            </div>
+                            <div class="back border-radius-4px overflow-hidden">
+                                <div class="box-overlay bg-dark-gray"></div>
+                                <div class="content-wrap p-40px xs-p-30px last-paragraph-no-margin">
+                                    <i class="line-icon-Dumbbell align-middle icon-extra-large text-white mb-20px"></i>
+                                    <p class="text-white opacity-7 lh-30 sm-w-70 xs-w-100 mx-auto">{{moTa.moTa}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="fs-20 d-inline-block mt-30px fw-600 text-dark-gray">{{moTa.noiDung}}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

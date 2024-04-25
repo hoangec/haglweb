@@ -11,6 +11,14 @@ fields:
         span: adaptive
         tab: Nội dung trang
         groups:
+            marquee:
+                name: Block hiên thị nội dung chạy
+                description: Block hiên thị nội dung chạy
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\Marquee
             moi-truong-box:
                 name: Block hiển thị nội dung cho section môi trường
                 description: Block hiển thị nội dung cho section môi trường

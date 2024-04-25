@@ -1,0 +1,101 @@
+uuid: 8be51782-b916-4974-9fdb-976644acc5e1
+handle: Hagl\Blocks\PhatTrienBenVung\MoiTruongBox
+type: mixin
+name: Hiển thị thông tin section môi trường
+
+fields:
+    tuaDeNho:
+        label: Tựa đề nhỏ
+        type: text
+        span: row
+        spanClass: col-6
+    tuaDeLon:
+        label: Tựa đề lớn
+        type: text
+        span: row
+        spanClass: col-6
+    noiDung1:
+        label: Nội dung cho mục 1
+        type: text
+        default: Phụ phẩm
+        placeholder: Phụ phẩm
+        comment: Phụ phẩm
+        span: row
+        spanClass: col-4
+    noiDung2:
+        label: Nội dung cho mục 2
+        type: text
+        default: Tái tạo
+        placeholder: Tái tạo
+        comment: Tái tạo
+        span: row
+        spanClass: col-4
+    noiDung3:
+        label: Nội dung cho mục 3
+        type: text
+        default: Xuất khẩu
+        placeholder: Xuất khẩu
+        comment: Xuất khẩu
+        span: row
+        spanClass: col-4
+    moTa1:
+        label: Nội dung mô tả 1
+        type: text
+        span: row
+        spanClass: col-4
+    moTa2:
+        label: Nội dung mô tả 2
+        type: text
+        span: row
+        spanClass: col-4
+    moTa3:
+        label: Nội dung mô tả 3
+        type: text
+        span: row
+        spanClass: col-4
+    hinhMoHinh:
+        label: Mô hình
+        type: mediafinder
+        mode: image
+        maxItems: 1
+    _section1:
+        type: section
+        label: Thiết lập chi tiết cho mục môi trường
+        comment: Nội dung liên quan đến các giá trị đem lại cho môi trường.
+    _ruler1:
+        type: ruler
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-6
+    dsMoTa:
+        label: Danh sách các mô tả
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                image:
+                    label: Ảnh đại diện
+                    type: mediafinder
+                    mode: image
+                    comment: "kích thước anh 600x405"
+                    maxItems: 1
+                    size: small
+                noiDung:
+                    label: Nội dung
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                moTa:
+                    label: Mô tả
+                    type: textarea
+                    span: row
+                    spanClass: col-md-6
+    
+        

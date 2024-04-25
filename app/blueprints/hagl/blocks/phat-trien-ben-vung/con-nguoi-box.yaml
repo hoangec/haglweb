@@ -10,3 +10,61 @@ fields:
     noiDung:
         label: Nội dung
         type: textarea
+    image1:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    image2:
+        label: Ảnh minh hoạ 2
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    _section1:
+        type: section
+        label: Thiết lập chi tiết cho mục con người
+        comment: Nội dung liên quan đến các đầu mục mô ta chi tiết
+    _ruler1:
+        type: ruler
+    dsMoTa:
+        label: Danh sách các mô tả
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                noiDung:
+                    label: Nội dung
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                moTa:
+                    label: Mô tả
+                    type: textarea
+                    span: row
+                    spanClass: col-md-6
+    _section2:
+        type: section
+        label: Thiết lập số liệu cho mục con người
+        comment: Cung cấp số liệu liên quan đến con người
+    _ruler2:
+        type: ruler
+    slConNguoi:
+        label: Danh sách các số liệu con người
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                noiDung:
+                    label: Nội dung
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                soLuong:
+                    label: Số lượng
+                    type: number
+                    span: row
+                    spanClass: col-md-6
