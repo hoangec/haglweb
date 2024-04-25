@@ -20,7 +20,9 @@ handle = "Hagl\LienHe"
 {% put breadcrumbs %}
     {% partial 'app/breadcrumbs' pages=breadcrumbs %}
 {% endput %}
+
 {% partial 'app/page-title' pageBanner = pageLienHe.pageBanner type = "parallax-bg" %}
+
 {% for block in pageLienHe.blocks %}
-   {% partial 'blocks/the-thao/' ~ str_slug(block.type) block=block %}
+   {% partial 'blocks/lien-he/' ~ str_slug(block.type) block=block %}
 {% endfor %}

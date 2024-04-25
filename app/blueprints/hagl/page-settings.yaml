@@ -65,6 +65,14 @@ fields:
         type: text
         span: row
         spanClass: col-6
+    imageCty:
+        label: Ảnh minh hoạ công ty
+        type: mediafinder
+        tab: Liên hệ
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
     _ruler2:
         type: ruler
         label: Văn phòng đại diện
@@ -99,3 +107,39 @@ fields:
         type: text
         span: row
         spanClass: col-6
+    imageVP:
+        label: Ảnh minh hoạ văn phòng
+        type: mediafinder
+        tab: Liên hệ
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    _ruler3:
+        type: ruler
+        label: Liên hết mạng xã hội
+        tab: Liên hệ
+    facebook:
+        label: liên kết facebook
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-4
+    youtube:
+        label: liên kết youtube
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-4
+    zalo:
+        label: liên kết zalo
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-4
+    googleMapLinks:
+        label: links toạ độ google map
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-12
