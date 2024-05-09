@@ -4,7 +4,7 @@
         <a href="{{'tin-tuc'|page({ slug: tinTuc.slug })}}" class="d-block"><img src="{{tinTuc.banner.path}}" alt=" {{ tinTuc.featured_text }}" /></a>
     </div>
     <div class="card-body p-5">
-        <a href="{{'tin-tuc'|page({ slug: tinTuc.slug })}}" class="card-title mb-15px fw-600 fs-17 lh-26 text-primary text-base-color-hover d-inline-block">{{tinTuc.title}}</a>
+        <a href="{{'tin-tuc'|page({ slug: tinTuc.slug })}}" class="card-title mb-15px fw-600 fs-17 lh-26 text-primary text-base-color-hover d-inline-block">{{ str_limit(tinTuc.title,70,'...') }}</a>
         <p class="text-black lh-22">{{ str_limit(tinTuc.featured_text, 90,'...') }}</p>
         <div class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-14 text-uppercase">
             <div class="me-auto">

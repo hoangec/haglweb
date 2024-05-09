@@ -21,95 +21,95 @@ fields:
                         source: Hagl\Blocks\PageTitle
             section_title:
                 name: Block tựa đề
-                description: hiên thị nôi dung tựa đề
+                description: hiển thị nôi dung tựa đề
                 icon: icon-text-h1
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\SectionTitle
-            tintuc-card:
-                name: Block hiên thị tin tức mới nhất
-                description: Hiên thị 3 tin tức mới nhất dạng thẻ
+            dung-chung_tin-tuc-card:
+                name: Block hiển thị tin tức mới nhất
+                description: Hiển thị 3 tin tức mới nhất dạng thẻ
                 icon: icon-text-code-block
                 fields:
                     _mixin:
                         type: mixin
-                        source: Hagl\Blocks\TinTucCard
-            sukien-card:
-                name: Block hiên thị tin các sự kiện
-                description: Hiên thị 3 sự kiện mới nhất từ danh sách
+                        source: Hagl\Blocks\DungChung\TinTucCard
+            dung-chung_sukien-card:
+                name: Block hiển thị tin các sự kiện
+                description: Hiển thị 3 sự kiện mới nhất từ danh sách
                 icon: icon-calendar-3
                 fields:
                     _mixin:
                         type: mixin
-                        source: Hagl\Blocks\SuKienCard
+                        source: Hagl\Blocks\DungChung\SuKienCard
             prallax-scroll-video:
-                name: Block hiên thị banner video
-                description: Block hiên tị banner video
+                name: Block hiển thị banner video
+                description: Block hiển thị banner video
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\PrallaxScrollVideo
             two-images-box:
-                name: Block hiên thị box có hai ảnh
-                description: Block hiên thị box có hai ảnh
+                name: Block hiển thị box có hai ảnh
+                description: Block hiển thị box có hai ảnh
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\TwoImagesBox
             counter-box:
-                name: Block hiên thị số liệu
-                description: Block hiên thị số liệu
+                name: Block hiển thị số liệu
+                description: Block hiển thị số liệu
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\CounterBox
             quote:
-                name: Block hiên thị trích dẫn câu nói
-                description:  Block hiên thị trích dẫn câu nói
+                name: Block hiển thị trích dẫn câu nói
+                description:  Block hiển thị trích dẫn câu nói
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\Quote
             marquee:
-                name: Block hiên thị nội dung chạy
-                description: Block hiên thị nội dung chạy
+                name: Block hiển thị nội dung chạy
+                description: Block hiển thị nội dung chạy
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\Marquee
             sanpham-box:
-                name: Block hiên thị thông tin sản phẩm
-                description: Block hiên thị thông tin sản phẩm
+                name: Block hiển thị thông tin sản phẩm
+                description: Block hiển thị thông tin sản phẩm
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\SanPhamBox
             nganhnghe-box:
-                name: Block hiên thị thông tin ngành nghề
-                description: Block hiên thị thông tin ngành nghề
+                name: Block hiển thị thông tin ngành nghề
+                description: Block hiển thị thông tin ngành nghề
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\NganhNgeBox
-            codong-box:
-                name: Block hiên thị thông tin cổ đông
-                description: Block hiên thị thông tin cổ đông
+            dung-chung_files-moi-nhat-codong:
+                name: Block hiển thị danh sách files trong menu cổ đông
+                description: Block hiển thị danh sách files mới nhất trong menu cổ đông
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
-                        source: Hagl\Blocks\CoDongBox
+                        source: Hagl\Blocks\DungChung\FilesMoiNhatCoDongBox
             lienhe-box:
-                name: Block hiên thị thông tin liên hệ
-                description: Block hiên thị thông tin liên hệ
+                name: Block hiển thị thông tin liên hệ
+                description: Block hiển thị thông tin liên hệ
                 icon: icon-text-image
                 fields:
                     _mixin:

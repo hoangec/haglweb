@@ -22,5 +22,10 @@ handle = "Hagl\TheThao"
 {% endput %}
 {% partial 'app/page-title' pageBanner = pageTheThao.pageBanner type = "parallax-bg" %}
 {% for block in pageTheThao.blocks %}
-   {% partial 'blocks/the-thao/' ~ str_slug(block.type) block=block %}
+    {% set blockType = block.type|split('_') %}
+    {% if blockType[0] == 'dung-chung' %}
+        {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
+    {% else %}
+        {% partial 'blocks/the-thao/' ~ str_slug(block.type) block=block %}
+    {% endif %}
 {% endfor %}

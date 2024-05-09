@@ -1,0 +1,28 @@
+uuid: fb4eb4a6-d276-4234-9a1e-029802a56144
+handle: Hagl\Blocks\DungChung\FileTheoDanhMucBox
+type: mixin
+name: Hiển thị danh sách file theo danh mục
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: textarea
+    image1:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    dsDanhMuc:
+        label: Chọn danh mục
+        type: recordfinder
+        nameFrom: ten
+        maxItems: 1
+        conditions: danh_muc_cha_id IS NULL
+        modelClass: HoangVo\Files\Models\DanhMuc
+        list: ~/plugins/hoangvo/files/models/danhmuc/columns.yaml
+

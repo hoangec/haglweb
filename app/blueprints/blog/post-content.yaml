@@ -39,9 +39,10 @@ fields:
         span: adaptive
         tab: Gallery
 
-    gallery_media:
+    video:
         label: Media
         type: mediafinder
         mode: image
         span: adaptive
+        maxItems: 1
         tab: Media

@@ -1,0 +1,10 @@
+name: DanhSachFiles
+form: $/hoangvo/files/models/file/fields.yaml
+modelClass: Hoangvo\Files\Models\File
+defaultRedirect: hoangvo/files/danhsachfiles
+create:
+    redirect: 'hoangvo/files/danhsachfiles/update/:id'
+    redirectClose: hoangvo/files/danhsachfiles
+update:
+    redirect: hoangvo/files/danhsachfiles
+    redirectClose: hoangvo/files/danhsachfiles

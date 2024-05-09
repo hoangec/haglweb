@@ -1,0 +1,25 @@
+uuid: 8a6bcccd-d95e-45c8-8092-a20796fbee45
+handle: Hagl\Blocks\DungChung\VideoBoxStyle1
+type: mixin
+name: Hiển thị video style 1
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: text
+    videoLink:
+        label: Links video
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    image:
+        label: Chọn ảnh từ thư viện
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    

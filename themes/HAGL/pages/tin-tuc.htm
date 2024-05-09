@@ -1,4 +1,141 @@
-title = "Tin-tuc"
+url = "/truyen-thong/tin-tuc/:slug"
 layout = "default"
-url = "/tin-tuc"
+title = "Chi chiết tin tức"
+meta_title = "Chi chiết tin tức"
+meta_description = "Chi chiết tin tức"
+
+[section tinTuc]
+handle = "Blog\Post"
+value = "{{ :slug }}"
+
+[global tinTucSetting]
+handle = "Blog\Config"
+
+[collection categories]
+handle = "Blog\Category"
+
+[collection dsTinTuc]
+handle = "Blog\Post"
 ==
+
+{% partial 'app/page-title' pageBanner = tinTucSetting.pageBanner type = "parallax-bg" %}
+<section class="top-space-margin right-side-bar pt-0" id="section-tin-tuc-detail">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 blog-standard md-mb-50px sm-mb-40px">
+                <!-- start blog details  -->
+                <div class="col-12 blog-details mb-12">
+                    <div class="entry-meta mb-20px fs-15 d-flex justify-content-between">
+                        <div>
+                            <span><i class="text-base-color feather icon-feather-calendar"></i><sapn class="text-base-color fs-15 lh-16 fw-500">{{tinTuc.published_at_date|date('j/m/Y') }}</span></span>
+                            <span><i class="text-base-color feather icon-feather-folder"></i> <a class="text-base-color fs-15 lh-16 fw-500" href="{{'truyen-thong'|page({'category': tinTuc.categories.first().slug}) }}#section-truyen-thong" >{{tinTuc.categories.first().title}}</a></span>
+                        </div>
+                        <div>
+                            <a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                             <a  href="javascript:void(0);"  onclick="window.print();"> <i class="fas fa-print"></i></a>
+                        </button>
+                        </div>
+                    </div>
+                    <h5 class="text-primary fw-700 w-100 fs-50 sm-w-100 mb-6">{{tinTuc.title}}</h5>
+                    {% if tinTuc.gallery %}
+                        <div class="overflow-hidden mb-7">
+                            <div class="swiper magic-cursor magic-cursor-light" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 0, "loop": true, "autoplay": { "delay": 2000, "disableOnInteraction": false },  "pagination": { "el": ".slider-three-slide-pagination", "clickable": true, "dynamicBullets": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "992": { "slidesPerView": 1 }, "768": { "slidesPerView": 1 }, "320": { "slidesPerView": 1 } }, "effect": "slide" }'>
+                                <div class="swiper-wrapper">
+                                    <!-- start slider item -->
+                                    {% for image in tinTuc.gallery%}
+                                    <div class="swiper-slide">
+                                        <img src="{{image|media}}" class="w-100" alt="" />
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <!-- start slider navigation -->
+                                <div class="slider-one-slide-prev-1 icon-very-small text-dark-gray swiper-button-prev slider-navigation-style-02 bg-white text-dark-gray box-shadow-small"><i class="feather icon-feather-arrow-left"></i></div>
+                                <div class="slider-one-slide-next-1 icon-very-small text-dark-gray swiper-button-next slider-navigation-style-02 bg-white text-dark-gray box-shadow-small"><i class="feather icon-feather-arrow-right"></i></div>
+                                <!-- end slider navigation -->
+                            </div>
+                        </div>
+                    {% else %}
+                        {% if tinTuc.video %}
+                             <div class="fit-videos overflow-hidden mb-3">
+                                <video autoplay="" muted="" loop="" controls="">
+                                    <source  src="{{tinTuc.video|media}}" type="video/mp4">
+                                </video>
+                            </div>
+                        {% else %}
+                            <img src="{{tinTuc.banner|media}}" alt="" class="w-100 border-radius-6px mb-7">
+                        {% endif %}
+                    {% endif %}
+                     {{tinTuc.content|raw}}
+                </div>
+            </div>
+            <!-- start sidebar -->
+            <aside class="col-12 col-xl-4 col-lg-4 col-md-7 ps-55px xl-ps-50px lg-ps-15px sidebar d-print-none">
+                {# <div class="mb-15 md-mb-50px xs-mb-35px">
+                    <div class="fw-600 fs-19 lh-22 ls-minus-05px text-dark-gray border-bottom border-color-dark-gray border-2 d-block mb-30px pb-15px position-relative">Popular posts</div>
+                    <ul class="popular-post-sidebar position-relative">
+                        <li class="d-flex align-items-center">
+                            <figure>
+                                <a href="demo-elearning-blog-single-simple.html"><img src="https://via.placeholder.com/600x600" alt=""></a>
+                            </figure>
+                            <div class="col media-body">
+                                <a href="demo-elearning-blog-single-simple.html" class="fw-600 fs-17 text-dark-gray d-inline-block mb-10px">Trendy is the last stage before tacky.</a>
+                                <div><a href="blog-grid.html" class="d-inline-block fs-15">20 February 2023</a></div>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <figure>
+                                <a href="demo-elearning-blog-single-simple.html"><img src="https://via.placeholder.com/600x600" alt=""></a>
+                            </figure>
+                            <div class="col media-body">
+                                <a href="demo-elearning-blog-single-simple.html" class="fw-600 fs-17 text-dark-gray d-inline-block mb-10px">Believe you can and you're halfway there.</a>
+                                <div><a href="blog-grid.html" class="d-inline-block fs-15">18 February 2023</a></div>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <figure>
+                                <a href="demo-elearning-blog-single-simple.html"><img src="https://via.placeholder.com/600x600" alt=""></a>
+                            </figure>
+                            <div class="col media-body">
+                                <a href="demo-elearning-blog-single-simple.html" class="fw-600 fs-17 text-dark-gray d-inline-block mb-10px">In a gentle way, you can shake the world.</a>
+                                <div><a href="blog-grid.html" class="d-inline-block fs-15">16 February 2023</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div> #}
+                <div class="mb-15 md-mb-50px xs-mb-35px ">
+                    <div class="fw-600 fs-19 lh-22 ls-minus-05px text-dark-gray border-bottom border-color-dark-gray border-2 d-block mb-30px pb-15px position-relative">Danh mục bài viết</div>
+                    <ul class="category-list-sidebar position-relative">
+                        {% for category in categories%}
+                        <li class="d-flex align-items-center h-80px cover-background ps-35px pe-35px" style="background-image: url('{{ ( category.image is not empty)  ? category.image|media :  url('https://via.placeholder.com/600x144')}}')">
+                            <div class="opacity-medium bg-gradient-dark-transparent"></div>
+                            <a href="{{'truyen-thong'|page({'category': category.slug}) }}#section-truyen-thong" class="d-flex align-items-center position-relative w-100 h-100">
+                                <span class="text-white mb-0 fs-20 fw-500 fancy-text-style-4">{{category.title}}</span>
+                                <span class="btn text-white position-absolute"><i class="bi bi-arrow-right ms-0 fs-24"></i></span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </aside>
+            <!-- end sidebar -->
+        </div>
+    </div>
+</section>
+
+{% set dsTinTheoCatelogies = dsTinTuc.whereRelation('categories','slug',tinTuc.categories.first().slug)
+                                    .whereNotIn('id',[tinTuc.id])
+                                    .latest().take(3).get() %}
+<section  class="bg-very-light-gray d-print-none" >
+    <div class="container">
+        <div class="row justify-content-center mb-2">
+            <div class="col-12 col-lg-7 text-center">
+                <h4 class="text-primary fw-600" data-fancy-text='{ "opacity": [0, 1], "translateY": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["Bài viết liên quan"], "duration": 400, "delay": 0, "speed": 20, "easing": "easeOutQuad" }'></h4>
+            </div>
+        </div>
+        <div class="row row-cols-3"  data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            {% for tinTuc in dsTinTheoCatelogies %}
+                {% partial 'elements/tin-tuc-card-basic' tinTuc=tinTuc%}
+            {% endfor %}
+        </div>
+    </div>
+</section>

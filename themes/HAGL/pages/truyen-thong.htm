@@ -1,4 +1,4 @@
-url = "/truyen-thong"
+url = "/truyen-thong/:category?/"
 layout = "default"
 title = "Truyền thông"
 meta_title = "Truyền thông HAGL"
@@ -6,6 +6,19 @@ meta_description = "Truyền thông HAGL"
 
 [section pageTruyenThong]
 handle = "Hagl\TruyenThong"
+==
+<?php
+use Tailor\Models\EntryRecord;
+function onTinTucByCategory() {
+    $this['result'] = input('value1') + input('value2');
+}
+function onStart(){
+    $this['categoryParam'] =  $this->param('category');
+}
+function onGetSuKien() {
+    $this['dsSuKienPaginated'] = EntryRecord::inSection('Blog\Event')->paginate(2);
+}
+?>
 ==
 {% set breadcrumbs = [
     {
@@ -20,6 +33,13 @@ handle = "Hagl\TruyenThong"
     {% partial 'app/breadcrumbs' pages=breadcrumbs %}
 {% endput %}
 {% partial 'app/page-title' pageBanner = pageTruyenThong.pageBanner type = "parallax-bg" %}
+{% framework extras %}
 {% for block in pageTruyenThong.blocks %}
-   {% partial 'blocks/the-thao/' ~ str_slug(block.type) block=block %}
+    {% set blockType = block.type|split('_') %}
+    {% if blockType[0] == 'dung-chung' %}
+        {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
+    {% else %}
+        {% partial 'blocks/truyen-thong/' ~ str_slug(block.type) block=block %}
+    {% endif %}
 {% endfor %}
+

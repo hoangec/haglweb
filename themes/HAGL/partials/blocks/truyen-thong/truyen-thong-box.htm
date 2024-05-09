@@ -1,2 +1,53 @@
+[collection categories]
+handle = "Blog\Category"
 
+[collection dsTinTuc]
+handle = "Blog\Post"
+==
+<section class="pb-0" id="section-truyen-thong">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-xl-5 lg-mb-30px text-center text-xl-start">
+                <h2 class="alt-font text-primary fw-600 ls-minus-3px mb-0">{{block.tuaDe}}</h2>
+            </div>
+            <div class="col-xl-7 tab-style-04 text-center text-xl-end">
+                <!-- filter navigation -->
+                <ul class="truyen-thong nav nav-tabs justify-content-center justify-content-xl-end border-0">
+                    {% for category in categories %}
+                        {% if category.slug == categoryParam %}
+                            {% set activeClass = 'active'%}
+                        {% elseif categoryParam == '' and loop.first %}
+                            {% set activeClass = 'active'%}
+                        {% else %}
+                            {% set activeClass = '' %}
+                        {% endif %}
+                        <li class="nav {{activeClass}}"><a class="fs-30px fw-600 " href="{{'truyen-thong'|page({category: category.slug})}}#section-truyen-thong">{{category.title}}</a></li>
+                    {% endfor %}
+
+                </ul>
+                <!-- end filter navigation -->
+            </div>
+        </div>
+        {% set categoryURL = categoryParam == '' ?  categories.first().slug : categoryParam%}
+        {% set dsTinTucByCategory = dsTinTuc.whereRelation('categories','slug',categoryURL).paginate(2) %}
+        <div  class="row" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <div class="col-12 filter-content p-md-0">
+                <ul class="portfolio-wrapper grid-loading grid grid-3col xxl-grid-3col xl-grid-3col lg-grid-2col md-grid-2col sm-grid-1col xs-grid-1col gutter-extra-large">
+                    <li class="grid-sizer"></li>
+                    <!-- start portfolio item -->
+                    {% for tinTuc in dsTinTucByCategory %}
+                    <li class="grid-item design transition-inner-all">
+                        {% partial 'elements/tin-tuc-card-grid' tinTuc = tinTuc %}
+                    </li>
+                    {% endfor %}
+                    <!-- end portfolio item -->
+                </ul>
+            </div>
+
+            <div class="col-12 mt-4 d-flex justify-content-center">
+                {{ pager(dsTinTucByCategory,{partial: 'elements/pagination'}) }}
+            </div>
+        </div>
+    </div>
+</section>
 

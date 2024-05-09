@@ -1,0 +1,22 @@
+uuid: 3ec2c172-87e9-4a5c-ba9c-95a8531abdcc
+handle: Hagl\Blocks\DungChung\SuKienCard
+type: mixin
+name: Hiển thị danh sách các sự kiện mới nhất
+
+fields:
+     tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+     lienKet:
+        label: Link liên kết xem tất cả
+        type: pagefinder
+        span: row
+        spanClass: col-6
+     noiDung:
+        label: Nội dung
+        type: text
+        span: row
+        spanClass: col-6
+     

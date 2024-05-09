@@ -1,0 +1,48 @@
+uuid: ab57cbc8-9ad8-4fbd-8fda-368b6fed5dab
+handle: Blog\Event
+type: stream
+name: Event
+multisite: true
+drafts: true
+
+navigation:
+    parent: Blog\Post
+    icon: octo-icon-list-ul
+    order: 150
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    ngayBatDau:
+        label: Ngày bắt đầu sự kiện
+        type: datepicker
+        mode: datetime
+        format: d/m/Y
+    ngayKetThuc:
+        label: Ngày kết thúc sự kiện
+        type: datepicker
+        mode: datetime
+        format: d/m/Y
+        useTimezone: true
+    noiDung:
+        label: Nội dung
+        type: text
+    diaDiem:
+        label: Địa điểm
+        type: text
+    image:
+        label: Ảnh minh hoạ
+        type: mediafinder
+        mode: image
+        span: row
+        spanClass: col-md-6
+    fileAttach:
+        label: File đính kèm
+        type: fileupload
+        mode: file
+        maxFiles: 1
+        span: row
+        spanClass: col-md-6
+
+

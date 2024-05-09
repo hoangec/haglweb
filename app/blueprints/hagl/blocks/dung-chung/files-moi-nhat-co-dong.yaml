@@ -1,0 +1,27 @@
+uuid: 6871daaa-1ab6-4011-b033-7be73cd71f2a
+handle: Hagl\Blocks\DungChung\FilesMoiNhatCoDongBox
+type: mixin
+name: Hiển thị danh sách file mới nhất trong menu cổ đông
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-6
+    soLuongFiles:
+         label: Số lượng files được lấy
+         type: number
+         default: 10
+         span: row
+         spanClass: col-6
+    lienKet:
+        label: Link liên kết xem tất cả
+        type: pagefinder
+        span: row
+        spanClass: col-6

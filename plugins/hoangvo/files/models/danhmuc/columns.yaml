@@ -1,0 +1,17 @@
+columns:
+    id:
+        label: ID
+        type: number
+    ten:
+        label: Tên
+        type: text
+    slug:
+        label: Slug
+        type: text
+    loai_danh_muc:
+        label: 'Loại danh mục'
+        type: text
+        displayFrom: status_label
+    thu_tu:
+        label: 'Thứ tự hiển thị'
+        type: number

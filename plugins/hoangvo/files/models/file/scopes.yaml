@@ -1,0 +1,6 @@
+scopes:
+    danhMuc:
+        label: Lọc theo danh mục
+        modelClass: Hoangvo\Files\Models\DanhMuc
+        conditions: danh_muc_id in (:value)
+        nameFrom: ten

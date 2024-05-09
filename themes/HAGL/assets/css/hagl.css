@@ -10,6 +10,18 @@
   color: var(--primary-color) !important;
 }
 
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.bg-third-color {
+  background-color: rgb(244, 215, 180);
+}
+
 /* ===================================
    HAGL Style header
 ====================================== */
@@ -544,4 +556,170 @@ blockquote {
   pointer-events: none;
   font-size: 14px;
   background-color: #000;
+}
+
+/** truyen thong **/
+.truyen-thong li {
+  padding: 0 25px;
+}
+.truyen-thong li:first-child {
+  padding-left: 0;
+}
+.truyen-thong li:last-child {
+  padding-right: 0;
+}
+.truyen-thong li a {
+  color: var(--medium-gray);
+  border-bottom: 2px solid transparent;
+}
+.truyen-thong li:hover a, .truyen-thong li:focus a, .truyen-thong li.active a {
+  color: var(--base-color);
+  border-color: var(--base-color);
+}
+
+/** pagination **/
+.pagination-style-01 .page-item.active .page-link {
+  background: var(--base-color) !important;
+}
+
+/*--image-box */
+.image-box-style1 {
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 10px;
+}
+.image-box-style1 .card {
+  border-radius: 10px;
+  border: none;
+}
+.image-box-style1 .image-box-body {
+  background-color: var(--base-color);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.image-box-style1 img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.video-box-style2 {
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 10px;
+}
+.video-box-style2 .card {
+  border-radius: 10px;
+  border: none;
+}
+.video-box-style2 .image-box-body {
+  background-color: var(--base-color);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.video-box-style2 video {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* -- tin tuc card */
+.tin-tuc-item {
+  transition: transform 0.3s ease;
+}
+.tin-tuc-item:hover .tin-tuc-card {
+  transform: scale(1.05);
+}
+
+.tin-tuc-card {
+  border: none;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+}
+.tin-tuc-card .card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+}
+.tin-tuc-card .card-body {
+  background-color: #fff;
+  padding: 16px 24px 24px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.tin-tuc-card .card-date {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0px 0px 16px;
+}
+.tin-tuc-card .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0px 0px 8px;
+}
+.tin-tuc-card .card-text {
+  font-size: 16px;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+/*-- co dong --- */
+.co-dong-category .card {
+  background-color: #E9F3FD;
+}
+
+.co-dong-category:nth-child(2n) .card {
+  background-color: #C8E0F8;
+}
+
+.danh-muc-item .card {
+  box-shadow: none;
+  transition: box-shadow 0.5s ease;
+}
+
+.danh-muc-item:hover .card {
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.dt-scroll-head .table-border-10px {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.dt-scroll-body .table-border-10px {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+
+.dt-container > .table-border-10px {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.btn-search {
+  background: #fff;
+  border-radius: 0;
+  border: 0;
+  color: var(--base-color);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn-search:hover {
+  background: white;
+  color: var(--base-color);
+}
+
+select[name=table-loc-nam] {
+  border: 0;
+}
+
+input[name=table-tim-kiem-input] {
+  border: 0;
 }

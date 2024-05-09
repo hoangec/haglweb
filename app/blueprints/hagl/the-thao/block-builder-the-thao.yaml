@@ -10,7 +10,15 @@ fields:
         displayMode: builder
         span: adaptive
         tab: Nội dung trang
-        groups:          
+        groups:
+            marquee:
+                name: Block hiên thị nội dung chạy
+                description: Block hiên thị nội dung chạy
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\Marquee          
             the-thao-box:
                 name: Block hiển thị nội dung cho section thể thao
                 description: Block hiển thị nội dung cho section thể thao
@@ -19,3 +27,11 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\TheThao\TheThaoBox
+            dung-chung_tintuc-card:
+                name: Block hiên thị tin tức mới nhất
+                description: Hiên thị 3 tin tức mới nhất dạng thẻ
+                icon: icon-text-code-block
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\TinTucCard

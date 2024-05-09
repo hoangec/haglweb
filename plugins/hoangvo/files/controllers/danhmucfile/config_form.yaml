@@ -1,0 +1,10 @@
+name: DanhMucFile
+form: $/hoangvo/files/models/danhmuc/fields.yaml
+modelClass: Hoangvo\Files\Models\DanhMuc
+defaultRedirect: hoangvo/files/danhmucfile
+create:
+    redirect: 'hoangvo/files/danhmucfile/update/:id'
+    redirectClose: hoangvo/files/danhmucfile
+update:
+    redirect: hoangvo/files/danhmucfile
+    redirectClose: hoangvo/files/danhmucfile

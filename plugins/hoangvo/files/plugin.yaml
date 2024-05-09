@@ -1,0 +1,21 @@
+plugin:
+    name: 'hoangvo.files::lang.plugin.name'
+    description: 'hoangvo.files::lang.plugin.description'
+    author: hoangvo
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    co-dong-menu-item:
+        label: 'Cổ đông'
+        url: /
+        icon: icon-life-ring
+        order: '130'
+        sideMenu:
+            danh-muc-sub-item:
+                label: 'Danh mục'
+                url: hoangvo/files/danhmucfile
+                icon: icon-sitemap
+            files-sub-item:
+                label: 'Danh sách file'
+                url: hoangvo/files/danhsachfiles
+                icon: icon-file

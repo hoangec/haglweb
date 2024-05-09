@@ -5,7 +5,10 @@ name: Hiển thị dòng chạy nội dung
 
 fields:
     noiDung:
-        label: Nội dung chữ
+        label: Nội dung chữ 1
+        type: text
+    noiDung1:
+        label: Nội dung chữ 2
         type: text
     image:
         label: Nội dung ảnh

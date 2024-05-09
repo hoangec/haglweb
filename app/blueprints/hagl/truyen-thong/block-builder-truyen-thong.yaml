@@ -19,3 +19,43 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\TruyenThong\TruyenThongBox
+            su-kien-box:
+                name: Block hiển thị nội dung cho sự kiện
+                description: Block hiển thị nội dung cho sự kiện
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\SuKienBox
+            dung-chung_video-box-style1:
+                name: Block hiển thị nội dung video style 1
+                description: Block hiển thị nội dung video với hình nền
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\VideoBoxStyle1
+            dung-chung_video-box-style2:
+                name: Block hiển thị nội dung video style 2
+                description: Block hiển thị nội dung video và chữ
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\VideoBoxStyle1
+            dung-chung_tin-tuc-card:
+                name: Block hiển thị tin mới nhất
+                description: Block hiển thị nội dung tin mới nhất theo danh mục
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\TinTucCard
+            dung-chung_image-box-style1:
+                name: Block hiển thị ảnh và nội dung style 1
+                description: Block hiển thị ảnh và nội dung style 1
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox

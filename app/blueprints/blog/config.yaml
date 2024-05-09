@@ -30,11 +30,7 @@ fields:
         type: mixin
         source: Fields\SocialLinks
         tab: General
-    about_h2:
-        label: Tựa đề
-        tab: Mục giới thiệu công ty
-        placeholder: nội dung tựa đề
-    about_content:
-        label: Nội dung
-        type: textarea
-        tab: Mục giới thiệu công ty
+    pageSetting:
+        type: mixin
+        tab: Cấu hình banner cho bài viết
+        source: HAGLFields/PageBannerImageGalerry

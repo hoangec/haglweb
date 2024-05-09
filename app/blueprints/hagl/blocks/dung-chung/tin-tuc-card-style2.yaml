@@ -1,0 +1,25 @@
+uuid: 40f6f51f-8321-4dbf-8e11-03b4dba73cab
+handle: Hagl\Blocks\DungChung\TinTucCardStyle2
+type: mixin
+name: Hiển thị danh sách các tin tức mới nhất style 2
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+    lienKet:
+        lable: Link đến page hiển thị xem tất cả
+        type: pagefinder
+    categories:
+        label: Danh mục bài viết
+        commentAbove: 'Chọn danh mục loại bài viết được hiển thị'
+        type: entries
+        source: Blog\Category
+    kieuHienThi:
+        type: dropdown
+        label: kiểu hiển thị các item
+        options:
+            basic: Cơ bản
+            grid: Lưới

@@ -1,2 +1,59 @@
 
+<section class="bg-spring-wood">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 md-mb-50px sm-mb-30px">
+                <div class="blockquote-style-01">
+                    <!-- start blockquote -->
+                    <i class="bi bi-chat-quote float-start me-30px xs-me-20px text-crusoe-green icon-extra-double-large xs-icon-double-large"></i>
+                    <blockquote class="mb-0 d-table last-paragraph-no-margin " style="border-left: none;">
+                        <p class="fs-25 text-dark-gray ls-minus-1px w-90 lg-w-100 mb-15px">{{block.noiDung}}</p>
+                    </blockquote>
+                    <!-- end blockquote -->
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="{{block.image1|media}}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="swiper position-relative text-slider-style-03" data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 3000, "disableOnInteraction": false }, "navigation": { "nextEl": ".swiper-button-next-01", "prevEl": ".swiper-button-prev-01" }, "effect": "fade" }'>
+                    <div class="swiper-wrapper">
+                        <!-- start text slider item -->
+                        {% for image in block.dsImage %}
+                        <div class="swiper-slide  md-p-13 sm-p-6 position-relative" >
+                            <img src="{{image|media}}" class="">
+                            <div class="opacity-extra-medium bg-dark-gray"></div>
+                            <div class="container absolute-middle-center swiper-slide-content" style="z-index: 10000;">
+                                <div class="row justify-content-start">
+                                    <div class="col-12 col-xl-6 col-lg-8 col-md-12">
+                                     <img src="{{block.image2|media}}" class="border-radius-10px"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="position-relative overflow-hidden p-0">
+    <div class="container">
+        <div class="row align-items-center h-850px lg-h-650px md-h-500px text-center justify-content-center">
+            {# <div class="col-12 position-relative">
+                <h3 class="text-white fw-600 ls-minus-1px text-shadow-extra-large">HAGL </h3>
+            </div> #}
+        </div>
+    </div>
+    <video loop="" autoplay="" playsinline controls="" muted class="html-video" poster="{{'assets/images/san-pleiku-1920.jpeg'|theme}}">
+        <source type="video/mp4" src="{{block.video|media}}" />
+    </video>
+</section>

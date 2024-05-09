@@ -1,9 +1,0 @@
-uuid: 3ec2c172-87e9-4a5c-ba9c-95a8531abdcc
-handle: Hagl\Blocks\SuKienCard
-type: mixin
-name: Hiển thị danh sách các sự kiện mới nhất
-
-fields:
-    link:
-        label: Link liên kết nút xem tất cả
-        type: text

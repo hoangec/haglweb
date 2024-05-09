@@ -1,9 +1,0 @@
-uuid: 307a299d-b80b-43ec-ad8a-d390f01e1793
-handle: Hagl\Blocks\TinTucCard
-type: mixin
-name: Hiển thị danh sách các tin tức mới nhất
-
-fields:
-    link:
-        label: Link liên kết nút xem tất cả
-        type: text

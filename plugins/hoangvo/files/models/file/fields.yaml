@@ -1,0 +1,95 @@
+fields:
+    ten:
+        label: Tên
+        span: auto
+        type: text
+    danh_muc_id:
+        label: 'Danh mục'
+        showSearch: 0
+        span: auto
+        disabled: 1
+        readOnly: 1
+        type: dropdown
+    _loai_danh_muc:
+        label: 'Loại danh mục'
+        type: dropdown
+        span: auto
+        readOnly: true
+        options:
+            nam: 'Quản lý theo năm'
+            nam-catalog: 'Quản lý theo năm, hiên thị kiểu danh mục'
+            quy: 'Quản lý theo quý'
+    quy_du_lieu:
+        label: Quý
+        options:
+            1: 'Quý 1'
+            2: 'Quý 2'
+            3: 'Quý 3'
+            4: 'Quý 4'
+        showSearch: true
+        default: 0
+        span: auto
+        type: dropdown
+        trigger:
+            action: show
+            condition: 'value[quy]'
+            field: _loai_danh_muc
+    nam_du_lieu:
+        label: 'Năm dữ liệu'
+        mode: date
+        format: 'Y'
+        span: auto
+        default: now
+        type: datepicker
+    ngay_dang:
+        label: 'Ngày đăng'
+        mode: date
+        format: d/m/Y
+        span: auto
+        default: now
+        type: datepicker
+    mo_ta:
+        label: 'Mô tả'
+        size: ''
+        span: auto
+        type: text
+    thu_tu:
+        label: 'Thứ tự'
+        span: auto
+        default: 1
+        min: '1'
+        step: '1'
+        type: number
+    file:
+        label: 'File đính kèm'
+        mode: file
+        fileTypes: 'pdf,txt,docx,xlsx,ppt,zip,rar'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        maxFiles: '1'
+        span: auto
+        required: 1
+        type: fileupload
+    anh_dai_dien:
+        label: 'Ảnh đại diện'
+        mode: file
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: mediafinder
+        trigger:
+            action: show
+            condition: 'value[nam-catalog]'
+            field: _loai_danh_muc
+    file2:
+        label: 'File đính kèm 2'
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

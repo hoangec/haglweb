@@ -12,10 +12,18 @@ fields:
         tab: Nội dung trang
         groups:
             co-dong-box:
-                name: Block hiển thị nội dung cho section liên hệ
-                description: Block hiển thị nội dung cho section liên hệ
+                name: Block hiển thị nội dung cho section cổ đông
+                description: Block hiển thị nội dung cho section cổ đông
                 icon: icon-text-image
                 fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\CoDong\CoDongBox
+            dung-chung_files-danh-muc-codong:
+                name: Block hiển thị danh sach file theo danh mục
+                description: Block hiển thị danh sách file theo danh mục
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\FileTheoDanhMucBox

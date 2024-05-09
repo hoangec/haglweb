@@ -1,0 +1,13 @@
+list: $/hoangvo/files/models/file/columns.yaml
+modelClass: Hoangvo\Files\Models\File
+title: DanhSachFiles
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'hoangvo/files/danhsachfiles/update/:id'
+filter: $/hoangvo/files/models/file/scopes.yaml

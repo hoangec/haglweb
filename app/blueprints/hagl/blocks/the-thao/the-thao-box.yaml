@@ -17,3 +17,36 @@ fields:
         maxItems: 1
         span: row
         spanClass: col-6
+    image2:
+        label: Ảnh minh hoạ 2
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    dsImage:
+        label: Ảnh các cầu thủ
+        type: mediafinder
+        mode: image
+        maxItems: 10
+        span: row
+        spanClass: col-12
+    video:
+        label: Video
+        type: mediafinder
+        mode: file
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    _section1:
+        type: section
+        label: Thiết lập chi tiết cho mục tin tức bóng đá
+        comment: Nội dung hiển thị 3 bài viết mới nhất liên quan đến bóng đá
+    _ruler1:
+        type: ruler
+    categories:
+        label: Danh mục bài viết
+        commentAbove: 'Chọn danh mục loại bài viết được hiển thị'
+        type: entries
+        source: Blog\Category
+        maxItems: 1

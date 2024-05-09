@@ -18,7 +18,7 @@ fields:
                 fields:
                     _mixin:
                         type: mixin
-                        source: Hagl\Blocks\ImageCard
+                        source: Hagl\Blocks\DungChung\ImageBox
             time_lines_doc:
                 name: Block hiên thị nhật ký thời gian theo chiều dọc
                 description: Nội dung cho block hiên thị nhật ký thời gian theo chiều dọc

@@ -1,0 +1,40 @@
+fields:
+    ten:
+        label: Tên
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: ten
+            type: slug
+        type: text
+    danh_muc_cha:
+        label: 'Danh mục cha'
+        nameFrom: ten
+        emptyOption: '-- Không có danh mục con --'
+        span: left
+        type: relation
+    loai_danh_muc:
+        label: 'Loại danh mục'
+        options:
+            nam: 'Quản lý theo năm'
+            nam-catalog: 'Quản lý theo năm - Catalog'
+            quy: 'Quản lý theo quý'
+        showSearch: true
+        span: auto
+        type: dropdown
+    thu_tu:
+        label: 'Thứ tự hiển thị'
+        span: left
+        type: number
+        default: 1
+    anh_dai_dien:
+        label: 'Ảnh địa diện'
+        mode: file
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: mediafinder

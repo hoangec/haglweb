@@ -1,0 +1,35 @@
+columns:
+    id:
+        label: ID
+        type: number
+    ten:
+        label: 'Tên file'
+        type: text
+    mo_ta:
+        label: 'Mô tả'
+        type: text
+    thu_tu:
+        label: 'Thứ tự'
+        type: number
+    nam_du_lieu:
+        label: 'Năm dữ liệu'
+        type: text
+    quy_du_lieu:
+        label: 'Quý dữ liệu'
+        type: text
+    ngay_dang:
+        label: 'Ngày đăng'
+        type: text
+    danh_muc:
+        label: 'Danh mục'
+        type: text
+        searchable: true
+        sortable: true
+        select: ten
+        relation: danh_muc
+    danh_muc_id:
+        label: danh_muc_id
+        type: number
+    anh_dai_dien:
+        label: anh_dai_dien
+        type: text
