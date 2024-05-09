@@ -1,6 +1,9 @@
 [collection dsSuKien]
 handle = "Blog\Event"
 ==
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
 <section id="su-kien-box"  class="big-section pb-0 bg-gradient-top-very-light-gray ">
     <div class="container">
         <div class="row mb-2 mt-2">
