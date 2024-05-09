@@ -31,7 +31,7 @@ handle = "Blog\Post"
                             <span><i class="text-base-color feather icon-feather-folder"></i> <a class="text-base-color fs-15 lh-16 fw-500" href="{{'truyen-thong'|page({'category': tinTuc.categories.first().slug}) }}#section-truyen-thong" >{{tinTuc.categories.first().title}}</a></span>
                         </div>
                         <div>
-                            <a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{'tin-tuc'|page({ slug: tinTuc.slug })}}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                              <a  href="javascript:void(0);"  onclick="window.print();"> <i class="fas fa-print"></i></a>
                         </button>
                         </div>
