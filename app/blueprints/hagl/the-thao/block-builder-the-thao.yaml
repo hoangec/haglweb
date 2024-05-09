@@ -27,7 +27,7 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\TheThao\TheThaoBox
-            dung-chung_tintuc-card:
+            dung-chung_tin-tuc-card:
                 name: Block hiên thị tin tức mới nhất
                 description: Hiên thị 3 tin tức mới nhất dạng thẻ
                 icon: icon-text-code-block

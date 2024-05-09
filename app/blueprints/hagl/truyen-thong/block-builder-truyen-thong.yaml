@@ -26,7 +26,7 @@ fields:
                 fields:
                     _mixin:
                         type: mixin
-                        source: Hagl\Blocks\DungChung\SuKienBox
+                        source: Hagl\Blocks\TruyenThong\SuKienBox
             dung-chung_video-box-style1:
                 name: Block hiển thị nội dung video style 1
                 description: Block hiển thị nội dung video với hình nền

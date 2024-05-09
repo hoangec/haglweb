@@ -1,12 +1,33 @@
-$(function () {
-    // cac ultilies
-    function scrollToTarget(idSecctionDich) {
+function scrollToTarget(idSecctionDich) {
+    var sectionToScroll = document.getElementById(idSecctionDich);
+    if (sectionToScroll) {
         anime({
             targets: "html, body",
-            scrollTop: document.getElementById(idSecctionDich).offsetTop,
+            scrollTop: sectionToScroll.offsetTop,
             duration: 1000,
             easing: "easeInOutQuad",
         });
+    }
+}
+$(function () {
+    // cac ultilies
+    function scrollToSuKien(idSuKien) {
+        var section = document.getElementById(idSuKien);
+        var offset = 500;
+
+        var sectionPosition = section.offsetTop - offset;
+        // window.scrollTo(0,sectionPosition);
+        window.scrollTo({
+            top: sectionPosition,
+            left: 0,
+            behavior: "smooth",
+        });
+        // oc.progressBar.show();
+        // oc.flashMsg({
+        //     message: 'Record has been successfully saved. This message will disappear in 1 second.',
+        //     type: 'success',
+        //     interval: 1
+        // });
     }
     //-----------------------------------------
     var tlPhuPham = anime.timeline({
@@ -137,35 +158,6 @@ $(function () {
     });
 });
 
-/** page truyen thong - su kien */
-function scrollToTarget(idSecctionDich) {
-    anime({
-        targets: "html, body",
-        scrollTop: document.getElementById(idSecctionDich).offsetTop,
-        duration: 1000,
-        easing: "easeInOutQuad",
-    });
-}
-
-function scrollToSuKien(idSuKien) {
-    var section = document.getElementById(idSuKien);
-    var offset = 500;
-
-    var sectionPosition = section.offsetTop - offset;
-    // window.scrollTo(0,sectionPosition);
-    window.scrollTo({
-        top: sectionPosition,
-        left: 0,
-        behavior: "smooth",
-    });
-    // oc.progressBar.show();
-    // oc.flashMsg({
-    //     message: 'Record has been successfully saved. This message will disappear in 1 second.',
-    //     type: 'success',
-    //     interval: 1
-    // });
-}
-
 /* xu ly in trang tin tuc */
 function inTrangTinTuc() {
     var content = document.getElementById("section-tin-tuc-detail").innerHTML;
@@ -266,7 +258,6 @@ $(function () {
                 },
             });
         }
-        console.log(dataTable);
         //Koi tao loc du lieu cho tung table
         if(dataTable != null){
             var years = dataTable.column(1).data().unique().sort().toArray();
