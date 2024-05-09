@@ -1,0 +1,22 @@
+<table class="table table-hover table-border-10px table-striped" style="width:100%;" table-type="row-group" id="{{tableId}}">
+    <thead class="table-light">
+        <th class="align-middle text-start">Văn bản</th>
+        <th class="align-middle text-center">Năm</th>
+        <th class="align-middle text-center">Danh mục</th>
+        <th class="align-middle text-start">Ngày phát hành</th>
+    </thead>
+    <tbody>
+        {% for file in danhSachFile %}
+            <tr>
+                <td class="text-start">{{ file.ten }}</td>
+                <td class="text-start">{{ file.nam_du_lieu|date('Y') }}</td>
+                <td class="text-start">{{ file.danh_muc.ten}}</td>
+                <td class="text-start">
+                    <a target="_blank" href="{{file.file.url}}" />
+                        <span class="badge rounded-pill bg-base-color fs-12 ">{{ file.ngay_dang|date('d/m/Y')}}<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,58 @@
+[danhSachFile]
+sortOrder = "nam_du_lieu_asc"
+soLuong = {{block.soLuongFiles}}
+==
+<section>
+    <div class="container">
+        <div class="row mb-6" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="col-xl-10">
+                <h5 class="text-primary mb-0 lh-44 ls-minus-1px">{{block.tuaDe}} <span class="fw-600">{{block.noiDung}}</span></h5>
+            </div>
+        </div>
+        <div class="row justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+             <div class="col-lg-12 pt-20px pb-20px border-bottom border-3 border-color-dark-gray">
+                <div class="row align-items-center">
+                    <div class="col-md-2 col-xl-2 col-lg-1 text-start"><span class="fw-600 text-uppercase text-dark-gray">Ngày đăng tải</span></div>
+                    <div class="col-md-4 col-xl-4 col-lg-4 text-start"><span class="fw-600 text-uppercase text-dark-gray">Văn bản</span></div>
+                    <div class="col-md-4 col-xl-4 col-lg-5 text-start"><span class="fw-600 text-uppercase text-dark-gray">Danh mục</span></div>
+                    <div class="col-md-2 col-xl-2 col-lg-2 d-flex justify-content-center align-items-center"><span class="fw-600 text-uppercase text-dark-gray">Tải file</span></div>
+                </div>
+            </div>
+            {% for file in danhSachFile.files%}
+            <div class="col-lg-12 pt-20px pb-20px border-bottom border-color-light-gray">
+                <div class="row align-items-center">
+                    <div class="col-md-2 col-xl-2 col-lg-1 text-start"><span class="fw-600 text-uppercase text-dark-gray">{{file.ngay_dang|date('d/m/Y')}}</span></div>
+                    <div class="col-md-4 col-xl-4 col-lg-4 d-flex justify-content-center justify-content-md-start">{{file.ten}}</div>
+                    <div class="col-md-4 col-xl-4 col-lg-5 text-start"><span>{{file.danh_muc.ten}}</span></div>
+                    <div class="col-md-2 col-xl-2 col-lg-2 d-flex justify-content-center align-items-center">
+                        {% if file.danh_muc.loai_danh_muc == 'nam-catalog'%}
+                            <a target="_blank" href="{{file.file.url}}" />
+                                <span class="badge rounded-pill bg-base-color fs-12 ">Trang đơn<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
+                            </a>
+                            {% if file.file2 %}
+                            <a target="_blank" href="{{file.file2.url}}" class="ms-5px"/>
+                                <span class="badge rounded-pill bg-primary fs-12 ">Trang đôi<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
+                            </a>
+                            {% endif %}
+                        {% else %}
+                           <a target="_blank" href="{{file.file.url}}" />
+                                <span class="badge rounded-pill bg-base-color fs-12 ">{{ file.ngay_dang|date('d/m/Y')}}<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
+                            </a>
+                            {% if file.file2 %}
+                            <a target="_blank" href="{{file.file2.url}}" class="ms-5px"/>
+                                <span class="badge rounded-pill bg-primary fs-12 ">{{ file.ngay_dang|date('d/m/Y')}}<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
+                            </a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% if block.lienKet %}
+            <div class="col-lg-12 text-start mt-20px ps-0">
+                <a href="{{block.lienKet|link}}" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700"><span class="bg-base-color text-primary"></span>Xem tất cả</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

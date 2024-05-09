@@ -1,0 +1,136 @@
+[builderList danhMucFiles]
+modelClass = "Hoangvo\Files\Models\DanhMuc"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "ten"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList dsFiles]
+modelClass = "Hoangvo\Files\Models\File"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "ten"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[danhSachFile]
+sortOrder = "nam_du_lieu_asc"
+
+[danhSachDanhMuc]
+==
+{% set dsDanhMuc = danhMucFiles.records %}
+{% set dsFilesTheoDanhMuc = dsFiles.records %}
+
+<section class="bg-very-light-gray" id="section-danh-muc-files">
+    <div class="container">
+        <div class="row justify-content-center align-items-center gy-0 gx-0">
+            <div class="col-lg-7">
+                <div class="row row-cols-1 row-cols-md-3 g-0">
+                    {% for danhMuc in dsDanhMuc %}
+                        {% if danhMuc.danh_muc_cha is empty %}
+                            <div class="col co-dong-category">
+                                <a href="#section-table-{{danhMuc.id}}" onclick="scrollToTarget('section-table-{{danhMuc.id}}')"class="danh-muc-item">
+                                    <div class="card h-100 border-none no-border-radius">
+                                        <div class="card-body p-20px text-center justify-content-center align-items-center d-flex flex-column">
+                                            <img src="{{danhMuc.anh_dai_dien|media}}" class="card-img-top mx-auto d-block w-50" alt="..." />
+                                            <p class="text-center mt-2 mb-0">{{ danhMuc.ten }}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <script src="https://www.fireant.vn/Scripts/web/widgets.js"></script>
+                    <div id="fan-quote-758"></div>
+                    <script type="text/javascript">
+                    new FireAnt.QuoteWidget({
+                        "container_id": "fan-quote-758",
+                        "symbols": "HAG",
+                        "locale": "vi",
+                        "price_line_color": "#71BDDF",
+                        "grid_color": "#999999",
+                        "label_color": "#999999",
+                        "width": "100%",
+                        "height": "300px"
+                    });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{# <section id="section-du-lieu">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bg-base-color border-radius-10px p-25px mb-10px">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 col-lg-6 col-xxl-6">
+                            <div class="form-group">
+                                <label class="fw-700 fs-16px text-white">Lọc theo năm</label>
+                                <select id="table-loc-nam" name="table-loc-nam" class="form-select" aria-label="Default select example">
+                                    <option value="" selected>Xem tất cả</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-lg-6 col-xxl-6">
+                            <label class="fw-700 fs-16px text-white">Tìm kiếm</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="table-tim-kiem-input" placeholder="Nhập từ khoá tìm kiếm" />
+                                <span class="input-group-btn"><button class="btn btn-search h-100" type="button" id="table-tim-kiem-btn"><i class="fa fa-search fa-fw"></i></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-secondary-color border-radius-10px xs-p-0 p-20px lg-p-25px xxl-p-30px">
+                    <table id="table-theo-quy" class="table table-hover table-border-10px table-striped" style="width:100%;">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="align-middle text-center" data-priority="1" rowspan="2">Tên</th>
+                                <th class="align-middle text-center" rowspan="2">Mô tả</th>
+                                <th class="align-middle text-center" rowspan="2">Năm</th>
+                                <th class="align-middle text-center" colspan="4">Quý</th>
+                            </tr>
+                            <tr>
+                                <th class="align-middle text-center" data-priority="2">Quý I</th>
+                                <th class="align-middle text-center" data-priority="3">
+                                    Quý II/<br />Bán niên
+                                </th>
+                                <th class="align-middle text-center" data-priority="3">Quý III</th>
+                                <th class="align-middle text-center" data-priority="3">Quý IV</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for file in danhSachFile.files %}
+                                {% if file.danh_muc.loai_danh_muc == 'quy' %}
+                                    <tr>
+                                        {% set duLieuQuy1 = file.quy_du_lieu == 1 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-base-color fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                                        {% set duLieuQuy2 = file.quy_du_lieu == 2 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-primary fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                                        {% set duLieuQuy3 = file.quy_du_lieu == 3 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-green fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                                        {% set duLieuQuy4 = file.quy_du_lieu == 4 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-red fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                                        <td>{{ file.ten }}</td>
+                                        <td>{{ file.mo_ta }}</td>
+                                        <td class="text-start">{{ file.nam_du_lieu|date('Y') }}</td>
+                                        <td>{{ duLieuQuy1|raw }}</td>
+                                        <td>{{ duLieuQuy2|raw }}</td>
+                                        <td>{{ duLieuQuy3|raw }}</td>
+                                        <td>{{ duLieuQuy4|raw }}</td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> #}

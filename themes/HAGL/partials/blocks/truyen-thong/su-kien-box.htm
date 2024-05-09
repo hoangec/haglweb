@@ -1,0 +1,17 @@
+[collection dsSuKien]
+handle = "Blog\Event"
+==
+<section id="su-kien-box"  class="big-section pb-0 bg-gradient-top-very-light-gray ">
+    <div class="container">
+        <div class="row mb-2 mt-2">
+            <div class="col-12 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <h2 class="alt-font text-primary text-uppercase fw-700">{{block.tuaDe}}</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            {% set dsSuKienPaginated = dsSuKien.paginate(2) %}
+            {% set handler = "onGetSuKien"%}
+            {% ajaxPartial 'blocks/truyen-thong/ajax-su-kien-items' %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+<section class="bg-very-light-gray" id="section-table-{{block.dsDanhMuc.id}}">
+    <div class="{{ block.dsDanhMuc.loai_danh_muc == 'nam-catalog' ? 'container' : 'container'}}">
+        <div class="row justify-content-center mb-3">
+            <div class="col-xl-5 col-lg-6 col-md-7 text-center appear anime-child anime-complete" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+                <h3 class="text-primary fw-700 ls-minus-1px" style="">{{block.tuaDe}}</h3>
+                {# <a class="fs-20 fw-700 text-base-color" href="#section-danh-muc-files">Quay về danh mục<i class="ms-5px feather icon-feather-chevrons-up align-middle icon-large "></i></a> #}
+                <a href="#section-danh-muc-files" onClick="scrollToTarget('section-danh-muc-files')" class="btn btn-large btn-base-color btn-rounded  btn-box-shadow fw-600 d-table d-lg-inline-block lg-mb-15px md-mx-auto">Quay về danh mục<i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 {{block.dsDanhMuc.loai_danh_muc != 'nam-catalog' ? 'table-block' : ''}}" block-id={{block.id}}>
+                {% if block.dsDanhMuc.loai_danh_muc != 'nam-catalog'%}
+                <div class="bg-base-color border-radius-10px p-25px mb-10px">
+                    <div class="row" >
+                        <div class="col-sm-12 col-xs-12 col-lg-6 col-xxl-6">
+                            <div class="form-group">
+                                <label class="fw-700 fs-16px text-white">Lọc theo năm</label>
+                                <select id="table-loc-nam-{{block.id}}" class="form-select" aria-label="Default select example">
+                                    <option value="" selected>Xem tất cả</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-lg-6 col-xxl-6">
+                            <label class="fw-700 fs-16px text-white">Tìm kiếm</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Nhập từ khoá tìm kiếm" id="table-search-input-{{block.id}}" />
+                                <span class="input-group-btn"><button class="btn btn-search h-100" type="button" id="table-search-btn-{{block.id}}"><i class="fa fa-search fa-fw"></i></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="bg-secondary-color border-radius-10px xs-p-0 p-20px lg-p-25px xxl-p-30px">
+                    {% if block.dsDanhMuc.loai_danh_muc == 'quy'%}
+                        {% partial 'elements/table-style-quy' danhSachFile = block.dsDanhMuc.getAllFiles() tableId = "table-rowgroup-"~block.id  %}
+                    {% elseif block.dsDanhMuc.loai_danh_muc == 'nam-catalog' %}
+                        {% partial 'elements/table-style-catalog' danhSachFile = block.dsDanhMuc.getAllFiles()  %}
+                    {% else %}
+                         {% partial 'elements/table-style-row-group' danhSachFile = block.dsDanhMuc.getAllFiles() tableId = "table-rowgroup-"~block.id  %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
