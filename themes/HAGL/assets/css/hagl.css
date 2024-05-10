@@ -560,7 +560,7 @@ blockquote {
 
 /** truyen thong **/
 .truyen-thong li {
-  padding: 0 25px;
+  margin-right: 20px;
 }
 .truyen-thong li:first-child {
   padding-left: 0;
@@ -603,6 +603,20 @@ blockquote {
   border-bottom-left-radius: 10px;
 }
 
+@media screen and (max-width: 576px) {
+  .image-box-style1 .image-box-body {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .image-box-style1 img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
 .video-box-style2 {
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
   padding-left: 0;
@@ -623,6 +637,17 @@ blockquote {
   border-bottom-left-radius: 10px;
 }
 
+@media screen and (max-width: 576px) {
+  .video-box-style2 .image-box-body {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .video-box-style2 video {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+}
 /* -- tin tuc card */
 .tin-tuc-item {
   transition: transform 0.3s ease;

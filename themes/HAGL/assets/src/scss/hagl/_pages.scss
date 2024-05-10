@@ -412,8 +412,8 @@ blockquote {
 /** truyen thong **/
 .truyen-thong {
     li {
-        padding: 0 25px;
-
+        // padding: 0 25px;
+        margin-right: 20px;
         &:first-child {
             padding-left: 0;
         }
@@ -466,6 +466,22 @@ blockquote {
         border-bottom-left-radius: 10px;
     }
 }
+@media screen and (max-width: 576px) {
+    .image-box-style1 {
+        .image-box-body {
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        img {
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+}
 
 .video-box-style2 {
     box-shadow: 5px 5px 15px 0px rgb(0, 0, 0, 0.3);
@@ -487,9 +503,24 @@ blockquote {
     video {
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+
     }
+
 }
 
+@media screen and (max-width: 576px) {
+    .video-box-style2 {
+        .image-box-body {
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        video {
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+}
 /* -- tin tuc card */
 
 .tin-tuc-item {
