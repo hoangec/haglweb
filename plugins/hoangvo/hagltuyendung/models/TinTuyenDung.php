@@ -79,7 +79,7 @@ class TinTuyenDung extends Model
         $ngayHetHan = 0;
         if(!is_null($this->ngay_het_han)){
             $ngay2 = Carbon::createFromFormat('Y-m-d', $this->ngay_het_han, 'Asia/Ho_Chi_Minh');
-            $ngayHetHan = $ngayHienTai->isSameDay($ngay2) || $ngayHienTai->diffInDays($ngay2,false) < 0 ? 0 :  $ngayHienTai->diffInDays($ngay2,false) + 1;
+            $ngayHetHan = $ngayHienTai->isSameDay($ngay2) || $ngayHienTai->diffInDays($ngay2,false) < 0 ? -1 :  $ngayHienTai->diffInDays($ngay2,false) + 1;
         }
         return $ngayHetHan ;
     }

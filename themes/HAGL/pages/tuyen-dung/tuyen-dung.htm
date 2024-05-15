@@ -88,7 +88,8 @@ function onStart()
                                             {% endif %}
                                         </div>
                                     </div>
-                                    {% if tinTuyenDungChiTiet.getSoNgayHetHan()  > 0 %}
+                                    {# {{dd( tinTuyenDungChiTiet.getSoNgayHetHan())}} #}
+                                    {% if tinTuyenDungChiTiet.getSoNgayHetHan()  >= 0 %}
                                     <div class="text-start">
                                         <a href="#"
                                             data-bs-toggle="modal"
