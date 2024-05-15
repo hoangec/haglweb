@@ -1,0 +1,29 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table hoangvo_hagltuyendung_tin_tuyen_dung'
+    - builder_table_create_hoangvo_hagltuyendung_tin_tuyen_dung.php
+v1.0.3:
+    - 'Updated table hoangvo_hagltuyendung_tin_tuyen_dung'
+    - builder_table_update_hoangvo_hagltuyendung_tin_tuyen_dung.php
+v1.0.4:
+    - 'Updated table hoangvo_hagltuyendung_tin_tuyen_dung'
+    - builder_table_update_hoangvo_hagltuyendung_tin_tuyen_dung_2.php
+v1.0.5:
+    - 'Updated table hoangvo_hagltuyendung_tin_tuyen_dung'
+    - builder_table_update_hoangvo_hagltuyendung_tin_tuyen_dung_3.php
+v1.0.6:
+    - 'Updated table hoangvo_hagltuyendung_tin_tuyen_dung'
+    - builder_table_update_hoangvo_hagltuyendung_tin_tuyen_dung_4.php
+v1.0.7:
+    - 'Updated table hoangvo_hagltuyendung_tin_tuyen_dung'
+    - builder_table_update_hoangvo_hagltuyendung_tin_tuyen_dung_5.php
+v1.0.8:
+    - 'Created table hoangvo_hagltuyendung_ung_vien'
+    - builder_table_create_hoangvo_hagltuyendung_ung_vien.php
+v1.0.9:
+    - 'Updated table hoangvo_hagltuyendung_ung_vien'
+    - builder_table_update_hoangvo_hagltuyendung_ung_vien.php
+v1.0.10:
+    - 'Updated table hoangvo_hagltuyendung_tin_tuyen_dung'
+    - builder_table_update_hoangvo_hagltuyendung_tin_tuyen_dung_6.php

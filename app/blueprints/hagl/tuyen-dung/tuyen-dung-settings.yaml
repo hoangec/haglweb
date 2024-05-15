@@ -1,0 +1,56 @@
+uuid: 3f2e3a1d-0b8c-4c2f-82a5-c309505ca087
+handle: HAGL\TuyenDung\Settings
+type: global
+name: Thiết lập cho trang tuyển dụng
+
+fields:
+    lien_he:
+        label: Thông tin người liên hệ
+        tab: Thiết lập chung
+    email_nhan_tin_ung_vien:
+        label: Email nhận tin ứng viên
+        type: email
+        validation: email
+        tab: Thiết lập chung
+    zalo_ho_tro:
+        label: Thông tin zalo hỗ trợ
+        tab: Thiết lập chung
+    facebook_ho_tro:
+        label: Thông tin facebook hỗ trợ
+        tab: Thiết lập chung
+    ds_nganh_nghe:
+        label: Danh sách ngành nghề
+        tab: Ngành nghề
+        type: repeater
+        form:
+            fields:
+                ten:
+                    label: Tên ngành nghề
+                    type: text
+                slug:
+                    label: Slug
+                    type: text
+                    readOnly: true
+                    span: auto
+                    dependsOn: ten
+                    preset:
+                        field: ten
+                        type: slug
+    ds_phuc_loi:
+        label: Danh sách phúc lợi
+        tab: Phúc lợi
+        type: repeater
+        form:
+            fields:
+                ten:
+                    label: Tên phúc lợi
+                    type: text
+                slug:
+                    label: Slug
+                    type: text
+                    readOnly: true
+                    span: auto
+                    dependsOn: ten
+                    preset:
+                        field: ten
+                        type: slug

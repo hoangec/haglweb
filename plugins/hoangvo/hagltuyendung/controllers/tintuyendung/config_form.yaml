@@ -1,0 +1,10 @@
+name: TinTuyenDung
+form: $/hoangvo/hagltuyendung/models/tintuyendung/fields.yaml
+modelClass: Hoangvo\HaglTuyenDung\Models\TinTuyenDung
+defaultRedirect: hoangvo/hagltuyendung/tintuyendung
+create:
+    redirect: 'hoangvo/hagltuyendung/tintuyendung/update/:id'
+    redirectClose: hoangvo/hagltuyendung/tintuyendung
+update:
+    redirect: hoangvo/hagltuyendung/tintuyendung
+    redirectClose: hoangvo/hagltuyendung/tintuyendung

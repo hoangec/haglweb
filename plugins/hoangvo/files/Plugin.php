@@ -14,7 +14,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'HAGL',
+            'name' => 'HAGL Files',
             'description' => 'plugin quản lý file cho web page hage',
             'author' => 'Hoang Vo',
             'icon' => 'icon-leaf'

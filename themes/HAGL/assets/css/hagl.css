@@ -748,3 +748,33 @@ select[name=table-loc-nam] {
 input[name=table-tim-kiem-input] {
   border: 0;
 }
+
+/* -- Page tuyen dung */
+.text-truncate-2-row {
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  max-width: 100%;
+  white-space: pre-wrap;
+}
+
+.tuyen-dung-mo-ta-cong-viec {
+  color: #000;
+}
+.tuyen-dung-mo-ta-cong-viec p {
+  margin-bottom: 10px;
+}
+
+.tuyen-dung-yeu-cau-cong-viec {
+  color: #000;
+}
+.tuyen-dung-yeu-cau-cong-viec p {
+  margin-bottom: 10px;
+}
+
+.tuyen-dung-lien-he {
+  color: #000;
+  font-size: 16px;
+}

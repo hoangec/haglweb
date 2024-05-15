@@ -145,9 +145,13 @@ items:
             isExternal: '0'
     -
         title: 'Truyền thông'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: truyen-thong
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -167,13 +171,9 @@ items:
             isExternal: '0'
     -
         title: 'Tuyển dụng'
-        nesting: null
         type: cms-page
-        url: null
         code: ''
-        reference: tuyen-dung
-        cmsPage: null
-        replace: null
+        reference: tuyen-dung/index
         viewBag:
             isHidden: '0'
             cssClass: ''

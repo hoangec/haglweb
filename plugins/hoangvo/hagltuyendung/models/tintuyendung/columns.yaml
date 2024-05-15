@@ -1,0 +1,34 @@
+columns:
+    id:
+        label: id
+        type: number
+    tua_de:
+        label: tua_de
+        type: text
+    so_luong:
+        label: so_luong
+        type: number
+    hinh_thuc:
+        label: hinh_thuc
+        type: text
+    do_tuoi:
+        label: do_tuoi
+        type: text
+    gioi_tinh:
+        label: gioi_tinh
+        type: text
+    kinh_nghiem:
+        label: kinh_nghiem
+        type: text
+    dia_diem_lam_viec:
+        label: dia_diem_lam_viec
+        type: text
+    ngay_dang_tuyen:
+        label: ngay_dang_tuyen
+        type: text
+    ngay_het_han:
+        label: ngay_het_han
+        type: text
+    slug:
+        label: Slug
+        type: text

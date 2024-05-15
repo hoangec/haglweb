@@ -1,0 +1,113 @@
+fields:
+    tua_de:
+        label: 'Tựa đề'
+        span: auto
+        required: 1
+        type: text
+    so_luong:
+        label: 'Số lượng'
+        span: auto
+        default: '1'
+        required: 1
+        type: number
+    nganh_nghe:
+        label: 'Ngành nghề'
+        showSearch: true
+        span: auto
+        type: dropdown
+    do_tuoi:
+        label: 'Độ tuổi'
+        span: auto
+        default: 'Không giới hạn'
+        required: 0
+        type: text
+    gioi_tinh:
+        label: 'Giới tính'
+        options:
+            'Không quy định': 'Không quy định'
+            Nam: Nam
+            Nữ: Nữ
+        span: auto
+        default: 'Không quy định'
+        type: balloon-selector
+    noi_lam_viec:
+        label: 'Nơi làm việc'
+        showSearch: 1
+        span: auto
+        default: vn
+        required: 1
+        type: dropdown
+    dia_diem_lam_viec:
+        label: 'Địa điểm làm việc'
+        span: auto
+        required: 1
+        type: text
+    hinh_thuc:
+        label: 'Hình thức'
+        span: auto
+        default: 'Toàn thời gian'
+        type: text
+    kinh_nghiem:
+        label: 'Kinh nghiệm'
+        span: auto
+        default: 'Không bắt buộc'
+        type: text
+    thanh_phan:
+        label: 'Vị trí'
+        span: auto
+        default: 'Nhân viên'
+        type: text
+    phuc_loi:
+        label: 'Phúc lợi'
+        mode: string
+        # separator: space
+        # optionsMethod: true
+        options: true
+        span: auto
+        useKey: true
+        type: taglist
+    mo_ta_cong_viec:
+        label: 'Mô tả công việc'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    yeu_cau:
+        label: 'Yêu cầu'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    lien_he:
+        label: 'Liên hệ'
+        span: auto
+        type: text
+    ngay_dang_tuyen:
+        label: 'Ngày đăng tuyển'
+        mode: date
+        format: d/m/Y
+        span: auto
+        default: now
+        required: 1
+        type: datepicker
+    tuyen_gap:
+        label: 'Tuyển gấp'
+        span: left
+        type: switch
+    ngay_het_han:
+        label: 'Ngày hết hạn'
+        mode: date
+        format: d/m/Y
+        span: left
+        type: datepicker
+    anh_dai_dien:
+        label: 'Ảnh đại diện'
+        mode: image
+        imageWidth: '130'
+        imageHeight: '90'
+        maxItems: '1'
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: mediafinder

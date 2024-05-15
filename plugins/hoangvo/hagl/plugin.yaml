@@ -1,6 +1,0 @@
-plugin:
-    name: 'hoangvo.hagl::lang.plugin.name'
-    description: 'hoangvo.hagl::lang.plugin.description'
-    author: hoangvo
-    icon: oc-icon-beer
-    homepage: ''

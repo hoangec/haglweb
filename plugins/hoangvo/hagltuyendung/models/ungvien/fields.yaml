@@ -1,0 +1,32 @@
+fields:
+    ho_ten:
+        label: 'Họ tên'
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    dien_thoai:
+        label: 'Số điện thoại'
+        span: auto
+        type: text
+    created_at:
+        label: 'Created at'
+        span: auto
+        type: datepicker
+    cvFile:
+        label: 'CV  đính kèm'
+        span: auto
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload
+    tin_tuyen_dung:
+        label: 'Tin tuyển dụng'
+        nameFrom: tua_de
+        span: auto
+        descriptionFrom: description
+        type: relation

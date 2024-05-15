@@ -1,0 +1,10 @@
+name: UngVien
+form: $/hoangvo/hagltuyendung/models/ungvien/fields.yaml
+modelClass: Hoangvo\HaglTuyenDung\Models\UngVien
+defaultRedirect: hoangvo/hagltuyendung/ungvien
+create:
+    redirect: 'hoangvo/hagltuyendung/ungvien/update/:id'
+    redirectClose: hoangvo/hagltuyendung/ungvien
+update:
+    redirect: hoangvo/hagltuyendung/ungvien
+    redirectClose: hoangvo/hagltuyendung/ungvien

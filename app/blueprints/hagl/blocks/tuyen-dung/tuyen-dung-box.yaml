@@ -17,3 +17,20 @@ fields:
         maxItems: 1
         span: row
         spanClass: col-6
+    _section1:
+        type: section
+        label: Danh sách các nội dung thành phần
+    dsNoiDung:
+        type: repeater
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-6
+                noiDung:
+                    label: Nội dung
+                    type: text
+                    span: row
+                    spanClass: col-6

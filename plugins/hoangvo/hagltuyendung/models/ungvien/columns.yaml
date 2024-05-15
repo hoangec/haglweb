@@ -1,0 +1,22 @@
+columns:
+    id:
+        label: id
+        type: number
+    ho_ten:
+        label: 'Họ tên'
+        type: text
+    email:
+        label: email
+        type: text
+    dien_thoai:
+        label: 'Số điện thoại'
+        type: text
+    cvFile:
+        label: 'File CV đính kèm'
+        type: linkage
+        displayFrom: cv_file_link
+    tin_tuyen_dung_id:
+        label: 'Tin tuyển dụng'
+        type: text
+        select: tua_de
+        relation: tin_tuyen_dung

@@ -1,0 +1,72 @@
+<div class="ps-20px pe-20px">
+    <form data-request="onSaveUngVien" data-request-files data-request-flash data-request-message="Đang xử lý" class="contact-form-style-03" id="form-ung-tuyen">
+        {{form_token()}}
+        {{form_sessionKey()}}
+        <div class="row justify-content-start">
+             <div class="col-md-12">
+                <p class="mb-0 "><span class="fw-bolder text-black fs-20">Vị trí:</span> {{ __SELF__.property('tuyenDungTuaDe')}}</p>
+                <input type="hidden" name="tuyenDungId" value="{{ __SELF__.property('tuyenDungId')}}"  />
+             </div>
+            <div class="col-md-6">
+                <label for="hoTenUngVien" class="form-label fs-11 ls-2px text-uppercase text-black mb-0">Tên ứng viên*</label>
+                <div class="position-relative form-group mb-30px">
+                    <span class="form-icon"><i class="bi bi-emoji-smile"></i></span>
+                    <input class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control required" id="hoTenUngVien" type="text" name="hoTen" placeholder="Nhập họ tên ứng viên" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="emailUngVien" class="form-label fs-11 ls-2px text-uppercase text-black mb-0">Địa chỉ Email*</label>
+                <div class="position-relative form-group mb-30px">
+                    <span class="form-icon"><i class="bi bi-envelope"></i></span>
+                    <input class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control required" id="emailUngVien" type="email" name="email" placeholder="Nhập Email" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="soDienThoaiUngVien" class="form-label fs-11 ls-2px text-uppercase text-black mb-0">Số điện thoại</label>
+                <div class="position-relative form-group mb-30px">
+                    <span class="form-icon"><i class="bi bi-telephone"></i></span>
+                    <input class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control required" id="soDienThoaiUngVien" type="tel" name="soDienThoai" placeholder="Nhập số di động" />
+                </div>
+            </div>
+            <div class="col-md-12 mb-2">
+                <label for="cvUngVien" class="form-label fs-11 ls-2px text-uppercase text-black mb-0">Tải CV</label>
+                <div class="position-relative form-group form-textarea mb-0">
+                    <input class="form-control required" type="file" name="cvFile" id="cvUngVien">
+                </div>
+            </div>
+            <div class="col-xl-8 col-md-8 text-start mb-2">
+                {# <p class="mb-0 fs-14 lh-24 w-90 xl-w-100">We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p> #}
+                <div class="position-relative terms-condition-box text-start d-inline-block">
+                    <label>
+                        <input type="checkbox" name="terms_condition" id="terms_condition" value="1" class="terms-condition check-box align-middle required">
+                        <span class="box fs-16">Tôi đồng ý với Quy Định Bảo Mật của Công ty Cổ phần Hoàng Anh Gia Lai.</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-xl-5 col-md-4 text-start mb-2">
+                <button class="btn btn-small btn-base-color btn-box-shadow btn-round-edge-small primary-font fw-700 submit-tuyendung" type="submit">Xác nhận</button>
+            </div>
+            <div class="col-12">
+                <div id="result" class="form-results mt-20px d-none">
+                    <ul>
+                    {% for error in errors.all() %}
+                        <li >{{error}}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+
+{# <form data-request="onTest">
+
+    <!-- Input two values -->
+    <input name="value1"> + <input name="value2">
+
+    <!-- Action button -->
+    <button type="submit">Calculate</button>
+
+</form> #}

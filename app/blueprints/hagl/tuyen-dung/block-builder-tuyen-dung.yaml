@@ -12,8 +12,8 @@ fields:
         tab: Nội dung trang
         groups:
             tuyen-dung-box:
-                name: Block hiển thị nội dung cho section liên hệ
-                description: Block hiển thị nội dung cho section liên hệ
+                name: Block hiển thị nội dung cho section tuyển dụng
+                description: Block hiển thị nội dung cho section tuyển dụng
                 icon: icon-text-image
                 fields:
                     _mixin:

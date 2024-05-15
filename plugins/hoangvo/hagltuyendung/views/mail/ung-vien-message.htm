@@ -1,0 +1,20 @@
+    <div class="email-wrapper">
+        <div class="email-header">
+            <h2>Thông báo: Có ứng viên mới</h2>
+        </div>
+        <div class="email-content">
+            <p>Xin chào,</p>
+            <p>Có một ứng viên mới đã gửi hồ sơ ứng tuyển.</p>
+            <p>Dưới đây là thông tin về ứng viên:</p>
+            <ul>
+                <li><strong>Họ và tên:</strong> {{ applicant_name }}</li>
+                <li><strong>Email:</strong> {{ applicant_email }}</li>
+                <li><strong>Số điện thoại:</strong> {{ applicant_phone }}</li>
+                {# <li><strong>Resume/CV:</strong> <a href="{{ applicant_resume }}">Tải về</a></li> #}
+            </ul>
+        </div>
+        <div class="email-footer">
+            <p>Trân trọng,</p>
+            <p>Đội ngũ quản lý ứng viên</p>
+        </div>
+    </div>

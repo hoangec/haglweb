@@ -1,0 +1,25 @@
+plugin:
+    name: 'hoangvo.hagltuyendung::lang.plugin.name'
+    description: 'hoangvo.hagltuyendung::lang.plugin.description'
+    author: hoangvo
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    tuyen-dung-menu-item:
+        label: 'Tuyển dụng'
+        url: /
+        icon: icon-life-ring
+        order: '135'
+        sideMenu:
+            tin-tuyen-dung-side-menu-item:
+                label: 'Tin tuyển dụng'
+                url: hoangvo/hagltuyendung/tintuyendung
+                icon: icon-sitemap
+            ung-vien-side-menu-item:
+                label: 'Ứng viên'
+                url: hoangvo/hagltuyendung/ungvien
+                icon: icon-sitemap
+            thiet-lap-side-menu-item:
+                label: 'Thiết lập'
+                url: tailor/globals/h_a_g_l_tuyen_dung_settings/
+                icon: icon-sliders

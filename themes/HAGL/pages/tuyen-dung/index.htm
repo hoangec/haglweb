@@ -1,0 +1,168 @@
+url = "/tuyen-dung/:quoc_gia?all/:page?"
+layout = "default"
+title = "Index"
+meta_title = "Tuyền dụng HAGL"
+meta_description = "Tuyển dụng HAGL"
+
+[section pageTuyenDung]
+handle = "Hagl\TuyenDung"
+
+[dsTinTuyenDung]
+
+[builderList dsTuyenDung]
+modelClass = "Hoangvo\HaglTuyenDung\Models\TinTuyenDung"
+scope = "scopeTinTheoQuocGiaFilter"
+scopeValue = "{{ :quoc_gia }}"
+displayColumn = "tua_de"
+noRecordsMessage = "No records found"
+detailsPage = "tuyen-dung/tuyen-dung"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+sortColumn = "ngay_dang_tuyen"
+sortDirection = "desc"
+==
+{% set breadcrumbs = [
+    {
+        'name':'HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Tuyển dụng'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pageTuyenDung.pageBanner type = "parallax-bg" %}
+{% for block in pageTuyenDung.blocks %}
+   {% partial 'blocks/tuyen-dung/' ~ str_slug(block.type) block=block %}
+{% endfor %}
+{% put pageSticks %}
+    {% partial 'app/page-stick'  %}
+{% endput %}
+<section class="ps-10 pe-10">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h5 class="text-primary fw-bold text-uppercase">Vị trí tuyển dụng</h5>
+            </div>
+        </div>
+        <div class="row mb-30px bg-third-color border-radius-5px">
+            <div class="col-lg-12 ">
+                <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center" data-anime='{ "el": "childs",  "translateY": [0, 0], "perspective": [1200, 1200], "scale": [1.05, 1], "rotateX": [50, 0], "opacity": [0,1], "duration":600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <div class="col p-20px icon-with-text-style-07 transition-inner-all md-mb-30px">
+                        <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'vn', page: ''}) }}">
+                            <div class=" bg-white align-items-center feature-box h-100 justify-content-center box-shadow-small box-shadow-small-hover text-center p-20px sm-p-14 border-radius-6px ">
+                                <div class="feature-box-icon mb-20px">
+                                    <img class="w-120px h-120px rounded-circle  object-fit-contain" src="{{'assets/images/vn-flag.png'|theme}}">
+                                </div>
+                                <div class="feature-box-content">
+                                    <span class="d-inline-block fw-600 text-dark-gray fs-18 ls-minus-05px">Việt Nam</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col p-20px icon-with-text-style-07 transition-inner-all md-mb-30px">
+                        <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'lao', page:''}) }}">
+                            <div class=" bg-white align-items-center feature-box h-100 justify-content-center box-shadow-small box-shadow-small-hover text-center p-20px sm-p-14 border-radius-6px ">
+                                <div class="feature-box-icon mb-20px">
+                                    <img class="w-120px h-120px rounded-circle  object-fit-contain" src="{{'assets/images/laos-flag.png'|theme}}">
+                                </div>
+                                <div class="feature-box-content">
+                                    <span class="d-inline-block fw-600 text-dark-gray fs-18 ls-minus-05px">Lào</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col p-20px icon-with-text-style-07 transition-inner-all md-mb-30px">
+                         <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'cam', 'page': ''}) }}">
+                            <div class=" bg-white align-items-center feature-box h-100 justify-content-center box-shadow-small box-shadow-small-hover text-center p-20px sm-p-14 border-radius-6px ">
+                                <div class="feature-box-icon mb-20px">
+                                    <img class="w-120px h-120px rounded-circle  object-fit-contain" src="{{'assets/images/cam-flag.png'|theme}}">
+                                </div>
+                                <div class="feature-box-content">
+                                    <span class="d-inline-block fw-600 text-dark-gray fs-18 ls-minus-05px">Campuchia</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3" data-anime='{ "el": "childs",  "translateY": [0, 0], "perspective": [1200, 1200], "scale": [1.05, 1], "rotateX": [50, 0], "opacity": [0,1], "duration":600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            {% for tinTuyenDung in dsTuyenDung.records%}
+            <div class="col-lg-4 col-md-6 col-12 px-1">
+                <div class="border rounded-3 px-2 py-2 position-relative overflow-hidden h-100  box-shadow-medium box-shadow-medium-hover">
+                    <div class="row mb-2">
+                        <div class="col-xxl-4 col-lg-4 col-4">
+                            <div class="d-flex align-items-center justify-content-center  ">
+                                <a href="{{ 'tuyen-dung/tuyen-dung'|page({slug: tinTuyenDung.slug}) }}"  class="img">
+                                    <img class="object-fit-contain w-100" src="{{tinTuyenDung.anh_dai_dien|media}}" height="100px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-8 col-6 pe-5">
+                            <div class="d-flex flex-column gap-1 justify-content-center h-100">
+                                <a href="{{ 'tuyen-dung/tuyen-dung'|page({slug: tinTuyenDung.slug}) }}" class="text-decoration-none">
+                                    <h5 class="text-truncate-2-row  fw-bolder fs-20  mb-0 text-dark " >{{tinTuyenDung.tua_de}}</h5>
+                                </a>
+                                <div class="fs-16">Số lượng tuyển : <span class="fw-bold">{{tinTuyenDung.so_luong}}</span> người</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center w-100 justify-content-between">
+                        <div class="flex-grow-1 text-primary d-flex gap-2 align-items-center justify-content-center">
+                            <i class="fa-solid fa-location-dot bg-opacity-10  p-1 icon-small"></i>
+                            <span class="fs-13 text-primary">
+                                {{tinTuyenDung.getNoiLamViecOptions[tinTuyenDung.noi_lam_viec]}}
+                            </span>
+                        </div>
+                        {% if tinTuyenDung.tuyen_gap %}
+                         <div class="flex-grow-1 d-flex gap-2 align-items-center justify-content-center">
+                            <span class="border-radius-10px bg-red px-3 fw-bold text-white">Tuyển Gấp</span>
+                        </div>
+                        {% endif %}
+                        <div class="flex-grow-1">
+                            <a href="{{ 'tuyen-dung/tuyen-dung'|page({slug: tinTuyenDung.slug}) }}" class="text-decoration-none">
+                                <div class="text-primary d-flex gap-2 align-items-center justify-content-center">
+                                    <i class="fa-solid fa-paste bg-opacity-10  p-1 icon-small"></i>
+                                    <span class="fs-13 ">Chi tiết</span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    {% if tinTuyenDung.isNew() %}
+                    <span class="bg-base-color px-3 position-absolute end-0 top-0 fw-bold text-white" style="font-size: 0.8rem;border-bottom-left-radius: .53rem; z-index:3">MỚI</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row ">
+            <div class="col-lg-12 justify-content-center align-items-center d-flex mt-4">
+                {% if records.lastPage > 1 %}
+                    <ul class="pagination pagination-style-01 fs-13 fw-500 mb-0">
+                        {% if records.currentPage > 1 %}
+                            {# <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Trang trước</a></li> #}
+                            <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1), quoc_gia: this.param.quoc_gia }) }}"><i class="feather icon-feather-arrow-left fs-18 d-xs-none"></i></a></li>
+                        {% endif %}
+
+                        {% for page in 1..records.lastPage %}
+                            <li class="page-item {{ records.currentPage == page ? 'active' : null }}">
+                                <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page, quoc_gia: this.param.quoc_gia }) }}">{{ page }}</a>
+                            </li>
+                        {% endfor %}
+
+                        {% if records.lastPage > records.currentPage %}
+                            {# <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Trang kế &rarr;</a></li> #}
+                            <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1), quoc_gia: this.param.quoc_gia }) }}"><i class="feather icon-feather-arrow-right fs-18 d-xs-none"></i></a></li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
