@@ -14,53 +14,17 @@ fields:
         type: textarea
         span: row
         spanClass: col-md-6
+    sologan:
+        label: Câu sologan
+        type: text
+        span: row
+        spanClass: col-md-6
     image1:
         label: Ảnh 1
         type: mediafinder
         mode: image
         maxItems: 1
-    _section1:
-        type: section
-        label: Nội dung section định hướng
-        comment: Nội dung kiểu danh mục 1,2,3
-    tuaDeLon:
-        label: Nội dung tựa đề lớn
-        type: text
         span: row
         spanClass: col-md-6
-    image2:
-        label: Ảnh 2
-        type: mediafinder
-        mode: image
-        maxItems: 1
-    tieuDe1:
-        label: Nội dung tiêu đề 1
-        type: text
-        span: row
-        spanClass: col-md-6
-    noiDungTieuDe1:
-        label: Nội dung mô tả tiều đề 1
-        type: text
-        span: row
-        spanClass: col-md-6
-    tieuDe2:
-        label: Nội dung tiêu đề 2
-        type: text
-        span: row
-        spanClass: col-md-6
-    noiDungTieuDe2:
-        label: Nội dung mô tả tiều đề 2
-        type: text
-        span: row
-        spanClass: col-md-6
-    tieuDe3:
-        label: Nội dung tiêu đề 3
-        type: text
-        span: row
-        spanClass: col-md-6
-    noiDungTieuDe3:
-        label: Nội dung mô tả tiều đề 3
-        type: text
-        span: row
-        spanClass: col-md-6
+     
 

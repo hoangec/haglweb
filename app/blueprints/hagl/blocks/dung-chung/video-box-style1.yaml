@@ -9,6 +9,9 @@ fields:
         type: text
     noiDung:
         label: Nội dung
+        type: textarea
+    tenButton:
+        label: Tên nút tải file video
         type: text
     videoLink:
         label: Links video
@@ -16,10 +19,5 @@ fields:
         mode: image
         maxItems: 1
         size: small
-    image:
-        label: Chọn ảnh từ thư viện
-        type: mediafinder
-        mode: image
-        maxItems: 1
-        size: small
+    
     

@@ -36,9 +36,17 @@ sortDirection = "desc"
     {% partial 'app/breadcrumbs' pages=breadcrumbs %}
 {% endput %}
 {% partial 'app/page-title' pageBanner = pageTuyenDung.pageBanner type = "parallax-bg" %}
+
 {% for block in pageTuyenDung.blocks %}
-   {% partial 'blocks/tuyen-dung/' ~ str_slug(block.type) block=block %}
+    {% set blockType = block.type|split('_') %}
+    {% if blockType[0] == 'dung-chung' %}
+        {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
+    {% else %}
+        {% partial 'blocks/the-thao/' ~ str_slug(block.type) block=block %}
+    {% endif %}
 {% endfor %}
+
+
 {% put pageSticks %}
     {% partial 'app/page-stick'  %}
 {% endput %}

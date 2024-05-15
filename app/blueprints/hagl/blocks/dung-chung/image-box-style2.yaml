@@ -1,0 +1,20 @@
+uuid: 93759712-cbbf-4981-ab43-e6d61c9dd194
+handle: Hagl\Blocks\DungChung\ImageBoxStyle2
+type: mixin
+name: Nội dung section hiển thị ảnh.
+multisite: sync
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+
+    noiDung:
+        lable: Nội dung
+        type: richeditor
+    image:
+        label: Chọn ảnh từ thư viện
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small

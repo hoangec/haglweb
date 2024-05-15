@@ -19,3 +19,27 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\TuyenDung\TuyenDungBox
+            dung-chung_video-box-style1:
+                name: Block hiển thị nội dung video style 1
+                description: Block hiển thị nội dung video với hình nền
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\VideoBoxStyle1
+            dung-chung_video-box-style2:
+                name: Block hiển thị nội dung video style 2
+                description: Block hiển thị nội dung video với hình nền
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\VideoBoxStyle1
+            dung-chung_counter-box-style2:
+                name: Block hiển thị nội dung số liệu style 2
+                description: Block hiển thị nội dung số liệu style 2
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source:  Hagl\Blocks\DungChung\CounterBoxStyle2

@@ -19,3 +19,19 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\ChienLuocPhatTrienBox
+            dung-chung_process-steps-box:
+                name: Block hiển thị nội dung liên kê và ảnh bên phải
+                description: Block hiển thị nội dung liên kê và ảnh bên phải
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ProcessStepsBox
+            dung-chung_image-box-style2:
+                name: Block hiển thị ảnh và nội dung style 2
+                description: Block hiển thị ảnh và nội dung style 2
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBoxStyle2

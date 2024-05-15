@@ -2,18 +2,20 @@
     <div class="container  video-box-style2">
         <div class="card mb-3" >
             <div class="row g-0 ">
-                <div class="col-md-6 text-center fit-videos">
-                    <div class="fit-videos overflow-hidden">
-                        <video autoplay="" muted="" loop="" controls="">
-                            <source  src="{{block.videoLink|media}}" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="col-md-6 image-box-body">
+                <div class="col-md-6 d-flex flex-column image-box-body">
                     <div class="card-body ps-65px pe-65px pt-50px text-white ">
                         <h5 class="card-title fs-32 fw-700 mb-25px">{{block.tuaDe}}</h5>
                         <p class="card-text fs-24px ">{{block.noiDung}}</p>
-
+                        {% if block.tenButton != ''%}
+                        <a href="{{block.videoLink|media}}" download target="_blank" class="btn btn-small fw-600 btn-rounded with-rounded btn-white btn-box-shadow d-table d-lg-inline-block lg-mb-15px md-mx-auto">{{block.tenButton}}<span class="bg-primary text-white"><i class="fa-solid fa-arrow-right"></i></span></a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-6 text-center d-flex align-items-stretch fit-videos">
+                    <div class="fit-videos overflow-hidden">
+                        <video autoplay="" muted="" loop="" controls="" class="h-100">
+                            <source  src="{{block.videoLink|media}}" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>

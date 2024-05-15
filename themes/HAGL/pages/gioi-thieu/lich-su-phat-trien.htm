@@ -22,5 +22,5 @@ handle = "Hagl\LichSuPhatTrien"
 {% endput %}
 {% partial 'app/page-title' pageBanner = lichSuPhatTrienPage.pageBanner type = "parallax-bg" %}
 {% for block in lichSuPhatTrienPage.blocks %}
-   {% partial 'blocks/' ~ str_slug(block.type) block=block %}
+   {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
 {% endfor %}

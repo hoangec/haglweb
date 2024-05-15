@@ -15,23 +15,44 @@ fields:
         type: mediafinder
         mode: image
         maxItems: 1
-        size: small
-    imageMinhHoa1:
-        label: Ảnh minh hoạ 1
-        type: mediafinder
-        mode: image
-        maxItems: 1
-        size: small
-    imageMinhHoa2:
-        label: Ảnh minh hoạ 2
-        type: mediafinder
-        mode: image
-        maxItems: 1
-        size: small
+        size: small    
     imageSoDo:
         label: Ảnh sở đồ hệ thống quản trị
         type: mediafinder
         mode: image
         maxItems: 1
         size: small
-
+    _section1:
+        type: section
+        label: Danh sách các file đính kèm
+        comment: Danh sách các file đính kèm
+    dsDinhKem:
+        type: repeater
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-6
+                noiDung:
+                    label: Nội dung
+                    type: textarea
+                    span: row
+                    spanClass: col-6
+                image:
+                    label: Ảnh minh hoạ
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    size: small
+                    span: row
+                    spanClass: col-6
+                file:
+                    label: File đính kèm
+                    type: fileupload
+                    mode: file
+                    maxFiles: 1
+                    size: small
+                    span: row
+                    spanClass: col-6

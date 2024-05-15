@@ -1,0 +1,38 @@
+uuid: 8df960c7-0bac-4b76-9b07-8c8005a3c214
+handle: Hagl\Blocks\DungChung\CounterBoxStyle2
+type: mixin
+name: Hiển thị số liệu
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: text
+    _section1:
+        type: section
+        label: Danh sách các số liệu
+        comment: Cung cấp danh sách các số liệu
+    dsSoLieu:
+        type: repeater
+        form:
+            fields:
+                soLieu:
+                    label: Số liệu
+                    type: text
+                    span: row
+                    spanClass: col-6
+                noiDung:
+                    label: Mô tả
+                    type: text
+                    span: row
+                    spanClass: col-6
+                image:
+                    label: Ảnh minh hoạ
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    span: row
+                    spanClass: col-6
+
