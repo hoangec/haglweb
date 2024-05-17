@@ -1,0 +1,184 @@
+[staticMenu topMenu]
+code = "topmenu"
+==
+<header class="d-print-none">
+    <div class="container-fluid hagl-header">
+        <div class="hagl-navbar ">
+            <ul class="nav justify-content-center top-menu d-none d-lg-flex">
+                {% for item in topMenu.menuItems %}
+                    {% if loop.first %}
+                    <a class="nav-link d-flex flex-nowrap p-0 text-white"  href="{{item.url}}">
+                        <svg class="top-menu-svg" width="48" height="34" viewBox="0 0 48 34" xmlns="http://www.w3.org/2000/svg"><path d="M48 32V0H0C24 2.13277e-10 24 34 48 34Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        <span class="d-flex flex-nowrap top-menu-span  fw-bolder  pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">{{item.title}}</span>
+                    </a>
+                    {% elseif loop.last %}
+                    <a class="nav-link d-flex flex-nowrap p-0 text-white" href="{{item.url}}">
+                        <span class="top-menu-span d-flex flex-nowrap  fw-bolder pl-0 pt-1 pb-1 px-4 mx-0  ml-0 h-100 ">{{item.title}}</span>
+                        <svg class="top-menu-svg" width="48" height="34" viewBox="0 0 48 34" xmlns="http://www.w3.org/2000/svg"><path d="M0 32V0H48C24 2.13277e-10 24 34 0 34Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </a>
+                    {% else %}
+                    <a class="nav-link p-0 text-white" href="{{item.url}}">
+                        <span class="my-menu d-flex flex-nowrap  top-menu-span fw-bolder l-0 pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">
+                        {{item.title}}
+                        </span>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <nav class="navbar navbar-expand-lg header-light bg-white header-reverse ">
+                <div class="container-fluid">
+                    <div class="col-auto me-auto ps-lg-0 me-lg-0 col-lg-2">
+                        <a class="navbar-brand" href="{{'index'|page}}">
+                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="default-logo">
+                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="alt-logo">
+                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="mobile-logo">
+                        </a>
+                    </div>
+                    <div class="col-auto menu-order hagl-nav position-static">
+
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav main-menu-navbar">
+                                {% partial 'app/nav' %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-lg-2 text-end d-sm-flex">
+                        <div class="header-icon justify-content-between">
+                            <div class="header-search-icon icon">
+                                <a href="javascript:void(0)" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                <div class="search-form-wrapper">
+                                    <button title="Close" type="button" class="search-close alt-font">×</button>
+                                    <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                        <div class="search-form-box">
+                                            <h2 class="text-dark-gray text-center mb-7 fw-600">Nhập thông tin tìm kiếm</h2>
+                                            <input class="search-input alt-font" id="search-form-input5e219ef164995" placeholder="Nhập từ khoá để tìm kiếm" name="s" value="" type="text" autocomplete="off">
+                                            <button type="submit" class="search-button">
+                                                <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="header-language-icon icon">
+                                <div class="header-language dropdown">
+                                    <a href="javascript:void(0);"><i class="feather icon-feather-globe"></i></a>
+                                    <ul class="language-dropdown alt-font">
+                                        <li><a href="javascript:void(0);" title="Việt Nam"><span class="icon-country"><img src="{{'assets/images/vn.svg'|theme}}" alt=""></span>Việt Nam</a></li>
+                                        <li><a href="javascript:void(0);" title="English"><span class="icon-country"><img src="{{'assets/images/usa.png'|theme}}" alt=""></span>English</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+{# <header>
+    <nav class="navbar navbar-expand-lg header-light header-reverse header-demo" data-header-hover="light">
+        <div class="container-fluid">
+            <div class="col-auto col-lg-2 me-lg-0 me-auto">
+                <a class="navbar-brand" href="index.html">
+                    <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="default-logo">
+                    <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="alt-logo">
+                    <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="mobile-logo">
+                </a>
+            </div>
+            <div class="col-auto col-lg-8 menu-order position-static">
+                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown submenu">
+                            <a href="javascript:void(0);" class="nav-link">Pre-Built Sites</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu submenu-content background-position-center cover-background" aria-labelledby="navbarDropdownMenuLink1" style="background-image: url(images/pre-built-sites-bg.jpg)">
+                                <div class="d-lg-flex mega-menu m-auto">
+                                    <ul class="col">
+                                        <li><a href="demo-corporate.html" target="_blank">Corporate<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">Trendy</span></a></li>
+                                        <li><a href="demo-marketing.html" target="_blank">Marketing</a></li>
+                                        <li><a href="demo-accounting.html" target="_blank">Accounting<span class="label bg-light-red text-red border-radius-26px">Classic</span></a></li>
+                                        <li><a href="demo-beauty-salon.html" target="_blank">Beauty Salon</a></li>
+                                        <li><a href="demo-architecture.html" target="_blank">Architecture</a></li>
+                                        <li><a href="demo-ebook.html" target="_blank">eBook</a></li>
+                                        <li><a href="demo-seo-agency.html" target="_blank">SEO Agency</a></li>
+                                        <li><a href="demo-hosting.html" target="_blank">Hosting</a></li>
+                                        <li><a href="demo-consulting.html" target="_blank">Consulting</a></li>
+                                        <li><a href="demo-business.html" target="_blank">Business</a></li>
+                                        <li><a href="demo-interactive-portfolio.html" target="_blank">Interactive Portfolio</a></li>
+                                        <li><a href="demo-spa-salon.html" target="_blank">Spa Salon<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Clean</span></a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-branding-agency.html" target="_blank">Branding Agency<span class="label bg-white-ice text-jade border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-elearning.html" target="_blank">eLearning</a></li>
+                                        <li><a href="demo-it-business.html" target="_blank">IT Business<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Modern</span></a></li>
+                                        <li><a href="demo-barber.html" target="_blank">Barber</a></li>
+                                        <li><a href="demo-hotel-and-resort.html" target="_blank">Hotel & Resort</a></li>
+                                        <li><a href="demo-real-estate.html" target="_blank">Real Estate</a></li>
+                                        <li><a href="demo-jewellery-store.html" target="_blank">Jewellery Store</a></li>
+                                        <li><a href="demo-travel-agency.html" target="_blank">Travel Agency</a></li>
+                                        <li><a href="demo-gym-and-fitness.html" target="_blank">Gym & Fitness</a></li>
+                                        <li><a href="demo-design-agency.html" target="_blank">Design Agency<span class="label bg-light-red text-red border-radius-26px">Creative</span></a></li>
+                                        <li><a href="demo-photography.html" target="_blank">Photography</a></li>
+                                        <li><a href="demo-pizza-parlor.html" target="_blank">Pizza Parlor</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-restaurant.html" target="_blank">Restaurant<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-scattered-portfolio.html" target="_blank">Scattered Portfolio</a></li>
+                                        <li><a href="demo-data-analysis.html" target="_blank">Data Analysis</a></li>
+                                        <li><a href="demo-medical.html" target="_blank">Medical</a></li>
+                                        <li><a href="demo-horizontal-portfolio.html" target="_blank">Horizontal Portfolio</a></li>
+                                        <li><a href="demo-product-showcase.html" target="_blank">Product Showcase<span class="label bg-solitude-blue text-cornflower-blue border-radius-26px">Trendy</span></a></li>
+                                        <li><a href="demo-finance.html" target="_blank">Finance</a></li>
+                                        <li><a href="demo-fashion-store.html" target="_blank">Fashion Store</a></li>
+                                        <li><a href="demo-music-onepage.html" target="_blank">Music</a></li>
+                                        <li><a href="demo-vertical-portfolio.html" target="_blank">Vertical Portfolio</a></li>
+                                        <li><a href="demo-freelancer.html" target="_blank">Freelancer<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">Clean</span></a></li>
+                                        <li><a href="demo-charity.html" target="_blank">Charity</a></li>
+                                    </ul>
+                                    <ul class="col">
+                                        <li><a href="demo-digital-agency.html" target="_blank">Digital Agency</a></li>
+                                        <li><a href="demo-web-agency.html" target="_blank">Web Agency<span class="label bg-white-ice text-jade border-radius-26px">Creative</span></a></li>
+                                        <li><a href="demo-yoga-and-meditation.html" target="_blank">Yoga & Meditation</a></li>
+                                        <li><a href="demo-startup.html" target="_blank">Startup</a></li>
+                                        <li><a href="demo-application.html" target="_blank">Application<span class="label bg-light-majorelle-blue text-majorelle-blue border-radius-26px">New</span></a></li>
+                                        <li><a href="demo-lawyer.html" target="_blank">Lawyer</a></li>
+                                        <li><a href="demo-conference.html" target="_blank">Conference</a></li>
+                                        <li><a href="demo-minimal-portfolio.html" target="_blank">Minimal Portfolio<span class="label bg-light-red text-red border-radius-26px">Hot</span></a></li>
+                                        <li><a href="demo-decor-store.html" target="_blank">Decor Store</a></li>
+                                        <li><a href="demo-magazine.html" target="_blank">Magazine</a></li>
+                                        <li><a href="demo-blogger.html" target="_blank">Blogger</a></li>
+                                        <li><a href="demo-wedding-invitation.html" target="_blank">Wedding Invitation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-auto col-lg-2 text-end xs-pe-0">
+                <div class="header-icon">
+                    <div class="header-button">
+                        <a href="https://themeforest.net/user/themezaa/portfolio" target="_blank" class="btn btn-dark-gray btn-small btn-switch-text btn-rounded text-transform-none btn-box-shadow purchase-envato">
+                            <span>
+                                <span class="btn-double-text" data-text="Purchase Crafto">Purchase Crafto</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header> #}
