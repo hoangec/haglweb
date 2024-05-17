@@ -1,0 +1,32 @@
+url = "/gioi-thieu/gia-tri-cot-loi"
+layout = "default"
+title = "Gía trị cốt lõi"
+description = "Trang giá trị cốt lõi"
+meta_title = "Trang giá trị cốt lõi"
+meta_description = "Trang giá trị cốt lõi"
+
+[section pageGiaTriCotLoi]
+handle = "Hagl\GiaTriCotLoi"
+==
+{% set breadcrumbs = [
+    {
+        'name':'Về HAGL',
+        'url':"/",
+    },
+    {
+        'name': 'Giá trị cốt lõi'
+    }
+] %}
+{% put breadcrumbs %}
+    {% partial 'app/breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+{% partial 'app/page-title' pageBanner = pageGiaTriCotLoi.pageBanner type = "parallax-bg" %}
+
+{% for block in pageGiaTriCotLoi.blocks %}
+    {% set blockType = block.type|split('_') %}
+    {% if blockType[0] == 'dung-chung' %}
+        {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
+    {% else %}
+        {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+    {% endif %}
+{% endfor %}

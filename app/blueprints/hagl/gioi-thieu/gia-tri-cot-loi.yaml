@@ -1,0 +1,19 @@
+uuid: d82fa838-77cc-48d7-a4ff-1c7a7fc660bc
+handle: Hagl\GiaTriCotLoi
+type: single
+name: Trang giá trị cốt lõi
+multisite: true
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-pencil-square
+    order: 8
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source: Hagl\GioiThieu\GiaTriCotLoi\BlockBuilder

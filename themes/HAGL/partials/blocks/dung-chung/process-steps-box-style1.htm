@@ -1,0 +1,46 @@
+{# <section class="bg-extra-medium-gray position-relative pb-0">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-11">
+                <span class="fs-80 md-fs-70 sm-fs-60 text-white fw-500 ls-minus-2px" data-fancy-text='{ "opacity": [0, 1], "translateY": [50, 0], "translateX": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["It&#39;s so challenging to find a good team to do great things. But we can provide you the best one."], "duration": 400, "delay": 0, "speed": 20, "easing": "easeOutQuad" }'></span>
+            </div>
+        </div>
+    </div>
+    <div class="page-divider-wrapper">
+        <svg aria-hidden="true" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path d="M 0 45.86 h 458 c 29 0 42 19.27 42 19.27 s 13 -19.27 42.74 -19.27 h 457.26 v 54.14 h -1000 z"></path></svg>
+    </div>
+</section> #}
+ <section class="pt-50px" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center divider-style-01 mb-7 sm-mb-50px">
+                <div class="d-flex justify-content-center">
+                    <div class="divider-shadow d-flex align-items-center w-100">
+                    <span class="d-flex flex-column justify-content-center bg-third-color w-70px h-70px box-shadow rounded-circle"><i class="feather icon-feather-globe icon-extra-medium text-dark-gray"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            {% for noiDung in block.dsNoiDung%}
+                <div class="col-12 col-lg-6 process-step-style-05 position-relative hover-box">
+                    <div class="process-step-item d-flex">
+                        <div class="process-step-icon-wrap position-relative">
+                            <div class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px fs-16 bg-solitude-blue fw-600 position-relative">
+                                <span class=" position-relative z-index-1 text-dark-gray"><i class="fa-solid fa-award"></i></span>
+                                <div class="box-overlay bg-base-color rounded-circle"></div>
+                            </div>
+                            {% if loop.last == false %}
+                            <span class="progress-step-separator bg-dark-gray opacity-1"></span>
+                            {% endif %}
+                        </div>
+                        <div class="process-content ps-30px last-paragraph-no-margin mb-30px">
+                            <span class="d-block fw-600 text-dark-gray mb-5px fs-18">{{noiDung.tuaDe}}</span>
+                            <p class="w-90 lg-w-100">{{noiDung.noiDung}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

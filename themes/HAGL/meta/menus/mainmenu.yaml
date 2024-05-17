@@ -104,6 +104,15 @@ items:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
+            -
+                title: 'Giá trị cốt lõi'
+                type: cms-page
+                code: ''
+                reference: gioi-thieu/gia-tri-cot-loi
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: 'Sản phẩm'
         nesting: null
@@ -171,9 +180,13 @@ items:
             isExternal: '0'
     -
         title: 'Tuyển dụng'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: tuyen-dung/index
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''

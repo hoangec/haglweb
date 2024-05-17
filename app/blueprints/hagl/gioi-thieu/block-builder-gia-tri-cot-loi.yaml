@@ -1,0 +1,63 @@
+uuid: e9c474c1-6287-4499-aa4e-e84b5a92fd5c
+handle: Hagl\GioiThieu\GiaTriCotLoi\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page giá trị cốt lõi
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            dung-chung_process-steps-box:
+                name: Block hiển thị nội dung liên kê và ảnh bên phải
+                description: Block hiển thị nội dung liên kê và ảnh bên phải
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ProcessStepsBox
+            dung-chung_image-box-style2:
+                name: Block hiển thị ảnh và nội dung style 2
+                description: Block hiển thị ảnh ở trên  và nội dung ở dưới style 2
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBoxStyle2
+
+            dung-chung_image-box-style3-grid:
+                name: Block hiển thị ảnh và nội dung style 3
+                description: Block hiển thị danh sách dạng grid icon và nôi dung
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBoxStyle3Grid
+            dung-chung_image-box-style4-grid:
+                name: Block hiển thị ảnh và nội dung style 4
+                description: Block hiển thị danh sách dạng grid tối đa 3 icon và nôi dung
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBoxStyle4Grid
+            dung-chung_image-box-style5:
+                name: Block hiển thị ảnh và nội dung style 5
+                description: Block hiển thị ảnh và nôi dung rich edit
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBoxStyle5
+            dung-chung_process-steps-box-style1:
+                name: Block hiển thị các đầu mục
+                description: Block hiển thị các đầu mục style 2
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ProcessStepsBox
+

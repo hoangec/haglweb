@@ -629,7 +629,9 @@ blockquote {
   }
 }
 /* image-box-style2 */
-.image-box-style2-noidung h4, .image-box-style2-noidung h5, .image-box-style2-noidung h6 {
+.image-box-style2-noidung h4,
+.image-box-style2-noidung h5,
+.image-box-style2-noidung h6 {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.25;
@@ -674,9 +676,171 @@ blockquote {
     border-bottom-left-radius: 10px;
   }
 }
+/* -- dung-chung- image-box-style-5-mota */
+.image-box-style5-noidung-phai .image-box-style5-bg {
+  background-color: var(--base-color);
+  margin-left: -100px;
+  z-index: 1;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung {
+  padding: 15px;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h1,
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h2,
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h3,
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h4 {
+  padding-left: 10%;
+  font-weight: bolder;
+  color: var(--primary-color);
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h1 {
+  font-size: 40px;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h2,
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h3,
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h4,
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h5,
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung h6 {
+  font-size: 34px;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #000;
+  /* Loại bỏ bullet points */
+  width: 100%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li::before {
+  content: "•";
+  color: #000;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li {
+  text-align: left;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(1) {
+  padding-left: 10%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(2) {
+  padding-left: 9%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(3) {
+  padding-left: 7%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(4) {
+  padding-left: 7%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(5) {
+  padding-left: 6%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(6) {
+  padding-left: 5%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(7) {
+  padding-left: 4%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(8) {
+  padding-left: 3%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(9) {
+  padding-left: 2%;
+}
+.image-box-style5-noidung-phai .image-box-style5-bg .image-box-style5-noidung li:nth-child(10) {
+  padding-left: 1%;
+}
+
+.image-box-style5-noidung-trai .image-box-style5-hinh-anh {
+  margin-left: -10%;
+}
+.image-box-style5-noidung-trai .image-box-style5-hinh-anh img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.image-box-style5-noidung-trai .image-box-style5-bg {
+  background-color: var(--base-color);
+  z-index: 1;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung {
+  padding: 20px;
+}
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h1,
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h2,
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h3,
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h4 {
+  padding-right: 10%;
+  padding-left: 5%;
+  font-weight: bolder;
+  color: var(--primary-color);
+}
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h1 {
+  font-size: 40px;
+}
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h2,
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h3,
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h4,
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h5,
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung h6 {
+  font-size: 34px;
+}
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung ul {
+  padding-right: 15%;
+  margin: 0;
+  list-style: none;
+  color: #000;
+  /* Loại bỏ bullet points */
+  width: 100%;
+}
+.image-box-style5-noidung-trai .image-box-style5-bg .image-box-style5-noidung li::before {
+  content: "•";
+  color: #000;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.image-box-style5-noidung-giua .image-box-style5-hinh-anh {
+  margin-top: -150px !important;
+}
+.image-box-style5-noidung-giua .image-box-style5-noidung h1,
+.image-box-style5-noidung-giua .image-box-style5-noidung h2,
+.image-box-style5-noidung-giua .image-box-style5-noidung h3,
+.image-box-style5-noidung-giua .image-box-style5-noidung h4,
+.image-box-style5-noidung-giua .image-box-style5-noidung h5 {
+  font-weight: bolder;
+  color: var(--primary-color);
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .image-box-style5-noidung-trai .image-box-style5-hinh-anh {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .image-box-style5-noidung-trai img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .image-box-style5-noidung-phai .image-box-style5-hinh-anh {
+    margin-bottom: 10px;
+  }
+  .image-box-style5-noidung-phai .image-box-style5-bg {
+    margin-left: 0px;
+  }
+  .image-box-style5-noidung-giua .image-box-style5-hinh-anh {
+    margin-top: 0 !important;
+  }
+}
 /* --page he-thogn-quan-tri */
 .he-thong-quan-tri-dinh-kem .row:nth-child(even) {
-  flex-direction: row-reverse; /* Đảo ngược thứ tự cho hàng chẵn */
+  flex-direction: row-reverse;
+  /* Đảo ngược thứ tự cho hàng chẵn */
 }
 
 /* -- tin tuc card */

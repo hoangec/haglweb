@@ -1,0 +1,46 @@
+uuid: af938051-46bf-4692-98ca-1489bf5d7765
+handle: Hagl\Blocks\DungChung\ImageBoxStyle5
+type: mixin
+name: Hiển thị ảnh và nôi dung
+multisite: sync
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-6
+    moTa:
+        label: Nội dung chi tiết
+        type: richeditor
+    divider:
+        label: Sử dụng phân cách
+        type: switch
+        default: false
+        options:
+            - true
+            - false
+    boCuc:
+        label: Bố cục sắp xếp hình
+        type: radio
+        options:
+            le-trai: Bên trái
+            le-phai: Bên phải
+            giua: Giữa
+    image1:
+        label: Chọn ảnh 1 từ thư viện
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+    image2:
+        label: Chọn ảnh 2 từ thư viện
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small

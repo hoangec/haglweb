@@ -1,0 +1,25 @@
+<section class="cover-background">
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <span class="text-base-color fw-600 mb-5px d-block">{{block.tuaDe}}</span>
+                <h2 class="text-primary fw-700 ls-minus-2px">{{block.noiDung}}</h2>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-start" data-anime='{ "el": "childs",  "translateY": [0, 0], "perspective": [1200, 1200], "scale": [1.05, 1], "rotateX": [50, 0], "opacity": [0,1], "duration":600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            {% for noiDung in block.dsNoiDung %}
+            <div class="col icon-with-text-style-07 transition-inner-all md-mb-30px ">
+                <div class="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-20px sm-p-10px border-radius-6px">
+                    <div class="feature-box-icon mb-30px">
+                        <img src="{{noiDung.image|media}}" class="h-150px" alt="">
+                    </div>
+                    <div class="feature-box-content">
+                        <span class="d-inline-block fw-600 text-base-color fs-18 ls-minus-05px">{{noiDung.tuaDe}}</span>
+                        <p class="mb-10px">{{noiDung.noiDung}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

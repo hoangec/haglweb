@@ -1,0 +1,88 @@
+{% if block.boCuc == 'le-trai'%}
+<section class="{{block.divider ? 'bg-very-light-gray pb-0' : 'pt-50px pb-50px'}} position-relative ">
+    <div class="container">
+        {% if block.tuaDe != '' or block.noiDung != '' %}
+         <div class="row justify-content-center">
+            <div class="col-lg-8 text-center mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <span class="text-base-color fs-30 fw-600 mb-5px d-block">{{block.tuaDe}}</span>
+                <h2 class="text-primary fw-700 ls-minus-2px">{{block.noiDung}}</h2>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row  g-0 image-box-style5-noidung-phai" data-anime='{ "el": "childs", "perspective": [800, 1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="col-md-4 image-box-style5-hinh-anh">
+                <img src="{{block.image1|media}}" class="img-fluid rounded-start w-100 h-100 object-fit-cover" alt="{{block.tuaDe}}" />
+            </div>
+            <div class="col-md-8 d-flex align-items-center image-box-style5-bg justify-content-center flex-grow-1" >
+                <div class="image-box-style5-noidung">
+                    {{block.moTa|raw}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if block.divider %}
+    <div class="page-divider-wrapper">
+        <svg aria-hidden="true" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path d="M 0 45.86 h 458 c 29 0 42 19.27 42 19.27 s 13 -19.27 42.74 -19.27 h 457.26 v 54.14 h -1000 z"></path></svg>
+    </div>
+     {% endif %}
+</section>
+{% elseif block.boCuc == 'le-phai' %}
+<section  class="{{block.divider ? 'bg-very-light-gray pb-0' : 'pt-50px pb-50px'}} position-relative">
+    <div class="container">
+        {% if block.tuaDe != '' or block.noiDung != ''%}
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <span class="text-base-color fs-30 fw-600 mb-5px d-block">{{block.tuaDe}}</span>
+                <h2 class="text-primary fw-700 ls-minus-2px">{{block.noiDung}}</h2>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row  g-0 image-box-style5-noidung-trai">
+            <div class="col-12 col-md-8 d-flex align-items-center image-box-style5-bg justify-content-center flex-grow-1" >
+                <div class="image-box-style5-noidung" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    {{block.moTa|raw}}
+                </div>
+            </div>
+            <div class="col-12 col-md-4 image-box-style5-hinh-anh">
+                <img src="{{block.image1|media}}" class="ov img-fluid rounded-start w-100 h-100 object-fit-cover" alt="{{block.tuaDe}}" />
+            </div>
+
+        </div>
+    </div>
+     {% if block.divider %}
+    <div class="page-divider-wrapper">
+        <svg aria-hidden="true" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path d="M 0 45.86 h 458 c 29 0 42 19.27 42 19.27 s 13 -19.27 42.74 -19.27 h 457.26 v 54.14 h -1000 z"></path></svg>
+    </div>
+     {% endif %}
+</section>
+{% else %}
+<section class="{{block.divider ? 'bg-very-light-gray pb-0' : 'pt-50px pb-50px'}} position-relative">
+    <div class="container">
+        {% if block.tuaDe != '' or block.noiDung != ''%}
+         <div class="row justify-content-center">
+            <div class="col-lg-8 text-center mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <span class="text-base-color fs-30 fw-600 mb-5px d-block">{{block.tuaDe}}</span>
+                <h2 class="text-primary fw-700 ls-minus-2px">{{block.noiDung}}</h2>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row g-0 flex-column image-box-style5-noidung-giua" data-anime='{ "el": "childs", "perspective": [800, 1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="col bg-base-color pb-13 pt-5 ps-5 pe-5 border-radius-10px " >
+                <div class="image-box-style5-noidung text-primary justify-content-center align-items-center d-flex text-center" >
+                    {{block.moTa|raw}}
+                </div>
+            </div>
+            <div class="col overlap-section image-box-style5-hinh-anh d-flex justify-content-center " >
+                <img src="{{block.image1|media}}" class="p-3 object-fit-cover w-250px" alt="{{block.tuaDe}}" />
+            </div>
+
+        </div>
+    </div>
+    {% if block.divider %}
+        <div class="page-divider-wrapper">
+            <svg aria-hidden="true" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path d="M 0 45.86 h 458 c 29 0 42 19.27 42 19.27 s 13 -19.27 42.74 -19.27 h 457.26 v 54.14 h -1000 z"></path></svg>
+        </div>
+    {% endif %}
+</section>
+{% endif %}
+

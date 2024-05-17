@@ -1,0 +1,38 @@
+uuid: ddaf8f62-c8bd-45ed-a60c-d8d7aff6ad6c
+handle: Hagl\Blocks\DungChung\ImageBoxStyle3Grid
+type: mixin
+name: Hiển thị danh sách các Icon và nôi dung dạng grid
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: text
+    _section1:
+        type: section
+        label: Danh sách các nội dung
+        comment: Cung cấp danh sách các nôi dung
+    dsNoiDung:
+        type: repeater
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-6
+                noiDung:
+                    label: Nội dung
+                    type: textarea
+                    span: row
+                    spanClass: col-6
+                image:
+                    label: Ảnh minh hoạ
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    span: row
+                    spanClass: col-6
+

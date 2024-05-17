@@ -1,0 +1,32 @@
+<section class="cover-background bg-white">
+    <div class="container position-relative  ">
+        <div class="row justify-content-center mb-3">
+            <div class="col-lg-8 text-center mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <span class="text-base-color fs-30 fw-600 mb-5px d-block">{{block.tuaDe}}</span>
+                <h2 class="text-primary fw-700 ls-minus-2px">{{block.noiDung}}</h2>
+            </div>
+        </div>
+        <div class="row g-0 position-relative bg-third-color h-150px d-none d-lg-block">
+        </div>
+        <div class="row overlap-section">
+            {% for noiDung in block.dsNoiDung %}
+                <div class="col-12 col-lg-4 icon-with-text-style-03 py-0">
+                    <div class="feature-box">
+                        <div class="feature-box-icon">
+                        <img src="{{noiDung.image|media}}" class="h-100px" alt="">
+                        </div>
+                        <div class="feature-box-content last-paragraph-no-margin">
+                            <span class="d-inline-block fw-700 text-primary mb-5px fs-30">{{noiDung.tuaDe}}</span>
+                            <p class="w-100 lg-w-100 mx-auto mt-0 fs-20">{{noiDung.noiDung}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+        <div class="row">
+          <div class="col justify-content-center align-items-center h-100">
+                <img class="w-100 h-auto" src="{{block.image|media}}"/>
+            </div>
+        </div>
+    </div>
+</section>
