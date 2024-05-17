@@ -15,7 +15,17 @@ fields:
         type: mediafinder
         mode: image
         maxItems: 1
-        size: small    
+        size: small
+    tuaDeSoDo1:
+        label: Tựa đề sơ đồ 1
+        type: text
+        span: row
+        spanClass: col-6
+    tuaDeSoDo2:
+        label: Tựa đề sơ đồ 2
+        type: text
+        span: row
+        spanClass: col-6
     imageSoDo:
         label: Ảnh sở đồ hệ thống quản trị
         type: mediafinder
