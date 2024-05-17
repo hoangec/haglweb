@@ -1,7 +1,7 @@
 [staticMenu topMenu]
 code = "topmenu"
 ==
-<header class="d-print-none">
+{# <header class="d-print-none">
     <div class="container-fluid hagl-header">
         <div class="hagl-navbar ">
             <ul class="nav justify-content-center top-menu d-none d-lg-flex">
@@ -35,7 +35,6 @@ code = "topmenu"
                         </a>
                     </div>
                     <div class="col-auto menu-order hagl-nav position-static">
-
                         <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                             <span class="navbar-toggler-line"></span>
                             <span class="navbar-toggler-line"></span>
@@ -56,8 +55,8 @@ code = "topmenu"
                                     <button title="Close" type="button" class="search-close alt-font">×</button>
                                     <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
                                         <div class="search-form-box">
-                                            <h2 class="text-dark-gray text-center mb-7 fw-600">What are you looking for?</h2>
-                                            <input class="search-input alt-font" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">
+                                            <h2 class="text-dark-gray text-center mb-7 fw-600">Nhập thông tin tìm kiếm</h2>
+                                            <input class="search-input alt-font" id="search-form-input5e219ef164995" placeholder="Nhập từ khoá để tìm kiếm" name="s" value="" type="text" autocomplete="off">
                                             <button type="submit" class="search-button">
                                                 <i class="feather icon-feather-search" aria-hidden="true"></i>
                                             </button>
@@ -69,10 +68,8 @@ code = "topmenu"
                                 <div class="header-language dropdown">
                                     <a href="javascript:void(0);"><i class="feather icon-feather-globe"></i></a>
                                     <ul class="language-dropdown alt-font">
+                                        <li><a href="javascript:void(0);" title="Việt Nam"><span class="icon-country"><img src="{{'assets/images/vn.svg'|theme}}" alt=""></span>Việt Nam</a></li>
                                         <li><a href="javascript:void(0);" title="English"><span class="icon-country"><img src="{{'assets/images/usa.png'|theme}}" alt=""></span>English</a></li>
-                                        <li><a href="javascript:void(0);" title="France"><span class="icon-country"><img src="{{'assets/images/france.png'|theme}}" alt=""></span>France</a></li>
-                                        <li><a href="javascript:void(0);" title="Russian"><span class="icon-country"><img src="{{'assets/images/russian.png'|theme}}" alt=""></span>Russian</a></li>
-                                        <li><a href="javascript:void(0);" title="Spain"><span class="icon-country"><img src="{{'assets/images/spain.png'|theme}}" alt=""></span>Spain</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -80,6 +77,98 @@ code = "topmenu"
                     </div>
                 </div>
             </nav>
+        </div>
+    </div>
+</header> #}
+
+<header>
+    <div class="container-fluid hagl-header">
+        <div class="hagl-navbar ">
+            <ul class="nav justify-content-center top-menu d-none d-lg-flex">
+                {% for item in topMenu.menuItems %}
+                    {% if loop.first %}
+                    <a class="nav-link d-flex flex-nowrap p-0 text-white"  href="{{item.url}}">
+                        <svg class="top-menu-svg" width="48" height="34" viewBox="0 0 48 34" xmlns="http://www.w3.org/2000/svg"><path d="M48 32V0H0C24 2.13277e-10 24 34 48 34Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        <span class="d-flex flex-nowrap top-menu-span  fw-bolder  pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">{{item.title}}</span>
+                    </a>
+                    {% elseif loop.last %}
+                    <a class="nav-link d-flex flex-nowrap p-0 text-white" href="{{item.url}}">
+                        <span class="top-menu-span d-flex flex-nowrap  fw-bolder pl-0 pt-1 pb-1 px-4 mx-0  ml-0 h-100 ">{{item.title}}</span>
+                        <svg class="top-menu-svg" width="48" height="34" viewBox="0 0 48 34" xmlns="http://www.w3.org/2000/svg"><path d="M0 32V0H48C24 2.13277e-10 24 34 0 34Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </a>
+                    {% else %}
+                    <a class="nav-link p-0 text-white" href="{{item.url}}">
+                        <span class="my-menu d-flex flex-nowrap  top-menu-span fw-bolder l-0 pt-1 pb-1 px-4 ms-0 mx-1 ml-0 h-100 ">
+                        {{item.title}}
+                        </span>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <!-- start navigation -->
+            <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                <div class="container-fluid ps-20px pe-20px">
+                    <div class="col-auto col-xl-2 col-lg-2 me-lg-0 me-auto">
+                        <a class="navbar-brand" href="{{'index'|page}}">
+                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="default-logo">
+                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="alt-logo">
+                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="mobile-logo">
+                        </a>
+                    </div>
+                    {# <div class="col-auto col-xl-8 col-lg-8 menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        </div>
+                    </div> #}
+                    <div class="col-auto col-xl-9 col-lg-9 menu-order hagl-nav d-flex justify-content-between position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+                            <ul class="navbar-nav main-menu-navbar">
+                                {% partial 'app/nav' %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-xl-1 col-lg-1 text-end d-sm-flex">
+                        <div class="header-icon justify-content-between">
+                            <div class="header-search-icon icon">
+                                <a href="javascript:void(0)" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                <div class="search-form-wrapper">
+                                    <button title="Close" type="button" class="search-close alt-font">×</button>
+                                    <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                        <div class="search-form-box">
+                                            <h2 class="text-dark-gray text-center mb-7 fw-600">Nhập thông tin tìm kiếm</h2>
+                                            <input class="search-input alt-font" id="search-form-input5e219ef164995" placeholder="Nhập từ khoá để tìm kiếm" name="s" value="" type="text" autocomplete="off">
+                                            <button type="submit" class="search-button">
+                                                <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="header-language-icon icon">
+                                <div class="header-language dropdown">
+                                    <a href="javascript:void(0);"><i class="feather icon-feather-globe"></i></a>
+                                    <ul class="language-dropdown alt-font">
+                                        <li><a href="javascript:void(0);" title="Việt Nam"><span class="icon-country"><img src="{{'assets/images/vn.svg'|theme}}" alt=""></span>Việt Nam</a></li>
+                                        <li><a href="javascript:void(0);" title="English"><span class="icon-country"><img src="{{'assets/images/usa.png'|theme}}" alt=""></span>English</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- end navigation -->
         </div>
     </div>
 </header>

@@ -29,7 +29,7 @@
 ====================================== */
 .hagl-header {
   position: relative;
-  width: 93%;
+  width: 95%;
   top: 0px;
   z-index: 9999;
   padding-left: 0px !important;
@@ -90,7 +90,6 @@ header.sticky.sticky-active .hagl-navbar {
   background-color: var(--secondary-color);
 }
 
-/* ------------end top menu -------------*/
 .hagl-nav .main-menu-navbar .nav-item .nav-link {
   color: var(--black) !important;
   font-weight: 700 !important;
@@ -147,6 +146,104 @@ header.sticky.sticky-active .hagl-navbar {
   }
   .hagl-nav .navbar-collapse.show {
     margin-top: 5px !important;
+  }
+}
+/* header */
+.header-icon .icon > a {
+  font-size: 20px;
+}
+
+.navbar .btn.btn-switch-text.btn-medium > span {
+  padding: 10px 25px;
+  font-size: 14px;
+}
+
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu {
+  border-radius: 0;
+}
+
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a i {
+  font-size: 29px;
+  width: 28px;
+  margin-right: 12px;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu a,
+.navbar .navbar-nav .dropdown .dropdown-menu a:hover,
+.navbar .navbar-nav .dropdown .dropdown-menu li.active > a {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 18px 25px 20px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a:hover,
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li.active a {
+  opacity: 0.6;
+}
+
+/* media query responsive */
+@media (max-width: 1700px) {
+  .navbar .navbar-nav .nav-link {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}
+@media (max-width: 1600px) {
+  .navbar .navbar-nav .nav-link {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media (max-width: 1350px) {
+  header .navbar-brand img {
+    max-height: 28px;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 1300px) {
+  header .navbar-brand img {
+    max-height: 28px;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+@media (max-width: 1199px) {
+  .navbar .navbar-nav .nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu {
+    width: calc(100% + 30px) !important;
+    margin-left: -15px;
+    padding: 10px 45px;
+    margin-bottom: 0;
+    margin-right: -15px;
+  }
+  .navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a, .navbar-modern-inner .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a, .navbar-full-screen-menu-inner .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  [data-mobile-nav-style=modern] .navbar-modern-inner .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a {
+    font-size: 17px;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+  }
+  [data-mobile-nav-style=modern] .navbar-modern-inner .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a i {
+    font-size: 26px;
   }
 }
 /* ---- Style cho phan vung page title ---*/
