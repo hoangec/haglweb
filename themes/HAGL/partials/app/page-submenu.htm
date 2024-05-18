@@ -1,0 +1,20 @@
+<section class="pt-0 pb-0 ">
+  <div class="container ">
+    <div class="row gx-5 gy-3 justify-content-center align-items-center overlap-section ">
+      {% for menuItem in menuItems %}
+        <div class="col-sm-12 col-lg-3">
+            <a href="javascript:void(0);" onclick="scrollToTarget('{{menuItem.sectionId}}')"class="page-submenu">
+                <div class="bg-base-color border-radius-8px p-25px shadow-lg position-relative h-100">
+                    <div class="d-flex align-items-start justify-content-start">
+                        <p class="fs-24 text-white fw-700" >{{menuItem.tuaDe}}</p>
+                        <div class="widgets-icons">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

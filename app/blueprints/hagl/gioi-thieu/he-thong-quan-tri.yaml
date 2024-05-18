@@ -14,6 +14,10 @@ fields:
         type: mixin
         tab: Cấu hình page banner
         source: HAGLFields/PageBanner
+    pageSubmenus:
+        type: mixin
+        tab: Sub menu trên page
+        source: HAGLFields/PageSubmenu
     blockBuilder:
         type: mixin
         source: Hagl\GioiThieu\HeThongQuanTri\BlockBuilder

@@ -1,3 +1,29 @@
+/* Datatable */
+// table.dataTable[table-type = 'table-quy'] td:nth-child(1) {
+//     width: 40%;
+
+// }
+// table.dataTable[table-type = 'table-quy'] th:nth-child(1) {
+//     width: 40%;
+
+// }
+/* Thiết lập chiều rộng cố định cho cột đầu tiên khi ở chế độ responsive */
+// @media (max-width: 768px) {
+//     table.dataTable[table-type = 'table-quy'] th:nth-child(1) {
+//         width: 200px;
+//     }
+//     table.dataTable[table-type = 'table-quy'] th:nth-child(1) .ten-van-ban {
+//         width: 200px;
+//         white-space: normal;
+//         word-wrap: break-word;
+
+//     }
+// }
+.px200 {
+    width: 200px;
+    max-width: 200px;
+    word-wrap: break-word;
+}
 /*--- lich su phat trien ---*/
 .image-card-box {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -281,47 +307,45 @@ blockquote {
 
 /* card danh muc  catelogy-card*/
 
-.catelogy-card {
-    position: relative;
-    margin-top: -50px;
-    margin-bottom: 90px;
-
+.page-submenu {
+    .widgets-icons {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: 15px;
+        padding: 5px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        /* background: linear-gradient(45deg, #c9832d, var(--primary)) !important; */
+        font-size: 20px;
+        color: var(--blue);
+        visibility: hidden;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    :hover .widgets-icons {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
-.catelogy-card .card {
-    background: var(--base-color);
-    height: 100px;
-}
-
-.catelogy-card .card:hover .widgets-icons {
-    visibility: visible;
-    opacity: 1;
-}
-
-.widgets-icons {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-right: 15px;
-    padding: 5px;
-    ;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    /* background: linear-gradient(45deg, #c9832d, var(--primary)) !important; */
-    font-size: 20px;
-    color: var(--blue);
-    visibility: hidden;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
 
 /*---- Nhan su page -------*/
+.nhan-su-item {
+    img {
+        transition: all .3s ease-in-out;
+        outline: 1px solid var(--primary-color);
+    }
+    :hover img {
+        outline: 5px solid var(--primary-color);
+    }
+}
 .nhan-su-modal {
     max-height: 400px;
     overflow-y: auto;
@@ -380,6 +404,7 @@ blockquote {
 .nhan-su-chu-chot-style01 {
     box-shadow: 0 20px 20px var(--base-color)
 }
+
 
 /* ----Page phat trien ben vung---*/
 .nn-tuan-hoan-phu-pham-animate {

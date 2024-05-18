@@ -1,0 +1,14 @@
+{# Hiển thị ảnh lớn bên trái tràn hêt sbeen trai và chũ bên phải #}
+<section class="overlap-height" >
+    <div class="container-fluid p-0  overlap-gap-section">
+        <div class="row align-items-center g-0">
+            <div class="col-lg-6 position-relative top-minus-2px md-mb-30px" data-anime='{ "effect": "slide", "color": "#d39121", "direction":"lr", "easing": "easeOutQuad", "duration": 600, "delay":500}'>
+                <img src="{{block.image|media}}" class="rounded-end" alt="">
+            </div>
+            <div class="col-lg-6 lg-ps-15px ps-50px pe-50px text-start" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <h2 class="fw-700 text-primary ">{{block.tuaDe}}</h2>
+                <p class="mb-30px lg-mb-25px">{{block.noiDung}}</p>
+            </div>
+        </div>
+    </div>
+</section>

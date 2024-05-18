@@ -1,3 +1,4 @@
+{% if block.image %}
 <section class="pb-0">
    <div class="container">
         <div class="row">
@@ -7,7 +8,8 @@
         </div>
    </div>
 </section>
-<section class="pb-0 ps-15px pe-15px">
+{% endif %}
+<section class="{{block.image ? 'pb-0 ps-15px pe-15px ' : 'pb-0 ps-15px pe-15px pt-0'}}">
     <div class="container">
         <div class="row mt-10px">
             <div class="col-12 col-md-9">

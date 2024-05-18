@@ -13,6 +13,10 @@ fields:
     pageSetting:
         type: mixin
         source: HAGLFields/PageBanner
+    pageSubmenus:
+        type: mixin
+        tab: Sub menu trên page
+        source: HAGLFields/PageSubmenu
     blockBuilder:
         type: mixin
         source: Hagl\GioiThieu\NhanSu\BlockBuilder

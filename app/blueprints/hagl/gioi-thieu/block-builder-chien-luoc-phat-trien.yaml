@@ -19,6 +19,14 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\ChienLuocPhatTrienBox
+            dung-chung_accordion-box:
+                name: Block hiển thị nội dung liên kê dạng xổ và ảnh bên phải
+                description: Block hiển thị nội dung liên kê dạng xổ và ảnh bên phải
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\AccordionBox
             dung-chung_process-steps-box:
                 name: Block hiển thị nội dung liên kê và ảnh bên phải
                 description: Block hiển thị nội dung liên kê và ảnh bên phải

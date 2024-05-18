@@ -277,11 +277,12 @@ function inTrangTinTuc() {
     printWindow.document.close();
     printWindow.print();
 }
-
+/* khoi tao datatables */
 $(function () {
     $.extend($.fn.dataTable.defaults, {
         language: {
-            url: "https://cdn.datatables.net/plug-ins/2.0.6/i18n/vi.json",
+            // url: "https://cdn.datatables.net/plug-ins/2.0.6/i18n/vi.json",
+            url: 'themes/hagl/assets/js/datatables/dataTables.vn.json'
         },
     });
     // var table = $("#table-theo-quy").DataTable({
@@ -322,17 +323,36 @@ $(function () {
         var dataTable = null;
         if (tableType == "table-quy") {
             dataTable = $(strTableId).DataTable({
-                responsive: true,
+                // responsive: true,
+                rowGroup: {
+                    dataSrc: 1,
+                },
+                fixedHeader: true,
+                // autoWidth: false,
                 order: [[1, "desc"]],
                 pageLength: 10,
                 dom: "lrtip",
                 searching: true,
                 lengthChange: false,
                 paging: true,
+                fixedColumns: true,
                 scrollCollapse: true,
                 scrollX: true,
                 scrollY: 600,
-                columnDefs: [{ orderable: false, targets: [0, 2, 3, 4, 5] }],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        width: 300,
+                    },
+                    {
+                        targets: [1],
+                        visible: false,
+                        searchable: true,
+                    },
+                    {
+                        orderable: false,
+                        targets: [ 0, 1, 2, 3, 4, 5] }
+                ],
             });
         } else {
             // khoi tao cac table
@@ -340,17 +360,17 @@ $(function () {
                 dom: "lrtip",
                 columnDefs: [
                     {
-                        targets: [2], // Ẩn cột thứ 2 (index bắt đầu từ 0)
-                        visible: false, // Ẩn cột
-                        searchable: false, // Không cho phép tìm kiếm trên cột
+                        targets: [2],
+                        visible: false,
+                        searchable: false,
                     },
                     {
-                        targets: [1], // Ẩn cột thứ 2 (index bắt đầu từ 0)
-                        visible: false, // Ẩn cột
-                        searchable: true, // Không cho phép tìm kiếm trên cột
+                        targets: [1],
+                        visible: false,
+                        searchable: true,
                     },
                     {
-                        targets: [0, 1, 2, 3], // Ẩn cột thứ 2 (index bắt đầu từ 0)
+                        targets: [0, 1, 2, 3],
                         orderable: false,
                     },
                 ],

@@ -1,0 +1,40 @@
+uuid: cdce7edd-dc70-41de-a792-4f1af27a5fc4
+handle: Hagl\Blocks\DungChung\AccordionBox
+type: mixin
+name: Hiển thị thông tin liệt kê dạng xổ xuống
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-6
+    image1:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    _section1:
+        type: section
+        label: Danh sách các nội dung thành phần
+    dsNoiDung:
+        type: repeater
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-6
+                noiDung:
+                    label: Nội dung
+                    type: text
+                    span: row
+                    spanClass: col-6

@@ -1,0 +1,18 @@
+uuid: d63a7a15-eed8-4a9f-8cfb-1f8b87982a7e
+handle: Hagl\Blocks\DungChung\ShapeDivider
+type: mixin
+name: Hiển thị phân cách trang kiêu ảnh
+
+fields:
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-6
+    image:
+        label: Ảnh minh hoạ 1
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6

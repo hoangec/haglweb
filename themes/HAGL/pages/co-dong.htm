@@ -6,6 +6,10 @@ meta_description = "Cổ đông HAGL"
 
 [section pageCoDong]
 handle = "Hagl\CoDong"
+
+[resources]
+js[] = "datatables/datatables.min.js"
+css[] = "datatables/datatables.min.css"
 ==
 {% set breadcrumbs = [
     {
@@ -28,4 +32,3 @@ handle = "Hagl\CoDong"
         {% partial 'blocks/co-dong/' ~ str_slug(block.type) block=block %}
     {% endif %}
 {% endfor %}
-

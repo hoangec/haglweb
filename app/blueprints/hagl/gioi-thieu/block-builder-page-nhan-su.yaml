@@ -27,12 +27,38 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\SectionTitle
+
             nhan_su_chu_chot:
                 name: Bock danh sách nhân sự
                 description: Hiển thị danh sách nhân sự
                 icon: icon-group
                 fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\NhanSuChuChot
 
+            dung-chung_shape-divider:
+                name: Block hiển thị dấu phân cách mỗi section
+                description: Block hiển thị dấu phân cách mỗi section
+                icon: icon-text-h1
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ShapeDivider

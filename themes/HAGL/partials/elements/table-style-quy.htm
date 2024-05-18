@@ -1,38 +1,28 @@
-<table class="table table-hover table-border-10px table-striped" style="width:100%;"  table-type="table-quy" id="{{tableId}}">
+<table class="table table-hover table-border-10px table-striped w-100"  table-type="table-quy" id="{{tableId}}">
     <thead class="table-light">
         <tr>
-            <th class="align-middle text-center" data-priority="1" rowspan="2">Tên</th>
-            {# <th class="align-middle text-center" rowspan="2">Mô tả</th> #}
-            <th class="align-middle text-center" rowspan="2">Năm</th>
-            <th class="align-middle text-center" colspan="4">Quý</th>
-        </tr>
-        <tr>
+            <th class="align-middle ps-10px text-start text-nowrap" data-priority="1">Văn bản&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th class="align-middle text-start" >Năm</th>
             <th class="align-middle text-center" data-priority="2">Quý I</th>
-            <th class="align-middle text-center" data-priority="3">
-                Quý II/<br />Bán niên
-            </th>
-            <th class="align-middle text-center" data-priority="3">Quý III</th>
-            <th class="align-middle text-center" data-priority="3">Quý IV</th>
+            <th class="align-middle text-center" data-priority="3">Quý II/<br />Bán niên</th>
+            <th class="align-middle text-center text-nowrap" data-priority="5">Quý III</th>
+            <th class="align-middle text-center" data-priority="5">Quý IV/<br>Cả năm</th>
         </tr>
     </thead>
     <tbody>
         {% for file in danhSachFile %}
             {% if file.danh_muc.loai_danh_muc == 'quy' %}
-                <tr>
+                <tr >
                     {% set duLieuQuy1 = file.quy_du_lieu == 1 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-base-color fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
                     {% set duLieuQuy2 = file.quy_du_lieu == 2 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-primary fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
                     {% set duLieuQuy3 = file.quy_du_lieu == 3 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-green fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
                     {% set duLieuQuy4 = file.quy_du_lieu == 4 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-red fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
-                    <td>{{ file.ten }}</td>
-                    {# <td>{{ file.mo_ta }}</td> #}
-                    <td class="text-start">{{ file.nam_du_lieu|date('Y') }}</td>
-                    <td>{{ duLieuQuy1|raw }}</td>
-                    <td>{{ duLieuQuy2|raw }}</td>
-                    <td>{{ duLieuQuy3|raw }}</td>
-                    <td>{{ duLieuQuy4|raw }}</td>
-                    {# <td>
-                                    <a href="{{file.file.url}}" target="_blank">Tải File</a>
-                                </td> #}
+                    <td class="text-start">{{ file.ten }}</td>
+                    <td class="text-center">{{ file.nam_du_lieu|date('Y') }}</td>
+                    <td class="text-center">{{ duLieuQuy1|raw }}</td>
+                    <td class="text-center">{{ duLieuQuy2|raw }}</td>
+                    <td class="text-center">{{ duLieuQuy3|raw }}</td>
+                    <td class="text-center">{{ duLieuQuy4|raw }}</td>
                 </tr>
             {% endif %}
         {% endfor %}

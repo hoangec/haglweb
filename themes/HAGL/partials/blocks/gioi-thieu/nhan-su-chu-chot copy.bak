@@ -6,8 +6,8 @@
                 <h3 class="text-primary ls-minus-1px fw-700">{{block.tuaDe}}</h3>
             </div>
         </div>
-        <div class="row row-cols-1 align-items-center justify-content-center mb-50px" >
-            {# <div class="col-auto col-lg-4 mb-30px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+        <div class="row align-items-center mb-5 xs-mb-35px">
+            <div class="col-lg-4 md-mb-30px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                 <a href="#" data-bs-toggle="modal" data-bs-target="{{'#'~lanhDaoId}}" >
                     <div class="text-center team-style-07 bg-white border-radius-6px box-shadow-extra-large box-shadow-quadruple-large-hover">
                         <img src="{{block.lanhDao.image|media}}" class="border-radius-6px w-100" alt="">
@@ -32,6 +32,7 @@
                                         </div>
                                         <div class="nhan-su-detai_info_name" >{{block.lanhDao.hoTen}}</div>
                                         <div class="nhan-su-detail_info_title">{{block.lanhDao.chucDanh}}</div>
+                                         {# <span class="fs-16 lh-22 d-block mb-15px">{{block.lanhDao.chucDanh}}</span> #}
                                     </div>
                                     <div class="col-md-8 nhan-su-detail_content ">
                                         {{block.lanhDao.quaTrinhCongTac|raw}}
@@ -41,42 +42,8 @@
                         </div>
                     </div>
                 </div>
-            </div> #}
-            <div class="col text-center team-style-11 mb-30px last-paragraph-no-margin nhan-su-item" data-anime='{"translateY": [30, 0], "rotateX":[30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <a href="#" data-bs-toggle="modal" data-bs-target="{{'#'~lanhDaoId}}" >
-                    <img src="{{block.lanhDao.image|media}}" class="mb-10px d-block w-200px mx-auto rounded-circle " alt="" />
-                    <span class="d-inline-block fs-19 fw-700 text-primary">{{block.lanhDao.hoTen}}</span>
-                    <p>{{block.lanhDao.chucDanh}}</p>
-                </a>
             </div>
-            <div class="modal  fade" id="{{lanhDaoId}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title fs-20px fw-700 text-primary" id="exampleModalLabel">{{block.lanhDao.hoTen}}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body nhan-su-modal">
-                            <div class="row g-0 nhan-su-detail">
-                                <div class="col-md-4 text-center nhan-su-detail_info text-center">
-                                    <div class="nhan-su-detail_info_img">
-                                    <img src="{{block.lanhDao.image|media}}" class="img-fluid" alt="...">
-                                    </div>
-                                    <div class="nhan-su-detai_info_name" >{{block.lanhDao.hoTen}}</div>
-                                    <div class="nhan-su-detail_info_title">{{block.lanhDao.chucDanh}}</div>
-                                </div>
-                                <div class="col-md-8 nhan-su-detail_content ">
-                                    {{block.lanhDao.quaTrinhCongTac|raw}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {# <div class="row align-items-center mb-5 xs-mb-35px justify-content-center "> #}
-        <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-            {# <div class="col-lg-12" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <div class="col-lg-8" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                 <div class="row mb-30px">
                 {% for thanhVien in block.dsThanhVien %}
                     {% set thanhVienId = 'thanh-vien-' ~ thanhVien.id%}
@@ -107,6 +74,7 @@
                                                 </div>
                                                 <div class="nhan-su-detai_info_name" >{{thanhVien.hoTen}}</div>
                                                 <div class="nhan-su-detail_info_title">{{thanhVien.chucDanh}}</div>
+                                                {# <span class="fs-16 lh-22 d-block mb-15px">{{block.lanhDao.chucDanh}}</span> #}
                                             </div>
                                             <div class="col-md-8 nhan-su-detail_content ">
                                                 {{thanhVien.quaTrinhCongTac|raw}}
@@ -119,45 +87,11 @@
                     </div>
                 {% endfor %}
                 </div>
-            </div> #}
-            {% for thanhVien in block.dsThanhVien %}
-                {% set thanhVienId = 'thanh-vien-' ~ thanhVien.id%}
-                <div class="col text-center team-style-11 mb-30px last-paragraph-no-margin nhan-su-item">
-                     <a href="#" data-bs-toggle="modal" data-bs-target="#{{thanhVienId}}" class="text-center">
-                        <img src="{{thanhVien.image|media}}"  class="mb-10px d-block mx-auto w-200px rounded-circle" alt="" />
-                        <span class="d-inline-block fs-19 fw-700 text-primary">{{thanhVien.hoTen}}</span>
-                        <p>{{thanhVien.chucDanh}}</p>
-                     </a>
-                </div>
-                <div class="modal  fade" id="{{thanhVienId}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title fs-20px fw-700 text-primary" id="exampleModalLabel">{{thanhVien.hoTen}}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body nhan-su-modal">
-                                <div class="row g-0 nhan-su-detail">
-                                    <div class="col-md-4 text-center nhan-su-detail_info text-center">
-                                        <div class="nhan-su-detail_info_img">
-                                        <img src="{{thanhVien.image|media}}" class="img-fluid" alt="...">
-                                        </div>
-                                        <div class="nhan-su-detai_info_name" >{{thanhVien.hoTen}}</div>
-                                        <div class="nhan-su-detail_info_title">{{thanhVien.chucDanh}}</div>
-                                    </div>
-                                    <div class="col-md-8 nhan-su-detail_content ">
-                                        {{thanhVien.quaTrinhCongTac|raw}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+            </div>
         </div>
     </div>
 </section>
-{# <section class="cover-background h-700px md-h-650px pt-0 pb-0" style="background-image:url('{{'assets/images/default-banner.jpg'|theme}}');">
+<section class="cover-background h-700px md-h-650px pt-0 pb-0" style="background-image:url('{{'assets/images/default-banner.jpg'|theme}}');">
     <div class="shape-image-animation p-0 w-100">
         <svg width="1920" fill="#eceff1" height="150" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none" viewbox="0 0 1440 150">
         <path d="M 0 26.1978 C 275.76 83.8152 430.707 65.0509 716.279 25.6386 C 930.422 -3.86123 1210.32 -3.98357 1439 9.18045 C 2072.34 45.9691 2201.93 62.4429 2560 26.198 V 172.199 L 0 172.199 V 26.1978 Z">
@@ -166,5 +100,5 @@
         </path>
         </svg>
     </div>
-</section> #}
+</section>
 

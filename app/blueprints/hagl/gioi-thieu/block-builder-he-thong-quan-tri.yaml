@@ -11,11 +11,78 @@ fields:
         span: adaptive
         tab: Nội dung trang
         groups:
+            dung-chung_image-box-style1:
+                name: Block hiển thị ảnh và nội dung style 1
+                description: Block hiển thị ảnh và nội dung style 1
+                icon: icon-text-image
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+            dung-chung_image-card:
+                name: Block hiển thị ảnh
+                description: Nôi dụng cho block hiên thị ảnh vơi style hiệu ứng shadown
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
             he-thong-quan-tri:
                 name: Block hiển thị thông tin sơ đồ hệ thống quản trị
                 description: Block hiển thị thông tin sơ đồ hệ thống quản trị
                 icon: icon-text-image
                 fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\HeThongQuanTri

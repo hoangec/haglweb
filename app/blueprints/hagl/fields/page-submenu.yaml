@@ -1,0 +1,20 @@
+uuid: 703df9b0-58db-4010-b42a-164827fefcc8
+handle: HAGLFields/PageSubmenu
+type: mixin
+name: Hiển thị menu con đầu mỗi page
+
+fields:
+    dsMenuItems:
+        type: repeater
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-6
+                sectionId:
+                    label: Liên kết đến
+                    type: text
+                    span: row
+                    spanClass: col-6

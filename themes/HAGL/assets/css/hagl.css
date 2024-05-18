@@ -309,6 +309,14 @@ header.sticky.sticky-active .hagl-navbar {
   left: 25%;
 }
 
+/* Datatable */
+/* Thiết lập chiều rộng cố định cho cột đầu tiên khi ở chế độ responsive */
+.px200 {
+  width: 200px;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
 /*--- lich su phat trien ---*/
 .image-card-box {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -551,23 +559,7 @@ blockquote {
 }
 
 /* card danh muc  catelogy-card*/
-.catelogy-card {
-  position: relative;
-  margin-top: -50px;
-  margin-bottom: 90px;
-}
-
-.catelogy-card .card {
-  background: var(--base-color);
-  height: 100px;
-}
-
-.catelogy-card .card:hover .widgets-icons {
-  visibility: visible;
-  opacity: 1;
-}
-
-.widgets-icons {
+.page-submenu .widgets-icons {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -588,8 +580,20 @@ blockquote {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
+.page-submenu :hover .widgets-icons {
+  visibility: visible;
+  opacity: 1;
+}
 
 /*---- Nhan su page -------*/
+.nhan-su-item img {
+  transition: all 0.3s ease-in-out;
+  outline: 1px solid var(--primary-color);
+}
+.nhan-su-item :hover img {
+  outline: 5px solid var(--primary-color);
+}
+
 .nhan-su-modal {
   max-height: 400px;
   overflow-y: auto;

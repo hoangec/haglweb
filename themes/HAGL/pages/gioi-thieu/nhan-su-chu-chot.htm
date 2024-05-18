@@ -17,11 +17,18 @@ handle = "Hagl\NhanSuChuChot"
         'name': 'Nhân sự chủ chốt'
     }
 ] %}
-{% put breadcrumbs %}
+{# {% put breadcrumbs %}
     {% partial 'app/breadcrumbs' pages=breadcrumbs %}
-{% endput %}
+{% endput %} #}
 {% partial 'app/page-title' pageBanner = pageNhanSuChuChot.pageBanner type = "parallax-bg" %}
-
+{% if pageNhanSuChuChot.dsMenuItems %}
+    {% partial 'app/page-submenu' menuItems = pageNhanSuChuChot.dsMenuItems  %}
+{% endif %}
 {% for block in pageNhanSuChuChot.blocks %}
-   {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+    {% set blockType = block.type|split('_') %}
+    {% if blockType[0] == 'dung-chung' %}
+        {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
+    {% else %}
+        {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+    {% endif %}
 {% endfor %}
