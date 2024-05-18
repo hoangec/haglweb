@@ -31,7 +31,7 @@
                                 <div class="accordion-title fs-20 position-relative d-flex align-items-center pe-20px text-dark fw-600 mb-0">{{noiDung.tuaDe}}<span class="icon-round bg-dark-gray text-white w-25px h-25px"><i class="fa-solid fa-angle-up"></i></span></div>
                             </a>
                         </div>
-                        <div id="accordion-style-item-{{noiDung.id}}" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-04-{{block.id}}">
+                        <div id="accordion-style-item-{{noiDung.id}}" class="accordion-collapse collapse {{loop.first ? 'show': ''}}" data-bs-parent="#accordion-style-04-{{block.id}}">
                             <div class="accordion-body last-paragraph-no-margin">
                                 <p class="w-90 fw-400">{{noiDung.noiDung}}</p>
                             </div>
