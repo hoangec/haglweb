@@ -282,7 +282,7 @@ $(function () {
     $.extend($.fn.dataTable.defaults, {
         language: {
             // url: "https://cdn.datatables.net/plug-ins/2.0.6/i18n/vi.json",
-            url: 'themes/hagl/assets/js/datatables/dataTables.vn.json'
+            url: 'themes/HAGL/assets/js/datatables/dataTables.vn.json'
         },
     });
     // var table = $("#table-theo-quy").DataTable({
