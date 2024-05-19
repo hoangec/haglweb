@@ -323,7 +323,7 @@ $(function () {
         var dataTable = null;
         if (tableType == "table-quy") {
             dataTable = $(strTableId).DataTable({
-                // responsive: true,
+                responsive: true,
                 rowGroup: {
                     dataSrc: 1,
                 },
@@ -335,14 +335,14 @@ $(function () {
                 searching: true,
                 lengthChange: false,
                 paging: true,
-                fixedColumns: true,
+                // fixedColumns: true,
                 scrollCollapse: true,
                 scrollX: true,
                 scrollY: 600,
                 columnDefs: [
                     {
                         targets: [0],
-                        width: 300,
+                        // width: 300,
                     },
                     {
                         targets: [1],

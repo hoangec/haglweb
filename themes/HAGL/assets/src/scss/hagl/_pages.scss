@@ -1,12 +1,12 @@
 /* Datatable */
-// table.dataTable[table-type = 'table-quy'] td:nth-child(1) {
-//     width: 40%;
+table.dataTable[table-type = 'table-quy'] td:nth-child(1) {
+    width: 40%;
 
-// }
-// table.dataTable[table-type = 'table-quy'] th:nth-child(1) {
-//     width: 40%;
+}
+table.dataTable[table-type = 'table-quy'] th:nth-child(1) {
+    width: 40%;
 
-// }
+}
 /* Thiết lập chiều rộng cố định cho cột đầu tiên khi ở chế độ responsive */
 // @media (max-width: 768px) {
 //     table.dataTable[table-type = 'table-quy'] th:nth-child(1) {
@@ -340,7 +340,7 @@ blockquote {
 .nhan-su-item {
     img {
         transition: all .3s ease-in-out;
-        outline: 1px solid var(--primary-color);
+        outline: 0px solid var(--primary-color);
     }
     :hover img {
         outline: 5px solid var(--primary-color);

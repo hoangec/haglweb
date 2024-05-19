@@ -310,6 +310,14 @@ header.sticky.sticky-active .hagl-navbar {
 }
 
 /* Datatable */
+table.dataTable[table-type=table-quy] td:nth-child(1) {
+  width: 40%;
+}
+
+table.dataTable[table-type=table-quy] th:nth-child(1) {
+  width: 40%;
+}
+
 /* Thiết lập chiều rộng cố định cho cột đầu tiên khi ở chế độ responsive */
 .px200 {
   width: 200px;
@@ -588,7 +596,7 @@ blockquote {
 /*---- Nhan su page -------*/
 .nhan-su-item img {
   transition: all 0.3s ease-in-out;
-  outline: 1px solid var(--primary-color);
+  outline: 0px solid var(--primary-color);
 }
 .nhan-su-item :hover img {
   outline: 5px solid var(--primary-color);
