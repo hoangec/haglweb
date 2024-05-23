@@ -70,5 +70,29 @@ class DanhMuc extends Model
         return $dsFiles;
     }
 
+    public function getAllFilesTheoQuy() {
+        // dd($this->files->groupBy('ten'));
+        // $dsFiles = new \October\Rain\Database\Collection();
+        // if($this->ds_danh_muc_con != null){
+        //     foreach($this->ds_danh_muc_con as $danhMucCon) {
+        //         foreach($danhMucCon->files as $file){
+
+        //             $dsFiles->push($file);
+        //         }
+        //     }
+        // }
+        // foreach($this->files as $file){
+        //     $dsFiles->push($file);
+        // }
+           // Nhóm các File theo 'nam_du_lieu' trước
+        $groupedByYear = $this->files->groupBy('nam_du_lieu');
+        // Nhóm tiếp theo 'ten' trong mỗi nhóm 'nam_du_lieu'
+        $groupedFiles = $groupedByYear->map(function ($items) {
+            return $items->groupBy('ten');
+        });
+        // Trả về kết quả (có thể là mảng hoặc đối tượng JSON)
+        return $groupedFiles;
+
+    }
 
 }

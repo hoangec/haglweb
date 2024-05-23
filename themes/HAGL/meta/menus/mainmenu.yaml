@@ -93,22 +93,22 @@ items:
                     isExternal: '0'
             -
                 title: 'Thành tích nổi bật'
-                nesting: null
                 type: cms-page
-                url: null
                 code: ''
                 reference: gioi-thieu/thanh-tich-noi-bat
-                cmsPage: null
-                replace: null
                 viewBag:
-                    isHidden: '0'
+                    isHidden: '1'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'Giá trị cốt lõi'
+                nesting: null
                 type: cms-page
+                url: null
                 code: ''
                 reference: gioi-thieu/gia-tri-cot-loi
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''

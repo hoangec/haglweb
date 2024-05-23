@@ -1,22 +1,28 @@
+
 <li class="nav-item dropdown">
     <a href="javascript:void(0);" class="nav-link">{{item.title}}</a>
     <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink6" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
     <div class="dropdown-menu multi-column-dropdown " aria-labelledby="navbarDropdownMenuLink6">
+
         <div class="d-lg-flex m-auto">
             <ul class="col">
                 {% for childItem in item.items|slice(0,4) %}
+                    {% if childItem.viewBag.isHidden == 0 %}
                     <li class="d-flex align-items-center  justify-content-center" style="min-width: 300px;">
-                        <a class="flex-grow-1 py-0" href="{{childItem.url}}" >{{childItem.title}}</a>
+                        <a class="flex-grow-1 py-0" href="{{childItem.url}}" >{{ childItem.title }}</a>
                         <i class="fas fa-long-arrow-alt-right" ></i>
                     </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
             <ul class="col">
                 {% for childItem in item.items|slice(4,8) %}
+                     {% if childItem.viewBag.isHidden == 0 %}
                     <li class="d-flex align-items-center  justify-content-center" style="min-width: 300px;">
-                        <a class="flex-grow-1 py-0" href="{{childItem.url}}" >{{childItem.title}}</a>
+                        <a class="flex-grow-1 py-0" href="{{childItem.url}}" >{{ childItem.title }}</a>
                         <i class="fas fa-long-arrow-alt-right" ></i>
                     </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>

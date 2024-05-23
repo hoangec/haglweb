@@ -34,7 +34,7 @@
                 {% endif %}
                 <div class="bg-third-color border-radius-10px xs-p-10px p-20px lg-p-25px xxl-p-30px">
                     {% if block.dsDanhMuc.loai_danh_muc == 'quy'%}
-                        {% partial 'elements/table-style-quy' danhSachFile = block.dsDanhMuc.getAllFiles() tableId = "table-rowgroup-"~block.id  %}
+                        {% partial 'elements/table-style-quy' danhSachFile = block.dsDanhMuc.getAllFilesTheoQuy() tableId = "table-rowgroup-"~block.id  %}
                     {% elseif block.dsDanhMuc.loai_danh_muc == 'nam-catalog' %}
                         {% partial 'elements/table-style-catalog' danhSachFile = block.dsDanhMuc.getAllFiles()  %}
                     {% else %}

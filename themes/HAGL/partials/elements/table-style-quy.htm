@@ -1,3 +1,4 @@
+     {# {{d(danhSachFile)}} #}
 <table class="table table-hover table-border-10px table-striped w-100"  table-type="table-quy" id="{{tableId}}">
     <thead class="table-light">
         <tr>
@@ -10,21 +11,38 @@
         </tr>
     </thead>
     <tbody>
-        {% for file in danhSachFile %}
-            {% if file.danh_muc.loai_danh_muc == 'quy' %}
-                <tr >
-                    {% set duLieuQuy1 = file.quy_du_lieu == 1 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-base-color fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
-                    {% set duLieuQuy2 = file.quy_du_lieu == 2 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-primary fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
-                    {% set duLieuQuy3 = file.quy_du_lieu == 3 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-green fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
-                    {% set duLieuQuy4 = file.quy_du_lieu == 4 ? '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-red fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
-                    <td class="text-start">{{ file.ten }}</td>
-                    <td class="text-center">{{ file.nam_du_lieu|date('Y') }}</td>
+        {% for nam, groupByNamItems in danhSachFile %}
+            {% set namDuLieu = ''%}
+            {% set duLieuQuy1 = ''%}
+            {% set duLieuQuy2 = ''%}
+            {% set duLieuQuy3 = ''%}
+            {% set duLieuQuy4 = ''%}
+            {% for tenFile, items in groupByNamItems %}
+                {% for file in items %}
+                    {% set namDuLieu = 'Năm ' ~ file.nam_du_lieu|date('Y') %}
+                    {% if file.quy_du_lieu == 1%}
+                        {% set duLieuQuy1 = '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-base-color fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                    {% endif %}
+                    {% if file.quy_du_lieu == 2%}
+                        {% set duLieuQuy2 = '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-primary fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                    {% endif %}
+                    {% if file.quy_du_lieu == 3%}
+                        {% set duLieuQuy3 = '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-green fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                    {% endif %}
+                    {% if file.quy_du_lieu == 4%}
+                        {% set duLieuQuy4 = '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-red fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                    {% endif %}
+                {% endfor %}
+                <tr>
+                    <td class="text-start">{{ tenFile }}</td>
+                    <td class="text-center">{{ namDuLieu }}</td>
                     <td class="text-center">{{ duLieuQuy1|raw }}</td>
                     <td class="text-center">{{ duLieuQuy2|raw }}</td>
                     <td class="text-center">{{ duLieuQuy3|raw }}</td>
                     <td class="text-center">{{ duLieuQuy4|raw }}</td>
                 </tr>
-            {% endif %}
+            {% endfor %}
+
         {% endfor %}
     </tbody>
 </table>
