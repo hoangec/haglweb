@@ -1,0 +1,40 @@
+uuid: 6757fbc6-b618-4c0d-b5d1-4cadacdded23
+handle: Hagl\Blocks\DungChung\TabContentBox
+type: mixin
+name: Hiển thị thông tin dạng tabs
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-md-6
+    noiDung:
+        label: Nội dung
+        type: textarea
+        span: row
+        spanClass: col-md-6
+    dsNoiDung:
+        label: Danh sách các nội dung
+        type: repeater
+        itemsExpanded: false
+        maxItems: 5
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                noiDung:
+                    label: Nội dung
+                    type: textarea
+                    span: row
+                    spanClass: col-md-6
+                image:
+                    label: Ảnh minh hoạ
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    size: small
+

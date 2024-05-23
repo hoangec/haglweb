@@ -7,8 +7,12 @@ meta_description = "Trang nội dung phát triển bền vững HAGL"
 
 [section pagePhatTrienBenVung]
 handle = "Hagl\PhatTrienBenVung"
+
+[resources]
+js[] = "datatables/datatables.min.js"
+css[] = "datatables/datatables.min.css"
 ==
-{% set breadcrumbs = [
+{# {% set breadcrumbs = [
     {
         'name':'HAGL',
         'url':"/",
@@ -19,8 +23,16 @@ handle = "Hagl\PhatTrienBenVung"
 ] %}
 {% put breadcrumbs %}
     {% partial 'app/breadcrumbs' pages=breadcrumbs %}
-{% endput %}
+{% endput %} #}
 {% partial 'app/page-title' pageBanner = pagePhatTrienBenVung.pageBanner type = "parallax-bg" %}
+{% if pagePhatTrienBenVung.dsMenuItems %}
+    {% partial 'app/page-submenu-5' menuItems = pagePhatTrienBenVung.dsMenuItems  %}
+{% endif %}
 {% for block in pagePhatTrienBenVung.blocks %}
-   {% partial 'blocks/phat-trien-ben-vung/' ~ str_slug(block.type) block=block %}
+    {% set blockType = block.type|split('_') %}
+    {% if blockType[0] == 'dung-chung' %}
+        {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
+    {% else %}
+        {% partial 'blocks/phat-trien-ben-vung/' ~ str_slug(block.type) block=block %}
+    {% endif %}
 {% endfor %}

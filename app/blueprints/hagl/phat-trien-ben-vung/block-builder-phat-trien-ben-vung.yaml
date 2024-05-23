@@ -24,6 +24,23 @@ fields:
                 description: Block hiển thị nội dung cho section môi trường
                 icon: icon-text-image
                 fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\PhatTrienBenVung\MoiTruongBox
@@ -32,6 +49,23 @@ fields:
                 description: Block hiển thị nội dung cho section con người
                 icon: icon-text-image
                 fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\PhatTrienBenVung\ConNguoiBox
@@ -40,6 +74,23 @@ fields:
                 description: Block hiển thị nội dung cho section sản phẩm
                 icon: icon-text-image
                 fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\PhatTrienBenVung\SanPhamBox
@@ -48,6 +99,48 @@ fields:
                 description:  Block hiển thị nội dung cho section cộng đồng
                 icon: icon-text-image
                 fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\PhatTrienBenVung\CongDongBox
+            dung-chung_files-danh-muc:
+                name: Block hiển thị danh sach file theo danh mục
+                description: Block hiển thị danh sách file theo danh mục
+                icon: icon-text-image
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\FileTheoDanhMucBox

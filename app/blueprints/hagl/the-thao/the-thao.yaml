@@ -24,6 +24,10 @@ fields:
         type: mixin
         tab: Cấu hình page banner
         source: HAGLFields/PageBanner
+    pageFooter:
+        type: mixin
+        tab: Cấu hình footer
+        source: HAGLFields/PageFooter
     blockBuilder:
         type: mixin
         source:  Hagl\TheThao\BlockBuilder

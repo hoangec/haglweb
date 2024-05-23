@@ -1,0 +1,29 @@
+uuid: 6e37474d-8d73-4db0-9912-12d92b0fa968
+handle: HAGLFields/PageFooter
+type: mixin
+name: Hiển thị box kết nối footer và content
+
+fields:
+    pageFooterSetting:
+            label: Thông tin kết nối footer và content
+            tab: Cấu hình page footer
+            type: nestedform
+            form:
+                fields:
+                    tuaDe:
+                        label: Tựa đề
+                        type: text
+                        span: row
+                        spanClass: col-6
+                    tenLink:
+                        label: Tên link
+                        type: text
+                        span: row
+                        spanClass: col-6
+                    links:
+                        label: Link liên kết
+                        type: text
+                        placeholder: 'Sử dụng URL đầy đủ'
+                        span: row
+                        spanClass: col-6
+

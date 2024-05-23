@@ -23,12 +23,25 @@ sortOrder = "nam_du_lieu_asc"
 
 [danhSachDanhMuc]
 ==
-{% set dsDanhMuc = danhMucFiles.records %}
+{% set dsDanhMuc = danhMucFiles.records.where('loai_danh_muc','!=','ptbv') %}
 {% set dsFilesTheoDanhMuc = dsFiles.records %}
 
 <section class="bg-very-light-gray" id="section-danh-muc-files">
     <div class="container">
         <div class="row justify-content-center align-items-center gy-0 gx-0">
+            <div class="col-lg-5">
+                <div class="d-flex flex-column mb-3 danh-muc-doc">
+                    {% for danhMuc in dsDanhMuc %}
+                    {% if danhMuc.danh_muc_cha is empty %}
+                    <a class="danh-muc-doc-item" href="#section-table-{{danhMuc.id}}" onclick="scrollToCoDongTarget('section-table-{{danhMuc.id}}',this)">
+                        <div class="p-2 bg-third-color mb-10px border-radius-5px fw-500 danh-muc-doc-content">
+                            {{danhMuc.ten}}
+                        </div>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
             <div class="col-lg-7">
                 <div class="row row-cols-1 row-cols-md-3 g-0">
                     {% for danhMuc in dsDanhMuc %}
@@ -46,9 +59,7 @@ sortOrder = "nam_du_lieu_asc"
                         {% endif %}
                     {% endfor %}
                 </div>
-            </div>
-            <div class="col-lg-5">
-                <div>
+                {# <div>
                     <script src="https://www.fireant.vn/Scripts/web/widgets.js"></script>
                     <div id="fan-quote-758"></div>
                     <script type="text/javascript">
@@ -63,7 +74,7 @@ sortOrder = "nam_du_lieu_asc"
                         "height": "300px"
                     });
                     </script>
-                </div>
+                </div> #}
             </div>
         </div>
     </div>

@@ -1,17 +1,5 @@
-<section class="bg-very-light-gray big-section position-relative  overflow-hidden background-position-center-top sm-background-image-none" style="background-image: url('images/vertical-line-bg-small.svg')">
-    <div class="position-absolute left-minus-100px" data-bottom-top="transform: translateY(-180px)" data-top-bottom="transform: translateY(180px)">
-        <img src="images/demo-elearning-bg-05.png" alt="" >
-    </div>
+<section id="{{block.content_group}}-{{block.id}}" class="bg-very-light-gray big-section position-relative  overflow-hidden background-position-center-top sm-background-image-none" style="background-image: url('{{'assets/images/vertical-line-bg-small.svg'|theme}}')">
     <div class="container">
-        {# <div class="row align-items-end mb-6">
-            <div class="col-md-6 sm-mb-20px">
-                <span class="fs-14 fw-500 ls-1px opacity-6 text-uppercase mb-5px d-block text-primary ">{{block.tuaDe}}</span>
-                <h4 class="fw-600 mb-0 text-primary">{{block.tuaDe}}</h4>
-            </div>
-            <div class="col-md-5 offset-md-1 last-paragraph-no-margin">
-                <p class="w-80 xl-w-85 lg-w-100">{{block.noiDung}}</p>
-            </div>
-        </div> #}
         <div class="row align-items-center mb-6 sm-mb-9 text-center text-lg-start">
             <div class="col-lg-4 md-mb-20px">
                 <h3 class=" fw-700 mb-0 ls-minus-1px text-primary">{{block.tuaDe}}</h3>
@@ -37,27 +25,6 @@
                         <div class="swiper-wrapper" >
                             {% for hoatDong in block.dsHoatDong%}
                             <div class="swiper-slide"  style="height: auto;" >
-                                {# <div class=" interactive-banner-style-02 hover-box dark-hover md-mb-30px h-100">
-                                    <div class="h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden">
-                                        <figure class="m-0">
-                                            <img src="{{hoatDong.image|media}}" alt="" />
-                                            <figcaption class="w-100 position-absolute bottom-0px bg-white ">
-                                                <div class="position-relative z-index-2 p-40px pt-25px pb-15px border-bottom border-dark-opacity">
-                                                    <i class="features-icon line-icon-Archery-2 d-block icon-extra-large"></i>
-                                                    <p class="w-80 lg-w-100 fs-16 mx-auto mb-15px lg-mb-10px text-light-opacity">{{hoatDong.noiDung}}</p>
-                                                </div>
-                                                <a href="#" class="btn btn-link btn-hover-animation-switch btn-medium fw-700 text-dark-gray text-uppercase p-20px z-index-1">
-                                                    <span>
-                                                        <span class="btn-text">Chi tiết</span>
-                                                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                                    </span>
-                                                </a>
-                                                <div class="box-overlay bg-base-color"></div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                </div> #}
                                 <div class="card h-100 text-center">
                                     <img src="{{hoatDong.image|media}}" class="card-img-top" alt="...">
                                     <div class="card-body">

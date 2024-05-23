@@ -50,7 +50,7 @@ sortDirection = "desc"
 {% put pageSticks %}
     {% partial 'app/page-stick'  %}
 {% endput %}
-<section class="ps-10 pe-10">
+<section class="ps-10 pe-10" id="dsTinTuyenDung">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -61,7 +61,7 @@ sortDirection = "desc"
             <div class="col-lg-12 ">
                 <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center" data-anime='{ "el": "childs",  "translateY": [0, 0], "perspective": [1200, 1200], "scale": [1.05, 1], "rotateX": [50, 0], "opacity": [0,1], "duration":600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <div class="col p-20px icon-with-text-style-07 transition-inner-all md-mb-30px">
-                        <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'vn', page: ''}) }}">
+                        <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'vn', page: ''}) }}#dsTinTuyenDung">
                             <div class=" bg-white align-items-center feature-box h-100 justify-content-center box-shadow-small box-shadow-small-hover text-center p-20px sm-p-14 border-radius-6px ">
                                 <div class="feature-box-icon mb-20px">
                                     <img class="w-120px h-120px rounded-circle  object-fit-contain" src="{{'assets/images/vn-flag.png'|theme}}">
@@ -73,7 +73,7 @@ sortDirection = "desc"
                         </a>
                     </div>
                     <div class="col p-20px icon-with-text-style-07 transition-inner-all md-mb-30px">
-                        <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'lao', page:''}) }}">
+                        <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'lao', page:''}) }}#dsTinTuyenDung">
                             <div class=" bg-white align-items-center feature-box h-100 justify-content-center box-shadow-small box-shadow-small-hover text-center p-20px sm-p-14 border-radius-6px ">
                                 <div class="feature-box-icon mb-20px">
                                     <img class="w-120px h-120px rounded-circle  object-fit-contain" src="{{'assets/images/laos-flag.png'|theme}}">
@@ -85,7 +85,7 @@ sortDirection = "desc"
                         </a>
                     </div>
                     <div class="col p-20px icon-with-text-style-07 transition-inner-all md-mb-30px">
-                         <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'cam', 'page': ''}) }}">
+                         <a href="{{ 'tuyen-dung/index'|page({quoc_gia: 'cam', 'page': ''}) }}#dsTinTuyenDung">
                             <div class=" bg-white align-items-center feature-box h-100 justify-content-center box-shadow-small box-shadow-small-hover text-center p-20px sm-p-14 border-radius-6px ">
                                 <div class="feature-box-icon mb-20px">
                                     <img class="w-120px h-120px rounded-circle  object-fit-contain" src="{{'assets/images/cam-flag.png'|theme}}">
@@ -155,18 +155,18 @@ sortDirection = "desc"
                     <ul class="pagination pagination-style-01 fs-13 fw-500 mb-0">
                         {% if records.currentPage > 1 %}
                             {# <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Trang trước</a></li> #}
-                            <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1), quoc_gia: this.param.quoc_gia }) }}"><i class="feather icon-feather-arrow-left fs-18 d-xs-none"></i></a></li>
+                            <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1), quoc_gia: this.param.quoc_gia }) }}#dsTinTuyenDung"><i class="feather icon-feather-arrow-left fs-18 d-xs-none"></i></a></li>
                         {% endif %}
 
                         {% for page in 1..records.lastPage %}
                             <li class="page-item {{ records.currentPage == page ? 'active' : null }}">
-                                <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page, quoc_gia: this.param.quoc_gia }) }}">{{ page }}</a>
+                                <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page, quoc_gia: this.param.quoc_gia }) }}#dsTinTuyenDung">{{ page }}</a>
                             </li>
                         {% endfor %}
 
                         {% if records.lastPage > records.currentPage %}
                             {# <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Trang kế &rarr;</a></li> #}
-                            <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1), quoc_gia: this.param.quoc_gia }) }}"><i class="feather icon-feather-arrow-right fs-18 d-xs-none"></i></a></li>
+                            <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1), quoc_gia: this.param.quoc_gia }) }}#dsTinTuyenDung"><i class="feather icon-feather-arrow-right fs-18 d-xs-none"></i></a></li>
                         {% endif %}
                     </ul>
                 {% endif %}

@@ -1,11 +1,12 @@
+
 {% set imageUrl = block.image ? block.image|media : 'assets/images/image_not_available_L.png'|theme %}
-<section class="bg-very-light-gray position-relative pb-0" id="{{block.content_group}}-{{block.id}}">
+<section class="bg-very-light-gray  position-relative pb-0" id="{{block.content_group}}-{{block.id}}">
     <div id="particles-style-06" class="h-100 position-absolute left-0px top-0 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 10,"density": {"enable": true,"value_area": 800}},"color": {"value": ["#f7ccaf", "#f6cacd", "dbf5f8", "#c5d8f8", "#c5f8ce", "#f7afbd", "#b2d6ef", "#f1ecb7"]},"shape": {"type": "triangle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 40,"random": true,"anim": {"enable": false,"sync": true}},"line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":0.4,"width":1},"move": {"enable": true,"speed":1,"direction": "top","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
     <div class="container">
         <div class="row">
             <div class="col-12 mb-3 px-5 text-center">
                 <span class="fs-50 text-primary md-fs-70 sm-fs-60  fw-500 ls-minus-2px"
-                data-fancy-text='{ "opacity": [0, 1], "translateY": [50, 0], "translateX": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["{{block.title}}"], "duration": 400, "delay": 0, "speed": 20, "easing": "easeOutQuad" }'></span>
+                data-fancy-text='{ "opacity": [0, 1], "translateY": [50, 0], "translateX": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["{{block.tuaDe}}"], "duration": 400, "delay": 0, "speed": 20, "easing": "easeOutQuad" }'></span>
             </div>
             <div class="col-lg-12">
                 <div class="card shadow image-card-box">
@@ -20,4 +21,5 @@
         <svg aria-hidden="true" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path d="M 0 45.86 h 458 c 29 0 42 19.27 42 19.27 s 13 -19.27 42.74 -19.27 h 457.26 v 54.14 h -1000 z"></path></svg>
     </div>
 </section>
+
 

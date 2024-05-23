@@ -20,6 +20,7 @@ handle = "Hagl\TheThao"
 {% put breadcrumbs %}
     {% partial 'app/breadcrumbs' pages=breadcrumbs %}
 {% endput %}
+
 {% partial 'app/page-title' pageBanner = pageTheThao.pageBanner type = "parallax-bg" %}
 {% for block in pageTheThao.blocks %}
     {% set blockType = block.type|split('_') %}
@@ -29,3 +30,7 @@ handle = "Hagl\TheThao"
         {% partial 'blocks/the-thao/' ~ str_slug(block.type) block=block %}
     {% endif %}
 {% endfor %}
+
+{% put pageFooterData %}
+    {% partial 'app/bong-da-footer-data' block = pageTheThao.pageFooterSetting %}
+{% endput %}

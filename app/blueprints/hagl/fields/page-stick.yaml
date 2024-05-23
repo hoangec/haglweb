@@ -1,0 +1,28 @@
+uuid: 355ab114-4c99-4ba3-84b2-00615af3f12d
+handle: HAGLFields/PageStick
+type: mixin
+name: Hiển thị thông tin lề phải của page
+
+fields:
+    pageStickSetting:
+            label: Thông tin đính kèm lề phải
+            tab: Cấu hình Page stick
+            type: nestedform
+            form:
+                fields:
+                    tuaDe:
+                        label: Tựa đề
+                        type: text
+                        span: row
+                        spanClass: col-6
+                    tenLink:
+                        label: Tên link
+                        type: text
+                        span: row
+                        spanClass: col-6
+                    file:
+                        type: fileupload
+                        tab: Page stick
+                        maxFiles: 1
+                        label: File đính kèm
+                        mode: file

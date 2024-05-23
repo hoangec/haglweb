@@ -1,0 +1,23 @@
+<div class="col">
+    <a class="tin-tuc-item popup-with-zoom-anim" href="#modal-video-{{tinTuc.id}}" >
+        <div class="card tin-tuc-card h-100">
+            <img src="{{ tinTuc.banner.path }}" class="card-img-top" alt="..." />
+            <div class="card-body d-fex flex-column">
+                <p class="card-date text-dark-gray">{{ tinTuc.published_at_date|date('j/m/Y') }}</p>
+                <h5 class="card-title">{{ tinTuc.title }}</h5>
+            </div>
+        </div>
+    </a>
+</div>
+<div id="modal-video-{{tinTuc.id}}" class="zoom-anim-dialog  border-radius-10px mfp-hide col-xl-6 col-lg-6 col-md-7 col-11 mx-auto bg-white text-center modal-popup-main p-50px">
+    {% if tinTuc.video %}
+        <div class="fit-videos overflow-hidden p-20px">
+            <video autoplay muted loop controls>
+                <source src="{{tinTuc.video|media}}" type="video/mp4">
+            </video>
+        </div>
+    {% else %}
+         <h3 class="text-center fw-700 fs-20">Không có nội dung video </h3>
+    {% endif %}
+
+</div>

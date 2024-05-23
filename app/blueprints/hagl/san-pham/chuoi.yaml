@@ -1,0 +1,33 @@
+uuid: 495d4009-e303-43a5-bc56-450afefd85e1
+handle: Hagl\SanPham\Chuoi
+type: single
+name: Trang sản phẩm chuối
+multisite: true
+
+navigation:
+    parent: Hagl\HomePage
+    icon: icon-pencil-square
+    order: 73
+extraNavigation:
+    _page_san_pham_section:
+        itemType: section
+        label: Thiết lập trang sản phẩm
+        order: 71
+
+    _page_gioi_thieu_ruler:
+        itemType: ruler
+        order: 80
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    pageSubmenus:
+        type: mixin
+        tab: Sub menu trên page
+        source: HAGLFields/PageSubmenu
+    blockBuilder:
+        type: mixin
+        source: Hagl\SanPham\Chuoi\BlockBuilder
+

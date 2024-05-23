@@ -23,12 +23,12 @@
                     </div>
                     {% endfor %}
                 </div> #}
-                <div class="accordion pricing-table-style-04 " id="accordion-style-04-{{block.id}}" data-active-icon="fa-angle-down" data-inactive-icon="fa-angle-right" data-anime='{"el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <div class="accordion pricing-table-style-04 " id="accordion-style-04-{{block.id}}" data-active-icon="fa-angle-up" data-inactive-icon="fa-angle-right" data-anime='{"el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     {% for noiDung in block.dsNoiDung%}
-                     <div class="accordion-item bg-white  {{loop.first ? 'active-accordion':''}} box-shadow-quadruple-large mb-20px">
+                    <div class="accordion-item bg-white  {{loop.first ? 'active-accordion':''}} box-shadow-quadruple-large mb-20px">
                         <div class="accordion-header">
                             <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-item-{{noiDung.id}}" aria-expanded="true" data-bs-parent="#accordion-style-04-{{block.id}}">
-                                <div class="accordion-title fs-20 position-relative d-flex align-items-center pe-20px text-dark fw-600 mb-0">{{noiDung.tuaDe}}<span class="icon-round bg-dark-gray text-white w-25px h-25px"><i class="fa-solid fa-angle-up"></i></span></div>
+                                <div class="accordion-title fs-20 position-relative d-flex align-items-center pe-20px text-dark fw-600 mb-0">{{noiDung.tuaDe}}<span class="icon-round bg-dark-gray text-white w-25px h-25px"><i class="fa-solid {{loop.first ? 'fa-angle-up' : 'fa-angle-down'}}"></i></span></div>
                             </a>
                         </div>
                         <div id="accordion-style-item-{{noiDung.id}}" class="accordion-collapse collapse {{loop.first ? 'show': ''}}" data-bs-parent="#accordion-style-04-{{block.id}}">

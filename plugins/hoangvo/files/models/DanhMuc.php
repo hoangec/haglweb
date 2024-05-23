@@ -48,6 +48,8 @@ class DanhMuc extends Model
             return 'Quản lý theo quý';
         } elseif ($this->loai_danh_muc == 'nam-catalog') {
                 return 'Quản lý theo năm, hiên thị kiểu danh mục';
+        } elseif ($this->loai_danh_muc == 'ptbv') {
+                return 'Báo cáo phát triển bền vững';
         } else {
             return 'Chưa chọn loại danh mục';
         }

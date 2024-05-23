@@ -11,7 +11,34 @@ handle = "HAGL\PageSettings"
     <div class="container overlap-section p-0">
         <div class="row g-1 mx-1 justify-content-end overlap-section-one-fourth">
             <div class="col col-md-auto pointer-events-all">
-                <div class="bg-white box-shadow-quadruple-large w-400px md-w-300px sm-w-100 border-radius-6px md-mb-20px xs-mb-0">
+                <div class="card border-0 p-20px h-100 bg-white box-shadow-quadruple-large border-radius-6px md-mb-20px xs-mb-0" >
+                    <img src="{{pageSettings.imageCty|media}}" class="card-img-top w-350px" alt="hagl logo">
+                    <div class="card-body">
+                        <h3 class="fs-24 fw-700 text-primary text-uppercase mb-10px">{{pageSettings.tenCongTy}}</h3>
+                        <div class="fw-600"><i class="fa-solid fa-location-dot icon-small me-10px text-base-color"></i><a href="#" class="text-black">{{pageSettings.diaChi}}</a></div>
+                        <div class="fw-600"><i class="fa-solid fa-money-check-dollar icon-small me-10px text-base-color"></i><a href="#" class="text-black">MST: {{pageSettings.tax}}</a></div>
+                        <div class="fw-600"><i class="fa-solid fa-phone-volume icon-small me-10px text-base-color"></i><a class="text-black" href="tel:{{pageSettings.dienThoai}}">Tel: {{pageSettings.dienThoai}}</a></div>
+                        {% if pageSettings.fax %}
+                        <div class="fw-600"><i class="feather icon-feather-printer icon-small me-10px text-base-color"></i><a class="text-black" href="tel:{{pageSettings.fax}}">Fax: {{pageSettings.fax}}</a></div>
+                        {% endif %}
+                        {% if pageSettings.email %}
+                        <div class="fw-600"><i class="ti-email icon-small me-10px text-base-color"></i><a class="text-black" href="mail:{{pageSettings.email}}">Email: {{pageSettings.email}}</a></div>
+                        {% endif %}
+                        {% if pageSettings.web%}
+                        <div class="fw-600"><i class="ti-world icon-small me-10px text-base-color"></i><a class="text-primary text-bolder" href="{{pageSettings.web}}">Website: {{pageSettings.web}}</a></div>
+                        {% endif %}
+                    </div>
+                    <div class="text-center pt-15px pb-15px border-top border-color-extra-medium-gray">
+                        <a href="{{pageSettings.googleMap}}" target="_blank" class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray text-uppercase btn-icon-left fw-700 p-0">
+                            <span>
+                                <span class="btn-text text-primary">Google Map</span>
+                                <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
+                                <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                {# <div class="bg-white box-shadow-quadruple-large w-400px md-w-300px sm-w-100 border-radius-6px md-mb-20px xs-mb-0">
                     <div class="ps-25px pe-25px pt-50px pb-40px md-p-20px text-md-start">
                         <span class="text-dark-gray fw-600">{{pageSettings.tenCongTy}}</span>
                         <p class="w-80 mb-10px lh-30 sm-w-100">{{pageSettings.diaChi}}</p>
@@ -30,17 +57,15 @@ handle = "HAGL\PageSettings"
                             </span>
                         </a>
                     </div>
-                </div>
+                </div> #}
             </div>
-            <div class="col col-md-auto pointer-events-all">
+            {# <div class="col col-md-auto pointer-events-all">
                 <div class="bg-white box-shadow-quadruple-large w-400px md-w-300px sm-w-100 border-radius-6px md-mb-20px xs-mb-0">
                     <div class="ps-25px pe-25px pt-50px pb-40px md-p-20px text-md-start">
                         <span class="text-dark-gray fw-600">{{pageSettings.tenVanPhong}}</span>
                         <p class="w-80 mb-10px lh-30 sm-w-100">{{pageSettings.diaChiVanPhong}}</p>
                         <div class="w-100 d-block">
                             <span class="d-block"><span class="fw-600 text-dark-gray">Điện thoại:</span> <a href="tel:{{pageSettings.dienThoai}}" class="text-medium-gray">{{pageSettings.dienThoaiVanPhong}}</a></span>
-                            {# <span class="d-block"><span class="fw-600 text-dark-gray">Email:</span> <a href="mailto:{{pageSetiings.email}}" class="text-dark-gray text-decoration-line-bottom fw-500">{{pageSettings.email}}</a></span> #}
-                            {# <span class="d-block"><span class="fw-600 text-dark-gray">Website:</span> <a href="mailto:{{pageSetiings.email}}" class="text-dark-gray text-decoration-line-bottom fw-500">{{pageSettings.web}}</a></span> #}
                         </div>
                     </div>
                     <div class="text-center pt-15px pb-15px border-top border-color-extra-medium-gray">
@@ -53,7 +78,7 @@ handle = "HAGL\PageSettings"
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> #}
         </div>
     </div>
 </section>

@@ -41,8 +41,20 @@ fields:
         type: text
         span: row
         spanClass: col-6
+    tax:
+        label: Mã số thuế
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
     dienThoai:
         label: Điện thoại
+        tab: Liên hệ
+        type: text
+        span: row
+        spanClass: col-6
+    fax:
+        label: Số Fax
         tab: Liên hệ
         type: text
         span: row

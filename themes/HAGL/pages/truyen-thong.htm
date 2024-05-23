@@ -6,6 +6,10 @@ meta_description = "Truyền thông HAGL"
 
 [section pageTruyenThong]
 handle = "Hagl\TruyenThong"
+
+[resources]
+js[] = "lightbox.min.js"
+css[] = "lightbox.min.css"
 ==
 <?php
 use Tailor\Models\EntryRecord;
@@ -20,7 +24,7 @@ function onGetSuKien() {
 }
 ?>
 ==
-{% set breadcrumbs = [
+{# {% set breadcrumbs = [
     {
         'name':'HAGL',
         'url':"/",
@@ -31,9 +35,12 @@ function onGetSuKien() {
 ] %}
 {% put breadcrumbs %}
     {% partial 'app/breadcrumbs' pages=breadcrumbs %}
-{% endput %}
+{% endput %} #}
 {% partial 'app/page-title' pageBanner = pageTruyenThong.pageBanner type = "parallax-bg" %}
 {% framework extras %}
+{% if pageTruyenThong.dsMenuItems %}
+    {% partial 'app/page-submenu' menuItems = pageTruyenThong.dsMenuItems  %}
+{% endif %}
 {% for block in pageTruyenThong.blocks %}
     {% set blockType = block.type|split('_') %}
     {% if blockType[0] == 'dung-chung' %}
@@ -42,4 +49,3 @@ function onGetSuKien() {
         {% partial 'blocks/truyen-thong/' ~ str_slug(block.type) block=block %}
     {% endif %}
 {% endfor %}
-

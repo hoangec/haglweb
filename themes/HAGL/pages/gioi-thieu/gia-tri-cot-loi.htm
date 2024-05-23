@@ -21,7 +21,9 @@ handle = "Hagl\GiaTriCotLoi"
     {% partial 'app/breadcrumbs' pages=breadcrumbs %}
 {% endput %}
 {% partial 'app/page-title' pageBanner = pageGiaTriCotLoi.pageBanner type = "parallax-bg" %}
-
+{% put pageSticks %}
+    {% partial 'app/page-stick-gia-tri-cot-loi' block =  pageGiaTriCotLoi.pageStickSetting%}
+{% endput %}
 {% for block in pageGiaTriCotLoi.blocks %}
     {% set blockType = block.type|split('_') %}
     {% if blockType[0] == 'dung-chung' %}

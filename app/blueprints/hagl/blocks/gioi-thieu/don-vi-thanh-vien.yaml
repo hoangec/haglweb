@@ -26,9 +26,40 @@ fields:
                     spanClass: col-md-6
                 moTaCongTy:
                     label: Mô tả
+                    type: textarea
+                    span: row
+                    spanClass: col-md-6
+                diaChi:
+                    label: Địa chỉ
                     type: text
                     span: row
                     spanClass: col-md-6
+                soDT:
+                    label: Số điện thoại
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                soFax:
+                    label: Số Fax
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                email:
+                    label: Email
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                website:
+                    label: Website
+                    type: text
+                    span: row
+                    spanClass: col-md-6
+                imageTyLeSoHuu:
+                    label: Ảnh tỷ lệ sở hữu
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    size: small
                 quocGia:
                     type: dropdown
                     label: Quốc gia
@@ -37,10 +68,37 @@ fields:
                         VN: Việt Nam
                         LAO: Lào
                         CAM: Campuchia
+                    span: row
+                    spanClass: col-md-6
                 linhVuc:
                     type: dropdown
                     label: Lĩnh vực
                     default: NN
+                    span: row
+                    spanClass: col-md-6
                     options:
                         NN: Nông nghiệp
                         KH: Khác
+                loaiCongTy:
+                    type: dropdown
+                    label: Loại hình công ty
+                    default: CTYME
+                    span: row
+                    spanClass: col-md-6
+                    options:
+                        CTYME: công ty mẹ
+                        CTYCON&TN: công ty con & liên kết trong nước
+                        CTYCON&NN: công ty con & liên kết nước ngoài
+                hinhThucCongTy:
+                    type: dropdown
+                    label: Hình thức công ty
+                    default: TSC
+                    span: row
+                    spanClass: col-md-6
+                    options:
+                        TSC: trụ sự chính
+                        CN: chi nhánh
+                        CTYCONTN: công ty con trong nước
+                        CTYLKTN: công ty liên kết trong nước
+                        CTYCONNN: công ty con nước ngoài
+                        CTYLKNN: công ty con liên kết nước ngoài

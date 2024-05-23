@@ -20,6 +20,7 @@ fields:
         label: 'Loại danh mục'
         options:
             nam: 'Quản lý theo năm'
+            ptbv: 'Báo cáo phát triển bền vững'
             nam-catalog: 'Quản lý theo năm - Catalog'
             quy: 'Quản lý theo quý'
         showSearch: true

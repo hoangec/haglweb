@@ -54,7 +54,7 @@ fields:
                         source: Hagl\Blocks\DungChung\ImageBoxStyle5
             dung-chung_process-steps-box-style1:
                 name: Block hiển thị các đầu mục
-                description: Block hiển thị các đầu mục style 2
+                description: Block hiển thị các đầu mục style 1 không có ảnh
                 icon: icon-text-image
                 fields:
                     _mixin:

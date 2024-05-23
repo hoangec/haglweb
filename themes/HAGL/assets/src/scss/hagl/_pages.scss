@@ -789,6 +789,8 @@ blockquote {
 }
 
 
+
+
 /* --page he-thogn-quan-tri */
 .he-thong-quan-tri-dinh-kem {
     .row:nth-child(even) {
@@ -851,13 +853,15 @@ blockquote {
 /*-- co dong --- */
 .co-dong-category {
     .card {
-        background-color: #E9F3FD;
+        // background-color: #E9F3FD;
+        background-color: var(--third-color)
     }
 }
 
 .co-dong-category:nth-child(2n) {
     .card {
-        background-color: #C8E0F8;
+        // background-color: #C8E0F8;
+        background-color: var(--base-color);
     }
 }
 
@@ -869,6 +873,11 @@ blockquote {
 .danh-muc-item:hover .card {
     background-color: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.danh-muc-doc-item:hover .danh-muc-doc-content {
+    background-color: var(--base-color);
+    color: #fff;
 }
 
 .dt-scroll-head .table-border-10px {
@@ -924,6 +933,9 @@ select[name='table-loc-nam'] {
 input[name='table-tim-kiem-input'] {
     border: 0;
 }
+
+
+
 
 /* -- Page tuyen dung */
 .text-truncate-2-row {

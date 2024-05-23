@@ -1,0 +1,88 @@
+uuid: dd01711a-389f-44c6-b5b5-7694b4c21a9e
+handle: Hagl\SanPham\Chuoi\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page sản phẩm chuối
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            dung-chung_tab-content-style1:
+                name: Block hiển thị nội dung dạng TAB
+                description: Block hiển thị noi dung và ảnh tương ứng
+                icon: icon-text-image
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\TabContentBox
+            dung-chung_image-box-style1:
+                name: Block hiển thị ảnh và nội dung style 1
+                description: Block hiển thị ảnh và nội dung style 1
+                icon: icon-text-image
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+            dung-chung_image-card:
+                name: Block hiển thị ảnh
+                description: Nôi dụng cho block hiên thị ảnh vơi style hiệu ứng shadown
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox

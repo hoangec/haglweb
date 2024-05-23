@@ -9,6 +9,35 @@ function scrollToTarget(idSecctionDich) {
         });
     }
 }
+function scrollToCoDongTarget(idSecctionDich, el) {
+    var sectionToScroll = document.getElementById(idSecctionDich);
+    if (sectionToScroll) {
+        $('.danh-muc-doc-content').removeClass('bg-base-color');
+        $('.danh-muc-doc-content').addClass('bg-third-color');
+        $(el).find('.danh-muc-doc-content').removeClass('bg-third-color');
+        $(el).find('.danh-muc-doc-content').addClass('bg-base-color');
+        anime({
+            targets: "html, body",
+            scrollTop: sectionToScroll.offsetTop,
+            duration: 1000,
+            easing: "easeInOutQuad",
+        });
+    }
+}
+function showImageGallery(el){
+    var imageGalleryId = '#image-gallery-'+el;
+    var $links = $(imageGalleryId).find('a');
+    if ($links.length > 0) {
+        $links.each(function(index, link) {
+            $(link).attr('data-lightbox', 'gallery'); // Sử dụng .data() thay vì .attr()
+        });
+        lightbox.start($links);
+        $links.each(function(index, link) {
+            $(link).removeAttr('data-lightbox'); // Sử dụng .data() thay vì .attr()
+        });
+
+    }
+}
 $(function () {
     // cac ultilies
     function scrollToSuKien(idSuKien) {
@@ -30,6 +59,7 @@ $(function () {
         // });
     }
     //- xu ly form
+
     $(document).on('click', '.submit-tuyendung', function () {
         var error = false,
                 _this = $(this),
@@ -279,131 +309,103 @@ function inTrangTinTuc() {
 }
 /* khoi tao datatables */
 $(function () {
-    $.extend($.fn.dataTable.defaults, {
-        language: {
-            // url: "https://cdn.datatables.net/plug-ins/2.0.6/i18n/vi.json",
-            url: 'themes/HAGL/assets/js/datatables/dataTables.vn.json'
-        },
-    });
-    // var table = $("#table-theo-quy").DataTable({
-    //     responsive: true,
-    //     order: [[ 2, "desc" ]] ,
-    //     pageLength: 10,
-    //     dom: 'lrtip',
-    //     searching: true,
-    //     lengthChange: false,
-    //     paging: true,
-    //     scrollCollapse: true,
-    //     scrollX: true,
-    //     scrollY: 600,
-    //     columnDefs: [
-    //         { "orderable": false, "targets": [0,1,3,4,5,6] }
-    //     ]
-    // });
-    // var years = table.column(2).data().unique().sort().toArray();
-    // $.each(years, function(index, value){
-    //     $('#table-loc-nam').append('<option value="' + value + '">' + value + '</option>');
-    // });
-    // $('#table-loc-nam').on('change', function () {
-    //     var year = $(this).val();
-    //     console.log(year);
-    //     table.column(2).search(year).draw();
-    // });
-    // $('#table-tim-kiem-btn').on('click',function(){
-    //     var keywords = $('input[name="table-tim-kiem-input"]').val();
-    //     console.log(keywords);
-    //     table.search(keywords).draw();
-    // });
-    //
     var tableBlocks = $(".table-block");
-    tableBlocks.each(function () {
-        var tableBlockId = $(this).attr("block-id");
-        var strTableId = "#table-rowgroup-" + tableBlockId;
-        var tableType = $(strTableId).attr("table-type");
-        var dataTable = null;
-        if (tableType == "table-quy") {
-            dataTable = $(strTableId).DataTable({
-                responsive: true,
-                rowGroup: {
-                    dataSrc: 1,
-                },
-                fixedHeader: true,
-                // autoWidth: false,
-                order: [[1, "desc"]],
-                pageLength: 10,
-                dom: "lrtip",
-                searching: true,
-                lengthChange: false,
-                paging: true,
-                // fixedColumns: true,
-                scrollCollapse: true,
-                scrollX: true,
-                scrollY: 600,
-                columnDefs: [
-                    {
-                        targets: [0],
-                        // width: 300,
+    if (tableBlocks.length > 0) {
+        $.extend($.fn.dataTable.defaults, {
+            language: {
+                // url: "https://cdn.datatables.net/plug-ins/2.0.6/i18n/vi.json",
+                url: 'themes/HAGL/assets/js/datatables/dataTables.vn.json'
+            },
+        });
+        tableBlocks.each(function () {
+            var tableBlockId = $(this).attr("block-id");
+            var strTableId = "#table-rowgroup-" + tableBlockId;
+            var tableType = $(strTableId).attr("table-type");
+            var dataTable = null;
+            if (tableType == "table-quy") {
+                dataTable = $(strTableId).DataTable({
+                    responsive: true,
+                    rowGroup: {
+                        dataSrc: 1,
                     },
-                    {
-                        targets: [1],
-                        visible: false,
-                        searchable: true,
-                    },
-                    {
-                        orderable: false,
-                        targets: [ 0, 1, 2, 3, 4, 5] }
-                ],
-            });
-        } else {
-            // khoi tao cac table
-            dataTable = $(strTableId).DataTable({
-                dom: "lrtip",
-                columnDefs: [
-                    {
-                        targets: [2],
-                        visible: false,
-                        searchable: false,
-                    },
-                    {
-                        targets: [1],
-                        visible: false,
-                        searchable: true,
-                    },
-                    {
-                        targets: [0, 1, 2, 3],
-                        orderable: false,
-                    },
-                ],
-                paging: false,
-                order: [[1, "desc"]],
+                    fixedHeader: true,
+                    // autoWidth: false,
+                    order: [[1, "desc"]],
+                    pageLength: 10,
+                    dom: "lrtip",
+                    searching: true,
+                    lengthChange: false,
+                    paging: true,
+                    // fixedColumns: true,
+                    scrollCollapse: true,
+                    scrollX: true,
+                    scrollY: 600,
+                    columnDefs: [
+                        {
+                            targets: [0],
+                            // width: 300,
+                        },
+                        {
+                            targets: [1],
+                            visible: false,
+                            searchable: true,
+                        },
+                        {
+                            orderable: false,
+                            targets: [ 0, 1, 2, 3, 4, 5] }
+                    ],
+                });
+            } else {
+                // khoi tao cac table
+                dataTable = $(strTableId).DataTable({
+                    dom: "lrtip",
+                    columnDefs: [
+                        {
+                            targets: [2],
+                            visible: false,
+                            searchable: false,
+                        },
+                        {
+                            targets: [1],
+                            visible: false,
+                            searchable: true,
+                        },
+                        {
+                            targets: [0, 1, 2, 3],
+                            orderable: false,
+                        },
+                    ],
+                    paging: false,
+                    order: [[1, "desc"]],
 
-                rowGroup: {
-                    dataSrc: 2,
-                },
-            });
-        }
-        //Koi tao loc du lieu cho tung table
-        if(dataTable != null){
-            var years = dataTable.column(1).data().unique().sort().toArray();
-            var strToolBarLocNamId = "#table-loc-nam-" + tableBlockId;
-            $.each(years, function (index, value) {
-                $(strToolBarLocNamId).append(
-                    '<option value="' + value + '">' + value + "</option>"
-                );
-            });
-            $(strToolBarLocNamId).on("change", function () {
-                var year = $(this).val();
-                console.log(year);
-                dataTable.column(1).search(year).draw();
-            });
-            // khoi tao chuc nang tim kiem
-            var strToolBarTimKiemInputId = "#table-search-input-" + tableBlockId;
-            var strToolBarTimKiemBtnId = "#table-search-btn-" + tableBlockId;
-            $(strToolBarTimKiemBtnId).on("click", function () {
-                var keywords = $(strToolBarTimKiemInputId).val();
-                dataTable.search(keywords).draw();
-            });
-        }
+                    rowGroup: {
+                        dataSrc: 1,
+                    },
+                });
+            }
+            //Koi tao loc du lieu cho tung table
+            if(dataTable != null){
+                var years = dataTable.column(1).data().unique().sort().toArray();
+                var strToolBarLocNamId = "#table-loc-nam-" + tableBlockId;
+                $.each(years, function (index, value) {
+                    $(strToolBarLocNamId).append(
+                        '<option value="' + value + '">' + value + "</option>"
+                    );
+                });
+                $(strToolBarLocNamId).on("change", function () {
+                    var year = $(this).val();
+                    console.log(year);
+                    dataTable.column(1).search(year).draw();
+                });
+                // khoi tao chuc nang tim kiem
+                var strToolBarTimKiemInputId = "#table-search-input-" + tableBlockId;
+                var strToolBarTimKiemBtnId = "#table-search-btn-" + tableBlockId;
+                $(strToolBarTimKiemBtnId).on("click", function () {
+                    var keywords = $(strToolBarTimKiemInputId).val();
+                    dataTable.search(keywords).draw();
+                });
+            }
 
-    });
+        });
+    }
 });
