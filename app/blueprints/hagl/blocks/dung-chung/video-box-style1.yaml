@@ -19,5 +19,11 @@ fields:
         mode: image
         maxItems: 1
         size: small
-    
-    
+    image:
+        label: Ảnh thumbnail
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        size: small
+
+
