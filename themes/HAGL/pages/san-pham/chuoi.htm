@@ -14,6 +14,6 @@ handle = "Hagl\SanPham\Chuoi"
     {% if blockType[0] == 'dung-chung' %}
         {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
     {% else %}
-        {% partial 'blocks/gioi-thieu/' ~ str_slug(block.type) block=block %}
+        {% partial 'blocks/san-pham/' ~ str_slug(block.type) block=block %}
     {% endif %}
 {% endfor %}

@@ -21,41 +21,13 @@ function onStart()
 }
 ?>
 ==
-{% set dsDonViVN = block.dsDonVi.where('quocGia','VN')%}
-{% set dsDonViLao = block.dsDonVi.where('quocGia','LAO')%}
-{% set dsDonViCam = block.dsDonVi.where('quocGia','CAM')%}
+
 {% set dsLoaiCtyMe = block.dsDonVi.where('loaiCongTy','CTYME')%}
 {% set dsLoaiCtyTN = block.dsDonVi.where('hinhThucCongTy','CTYCONTN')%}
 {% set dsLoaiCtyLKTN = block.dsDonVi.where('hinhThucCongTy','CTYLKTN')%}
 {% set dsLoaiCtyNN = block.dsDonVi.where('hinhThucCongTy','CTYCONNN')%}
 {% set dsLoaiCtyLKNN = block.dsDonVi.where('hinhThucCongTy','CTYLKNN')%}
- {# <section class="p-0 border-bottom border-color-extra-medium-gray">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 justify-content-center"
-                data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 500, "easing": "easeOutQuad" }'>
-            <div class="col py-3 feature-box md-mb-50px xs-mb-30px border-end border-color-extra-medium-gray sm-border-end-0">
-                <div class="feature-box-icon">
-                    <span class="text-primary mb-20px d-block">
-                        <img src="{{'assets/images/office_45x45.svg'|theme}}" />
-                    </span>
-                </div>
-                <div class="feature-box-content">
-                    <h2 class="d-inline-block align-middle counter-number fw-700 text-primary mb-0 counter" data-speed="2000" data-to="13"></h2>
-                    <span class="d-block text-primary fw-500">Công ty con</span>
-                </div>
-            </div>
-            <div class="col py-3 feature-box md-mb-50px xs-mb-30px">
-                <div class="feature-box-icon">
-                    <i class="fa-solid fa-link icon-large  mb-20px d-block"></i>
-                </div>
-                <div class="feature-box-content">
-                    <h2 class="d-inline-block align-middle counter-number fw-700 text-primary mb-0 counter" data-speed="2000" data-to="1"></h2>
-                    <span class="d-block text-primary fw-500">Công ty liên kết</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> #}
+
 <section class="cover-background pb-0">
     <div class="container">
         <div class="row justify-content-center mb-3">
@@ -171,8 +143,17 @@ function onStart()
                                                                         {% endif %}
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-3 p-20px justify-content-center align-items-center d-flex">
+                                                                <div class="col-md-3 p-20px justify-content-center align-items-center d-flex flex-column">
+                                                                    {% if donVi.imageTyLeSoHuu %}
                                                                     <img src="{{donVi.imageTyLeSoHuu|media}}" class="img-fluid border-radius-10px" alt="...">
+                                                                    {% else %}
+                                                                    <div class="chart-percent mb-20px">
+                                                                        <span class="pie-chart-style-01 d-flex align-items-center justify-content-center" data-line-width="7" data-percent="{{donVi.tyLeSoHuuSo}}" data-track-color="#cccfe3" data-start-color="#1935dd" data-end-color="#6679ec">
+                                                                                <span class="percent d-flex align-items-center justify-content-center fs-22 ls-minus-1px fw-600 text-base-color bg-gradient-extra-midium-gray-transparent box-shadow-double-large w-100px h-100px rounded-circle"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="chart-text text-center text-dark-gray fw-600 fs-19">Tỷ lệ sở hữu</div>
+                                                                    {% endif %}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -217,8 +198,17 @@ function onStart()
                                                                         {% endif %}
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-3 p-20px justify-content-center align-items-center d-flex">
+                                                                <div class="col-md-3 p-20px justify-content-center align-items-center d-flex flex-column">
+                                                                    {% if donVi.imageTyLeSoHuu %}
                                                                     <img src="{{donVi.imageTyLeSoHuu|media}}" class="img-fluid border-radius-10px" alt="...">
+                                                                    {% else %}
+                                                                    <div class="chart-percent mb-20px">
+                                                                        <span class="pie-chart-style-01 d-flex align-items-center justify-content-center" data-line-width="7" data-percent="{{donVi.tyLeSoHuuSo}}" data-track-color="#cccfe3" data-start-color="#1935dd" data-end-color="#6679ec">
+                                                                                <span class="percent d-flex align-items-center justify-content-center fs-22 ls-minus-1px fw-600 text-base-color bg-gradient-extra-midium-gray-transparent box-shadow-double-large w-100px h-100px rounded-circle"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="chart-text text-center text-dark-gray fw-600 fs-19">Tỷ lệ sở hữu</div>
+                                                                    {% endif %}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -273,7 +263,7 @@ function onStart()
                                                                         {% endif %}
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-3 p-20px justify-content-center align-items-center d-flex">
+                                                                <div class="col-md-3 p-20px justify-content-center align-items-center d-flex flex-column">
                                                                     <img src="{{donVi.imageTyLeSoHuu|media}}" class="img-fluid border-radius-10px" alt="...">
                                                                 </div>
                                                             </div>
@@ -288,7 +278,7 @@ function onStart()
                                     <div class="accordion-item">
                                         <h2 class="accordion-header border-bottom" id="headingNuocNgoai2">
                                         <button class="accordion-button accordion-button text-primary fw-700 fs-20 ps-10px pe-10px pt-0 pb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNuocNgoai2" aria-expanded="false" aria-controls="collapseNuocNgoai2">
-                                            Công ty liên kết trong nước
+                                            Công ty liên kết nước ngoài
                                         </button>
                                         </h2>
                                         <div id="collapseNuocNgoai2" class="accordion-collapse collapse" aria-labelledby="headingNuocNgoai2" data-bs-parent="#accordion-nguoc-ngoai">
@@ -319,8 +309,17 @@ function onStart()
                                                                         {% endif %}
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-3 p-20px justify-content-center align-items-center d-flex">
+                                                                <div class="col-md-3 p-20px justify-content-center align-items-center d-flex flex-column">
+                                                                    {% if donVi.imageTyLeSoHuu %}
                                                                     <img src="{{donVi.imageTyLeSoHuu|media}}" class="img-fluid border-radius-10px" alt="...">
+                                                                    {% else %}
+                                                                    <div class="chart-percent mb-20px">
+                                                                        <span class="pie-chart-style-01 d-flex align-items-center justify-content-center" data-line-width="7" data-percent="{{donVi.tyLeSoHuuSo}}" data-track-color="#cccfe3" data-start-color="#1935dd" data-end-color="#6679ec">
+                                                                                <span class="percent d-flex align-items-center justify-content-center fs-22 ls-minus-1px fw-600 text-base-color bg-gradient-extra-midium-gray-transparent box-shadow-double-large w-100px h-100px rounded-circle"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="chart-text text-center text-dark-gray fw-600 fs-19">Tỷ lệ sở hữu</div>
+                                                                    {% endif %}
                                                                 </div>
                                                             </div>
                                                         </div>

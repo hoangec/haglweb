@@ -120,7 +120,7 @@
     <div class="container">
         <div class="row justify-content-center mb-3">
             <div class="col-md-10 text-center">
-                <h3 class="fw-600 text-dark-gray ls-minus-1px md-ls-0px">Video về sản phẩm chuối</h3>
+                <h3 class="fw-600 text-primary">{{block.tuaDe}}</h3>
             </div>
         </div>
         <div class="row">
@@ -200,16 +200,17 @@
             <div class="col-md-12 mb-40px sm-mb-30px">
                 <div class="swiper swiper-light-pagination" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": false, "navigation": { "nextEl": ".slider-one-slide-next-08", "prevEl": ".slider-one-slide-prev-08" }, "pagination": { "el": ".swiper-pagination-bullets-07", "clickable": true, "dynamicBullets": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "992": { "slidesPerView": 1 }, "768": { "slidesPerView": 1 }, "320": { "slidesPerView": 1 } }, "effect": "slide" }'>
                     <div class="swiper-wrapper align-items-center">
+                        {% for noiDung in block.dsNoiDung %}
                         <div class="swiper-slide">
                             <div class="overflow-visible position-relative">
-                                <div class="border-radius-6px h-650px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background" style="background-image: url('https://via.placeholder.com/1190x700')">
+                                <div class="border-radius-6px h-650px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background" style="background-image: url('{{noiDung.image|media}}')">
                                     <div class="opacity-very-light bg-dark-gray"></div>
                                 </div>
                                 <div class="position-absolute top-0px left-0px w-100 h-100 z-index-9">
-                                    <a href="https://www.youtube.com/watch?v=pr7YF6z6XaU" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-extra-large popup-youtube">
+                                    <a href="{{noiDung.link}}" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-extra-large popup-youtube">
                                         <span>
-                                            <span class="video-icon bg-yellow">
-                                                <i class="fa-solid fa-play text-dark-gray"></i>
+                                            <span class="video-icon bg-base-color">
+                                                <i class="fa-solid fa-play text-white"></i>
                                                 <span class="video-icon-sonar">
                                                     <span class="video-icon-sonar-bfr bg-yellow opacity-9"></span>
                                                 </span>
@@ -219,44 +220,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="overflow-visible position-relative">
-                                <div class="border-radius-6px h-650px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background" style="background-image: url('https://via.placeholder.com/1190x700')">
-                                    <div class="opacity-very-light bg-dark-gray"></div>
-                                </div>
-                                <div class="position-absolute top-0px left-0px w-100 h-100 z-index-9">
-                                    <a href="https://www.youtube.com/watch?v=pr7YF6z6XaU" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-extra-large popup-youtube">
-                                        <span>
-                                            <span class="video-icon bg-yellow">
-                                                <i class="fa-solid fa-play text-dark-gray"></i>
-                                                <span class="video-icon-sonar">
-                                                    <span class="video-icon-sonar-bfr bg-yellow opacity-9"></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="overflow-visible position-relative">
-                                <div class="border-radius-6px h-650px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background" style="background-image: url('https://via.placeholder.com/1190x700')">
-                                    <div class="opacity-very-light bg-dark-gray"></div>
-                                </div>
-                                <div class="position-absolute top-0px left-0px w-100 h-100 z-index-9">
-                                    <a href="https://www.youtube.com/watch?v=pr7YF6z6XaU" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-extra-large popup-youtube">
-                                        <span>
-                                            <span class="video-icon bg-yellow">
-                                                <i class="fa-solid fa-play text-dark-gray"></i>
-                                                <span class="video-icon-sonar">
-                                                    <span class="video-icon-sonar-bfr bg-yellow opacity-9"></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                     <div class="slider-one-slide-prev-08 swiper-button-prev bg-white-transparent-very-light text-white h-50px w-50px slider-navigation-style-01"><i class="fa-solid fa-angle-left"></i></div>
                     <div class="slider-one-slide-next-08 swiper-button-next bg-white-transparent-very-light text-white h-50px w-50px slider-navigation-style-01"><i class="fa-solid fa-angle-right"></i></div>

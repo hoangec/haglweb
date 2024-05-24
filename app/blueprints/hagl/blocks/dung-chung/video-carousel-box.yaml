@@ -1,0 +1,37 @@
+uuid: d7c67a33-3990-470a-88d8-0f1e45a87ff2
+handle: Hagl\Blocks\DungChung\VideoCarouselBox
+type: mixin
+name: Hiển thị danh sách các video carouse
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: text
+    _section1:
+        type: section
+        label: Danh sách các nội dung
+        comment: Cung cấp danh sách các nôi dung
+    dsNoiDung:
+        type: repeater
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-6
+                link:
+                    label: Nội dung
+                    type: text
+                    span: row
+                    spanClass: col-6
+                image:
+                    label: Ảnh thumbnail
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    span: row
+                    spanClass: col-6

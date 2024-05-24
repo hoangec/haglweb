@@ -86,3 +86,57 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\DungChung\ImageBox
+            dung-chung_video-carousel-box:
+                name: Block hiển thị slider video
+                description: Block hiển thị slider video với link youtube
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\VideoCarouselBox
+            tieu-chuan-san-pham-card:
+                name: Block hiển thị thông tin tiêu chuẩn sản phẩm
+                description: Block hiển thị thông tin tiêu chuẩn sản phẩm
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SanPham\TieuChuanSanPhamCard
+
+
+
+

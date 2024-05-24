@@ -1,0 +1,41 @@
+uuid: d23e9c3e-7c5e-41eb-8cc6-35b8022b9fd8
+handle: SanPham\SanPham
+type: stream
+name: Sản phẩm
+multisite: true
+drafts: true
+
+primaryNavigation:
+    label: Sản phẩm
+    icon: octo-icon-file
+    iconSvg: modules/tailor/assets/images/blog-icon.svg
+    order: 95
+
+navigation:
+    icon: octo-icon-pencil
+    order: 100
+
+fields:
+    ten:
+        label: Tên sản phẩm
+        type: text
+        span: row
+        spanClass: col-6
+    moTa:
+        label: Mô tả
+        type: text
+        span: row
+        spanClass: col-6
+    image:
+        label: Ảnh
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    danhMuc:
+        label: Danh mục
+        commentAbove: 'Chọn danh mục sản phẩm'
+        type: entries
+        source: SanPham\DanhMuc
+

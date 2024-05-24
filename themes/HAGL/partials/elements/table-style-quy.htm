@@ -1,4 +1,7 @@
-     {# {{d(danhSachFile)}} #}
+     {# {{d(danhSachFile)}}
+    {% for nam, groupByNamItems in danhSachFile %}
+        {{d(groupByNamItems)}}
+    {% endfor %} #}
 <table class="table table-hover table-border-10px table-striped w-100"  table-type="table-quy" id="{{tableId}}">
     <thead class="table-light">
         <tr>
@@ -12,6 +15,7 @@
     </thead>
     <tbody>
         {% for nam, groupByNamItems in danhSachFile %}
+
             {% set namDuLieu = ''%}
             {% set duLieuQuy1 = ''%}
             {% set duLieuQuy2 = ''%}

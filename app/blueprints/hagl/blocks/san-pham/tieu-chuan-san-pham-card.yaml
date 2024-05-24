@@ -1,0 +1,43 @@
+uuid: 720d5adb-5be7-44ac-9961-befb56bef878
+handle: Hagl\Blocks\SanPham\TieuChuanSanPhamCard
+type: mixin
+name: Hiển thị card ve tieu chuan san pham
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: text
+    _section1:
+        type: section
+        label: Danh sách các nội dung
+        comment: Cung cấp danh sách các nôi dung
+    dsNoiDung:
+        type: repeater
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-6
+                noiDung:
+                    label: Nội dung
+                    type: textarea
+                    span: row
+                    spanClass: col-6
+                image:
+                    label: Ảnh thumbnail
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    span: row
+                    spanClass: col-6
+
+                chiTiet:
+                    label: Chi tiết
+                    type: richeditor
+                    span: row
+                    spanClass: col-6

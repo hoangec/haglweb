@@ -60,6 +60,13 @@ fields:
                     mode: image
                     maxItems: 1
                     size: small
+                tyLeSoHuuSo:
+                    label: Tỷ lệ sở hữu nhập số
+                    placeholder: "Chọn một trong hai hình thức nhập số hay anh"
+                    type: number
+                    min: 0
+                    span: row
+                    spanClass: col-md-6
                 quocGia:
                     type: dropdown
                     label: Quốc gia

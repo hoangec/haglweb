@@ -1,0 +1,26 @@
+uuid: 3c0db173-a71f-4d50-acd3-3791cf57dc38
+type: structure
+handle: SanPham\DanhMuc
+name: DanhMuc
+drafts: false
+
+structure:
+    maxDepth: 1
+
+navigation:
+    parent: SanPham\SanPham
+    icon: octo-icon-list-ul
+    order: 150
+
+fields:
+    moTa:
+        label: Mô tả
+    image:
+        label: Ảnh đại diện
+        type: mediafinder
+        mode: image
+        maxItems: 1
+    color:
+        label: Màu đại diện
+        type: colorpicker
+        default: #f89f32

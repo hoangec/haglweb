@@ -5,7 +5,7 @@ name: Trang sản phẩm chuối
 multisite: true
 
 navigation:
-    parent: Hagl\HomePage
+    parent: SanPham\SanPham
     icon: icon-pencil-square
     order: 73
 extraNavigation:

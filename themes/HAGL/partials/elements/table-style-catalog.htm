@@ -11,29 +11,20 @@
                                 <img class="w-100" src="{{file.anh_dai_dien|media}}" alt="" />
                                 <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-5 xl-p-10 last-paragraph-no-margin">
                                     <div class="mb-auto bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-20px pe-20px fs-16 ms-auto" >{{file.nam_du_lieu|date('Y')}}</div>
-                                    <span class="text-primary fw-700 fs-20 sm-lh-26 xs-lh-28 sm-mb-5px">{{file.ten}}</span>
-                                    {# <p class="text-white opacity-6 fs-18">Innovative solutions</p> #}
+                                    {# <span class="text-primary fw-700 fs-20 sm-lh-26 xs-lh-28 sm-mb-5px">{{file.ten}}</span>
                                     <div class="d-flex align-items-center justify-content-between w-100">
                                          <a href="{{file.file.url}}" class="text-base-color  fs-18"  target="_blank">
                                             <span class="badge rounded-pill bg-primary fs-12 ">Tải tài liệu<i class="ms-5px fa-regular fa-file-pdf align-middle icon-small"></i></span>
                                         </a>
-                                        {# {% if file.file2  %}
-                                        <a href="{{file.file.url}}" class="text-base-color  fs-18"  target="_blank">
-                                            <span class="badge rounded-pill bg-primary fs-12 ">Tải trang đơn<i class="ms-5px fa-regular fa-file-pdf align-middle icon-small"></i></span>
-                                        </a>
-                                        <a href="{{file.file2.url}}" class="text-base-color  fs-18"  target="_blank">
-                                            <span class="badge rounded-pill bg-base-color fs-12 ">Tải trang đôi<i class="ms-5px fa-regular fa-file-pdf align-middle icon-small"></i></span>
-                                        </a>
-                                        {% else %}
-                                         <a href="{{file.file.url}}" class="text-base-color  fs-18"  target="_blank">
-                                            <span class="badge rounded-pill bg-primary fs-12 ">Tải tài liệu<i class="ms-5px fa-regular fa-file-pdf align-middle icon-small"></i></span>
-                                        </a>
-                                        {% endif %} #}
-                                    </div>
-                                    {# <div class="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent z-index-minus-1 opacity-9"></div> #}
-                                    {# <div class="box-overlay bg-gradient-gray-light-dark-transparent z-index-minus-1"></div> #}
+                                    </div> #}
                                 </figcaption>
                             </figure>
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <span class="text-primary fw-600 fs-16 sm-lh-26 xs-lh-28 sm-mb-5px">{{file.ten}}</span>
+                                <a href="{{file.file.url}}" class="text-base-color  fs-18"  target="_blank">
+                                    <span class="badge rounded-pill bg-primary fs-12 ">Tải tài liệu<i class="ms-5px fa-regular fa-file-pdf align-middle icon-small"></i></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
