@@ -4,11 +4,11 @@ type: mixin
 name: Block hiển thị danh sách các sản phẩm
 
 fields:
-    ten:
+    tuaDe:
         label: Tựa đề
         type: text
         validation: "required"
-    moTa:
+    noiDung:
         label: Nội dung
         type: text
     danhMuc:
