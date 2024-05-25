@@ -11,6 +11,23 @@ fields:
         span: adaptive
         tab: Nội dung trang
         groups:
+            dung-chung_khoang-trong-box:
+                name: Block chèn khoảng trống
+                description: Block chèn khoảng trống
+                icon: icon-text-image
+                fields:
+                    paddingTop:
+                        label: Khoảng trống (px) sẽ cách ở mép trên
+                        type: number
+                        min: 0
+                        span: row
+                        spanClass: col-6
+                    paddingBottom:
+                        label: Khoảng trống (px) sẽ cách ở mép dưới
+                        type: number
+                        min: 0
+                        span: row
+                        spanClass: col-6
             marquee:
                 name: Block hiên thị nội dung chạy
                 description: Block hiên thị nội dung chạy
