@@ -66,14 +66,17 @@ $(function () {
     }
     //xu ly modal dang ky mua san pham
     var myModalEl = document.getElementById('DangKySanPhamModal')
-    myModalEl.addEventListener('hidden.bs.modal', function (event) {
-        var table = $('#formDangKySanPham');
-        table.find('input[type=text]').val('');
-        grecaptcha.reset();
-        $('#formSubmitBtn').prop('disabled', false);
-        $('#dangKySanPhamAlert').hide();
+    if(myModalEl) {
+        myModalEl.addEventListener('hidden.bs.modal', function (event) {
+            var table = $('#formDangKySanPham');
+            table.find('input[type=text]').val('');
+            grecaptcha.reset();
+            $('#formSubmitBtn').prop('disabled', false);
+            $('#dangKySanPhamAlert').hide();
 
-    })
+        })
+    }
+
     function showDangKySanPham(element) {
         var sanPhamTen = $(element).prev().find('.san-pham-ten').text().trim();
         $('#formSanPhamName').val(sanPhamTen);
