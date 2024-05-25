@@ -1,0 +1,20 @@
+uuid: f1a727fc-44c2-45aa-b625-fc2c6551521a
+handle: SanPham\Settings
+type: global
+name: Thiết lập cho trang sản phẩm
+
+navigation:
+    parent: SanPham\SanPham
+    icon: octo-icon-list-ul
+    order: 150
+
+fields:
+    email_nhan_tin:
+        label: Email nhận tin
+        type: email
+        validation: email
+        tab: Thiết lập chung
+    thongDiepOnSuccess:
+        label: Thông điêp khi đăng ký mua sản phẩm thành công
+        type: text
+        tab: Thiết lập chung

@@ -136,6 +136,57 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\SanPham\TieuChuanSanPhamCard
+            dung-chung_san-pham-card:
+                name: Block hiển thị sản phẩm
+                description: Block hiển thị thông tin sản phẩm
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\SanPhamCard
+            dung-chung_image-box-style7:
+                name: Block hiển thị ảnh full màn hình
+                description: Block hiển thị ảnh full màn hình
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+
 
 
 

@@ -1,0 +1,18 @@
+uuid: 93021e40-3987-43c7-8d05-afe5b5586882
+handle: Hagl\Blocks\DungChung\SanPhamCard
+type: mixin
+name: Block hiển thị danh sách các sản phẩm
+
+fields:
+    ten:
+        label: Tựa đề
+        type: text
+        validation: "required"
+    moTa:
+        label: Nội dung
+        type: text
+    danhMuc:
+        label: Danh mụch hiển thị sản phẩm
+        commentAbove: 'Chọn danh mục sản phẩm để hiển thị'
+        type: entries
+        source:  SanPham\DanhMuc

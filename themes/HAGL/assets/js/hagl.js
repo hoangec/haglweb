@@ -38,6 +38,12 @@ function showImageGallery(el){
 
     }
 }
+function dongModalDangKySanPham() {
+    setTimeout(function(){
+        $('#DangKySanPhamModal').modal('hide');
+    },1000)
+
+}
 $(function () {
     // cac ultilies
     function scrollToSuKien(idSuKien) {
@@ -58,7 +64,25 @@ $(function () {
         //     interval: 1
         // });
     }
-    //- xu ly form
+    //xu ly modal dang ky mua san pham
+    var myModalEl = document.getElementById('DangKySanPhamModal')
+    myModalEl.addEventListener('hidden.bs.modal', function (event) {
+        var table = $('#formDangKySanPham');
+        table.find('input[type=text]').val('');
+        grecaptcha.reset();
+        $('#formSubmitBtn').prop('disabled', false);
+        $('#dangKySanPhamAlert').hide();
+
+    })
+    function showDangKySanPham(element) {
+        var sanPhamTen = $(element).prev().find('.san-pham-ten').text().trim();
+        $('#formSanPhamName').val(sanPhamTen);
+        $('#DangKySanPhamModal').modal('show');
+    }
+
+    $('a.btn-dangky-sanpham').on('click', function() {
+        showDangKySanPham(this);
+    });
 
     $(document).on('click', '.submit-tuyendung', function () {
         var error = false,

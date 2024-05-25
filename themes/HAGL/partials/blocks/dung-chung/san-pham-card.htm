@@ -1,0 +1,61 @@
+[collection dsSanPham]
+handle = "SanPham\SanPham"
+
+[global sanPhamSetting]
+handle = "SanPham\Settings"
+==
+{% set dsSanPhamAll = []%}
+{% for danhMuc in block.danhMuc %}
+    {% set dsSanPhamTheoCatelogies = dsSanPham.whereRelation('danhMuc','slug',danhMuc.slug).get() %}
+    {% if dsSanPhamTheoCatelogies is not  empty %}
+        {% set dsSanPhamAll = dsSanPhamAll|merge(dsSanPhamTheoCatelogies)%}
+    {% endif %}
+{% endfor %}
+<section class="bg-very-light-gray position-relative">
+    <div class="container">
+        <div class="row justify-content-center mb-3 md-mb-30px">
+            <div class="col-lg-8 align-items-center justify-content-center z-index-1 d-block d-md-flex text-center text-md-start" data-anime='{ "el": "childs", "translateY": [15,0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                {# <span class="text-red fs-18 ls-minus-05px alt-font fw-700 border-end sm-border-end-0 border-color-transparent-dark-very-light pt-10px pb-10px pe-30px me-30px text-uppercase sm-me-0 sm-pe-0">Our signature</span> #}
+                <h3 class="mb-0  text-primary text-uppercase fw-800">{{block.tuaDe}}</h3>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            {% for sanPham in dsSanPhamAll%}
+            <div class="col text-center transition-inner-all md-mb-30px">
+                <!-- start services box style -->
+                <div class="services-box-style-04 hover-box last-paragraph-no-margin border-radius-8px overflow-hidden position-relative ps-20px pe-20px lg-ps-10px lg-pe-10px pt-30px pb-40px box-shadow-extra-large-hover">
+                        <div class="mb-5px">
+                        <img src="{{sanPham.image|media}}" alt="" data-bottom-top="transform: rotate(30deg)" data-top-bottom="transform:rotate(-30deg)">
+                    </div>
+                    <div class="box-overlay bg-white z-index-minus-1"></div>
+                    <div class="d-flex flex-column h-100">
+                        <div class="flex-grow-1">
+                            <div class="bg-orange border-radius-4px mb-20px overflow-hidden d-inline-flex">
+                                <div class="text-white fs-17 ps-15px pe-15px lh-36 align-self-center">Cân nặng</div>
+                                <span class="text-white fs-16 lh-32 alt-font fw-600 bg-dark-gray ps-10px pe-10px">5.0</span>
+                            </div>
+                            <div class="fs-19 lh-32 fw-600 text-primary mb-5px san-pham-ten" >{{sanPham.ten}}</div>
+                            <div class="fs-16 alt-font lh-32 fw-600 text-dark-gray mb-5px">{{sanPham.moTa}}</div>
+                        </div>
+                        <a href="javascript:void(0)"  class="btn-dangky-sanpham btn btn-very-small fw-600 btn-rounded with-rounded btn-base-color btn-box-shadow d-table d-lg-inline-block lg-mb-15px md-mx-auto mt-10px">Đặt hàng<span class="bg-primary text-white"><i class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <!-- end services box style -->
+            </div>
+            {% endfor %}
+            <div class="modal fade" id="DangKySanPhamModal">
+                <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-primary fs-20 fw-600">Đăng ký mua hàng</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                    </div>
+                    <div class="modal-body">
+                        {% component 'formDangKySanPham' %}
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
