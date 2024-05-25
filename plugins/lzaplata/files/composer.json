@@ -1,8 +1,0 @@
-{
-    "name": "lzaplata/files-plugin",
-    "type": "october-plugin",
-    "description": "Plugin for files management",
-    "require": {
-        "composer/installers": "~1.0"
-    }
-}

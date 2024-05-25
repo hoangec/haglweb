@@ -1,5 +1,0 @@
-title: 'lzaplata.files::lang.category.reorder.title'
-modelClass: LZaplata\Files\Models\Category
-nameFrom: name
-toolbar:
-    buttons: reorder_toolbar

@@ -27,4 +27,6 @@ nbproject
 # Project
 /bootstrap/compiled.php
 /vendor
+/plugins/lzaplata
 /plugins/rainlab
+plugins/lzaplata
