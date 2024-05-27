@@ -1,0 +1,33 @@
+uuid: b8edf836-ae9d-47dc-b760-561632812726
+handle: Hagl\SanPham\HeoAnChuoi
+type: single
+name: Trang sản phẩm heo ăn chuối
+multisite: true
+
+navigation:
+    parent: SanPham\SanPham
+    icon: icon-pencil-square
+    order: 76
+extraNavigation:
+    _page_san_pham_section:
+        itemType: section
+        label: Thiết lập trang sản heo ăn chuối
+        order: 71
+
+    _page_gioi_thieu_ruler:
+        itemType: ruler
+        order: 80
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    pageSubmenus:
+        type: mixin
+        tab: Sub menu trên page
+        source: HAGLFields/PageSubmenu
+    blockBuilder:
+        type: mixin
+        source: Hagl\SanPham\Chuoi\BlockBuilder
+

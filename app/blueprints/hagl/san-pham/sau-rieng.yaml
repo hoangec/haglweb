@@ -1,0 +1,33 @@
+uuid: 14bc3adc-9faf-4b3a-be81-30277c6903e7
+handle: Hagl\SanPham\SauRieng
+type: single
+name: Trang sản phẩm sầu riêng
+multisite: true
+
+navigation:
+    parent: SanPham\SanPham
+    icon: icon-pencil-square
+    order: 75
+extraNavigation:
+    _page_san_pham_section:
+        itemType: section
+        label: Thiết lập trang sản phẩm sầu riêng
+        order: 71
+
+    _page_gioi_thieu_ruler:
+        itemType: ruler
+        order: 80
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    pageSubmenus:
+        type: mixin
+        tab: Sub menu trên page
+        source: HAGLFields/PageSubmenu
+    blockBuilder:
+        type: mixin
+        source: Hagl\SanPham\Chuoi\BlockBuilder
+

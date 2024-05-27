@@ -1,12 +1,15 @@
+
 /* Datatable */
-table.dataTable[table-type = 'table-quy'] td:nth-child(1) {
+table.dataTable[table-type='table-quy'] td:nth-child(1) {
     width: 40%;
 
 }
-table.dataTable[table-type = 'table-quy'] th:nth-child(1) {
+
+table.dataTable[table-type='table-quy'] th:nth-child(1) {
     width: 40%;
 
 }
+
 /* Thiết lập chiều rộng cố định cho cột đầu tiên khi ở chế độ responsive */
 // @media (max-width: 768px) {
 //     table.dataTable[table-type = 'table-quy'] th:nth-child(1) {
@@ -24,6 +27,7 @@ table.dataTable[table-type = 'table-quy'] th:nth-child(1) {
     max-width: 200px;
     word-wrap: break-word;
 }
+
 /*--- lich su phat trien ---*/
 .image-card-box {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -329,6 +333,7 @@ blockquote {
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
     }
+
     :hover .widgets-icons {
         visibility: visible;
         opacity: 1;
@@ -342,10 +347,12 @@ blockquote {
         transition: all .3s ease-in-out;
         outline: 0px solid var(--primary-color);
     }
+
     :hover img {
         outline: 5px solid var(--primary-color);
     }
 }
+
 .nhan-su-modal {
     max-height: 400px;
     overflow-y: auto;
@@ -580,6 +587,7 @@ blockquote {
         }
     }
 }
+
 /* -- dung-chung- image-box-style-5-mota */
 .image-box-style5-noidung-phai {
     .image-box-style5-bg {
@@ -689,6 +697,7 @@ blockquote {
             border-bottom-right-radius: 10px;
         }
     }
+
     .image-box-style5-bg {
         background-color: var(--base-color);
         // /margin-right: 100px;
@@ -748,7 +757,9 @@ blockquote {
     .image-box-style5-hinh-anh {
         margin-top: -150px !important;
     }
+
     .image-box-style5-noidung {
+
         h1,
         h2,
         h3,
@@ -773,14 +784,17 @@ blockquote {
             border-bottom-left-radius: 10px;
         }
     }
+
     .image-box-style5-noidung-phai {
         .image-box-style5-hinh-anh {
             margin-bottom: 10px;
         }
+
         .image-box-style5-bg {
             margin-left: 0px;
         }
     }
+
     .image-box-style5-noidung-giua {
         .image-box-style5-hinh-anh {
             margin-top: 0 !important;
@@ -969,3 +983,125 @@ input[name='table-tim-kiem-input'] {
     font-size: 16px;
     ;
 }
+
+/* Page San pham*/
+.san-pham-slider {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    // border-radius: 20px;
+    overflow: hidden;
+    -webkit-box-shadow: -7px 10px 111px -33px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -7px 10px 111px -33px rgba(0, 0, 0, 0.75);
+    box-shadow: -7px 10px 111px -33px rgba(0, 0, 0, 0.75);
+    background: linear-gradient(90deg, rgba(167, 162, 244, 1) 0%, rgba(112, 112, 143, 1) 35%, rgba(166, 149, 13, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+
+.juice-wrapper {
+    width: 90px;
+    height: 120px;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.juice-wheel {
+    width: 500px;
+    height: 500px;
+    // width: 400px;
+    // height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    right: -250px;
+    bottom: -250px;
+    // right: 100px;
+    // bottom: 100px;
+    transform: rotate(-45deg);
+    transition: transform 1s;
+    z-index: 1;
+}
+
+.juice-wheel img {
+    width: 320px;
+}
+
+.dynamic-juice-1 {
+    position: absolute;
+    // transform: rotate(-120deg);
+    top: -550px;
+    right: 125px;
+}
+
+.dynamic-juice-2 {
+    position: absolute;
+    transform: rotate(90deg);
+    // transform: rotate(120deg);
+    right: -350px;
+    top: 0px;
+}
+
+.dynamic-juice-3 {
+    position: absolute;
+    transform: rotate(180deg);
+    // transform: rotate(240deg);
+    bottom: -550px;
+    right: 50px;
+}
+
+.dynamic-juice-4 {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 30px;
+    left: -290px
+}
+
+.fruits-wheel {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    position: absolute;
+    top: -600px;
+    left: -480px;
+    transform: rotate(-45deg);
+    transition: transform 1s;
+    z-index: 0;
+
+}
+
+.fruits-wheel img {
+    width: 650px;
+    opacity: 40%;
+}
+
+.dynamic-fruits-1 {
+    position: absolute;
+    transform: rotate(90deg);
+    bottom: -500px;
+    left: 10px;
+
+}
+
+.dynamic-fruits-2 {
+    position: absolute;
+    transform: rotate(180deg);
+    bottom: 200px;
+    left: -580px;
+}
+
+.dynamic-fruits-3 {
+    position: absolute;
+    transform: rotate(100deg);
+    top: -450px;
+    left: 90px;
+
+}
+
+.dynamic-fruits-4 {
+    position: absolute;
+    bottom: 120px;
+    right: -600px;
+}
+

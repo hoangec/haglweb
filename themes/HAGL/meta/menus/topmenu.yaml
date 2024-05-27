@@ -1,35 +1,31 @@
 items:
     -
         title: Chuối
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: san-pham/chuoi
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: 'Heo ăn chuối'
-        nesting: null
-        type: url
-        url: /
+        type: cms-page
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
+        reference: san-pham/heo-an-chuoi
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: 'Sầu riêng'
-        nesting: null
-        type: url
-        url: /
+        type: cms-page
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
+        reference: san-pham/sau-rieng
         viewBag:
             isHidden: '0'
             cssClass: ''

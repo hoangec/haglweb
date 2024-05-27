@@ -123,81 +123,8 @@
                 <h3 class="fw-600 text-primary">{{block.tuaDe}}</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row align-items-center">
             {# <div class="col-md-12 mb-40px sm-mb-30px">
-                <div class="swiper" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": true, "navigation": { "nextEl": ".slider-one-slide-next-08", "prevEl": ".slider-one-slide-prev-08" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "992": { "slidesPerView": 1 }, "768": { "slidesPerView": 1 }, "320": { "slidesPerView": 1 } }, "effect": "slide" }'>
-                    <div class="swiper-wrapper align-items-center">
-                        <!-- start carousal item -->
-                        <div class="swiper-slide">
-                            <div class="overflow-visible position-relative">
-                                <div class="border-radius-6px h-650px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background" style="background-image: url('https://via.placeholder.com/1190x700')">
-                                    <div class="opacity-very-light bg-dark-gray"></div>
-                                </div>
-                                <div class="position-absolute top-0px left-0px w-100 h-100 z-index-9">
-                                    <a href="https://www.youtube.com/watch?v=cfXHhfNy7tU" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-extra-large popup-youtube">
-                                        <span>
-                                            <span class="video-icon bg-yellow">
-                                                <i class="fa-solid fa-play text-dark-gray"></i>
-                                                <span class="video-icon-sonar">
-                                                    <span class="video-icon-sonar-bfr bg-yellow opacity-9"></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end carousal item -->
-                        <!-- start carousal item -->
-                        <div class="swiper-slide">
-                            <div class="overflow-visible position-relative">
-                                <div class="border-radius-6px h-650px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background" style="background-image: url('https://via.placeholder.com/1190x700')">
-                                    <div class="opacity-very-light bg-dark-gray"></div>
-                                </div>
-                                <div class="position-absolute top-0px left-0px w-100 h-100 z-index-9">
-                                    <a href="https://www.youtube.com/watch?v=cfXHhfNy7tU" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-extra-large popup-youtube">
-                                        <span>
-                                            <span class="video-icon bg-yellow">
-                                                <i class="fa-solid fa-play text-dark-gray"></i>
-                                                <span class="video-icon-sonar">
-                                                    <span class="video-icon-sonar-bfr bg-yellow opacity-9"></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end carousal item -->
-                        <!-- start carousal item -->
-                        <div class="swiper-slide">
-                            <div class="overflow-visible position-relative">
-                                <div class="border-radius-6px h-650px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background" style="background-image: url('https://via.placeholder.com/1190x700')">
-                                    <div class="opacity-very-light bg-dark-gray"></div>
-                                </div>
-                                <div class="position-absolute top-0px left-0px w-100 h-100 z-index-9">
-                                    <a href="https://www.youtube.com/watch?v=cfXHhfNy7tU" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-extra-large popup-youtube">
-                                        <span>
-                                            <span class="video-icon bg-yellow">
-                                                <i class="fa-solid fa-play text-dark-gray"></i>
-                                                <span class="video-icon-sonar">
-                                                    <span class="video-icon-sonar-bfr bg-yellow opacity-9"></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end carousal item -->
-                    </div>
-                    <!-- start slider navigation -->
-                    <div class="slider-one-slide-prev-08 swiper-button-prev bg-white-transparent-very-light text-white h-50px w-50px slider-navigation-style-01"><i class="fa-solid fa-angle-left"></i></div>
-                    <div class="slider-one-slide-next-08 swiper-button-next bg-white-transparent-very-light text-white h-50px w-50px slider-navigation-style-01"><i class="fa-solid fa-angle-right"></i></div>
-                    <!-- end slider navigation -->
-                </div>
-            </div> #}
-            <div class="col-md-12 mb-40px sm-mb-30px">
                 <div class="swiper swiper-light-pagination" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": false, "navigation": { "nextEl": ".slider-one-slide-next-08", "prevEl": ".slider-one-slide-prev-08" }, "pagination": { "el": ".swiper-pagination-bullets-07", "clickable": true, "dynamicBullets": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "992": { "slidesPerView": 1 }, "768": { "slidesPerView": 1 }, "320": { "slidesPerView": 1 } }, "effect": "slide" }'>
                     <div class="swiper-wrapper align-items-center">
                         {% for noiDung in block.dsNoiDung %}
@@ -228,6 +155,48 @@
                     <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-style-1 swiper-pagination-bullets-07"></div>
                     <!-- end slider pagination -->
                 </div>
+            </div> #}
+            <div class="col-12 position-relative swiper-dark-pagination">
+                <div class="swiper" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": true, "autoplay": { "delay": 1600, "disableOnInteraction": false }, "pagination": { "el": ".swiper-pagination-bullets-03", "clickable": true, "dynamicBullets": false }, "navigation": { "nextEl": ".slider-one-slide-next-02", "prevEl": ".slider-one-slide-prev-02" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "992": { "slidesPerView": 3 }, "768": { "slidesPerView": 3 }, "480": { "slidesPerView": 2 }, "320": { "slidesPerView": 1 } }, "effect": "slide" }'>
+                    <div class="swiper-wrapper align-items-stretch">
+                        <!-- start carousal item -->
+                        {% for noiDung in block.dsNoiDung %}
+                        <div class="swiper-slide d-flex flex-column ">
+                            {# <div class=" d-flex flex-column alin-items-center justify-content-center">
+                                <img class="w-100 border-radius-10px" src="{{noiDung.image|media}}" alt="" />
+                                <p class="text-start text-black fs-20 fw-600 mt-5px">{{noiDung.tuaDe}}</p>
+                            </div> #}
+                            <div class="overflow-visible position-relative">
+                                <div class="border-radius-6px h-350px d-flex align-items-center justify-content-center overflow-hidden cover-background" style="background-image: url('{{noiDung.image|media}}')">
+                                    <div class="opacity-very-light bg-dark-gray"></div>
+                                </div>
+
+                                <div class="position-absolute top-0px left-0px w-100 h-100 z-index-9">
+                                    <a href="{{noiDung.link}}" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-large popup-youtube">
+                                        <span>
+                                            <span class="video-icon bg-base-color">
+                                                <i class="fa-solid fa-play text-white"></i>
+                                                <span class="video-icon-sonar">
+                                                    <span class="video-icon-sonar-bfr bg-yellow opacity-9"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+
+                            </div>
+                                <p class="text-start text-black fs-20 fw-600 mt-5px">{{noiDung.tuaDe}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- start slider navigation -->
+                <div class="slider-one-slide-prev-02 bg-base-color border border-2 h-50px w-50px swiper-button-prev slider-navigation-style-03"><i class="fa-solid fa-arrow-left text-white"></i></div>
+                <div class="slider-one-slide-next-02 bg-base-color border border-2 h-50px w-50px swiper-button-next slider-navigation-style-03"><i class="fa-solid fa-arrow-right text-white"></i></div>
+                <!-- end slider navigation -->
+                <!-- start slider pagination -->
+                <div class="swiper-pagination swiper-pagination-bullets-03 swiper-pagination-style-02 swiper-pagination-clickable swiper-pagination-bullets position-static mt-40px sm-mt-25px"></div>
+                <!-- end slider pagination -->
             </div>
         </div>
     </div>

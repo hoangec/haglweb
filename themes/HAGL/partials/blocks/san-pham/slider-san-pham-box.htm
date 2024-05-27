@@ -1,0 +1,39 @@
+ <section class="pt-0 pb-0 ">
+    <div class="san-pham-slider p-10px ">
+        <div class="container flex-grow-1">
+            <div class="row justify-content-center mb-3 h-100">
+                   <div class="col tab-style-02 fs-600 pt-45px pe-30px d-flex  flex-column  " >
+                        <div class="tab-content"  style="z-index: 2000;">
+                            {% for noiDung in block.dsNoiDung%}
+                            <!-- start tab content -->
+                            <div class="tab-pane fade in {{loop.first ? 'active show'}}" id="tab_san_pham_{{noiDung.id}}">
+                                <div class="row justify-content-center text-center align-items-center ">
+                                    <div class="col-lg-6 sm-mb-20px  align-items-center d-flex flex-column justify-content-center ">
+                                        <h4 class="fw-600 text-primary ls-minus-1px md-mb-20px">{{noiDung.tuaDe}}</h4>
+                                        <p class="text-white mb-35px md-mb-25px">{{noiDung.noiDung}}</p>
+                                        <a href="{{noiDung.lienKet}}" class="btn btn-large btn-rounded with-rounded btn-base-color btn-box-shadow fw-600">Chi tiết<span class="bg-primary text-white"><i class="bi bi-arrow-right-short icon-extra-medium"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <ul class="flex-grow-1 nav nav-tabs fw-500 justify-content-center text-center" data-anime='{ "el": "childs", "rotateX": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                            {% for noiDung in block.dsNoiDung%}
+                            <li class="d-flex flex-column align-items-center justify-content-center san-pham-nav-item nav-item" backgroud-color="{{noiDung.backgroudStyle}}"><a class="d-flex flex-column align-items-center justify-content-center nav-link {{loop.first ? 'active'}} text-white" data-bs-toggle="tab" href="#tab_san_pham_{{noiDung.id}}"><img src="{{noiDung.image|media}}" class="w-90px  d-block icon-large  " alt="juice1"><span>{{noiDung.tuaDe}}</span></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+            </div
+        </div>
+        <div class="juice-wheel d-none d-lg-block">
+            {% for noiDung in block.dsNoiDung %}
+                <img src="{{noiDung.imageRight|media}}" alt="juice1" class="dynamic-juice-{{loop.index}}" />
+            {% endfor %}
+        </div>
+        <div class="fruits-wheel d-none d-lg-block">
+            {% for noiDung in block.dsNoiDung %}
+                <img src="{{noiDung.imageLeft|media}}" alt="orange" class="dynamic-fruits-{{loop.index}}">
+            {% endfor %}
+        </div>
+    </div>
+ </section>

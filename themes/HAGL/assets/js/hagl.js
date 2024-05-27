@@ -436,3 +436,36 @@ $(function () {
         });
     }
 });
+
+
+const sanPhamNavItemArray = document.querySelectorAll(".san-pham-nav-item");
+const title = document.querySelector(".san-pham-slider-title");
+const description = document.querySelector(".juice-info");
+const juiceWheel = document.querySelector(".juice-wheel");
+const fruitsWheel = document.querySelector(".fruits-wheel");
+const juiceText = document.querySelector(".juice-text");
+
+let currentSanPhamNavItem = sanPhamNavItemArray[0];
+let deg = -45;
+sanPhamNavItemArray.forEach((element, index) => {
+  element.addEventListener("click", () => {
+
+    if(element !== currentSanPhamNavItem) {
+
+        document.querySelector(".san-pham-slider").style.background = element.getAttribute('backgroud-color');
+        deg = deg - 90;
+        if(index == 0) {
+            juiceWheel.style.transform = `rotate(-45deg)`;
+            fruitsWheel.style.transform = `rotate(-45deg)`;
+        }else if(index == 1) {
+            juiceWheel.style.transform = `rotate(-135deg)`;
+            fruitsWheel.style.transform = `rotate(-135deg)`;
+        } else if (index == 2) {
+            juiceWheel.style.transform = `rotate(-225deg)`;
+            fruitsWheel.style.transform = `rotate(-225deg)`;
+        }
+        currentSanPhamNavItem = element;
+    }
+
+  });
+});

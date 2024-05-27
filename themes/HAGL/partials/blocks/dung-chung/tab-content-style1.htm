@@ -5,7 +5,7 @@
                 <h2 class="text-primary fw-700 ls-minus-2px">{{block.tuaDe}}</h2>
             </div>
         </div>
-        <div class="row g-0 bg-very-light-gray">
+        <div class="row g-0">
             <div class="col-xl-3 col-lg-4 col-md-5 tab-style-07 d-flex align-items-start align-items-xl-center">
                 <ul class="nav nav-tabs justify-content-center border-0 text-left fs-22 md-fs-19 fw-500">
                     {% for noiDung in block.dsNoiDung%}
@@ -27,7 +27,7 @@
                             <div class="col-xl-6">
                                 <img src="{{noiDung.image|media}}" alt="" class="border-radius-6px w-100" />
                             </div>
-                            <div class="col-xl-6 bg-very-light-gray pt-6 pb-6 ps-8 pe-8 ">
+                            <div class="col-xl-6 pt-6 pb-6 ps-8 pe-8 ">
                                 {# <span class="fs-18 fw-500 text-base-color mb-25px d-flex align-items-center justify-content-center justify-content-md-start"><span class="text-center w-60px h-60px d-flex justify-content-center align-items-center rounded-circle bg-white box-shadow-medium-bottom align-middle me-15px flex-shrink-0"><i class="feather icon-feather-briefcase fs-22"></i></span>Grow and succeed</span> #}
                                 {# <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span class="fw-600">Work together</span> to make experience</h5> #}
                                 <p class="text-black">{{noiDung.noiDung}}</p>

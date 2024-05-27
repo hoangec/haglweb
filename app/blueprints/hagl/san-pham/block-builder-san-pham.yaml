@@ -1,0 +1,209 @@
+uuid: 8a009fd8-c66d-45ca-9446-f271b6a6dafc
+handle: Hagl\SanPham\Index\BlockBuilder
+type: mixin
+name: Hagl Block Builder cho page chủ sản phẩm
+
+fields:
+    blocks:
+        label: Blocks được thêm cho trang
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            dung-chung_tab-content-style1:
+                name: Block hiển thị nội dung dạng TAB
+                description: Block hiển thị noi dung và ảnh tương ứng
+                icon: icon-text-image
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\TabContentBox
+            dung-chung_image-box-style1:
+                name: Block hiển thị ảnh và nội dung style 1
+                description: Block hiển thị ảnh và nội dung style 1
+                icon: icon-text-image
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+            dung-chung_image-card:
+                name: Block hiển thị ảnh
+                description: Nôi dụng cho block hiên thị ảnh vơi style hiệu ứng shadown
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+            dung-chung_video-carousel-box:
+                name: Block hiển thị slider video
+                description: Block hiển thị slider video với link youtube
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\VideoCarouselBox
+            tieu-chuan-san-pham-card:
+                name: Block hiển thị thông tin tiêu chuẩn sản phẩm
+                description: Block hiển thị thông tin tiêu chuẩn sản phẩm
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SanPham\TieuChuanSanPhamCard
+            slider-san-pham-box:
+                name: Block hiển thị slider sản phẩm
+                description:  Block hiển thị slider sản phẩm
+                icon: octo-icon-picture
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SanPham\SliderSanPhamBox
+            san-pham-parallax:
+                name: Block hiển thị hiệu ứng animation parallax cho sản phẩm
+                description:  Block hiển thị hiệu ứng animation parallax cho sản phẩm
+                icon: octo-icon-picture
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SanPham\SanPhamParallax
+            dung-chung_san-pham-card:
+                name: Block hiển thị sản phẩm
+                description: Block hiển thị thông tin sản phẩm
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\SanPhamCard
+            dung-chung_image-box-style7:
+                name: Block hiển thị ảnh full màn hình
+                description: Block hiển thị ảnh full màn hình
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+
+
+
+
+

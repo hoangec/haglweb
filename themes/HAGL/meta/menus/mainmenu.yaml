@@ -93,9 +93,13 @@ items:
                     isExternal: '0'
             -
                 title: 'Thành tích nổi bật'
+                nesting: null
                 type: cms-page
+                url: null
                 code: ''
                 reference: gioi-thieu/thanh-tich-noi-bat
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '1'
                     cssClass: ''
@@ -115,13 +119,9 @@ items:
                     isExternal: '0'
     -
         title: 'Sản phẩm'
-        nesting: null
-        type: header
-        url: null
+        type: cms-page
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
+        reference: san-pham/index
         viewBag:
             isHidden: '0'
             cssClass: ''

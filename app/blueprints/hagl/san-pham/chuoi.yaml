@@ -7,7 +7,7 @@ multisite: true
 navigation:
     parent: SanPham\SanPham
     icon: icon-pencil-square
-    order: 73
+    order: 74
 extraNavigation:
     _page_san_pham_section:
         itemType: section

@@ -3,12 +3,15 @@ layout = "default"
 title = "Sản phẩm"
 meta_title = "Trang sản phẩm HAGL"
 meta_description = "Trang sản phẩm HAGL"
+
+[section pageSanPhamIndex]
+handle = "Hagl\SanPham\Index"
 ==
-{% partial 'app/page-title' pageBanner = pageSanPhamChuoi.pageBanner type = "parallax-bg" %}
-{% if pageSanPhamChuoi.dsMenuItems %}
-    {% partial 'app/page-submenu' menuItems = pageSanPhamChuoi.dsMenuItems  %}
+{% partial 'app/page-title' pageBanner = pageSanPhamIndex.pageBanner type = "parallax-bg" %}
+{% if pageSanPhamIndex.dsMenuItems %}
+    {% partial 'app/page-submenu' menuItems = pageSanPhamIndex.dsMenuItems  %}
 {% endif %}
-{% for block in pageSanPhamChuoi.blocks %}
+{% for block in pageSanPhamIndex.blocks %}
     {% set blockType = block.type|split('_') %}
     {% if blockType[0] == 'dung-chung' %}
         {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}

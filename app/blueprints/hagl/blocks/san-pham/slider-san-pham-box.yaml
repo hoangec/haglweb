@@ -1,0 +1,64 @@
+uuid: 354c5098-6ada-4d0d-a03a-3154286779df
+handle: Hagl\Blocks\SanPham\SliderSanPhamBox
+type: mixin
+name: Hiển thị card ve tieu chuan san pham
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: text
+    _section_sanpham:
+        type: section
+        label: Danh sách các nội dung
+        comment: Cung cấp danh sách các nôi dung
+    dsNoiDung:
+        type: repeater
+        maxItems: 3
+        form:
+            fields:
+                tuaDe:
+                    label: Tựa đề
+                    type: text
+                    span: row
+                    spanClass: col-6
+                noiDung:
+                    label: Nội dung
+                    type: textarea
+                    span: row
+                    spanClass: col-6
+                backgroudStyle:
+                    label: Màu nền
+                    type: text
+                    commentAbove: "Sử dụng style Css thuộc tính linear-gradient để tạo hiệu ứng gradient. Ví dụ: linear-gradient(90deg, rgba(167,162,244,1) 0%, rgba(112,112,143,1) 35%, rgba(166,149,13,1) 100%, rgba(0,212,255,1) 100%)"
+                    default: "linear-gradient(90deg, rgba(167,162,244,1) 0%, rgba(112,112,143,1) 35%, rgba(166,149,13,1) 100%, rgba(0,212,255,1) 100%)"
+                    span: row
+                    spanClass: col-12
+                image:
+                    label: Ảnh icon
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    span: row
+                    spanClass: col-4
+                imageLeft:
+                    label: Ảnh hiệu ứng roll bên trái
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    span: row
+                    spanClass: col-4
+                imageRight:
+                    label: Ảnh hiệu ứng roll bên phải
+                    type: mediafinder
+                    mode: image
+                    maxItems: 1
+                    span: row
+                    spanClass: col-4
+                lienKet:
+                    label: URL đến Page liên kết
+                    type: text
+                    span: row
+                    spanClass: col-6

@@ -1,0 +1,30 @@
+uuid: 64b7dd29-2f76-447e-8884-ac37078e6d42
+handle: Hagl\SanPham\Index
+type: single
+name: Trang sản phẩm
+multisite: true
+
+navigation:
+    parent: SanPham\SanPham
+    icon: icon-pencil-square
+    order: 73
+extraNavigation:
+    _page_san_pham_section:
+        itemType: section
+        label: Thiết lập trang sản phẩm
+        order: 72
+
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    # pageSubmenus:
+    #     type: mixin
+    #     tab: Sub menu trên page
+    #     source: HAGLFields/PageSubmenu
+    blockBuilder:
+        type: mixin
+        source: Hagl\SanPham\Index\BlockBuilder
+

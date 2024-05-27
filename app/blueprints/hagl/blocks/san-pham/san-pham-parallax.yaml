@@ -1,0 +1,40 @@
+uuid: e016e7e2-1651-4938-a726-588bba9be503
+handle: Hagl\Blocks\SanPham\SanPhamParallax
+type: mixin
+name: Hiển thị card ve tieu chuan san pham
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+    noiDung:
+        label: Nội dung
+        type: text
+    imageBackgroud:
+        label: Ảnh nền
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    imageMiddle:
+        label: Ảnh giữa
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    imageLeft:
+        label: Ảnh hiệu ứng bên trái
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
+    imageRight:
+        label: Ảnh hiệu ứng bên phải
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
