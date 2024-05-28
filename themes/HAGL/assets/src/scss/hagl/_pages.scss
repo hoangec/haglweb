@@ -1105,3 +1105,8 @@ input[name='table-tim-kiem-input'] {
     right: -600px;
 }
 
+/* modal dang ky mua san pham - page chuoi */
+.dang-ky-san-pham-modal {
+    max-height: 500px;
+    overflow-y: auto;
+}
