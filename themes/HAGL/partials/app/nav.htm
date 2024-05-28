@@ -1,5 +1,8 @@
 [staticMenu mainMenu]
 code = "mainmenu"
+
+[staticMenu topMenu]
+code = "topmenu"
 ==
 {% for item in mainMenu.menuItems %}
     {% if item.items|length  > 0  %}
@@ -18,3 +21,10 @@ code = "mainmenu"
         </li>
     {% endif %}
 {% endfor %}
+<div class="text-center d-md-none d-block mt-20px border-top d-flex flex-column  gap-2 justify-content-a p-20px ">
+{% for item in topMenu.menuItems %}
+    <li class="nav-item ">
+          <a class="nav-link btn btn-base-color fs-12 border-radius-10px " style="color: #fff !important;" href="{{item.url}}">{{item.title}}</a>
+    </li>
+{% endfor %}
+</div>
