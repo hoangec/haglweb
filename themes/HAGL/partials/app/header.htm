@@ -1,5 +1,6 @@
 [staticMenu topMenu]
 code = "topmenu"
+[sitePicker]
 ==
 {# <header class="d-print-none">
     <div class="container-fluid hagl-header">
@@ -116,16 +117,6 @@ code = "topmenu"
                             <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="mobile-logo">
                         </a>
                     </div>
-                    {# <div class="col-auto col-xl-8 col-lg-8 menu-order position-static">
-                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                        </div>
-                    </div> #}
                     <div class="col-auto col-xl-9 col-lg-9 menu-order hagl-nav d-flex justify-content-between position-static">
                         <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                             <span class="navbar-toggler-line"></span>
@@ -158,11 +149,14 @@ code = "topmenu"
                             </div>
                             <div class="header-language-icon icon">
                                 <div class="header-language dropdown">
-                                    <a href="javascript:void(0);"><i class="feather icon-feather-globe"></i></a>
-                                    <ul class="language-dropdown alt-font">
-                                        <li><a href="javascript:void(0);" title="Việt Nam"><span class="icon-country"><img src="{{'assets/images/vn.svg'|theme}}" alt=""></span>Việt Nam</a></li>
-                                        <li><a href="javascript:void(0);" title="English"><span class="icon-country"><img src="{{'assets/images/usa.png'|theme}}" alt=""></span>English</a></li>
-                                    </ul>
+                                    {% if this.site.code == "vietnam" %}
+                                            {% set diffSiteSelected = sitePicker.sites.where('code','english').first() %}
+                                            <a href="{{diffSiteSelected.url}}" title="English"><span class="icon-country"><img class="w-20px" src="{{'assets/images/english-flag.svg'|theme}}" alt=""></span></a>
+                                    {% endif %}
+                                      {% if this.site.code == "english" %}
+                                            {% set diffSiteSelected = sitePicker.sites.where('code','vietnam').first() %}
+                                            <a href="{{diffSiteSelected.url}}" title="VietNam"><span class="icon-country"><img class="w-20px" src="{{'assets/images/vn.svg'|theme}}" alt=""></span></a>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

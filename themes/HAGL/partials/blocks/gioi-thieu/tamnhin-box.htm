@@ -10,10 +10,6 @@
             <div class="col-lg-5 offset-lg-1 z-index-9 md-mt-35px" data-anime='{ "el": "childs", "translateX": [15, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <h1 class="text-primary fw-700 mb-40px md-mb-25px  word-break-normal">{{block.tuaDe}}</h1>
                 <p class="text-dark-gray  lh-34 w-95 mb-30px lg-w-100">{{block.noiDung}}</p>
-                {# <a href="demo-web-agency-about.html" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700"><span class="bg-base-color"></span>About agency</a> #}
-                {# <div class="outside-box-right-30 position-absolute right-0px bottom-minus-50px xl-outside-box-right-25 md-outside-box-right-0 d-none d-md-inline-block">
-                    <div class="fs-300 xl-fs-250 lg-fs-200 text-base-color fw-600 ls-minus-20px word-break-normal" data-bottom-top="transform:scale(1, 1) translate3d(0px, 0px, 0px);" data-top-bottom="transform:scale(1, 1) translate3d(-100px, 0px, 0px);">{{block.tuaDe}}</div>
-                </div> #}
             </div>
         </div>
     </div>
@@ -22,12 +18,11 @@
             <div class="col swiper swiper-width-auto text-center pb-10px sm-pb-0px" data-slider-options='{ "slidesPerView": "1", "spaceBetween":50, "speed": 10000, "loop": true, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false, "reverseDirection": true }, "effect": "slide" }'>
                 <div class="swiper-wrapper marquee-slide">
                     <!-- start client item -->
-                    <div class="swiper-slide">
-                        <div class="fs-120 xl-fs-120 sm-fs-80 text-medium-gray fw-600 ls-minus-5px sm-ls-minus-4px word-break-normal">Nông nghiệp tuần hoàn.</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="fs-120 xl-fs-120 sm-fs-80 text-medium-gray fw-600 ls-minus-5px sm-ls-minus-4px word-break-normal">Nông nghiệp tuần hoàn.</div>
-                    </div>
+                    {% for i in 1..2 %}
+                        <div class="swiper-slide">
+                            <div class="fs-120 xl-fs-120 sm-fs-80 text-medium-gray fw-600 ls-minus-5px sm-ls-minus-4px word-break-normal">{{block.noiDungChuChay}}</div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

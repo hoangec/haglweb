@@ -129,21 +129,21 @@ sortDirection = "desc"
                         </div>
                         {% if tinTuyenDung.tuyen_gap %}
                          <div class="flex-grow-1 d-flex gap-2 align-items-center justify-content-center">
-                            <span class="border-radius-10px bg-red px-3 fw-bold text-white">Tuyển Gấp</span>
+                            <span class="border-radius-10px bg-red px-3 fw-bold text-white">{{"Tuyển Gấp"|_}}</span>
                         </div>
                         {% endif %}
                         <div class="flex-grow-1">
                             <a href="{{ 'tuyen-dung/tuyen-dung'|page({slug: tinTuyenDung.slug}) }}" class="text-decoration-none">
                                 <div class="text-primary d-flex gap-2 align-items-center justify-content-center">
                                     <i class="fa-solid fa-paste bg-opacity-10  p-1 icon-small"></i>
-                                    <span class="fs-13 ">Chi tiết</span>
+                                    <span class="fs-13 ">{{"Chi tiết"|_}}</span>
                                 </div>
                             </a>
                         </div>
 
                     </div>
                     {% if tinTuyenDung.isNew() %}
-                    <span class="bg-base-color px-3 position-absolute end-0 top-0 fw-bold text-white" style="font-size: 0.8rem;border-bottom-left-radius: .53rem; z-index:3">MỚI</span>
+                    <span class="bg-base-color px-3 position-absolute end-0 top-0 fw-bold text-white" style="font-size: 0.8rem;border-bottom-left-radius: .53rem; z-index:3">{{"MỚI"|_}}</span>
                     {% endif %}
                 </div>
             </div>

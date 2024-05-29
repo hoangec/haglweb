@@ -2,7 +2,7 @@ uuid: a5744dac-2988-4c38-8ebb-529711be4af7
 handle: HAGL\PageSettings
 type: global
 name: Thiết lập cho web
-
+multisite: true
 
 navigation:
     parent: Hagl\HomePage

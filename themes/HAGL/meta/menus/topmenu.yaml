@@ -1,33 +1,46 @@
 items:
     -
         title: Chuối
+        type: cms-page
+        code: ''
+        reference: san-pham/chuoi
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: Banana
+    -
+        title: 'Heo ăn chuối'
         nesting: null
         type: cms-page
         url: null
         code: ''
-        reference: san-pham/chuoi
+        reference: san-pham/heo-an-chuoi
         cmsPage: null
         replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-    -
-        title: 'Heo ăn chuối'
-        type: cms-page
-        code: ''
-        reference: san-pham/heo-an-chuoi
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
+            locale:
+                en:
+                    title: 'Heo ăn chuối'
     -
         title: 'Sầu riêng'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: san-pham/sau-rieng
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+            locale:
+                en:
+                    title: 'Sầu riêng'
 name: topMenu

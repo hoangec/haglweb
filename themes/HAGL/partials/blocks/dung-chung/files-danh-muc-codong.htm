@@ -3,7 +3,6 @@
         <div class="row justify-content-center mb-3">
             <div class="col-xl-5 col-lg-6 col-md-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <h3 class="text-primary fw-700 ls-minus-1px" style="">{{block.tuaDe}}</h3>
-                {# <a class="fs-20 fw-700 text-base-color" href="#section-danh-muc-files">Quay về danh mục<i class="ms-5px feather icon-feather-chevrons-up align-middle icon-large "></i></a> #}
                  {% if block.dsDanhMuc.loai_danh_muc != 'ptbv'%}
                 <a href="#section-danh-muc-files" onClick="scrollToTarget('section-danh-muc-files')" class="btn btn-large btn-base-color btn-rounded  btn-box-shadow fw-600 d-table d-lg-inline-block lg-mb-15px md-mx-auto">Quay về danh mục<i class="fa-solid fa-arrow-up"></i></a>
                 {% endif %}
@@ -16,14 +15,14 @@
                     <div class="row" >
                         <div class="col-sm-12 col-xs-12 col-lg-6 col-xxl-6">
                             <div class="form-group">
-                                <label class="fw-700 fs-16px text-white">Lọc theo năm</label>
+                                <label class="fw-700 fs-16px text-white">{{"Lọc theo năm"|_}}</label>
                                 <select id="table-loc-nam-{{block.id}}" class="form-select" aria-label="Default select example">
-                                    <option value="" selected>Xem tất cả</option>
+                                    <option value="" selected>{{"Xem tất cả"|_}}</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-sm-12 col-xs-12 col-lg-6 col-xxl-6">
-                            <label class="fw-700 fs-16px text-white">Tìm kiếm</label>
+                            <label class="fw-700 fs-16px text-white">{{"Tìm kiếm"|_}}</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Nhập từ khoá tìm kiếm" id="table-search-input-{{block.id}}" />
                                 <span class="input-group-btn"><button class="btn btn-search h-100" type="button" id="table-search-btn-{{block.id}}"><i class="fa fa-search fa-fw"></i></button></span>

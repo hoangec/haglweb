@@ -2,7 +2,7 @@ uuid: 3f2e3a1d-0b8c-4c2f-82a5-c309505ca087
 handle: HAGL\TuyenDung\Settings
 type: global
 name: Thiết lập cho trang tuyển dụng
-
+multisite: true
 fields:
     lien_he:
         label: Thông tin người liên hệ

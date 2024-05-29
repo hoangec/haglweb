@@ -3,7 +3,7 @@ handle = "HAGL\PageSettings"
 ==
 <section class="position-relative one-half-screen sm-small-screen overflow-hidden border border-radius-top-lr lg-border-radius-0px" data-parallax-background-ratio="0.7" style="background-image: url('{{block.image|media}}')">
     <div class="opacity-light bg-dark-gray"></div>
-    <div class="fs-100 ls-minus-5px text-white opacity-6 fw-600 position-absolute left-100px top-50px xs-fs-80">TẬP ĐOÀN HOÀNG ANH GIA LAI</div>
+    <div class="fs-100 ls-minus-5px text-white opacity-6 fw-600 position-absolute left-100px top-50px xs-fs-80">{{"TẬP ĐOÀN HOÀNG ANH GIA LAI"|_}}</div>
 </section>
 <!-- end section -->
 <!-- start section -->
@@ -16,7 +16,7 @@ handle = "HAGL\PageSettings"
                     <div class="card-body">
                         <h3 class="fs-24 fw-700 text-primary text-uppercase mb-10px">{{pageSettings.tenCongTy}}</h3>
                         <div class="fw-600"><i class="fa-solid fa-location-dot icon-small me-10px text-base-color"></i><a href="#" class="text-black">{{pageSettings.diaChi}}</a></div>
-                        <div class="fw-600"><i class="fa-solid fa-money-check-dollar icon-small me-10px text-base-color"></i><a href="#" class="text-black">MST: {{pageSettings.tax}}</a></div>
+                        <div class="fw-600"><i class="fa-solid fa-money-check-dollar icon-small me-10px text-base-color"></i><a href="#" class="text-black">{{"MST:"|_}} {{pageSettings.tax}}</a></div>
                         <div class="fw-600"><i class="fa-solid fa-phone-volume icon-small me-10px text-base-color"></i><a class="text-black" href="tel:{{pageSettings.dienThoai}}">Tel: {{pageSettings.dienThoai}}</a></div>
                         {% if pageSettings.fax %}
                         <div class="fw-600"><i class="feather icon-feather-printer icon-small me-10px text-base-color"></i><a class="text-black" href="tel:{{pageSettings.fax}}">Fax: {{pageSettings.fax}}</a></div>
@@ -38,47 +38,7 @@ handle = "HAGL\PageSettings"
                         </a>
                     </div>
                 </div>
-                {# <div class="bg-white box-shadow-quadruple-large w-400px md-w-300px sm-w-100 border-radius-6px md-mb-20px xs-mb-0">
-                    <div class="ps-25px pe-25px pt-50px pb-40px md-p-20px text-md-start">
-                        <span class="text-dark-gray fw-600">{{pageSettings.tenCongTy}}</span>
-                        <p class="w-80 mb-10px lh-30 sm-w-100">{{pageSettings.diaChi}}</p>
-                        <div class="w-100 d-block">
-                            <span class="d-block"><span class="fw-600 text-dark-gray">Điện thoại:</span> <a href="tel:{{pageSettings.dienThoai}}" class="text-medium-gray">{{pageSettings.dienThoai}}</a></span>
-                            <span class="d-block"><span class="fw-600 text-dark-gray">Email:</span> <a href="mailto:{{pageSetiings.email}}" class="text-dark-gray text-decoration-line-bottom fw-500">{{pageSettings.email}}</a></span>
-                            <span class="d-block"><span class="fw-600 text-dark-gray">Website:</span> <a href="mailto:{{pageSetiings.email}}" class="text-dark-gray text-decoration-line-bottom fw-500">{{pageSettings.web}}</a></span>
-                        </div>
-                    </div>
-                    <div class="text-center pt-15px pb-15px border-top border-color-extra-medium-gray">
-                        <a href="{{pageSettings.googleMap}}" target="_blank" class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray text-uppercase btn-icon-left fw-700 p-0">
-                            <span>
-                                <span class="btn-text">Google Map</span>
-                                <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
-                                <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
-                            </span>
-                        </a>
-                    </div>
-                </div> #}
             </div>
-            {# <div class="col col-md-auto pointer-events-all">
-                <div class="bg-white box-shadow-quadruple-large w-400px md-w-300px sm-w-100 border-radius-6px md-mb-20px xs-mb-0">
-                    <div class="ps-25px pe-25px pt-50px pb-40px md-p-20px text-md-start">
-                        <span class="text-dark-gray fw-600">{{pageSettings.tenVanPhong}}</span>
-                        <p class="w-80 mb-10px lh-30 sm-w-100">{{pageSettings.diaChiVanPhong}}</p>
-                        <div class="w-100 d-block">
-                            <span class="d-block"><span class="fw-600 text-dark-gray">Điện thoại:</span> <a href="tel:{{pageSettings.dienThoai}}" class="text-medium-gray">{{pageSettings.dienThoaiVanPhong}}</a></span>
-                        </div>
-                    </div>
-                    <div class="text-center pt-15px pb-15px border-top border-color-extra-medium-gray">
-                        <a href="{{pageSettings.googleMapVanPhong}}" target="_blank" class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray text-uppercase btn-icon-left fw-700 p-0">
-                            <span>
-                                <span class="btn-text">Google Map</span>
-                                <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
-                                <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div> #}
         </div>
     </div>
 </section>

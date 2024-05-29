@@ -1,41 +1,6 @@
 
 <section class="bg-spring-wood">
     <div class="container">
-        {# <div class="row mb-5 md-mb-50px sm-mb-40px align-items-center">
-            <div class="col-lg-5 md-mb-35px text-center text-lg-start">
-                <h3 class="text-primary fw-600 mb-0 text-dark-gray ls-minus-2px sm-ls-minus-1px" data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "delay": 0, "staggervalue": 250, "easing": "easeOutQuad" }'>{{block.tuaDe}}</h3>
-            </div>
-            <div class="col-xl-6 col-lg-7 offset-xl-1 text-center text-lg-start">
-                <div class="row align-items-center">
-                    <div class="col fancy-text-box-style-01 border-color-extra-medium-gray p-0">
-                        <div class="text-box-wrapper align-items-center d-flex">
-                            <div class="position-relative text-center w-100">
-                                <div class="text-box last-paragraph-no-margin p-14">
-                                    <i class="line-icon-Factory-2 icon-extra-large d-block mb-20px text-base-color"></i>
-                                    <span class="text-dark-gray fw-600 fs-22 lg-fs-20">{{block.tuaDeNhaMay}}</span>
-                                </div>
-                                <div class="text-box-hover p-10 lg-p-12 md-p-17 sm-p-5 xs-p-5">
-                                    <p class="mb-5px">{{block.noiDungNhaMay}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col fancy-text-box-style-01 border-color-extra-medium-gray p-0">
-                        <div class="text-box-wrapper align-items-center d-flex">
-                            <div class="position-relative text-center w-100">
-                                <div class="text-box last-paragraph-no-margin p-14">
-                                    <i class="ti-map-alt icon-extra-large d-block mb-20px text-base-color"></i>
-                                    <span class="text-dark-gray fw-600 fs-22 lg-fs-20">{{block.tuaDeThiTruong}}</span>
-                                </div>
-                                <div class="text-box-hover p-10 lg-p-12 md-p-17 sm-p-5 xs-p-5">
-                                    <p class="mb-5px">{{block.noiDungThiTruong}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> #}
         <div class="row mb-5 md-mb-50px sm-mb-40px align-items-center">
             <div class="col-xl-12 col-lg-12 text-center text-lg-start">
                 <div class="row align-items-center">
@@ -97,7 +62,7 @@
                                 <h5 class=" text-dark-gray mb-20px fw-500 ls-minus-1px">{{sanPham.tuaDeSanPham}}</h5>
                                 <p>{{sanPham.noiDung}}</p>
                                 {% if sanPham.links != '' %}
-                                    <a href="{{sanPham.link}}" class="btn btn-large btn-box-shadow btn-rounded btn-base-color mt-10px">Xem thêm</a>
+                                    <a href="{{sanPham.link}}" class="btn btn-large btn-box-shadow btn-rounded btn-base-color mt-10px">{{'Xem thêm'|_}}</a>
                                 {% endif %}
                             </div>
                         </div>

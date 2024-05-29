@@ -19,3 +19,9 @@ fields:
         type: mediafinder
         mode: image
         maxItems: 1
+    noiDungChuChay:
+        label: Nội dung chữ chạy
+        type: text
+        span: row
+        spanClass: col-md-6
+
