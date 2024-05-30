@@ -36,8 +36,8 @@ jobs:
             server: haglgroup.vn
             username: hagl
             password: ${{ secrets.ftp_password }}
-            local-dir: ./plugins/hoangvo
-            server-dir: ./octobercms-files/plugins/hoangvo
+            local-dir: ./plugins/hoangvo/
+            server-dir: ./octobercms-files/plugins/hoangvo/
             port: 2121
       - name: Dong bo file fu muc app
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
