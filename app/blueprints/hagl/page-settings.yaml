@@ -91,6 +91,24 @@ fields:
         type: text
         span: row
         spanClass: col-6
+    masoDoanhNghiep:
+        tab: Liên hệ
+        label: Mã số đăng ký doanh nghiệp
+        type: text
+        span: row
+        spanClass: col-6
+    ngayCapDoanhNghiep:
+        tab: Liên hệ
+        label: Ngày cấp mã doanh nghiệp
+        type: text
+        span: row
+        spanClass: col-6
+    noiCapCapDoanhNghiep:
+        tab: Liên hệ
+        label: Nơi cấp mã doanh nghiệp
+        type: text
+        span: row
+        spanClass: col-6
     _ruler2:
         type: ruler
         label: Văn phòng đại diện
