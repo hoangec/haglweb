@@ -85,6 +85,12 @@ fields:
         maxItems: 1
         span: row
         spanClass: col-6
+    copywriter:
+        tab: Liên hệ
+        label: Thông tin copywriter
+        type: text
+        span: row
+        spanClass: col-6
     _ruler2:
         type: ruler
         label: Văn phòng đại diện
