@@ -1,3 +1,5 @@
+[sitePicker]
+==
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -23,7 +25,7 @@
     <link rel="stylesheet" href="{{'assets/css/hagl.css'|theme}}"/>
 
 </head>
-    <body data-mobile-nav-style="classic"  class="app {{ 'layout-'~this.layout.id }} {{ 'page-'~this.page.id }}">
+    <body data-mobile-nav-style="classic"  class="app {{ 'layout-'~this.layout.id }} {{ 'page-'~this.page.id }}" lang="{{this.site.code}}">
         <div class="page-loader"></div>
         {% partial 'app/header' %}
         {% partial 'app/content' %}

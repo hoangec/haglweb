@@ -45,7 +45,7 @@ sortOrder = "nam_du_lieu_asc"
             <div class="col-lg-7">
                 <div class="row row-cols-1 row-cols-md-3 g-0">
                     {% for danhMuc in dsDanhMuc %}
-                        {% if danhMuc.danh_muc_cha is empty %}
+                        {% if danhMuc.danh_muc_cha is empty and danhMuc.slug != 'bao-cao-kiem-soat' %}
                             <div class="col co-dong-category">
                                 <a href="#section-table-{{danhMuc.id}}" onclick="scrollToTarget('section-table-{{danhMuc.id}}')"class="danh-muc-item">
                                     <div class="card h-100 border-none no-border-radius">

@@ -338,12 +338,15 @@ function inTrangTinTuc() {
 $(function () {
     var tableBlocks = $(".table-block");
     if (tableBlocks.length > 0) {
-        $.extend($.fn.dataTable.defaults, {
-            language: {
-                // url: "https://cdn.datatables.net/plug-ins/2.0.6/i18n/vi.json",
-                url: 'themes/HAGL/assets/js/datatables/dataTables.vn.json'
-            },
-        });
+        var lang = $('body').attr('lang');
+        if(lang == 'vietnam') {
+            $.extend($.fn.dataTable.defaults, {
+                language: {
+                    // url: "https://cdn.datatables.net/plug-ins/2.0.6/i18n/vi.json",
+                    url: 'themes/HAGL/assets/js/datatables/dataTables.vn.json'
+                },
+            });
+        }
         tableBlocks.each(function () {
             var tableBlockId = $(this).attr("block-id");
             var strTableId = "#table-rowgroup-" + tableBlockId;

@@ -18,6 +18,7 @@ fields:
         options:
             nam: 'Quản lý theo năm'
             ptbv: 'Báo cáo phát triển bền vững'
+            bcks: 'Báo cáo kiểm soát'
             nam-catalog: 'Quản lý theo năm, hiên thị kiểu danh mục'
             quy: 'Quản lý theo quý'
     quy_du_lieu:

@@ -23,6 +23,7 @@ fields:
             ptbv: 'Báo cáo phát triển bền vững'
             nam-catalog: 'Quản lý theo năm - Catalog'
             quy: 'Quản lý theo quý'
+            bcks: 'Báo cáo kiểm soát'
         showSearch: true
         span: auto
         type: dropdown
