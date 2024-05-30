@@ -15,6 +15,28 @@ navigation:
     icon: octo-icon-pencil
     order: 100
 
+siteSearch:
+    providerBadge: bao-viet-truyen-thong # Display this beside each search result.
+
+    pageName: 'tin-tuc'   # Filename of the target CMS page, used to build links.
+    urlParams:             # Given a page URL: /target-cms-page/:slug/:something
+      slug: $slug          # Use the value of the "slug" field, since it is prefixed with a "$"
+    #   something: else      # Use the literal string "else", since there is no $-prefix
+                           # the output is: /target-cms-page/slug-field-value/else
+
+    # See "Custom URL Resolver" below
+    # This is used *instead of* pageName + urlParams
+    # urlResolver: '\App\Provider::resolveSiteSearchUrl'
+
+    searchFields:          # Fields to search in.
+    - title
+    - featured_text
+    - content
+
+    # thumbFrom: banner       # Use the `image` field as thumbnail. Must be a fileupload.
+    resultFields:
+        title: title       # Use the "title" field as the search result title
+        text: content  # Use the "description" field as the search result text
 groups:
     regular_post:
         name: Regular Post

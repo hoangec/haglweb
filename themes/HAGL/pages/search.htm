@@ -1,0 +1,82 @@
+url = "/search"
+layout = "default"
+title = "search"
+meta_title = "Trang tìm kiếm HAGL"
+meta_description = "Trang tìm kiếm HAGL"
+
+[searchResults]
+resultsPerPage = 10
+showProviderBadge = 1
+noResultsMessage = "Không tìm thấy dữ liệu"
+visitPageMessage = "Liên kết đến ..."
+minQueryLength = 0
+==
+<?php
+function onInit()
+{
+    \Event::listen('offline.sitesearch.results', function ($results) {
+        // return $results->filter(...);
+        return $results->sortByDesc('model.custom_attribute');
+    });
+}
+?>
+==
+{% partial 'app/page-title' type = "parallax-bg" %}
+{# <section>
+    <div class="container">
+        {% component 'searchResults' %}
+
+    </div>
+</section> #}
+<section class="pb-0 ipad-top-space-margin md-pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-7 mx-auto">
+                <form id="search-form" role="search" method="get" class="search-form " action="{{"search"|page}}">
+                    <div class="input-group mb-3 input-group-lg ">
+                        <input type="search"  name="q" value="{{searchResults.query}}" class="form-control border-color-base-color ">
+                        <button class="btn border-color-base-color btn-base-color border " type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-xl-12 col-lg-12 text-center position-relative page-title-double-large">
+                <div class="d-flex flex-column justify-content-center extra-very-small-screen">
+                    <h1 class="text-primary fs-50 fw-700 mb-0">{{"Kết quả tìm kiếm cho từ khoá "|_}}</h1><span class="mt-10px text-base-color fs-80 fw-700">{{searchResults.query}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-gradient-very-light-gray position-relative">
+    <div class="container">
+        <div class="row gy-3 ">
+            {% for result in searchResults.results %}
+
+            <div class="col-12">
+                {{d(result)}}
+                <div class="card border-color-base-color">
+                    <div class="card-body  ">
+                        <a class="card-title fs-30 fw-600 text-primary " href="{{ result.url | app }}">{{ result.title | raw }}</a>
+                        <p class="mt-10px text-dark-gray card-subtitle fs-20  mb-2 text-muted"> {{ result.excerpt | raw }}</p>
+                        {% if result.provider == 'bao-viet-truyen-thong' %}
+                            <p><span class="badge rounded-pill bg-base-color fs-20  px-10px ">{{"Bài viết truyền thông"|_}}</span></p>
+                        {% elseif result.provider == 'Page' %}
+                            <p><span class="badge rounded-pill bg-primary fs-20  px-10px ">Trang nội dung</span></p>
+                        {% endif %}
+                        <a href="{{ result.url | app }}" class="fs-20 text-base-color">{{"Liên kết đến kết quả"|_}} &rarr;</a>
+                    </div>
+                 </div>
+            </div>
+            {% endfor %}
+            {% if searchResults.results is empty %}
+                <div class="col-12">
+                    <h3 class="text-center fw-600 text-primary">{{"Không tìm thấy dữ liệu"|_}}</h3>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
