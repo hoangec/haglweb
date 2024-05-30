@@ -9,7 +9,11 @@ class File extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\SoftDelete;
+    public $implement = [
+        \RainLab\Translate\Behaviors\TranslatableModel::class
+    ];
 
+    public $translatable = ['ten', 'file'];
     /**
      * @var array dates to cast from the database.
      */

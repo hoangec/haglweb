@@ -30,15 +30,15 @@ jobs:
           port: 2121
           exclude: |
             **/assets/src/**
-    #   - name: Dong bo file fu muc plugins
-    #     uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-    #     with:
-    #         server: haglgroup.vn
-    #         username: hagl
-    #         password: ${{ secrets.ftp_password }}
-    #         local-dir: ./plugins/
-    #         server-dir: ./octobercms-files/plugins/
-    #         port: 2121
+      - name: Dong bo file fu muc plugins
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+            server: haglgroup.vn
+            username: hagl
+            password: ${{ secrets.ftp_password }}
+            local-dir: ./plugins/hoangvo
+            server-dir: ./octobercms-files/plugins/hoangvo
+            port: 2121
       - name: Dong bo file fu muc app
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
