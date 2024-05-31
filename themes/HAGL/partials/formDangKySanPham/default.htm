@@ -1,8 +1,15 @@
-<form data-request="{{ __SELF__ }}::onFormSubmit" id="formDangKySanPham" data-request-message="Đang xử lý ..."  data-request-success="dongModalDangKySanPham()">
+<form autocomplete="off" data-request="{{ __SELF__ }}::onFormSubmit" id="formDangKySanPham" data-request-message="Đang xử lý ..."  data-request-success="dongModalDangKySanPham()">
     {{ form_token() }}
     <div id="{{ __SELF__ }}_forms_flash"></div>
     <div class="row">
-        <div class="col-12 col-md-12">
+        <div class="col-12 col-md-6">
+            <div class="form-group d-flex justify-content-start flex-column align-items-start mb-10px">
+                <label class="text-primary fw-500 fs-16" for="formThiTruong">{{"Thị trường quan tâm"|_}}</label>
+                <input type="text" readonly id="formThiTruong" name="formThiTruong" class="form-control p-5px">
+                <input type="hidden" readonly id="formThiTruongID" name="formThiTruongID" class="form-control p-5px">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
             <div class="form-group d-flex justify-content-start flex-column align-items-start mb-10px">
                 <label class="text-primary fw-500 fs-16" for="formSanPhamName">{{"Sản phẩm quan tâm"|_}}</label>
                 <input type="text" readonly id="formSanPhamName" name="formSanPhamName" class="form-control p-5px">
@@ -11,7 +18,7 @@
         <div class="col-12 col-md-4">
             <div class="form-group d-flex justify-content-start flex-column align-items-start mb-10px">
                 <label class="text-primary fw-500 fs-16" for="name">{{"Họ tên:"|_}}</label>
-                <input type="text" id="name" name="name" class="form-control p-5px">
+                <input autocomplete="off" type="text" id="name" name="name" class="form-control p-5px">
             </div>
         </div>
         <div class="col-12 col-md-4">
@@ -32,8 +39,7 @@
                 <textarea rows="2" id="content" name="content" class="form-control"></textarea>
             </div>
         </div>
-
-        <div class="col-12 col-md-12 mb-10px justify-content-center d-flex ">
+         <div class="col-12 col-md-12 mb-10px justify-content-center d-flex ">
             <div class="form-group ">
                 {% partial '@recaptcha' %}
             </div>

@@ -3,6 +3,7 @@ handle = "SanPham\SanPham"
 
 [global sanPhamSetting]
 handle = "SanPham\Settings"
+
 ==
 {% set dsSanPhamAll = []%}
 {% for danhMuc in block.danhMuc %}
@@ -48,7 +49,47 @@ handle = "SanPham\Settings"
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
                         </div>
                         <div class="modal-body dang-ky-san-pham-modal">
+                            <div id="chon_thi_truong">
+                                <h5 class="text-center text-primary mb-20px fs-24 fw-600 ">{{'Chọn thị trường'|_}} </h5>
+                                <div class="row row-cols-2">
+                                    <div class="col justify-content-around align-items-center d-flex flex-column ">
+                                        <a href="javascript:void(0)" class="btn-thi-truong-flag"  data-thiTruongid="tq" data-thitruong="{{'Trung Quốc'|_}}">
+                                            <div class="feature-box-icon mb-20px">
+                                                <img class="w-120px h-120px rounded-circle border-color-very-light-gray border-2 border  object-fit-contain" src="{{'assets/images/china-flag-round-icon-128.png'|theme}}" data-no-retina="">
+                                                <p class="text-center mt-10px fs-16 fw-600 ">{{'Trung Quốc'|_}}</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col justify-content-around align-items-center d-flex flex-column ">
+                                        <a href="javascript:void(0)" class="btn-thi-truong-flag" data-thiTruongid="vn" data-thitruong="{{'Việt Nam'|_}}">
+                                        <div class="feature-box-icon mb-20px">
+                                            <img class="w-120px h-120px rounded-circle border-color-very-light-gray border-2 border  object-fit-contain" src="{{'assets/images/vn-flag.png'|theme}}" data-no-retina="">
+                                            <p class="text-center mt-10px fs-16 fw-600 ">{{'Việt Nam'|_}}</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="col justify-content-around align-items-center d-flex flex-column ">
+                                        <a href="javascript:void(0)"  class="btn-thi-truong-flag" data-thiTruongid="nb" data-thitruong="{{'Nhật Bản'|_}}">
+                                        <div class="feature-box-icon mb-20px" >
+                                            <img class="w-120px h-120px rounded-circle border-color-very-light-gray border-2 border object-fit-contain" src="{{'assets/images/jp-circle-flag.png'|theme}}" data-no-retina="">
+                                            <p class="text-center mt-10px fs-16 fw-600 ">{{'Nhật Bản'|_}}</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="col justify-content-around align-items-center d-flex flex-column ">
+                                        <a href="javascript:void(0)"  class="btn-thi-truong-flag" data-thiTruongid="hq" data-thitruong="{{'Hàn Quốc'|_}}">
+                                        <div class="feature-box-icon mb-20px">
+                                            <img class="w-120px h-120px rounded-circle border-color-very-light-gray border-2 border object-fit-contain" src="{{'assets/images/south-korea-flag-square-icon-128.png'|theme}}" data-no-retina="">
+                                            <p class="text-center mt-10px fs-16 fw-600 ">{{'Hàn Quốc'|_}}</p>
+                                        </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id = "form-dang-ky-mua-hang" style="display: none;" >
                                 {% component 'formDangKySanPham' %}
+                            </div>
                         </div>
                     </div>
                 </div>

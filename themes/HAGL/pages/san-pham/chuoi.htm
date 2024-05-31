@@ -36,8 +36,8 @@ function onInit()
 {
     $sanPhamSetting = GlobalRecord::findForGlobal('SanPham\Settings');
     $this->page->components['formDangKySanPham']->setProperty('messages_success', $sanPhamSetting->thongDiepOnSuccess);
-    $email = [$sanPhamSetting->email_nhan_tin => $sanPhamSetting->email_nhan_tin ];
-    $this->page->components['formDangKySanPham']->setProperty('mail_recipients', $email);
+    // $email = [$sanPhamSetting->thongDiepOnSuccess => $sanPhamSetting->thongDiepOnSuccess ];
+    // $this->page->components['formDangKySanPham']->setProperty('mail_recipients', $email);
 }
 ?>
 ==

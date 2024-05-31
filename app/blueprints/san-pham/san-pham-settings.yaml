@@ -9,11 +9,62 @@ navigation:
     order: 150
 
 fields:
-    email_nhan_tin:
-        label: Email nhận tin
+    email_kd_vn:
+        label: Email nhận tin kinh doanh thị trường Việt Nam
         type: email
         validation: email
         tab: Thiết lập chung
+        span: row
+        spanClass: col-6
+    email_ql_vn:
+        label: Email nhận tin quản lý thị trường Việt Nam
+        type: email
+        validation: email
+        tab: Thiết lập chung
+        span: row
+        spanClass: col-6
+    email_kd_tq:
+        label: Email nhận tin kinh doanh thị trường Trung Quốc
+        type: email
+        validation: email
+        tab: Thiết lập chung
+        span: row
+        spanClass: col-6
+    email_ql_tq:
+        label: Email nhận tin quản lý thị trường Trung Quốc
+        type: email
+        validation: email
+        tab: Thiết lập chung
+        span: row
+        spanClass: col-6
+    email_kd_nhat:
+        label: Email nhận tin kinh doanh thị trường Nhật
+        type: email
+        validation: email
+        tab: Thiết lập chung
+        span: row
+        spanClass: col-6
+    email_ql_nhat:
+        label: Email nhận tin quản lý thị trường Nhật
+        type: email
+        validation: email
+        tab: Thiết lập chung
+        span: row
+        spanClass: col-6
+    email_kd_hq:
+        label: Email nhận tin kinh doanh thị trường Hàn Quốc
+        type: email
+        validation: email
+        tab: Thiết lập chung
+        span: row
+        spanClass: col-6
+    email_ql_hq:
+        label: Email nhận tin quản lý thị trường Hàn Quốc
+        type: email
+        validation: email
+        tab: Thiết lập chung
+        span: row
+        spanClass: col-6
     thongDiepOnSuccess:
         label: Thông điêp khi đăng ký mua sản phẩm thành công
         type: text

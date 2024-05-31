@@ -64,13 +64,15 @@ $(function () {
         //     interval: 1
         // });
     }
-    //xu ly modal dang ky mua san pham
+
+    //xu ly modal form dang ky mua san pham
     var myModalEl = document.getElementById('DangKySanPhamModal')
     if(myModalEl) {
         myModalEl.addEventListener('hidden.bs.modal', function (event) {
             var table = $('#formDangKySanPham');
             table.find('input[type=text]').val('');
             grecaptcha.reset();
+            $('#formDangKySanPham_forms_flash').hide();
             $('#formSubmitBtn').prop('disabled', false);
             $('#dangKySanPhamAlert').hide();
 
@@ -84,8 +86,32 @@ $(function () {
     }
 
     $('a.btn-dangky-sanpham').on('click', function() {
+        $('#form-dang-ky-mua-hang').hide();
+        $('#chon_thi_truong').show();
         showDangKySanPham(this);
     });
+    // xu ly chọn co khi dang ky san pham
+    // var divThiTruongFlag = $("#initial-buttons");
+    // console.log(divThiTruongFlag);
+    // var divFormDangKyMuaHang = $("#form-dang-ky-mua-hang-buttons");
+    // var dsThiTruongFlags =  $(".btn-thi-truong-flag");
+
+    // document.querySelectorAll('.btn-thi-truong-flag').forEach(button => {
+    //     button.addEventListener("click",() => {
+
+    //         var test = $('#chon_thi_truong');
+    //         console.log(test);
+    //     });
+    // });
+    $('#chon_thi_truong a').on('click',function(){
+        $('#chon_thi_truong').hide();
+        $('#formThiTruong').val($(this).data('thitruong'));
+        $('#formThiTruongID').val($(this).data('thitruongid'));
+        console.log($(this).data('thitruongid'));
+
+        $('#form-dang-ky-mua-hang').show();
+    })
+    /* -- end */
 
     $(document).on('click', '.submit-tuyendung', function () {
         var error = false,

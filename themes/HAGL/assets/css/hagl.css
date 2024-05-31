@@ -75,6 +75,10 @@
   color: var(--base-color) !important;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 /* ===================================
    HAGL Style header
 ====================================== */

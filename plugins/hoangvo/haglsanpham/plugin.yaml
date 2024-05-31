@@ -1,0 +1,6 @@
+plugin:
+    name: 'hoangvo.haglsanpham::lang.plugin.name'
+    description: 'hoangvo.haglsanpham::lang.plugin.description'
+    author: hoangvo
+    icon: oc-icon-adjust
+    homepage: ''
