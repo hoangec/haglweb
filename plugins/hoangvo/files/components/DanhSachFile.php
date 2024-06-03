@@ -47,6 +47,11 @@ class DanhSachFile extends ComponentBase
                     ]
                 ]
             ],
+            'danhMucId' => [
+                'title' => 'Danh mục ID',
+                'description' => 'Nhập ID danh mục cần lấy',
+                'type' => 'number',
+            ]
 
         ];
     }
@@ -56,6 +61,7 @@ class DanhSachFile extends ComponentBase
         return [
             'nam_du_lieu_asc' => 'Năm tăng dần',
             'nam_du_lieu_desc' => 'Năm giảm dần'
+
         ];
     }
 
@@ -69,6 +75,10 @@ class DanhSachFile extends ComponentBase
     protected function loadDsFiles()
     {
         $query = File::all();
+        if ($this->property('danhMucId')) {
+
+            $query = $query->where('danh_muc_id',$this->property('danhMucId'));
+        }
         if ($this->property('sortOrder') == 'nam_du_lieu_asc') {
 
             $query = $query->sortBy('nam_du_lieu');

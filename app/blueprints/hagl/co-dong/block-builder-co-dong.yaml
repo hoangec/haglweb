@@ -24,6 +24,23 @@ fields:
                 description: Block hiển thị danh sách file theo danh mục
                 icon: icon-text-image
                 fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section_co_dong:
+                        type: section
+                        label: Nội dung dữ liệu
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\DungChung\FileTheoDanhMucBox

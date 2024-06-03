@@ -25,3 +25,16 @@ fields:
         type: pagefinder
         span: row
         spanClass: col-6
+    lienKetSection:
+        label: section liên kết đến
+        type: text
+        span: row
+        spanClass: col-6
+    dsDanhMuc:
+        label: Chọn danh mục
+        type: recordfinder
+        nameFrom: ten
+        maxItems: 1
+        conditions: danh_muc_cha_id IS NULL
+        modelClass: HoangVo\Files\Models\DanhMuc
+        list: ~/plugins/hoangvo/files/models/danhmuc/columns.yaml
