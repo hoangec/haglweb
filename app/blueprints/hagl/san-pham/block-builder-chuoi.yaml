@@ -185,7 +185,32 @@ fields:
                         label: Nội dung dữ liệu
                     _mixin:
                         type: mixin
-                        source: Hagl\Blocks\DungChung\SanPhamCard
+                        source:  Hagl\Blocks\DungChung\SanPhamCard
+            lien-he-mua-hang-box:
+                name: Block hiển thị section liên hệ đặt hàng
+                description: Block hiển thị section liên hệ đặt hàng
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SanPham\LienHeMuaHang
             dung-chung_image-box-style7:
                 name: Block hiển thị ảnh full màn hình
                 description: Block hiển thị ảnh full màn hình

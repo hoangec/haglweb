@@ -1,1 +1,3 @@
-static-pages: {  }
+static-pages:
+    dieu-khoan-su-dung: {  }
+    chinh-sach-bao-mat: {  }

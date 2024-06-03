@@ -80,8 +80,8 @@ $(function () {
     }
 
     function showDangKySanPham(element) {
-        var sanPhamTen = $(element).prev().find('.san-pham-ten').text().trim();
-        $('#formSanPhamName').val(sanPhamTen);
+        // var sanPhamTen = $(element).prev().find('.san-pham-ten').text().trim();
+        // $('#formSanPhamName').val(sanPhamTen);
         $('#DangKySanPhamModal').modal('show');
     }
 

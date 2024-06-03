@@ -72,20 +72,29 @@ code = "mainmenu"
     <div class="container-fluid bg-base-color mt-30px">
         <div class="container">
             <div class="row justify-content-center align-items-center gx-4">
-                <div class="col-lg-6 pt-35px pb-35px px-0 order-1 text-start last-paragraph-no-margin">
-                    <div class="d-flex justify-content-evenly  ">
-                        <a href="{{index|page}}" target="_blank" class="fs-14 text-decoration-none text-white fw-600 ">{{"Trang chủ Hagl"|_}}</a>
-                        <span class="text-white">|</span>
-                        <a href="{{"lien-he"|page}}" target="_blank" class="fs-14 text-decoration-none text-white fw-600 ">{{"Thông tin liên lạc"|_}}</a>
-                        <span class="text-white">|</span>
-                        <a href="{{pageSettings.web}}" target="_blank" class="fs-14 text-decoration-none text-white fw-600 ">{{"Điều khoản sử dụng"|_}}</a>
-                        <span class="text-white">|</span>
-                        <a href="{{pageSettings.web}}" target="_blank" class="fs-14 text-decoration-none text-white fw-600 ">{{"Chính sách bảo mật"|_}}</a>
+                <div class="col-12 col-lg-6 pt-35px pb-35px  order-1 text-start last-paragraph-no-margin">
+                    <div class="row justify-content-evenly">
+                        <div class="col-6 col-md-3 text-center px-0 ">
+                            <a href="{{index|page}}" target="_blank" class="fs-14 text-decoration-none text-white fw-600 ">{{"Trang chủ Hagl"|_}}</a>
+                            {# <span class="text-white d-none d-md-block">|</span> #}
+                        </div>
+                        <div class="col-6 col-md-3  text-center px-0">
+                            <a href="{{"lien-he"|page}}" target="_blank" class="fs-14 text-decoration-none text-white fw-600 ">{{"Thông tin liên lạc"|_}}</a>
+                            {# <span class="text-white d-none d-md-block">|</span> #}
+                        </div>
+                        <div class="col-6 col-md-3  text-center px-0">
+                            <a href="{{'dieu-khoan-su-dung'|staticPage}}" target="_blank" class="fs-14 text-decoration-none text-white fw-600 ">{{"Điều khoản sử dụng"|_}}</a>
+                            {# <span class="text-white d-none d-md-block ">|</span> #}
+                        </div>
+                        <div class="col-6 col-md-3  text-center px-0 ">
+                            <a href="{{'chinh-sach-bao-mat'|staticPage}}" target="_blank" class="fs-14 text-decoration-none text-white fw-600 ">{{"Chính sách bảo mật"|_}}</a>
+                        </div>
                     </div>
-                    <p class="ps-15px text-white fs-14 fw-700">{{pageSettings.copywriter}}</p>
+                     <p class="col-12 ps-0 text-white text-center fs-14 fw-700 mt-10px md-mt-0">{{pageSettings.copywriter}}</p>
                 </div>
-                <div class="col-lg-6 pt-35px pb-35px ps-30px order-2 text-start last-paragraph-no-margin">
-                    <div class="d-flex flex-column ">
+
+                <div class="col-12 col-lg-6  pt-35px pb-35px ps-30px order-2 last-paragraph-no-margin">
+                    <div class="d-flex flex-column justify-content-center align-items-center text-center">
                         <p class=" m-0 fs-14 text-white fw-600">{{"Số giấy chứng nhận đăng ký doanh nghiệp:"|_}} {{pageSettings.masoDoanhNghiep}}</p>
                         <p class=" m-0 fs-14 text-white fw-600">{{"Ngày cấp:"|_}} {{pageSettings.ngayCapDoanhNghiep}} {{". Nơi cấp: "}} {{pageSettings.noiCapCapDoanhNghiep}}</p>
                     </div>

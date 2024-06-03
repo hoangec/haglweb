@@ -1,0 +1,23 @@
+uuid: dad1e8f5-f95e-4d91-af87-ad56d95bd047
+handle: Hagl\Blocks\SanPham\LienHeMuaHang
+type: mixin
+name: Hiển thị section liện hệ mua hàng
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text
+        span: row
+        spanClass: col-6
+    noiDung:
+        label: Nội dung
+        type: text
+        span: row
+        spanClass: col-6
+    image:
+        label: Ảnh 
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: row
+        spanClass: col-6
