@@ -432,8 +432,8 @@ $(function () {
                         },
                     ],
                     paging: false,
+                    pageLength: 10,
                     order: [[1, "desc"]],
-
                     rowGroup: {
                         dataSrc: 1,
                     },

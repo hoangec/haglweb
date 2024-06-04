@@ -13,19 +13,20 @@ danhMucId = {{block.dsDanhMuc.id}}
         <div class="row justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
              <div class="col-lg-12 pt-20px pb-20px border-bottom border-3 border-color-dark-gray">
                 <div class="row align-items-center">
-                    <div class="col-md-2 col-xl-2 col-lg-1 text-start"><span class="fw-600 text-uppercase text-dark-gray">Ngày đăng tải</span></div>
-                    <div class="col-md-4 col-xl-4 col-lg-4 text-start"><span class="fw-600 text-uppercase text-dark-gray">Văn bản</span></div>
-                    <div class="col-md-4 col-xl-4 col-lg-5 text-start"><span class="fw-600 text-uppercase text-dark-gray">Danh mục</span></div>
-                    <div class="col-md-2 col-xl-2 col-lg-2 d-flex justify-content-center align-items-center"><span class="fw-600 text-uppercase text-dark-gray">Tải file</span></div>
+                    <div class="col-md-2 text-start"><span class="fw-600 text-uppercase text-dark-gray">{{'Ngày đăng tải'|_}}</span></div>
+                    <div class="col-md-6 text-start"><span class="fw-600 text-uppercase text-dark-gray">{{'Văn bản'|_}}</span></div>
+                    <div class="col-md-2 text-start"><span class="fw-600 text-uppercase text-dark-gray">{{'Danh mục'|_}}</span></div>
+                     <div class="col-md-2 text-start"><span class="fw-600 text-uppercase text-dark-gray">{{'Tải file'|_}}</span></div>
+                    {# <div class="col-md-2 d-flex justify-content-center align-items-center"><span class="fw-600 text-uppercase text-dark-gray">Tải file</span></div> #}
                 </div>
             </div>
             {% for file in danhSachFile.files %}
             <div class="col-lg-12 pt-20px pb-20px border-bottom border-color-light-gray">
                 <div class="row align-items-center">
-                    <div class="col-md-2 col-xl-2 col-lg-1 text-start"><span class="fw-600 text-uppercase text-dark-gray">{{file.ngay_dang|date('d/m/Y')}}</span></div>
-                    <div class="col-md-4 col-xl-4 col-lg-4 d-flex justify-content-center justify-content-md-start">{{file.ten}}</div>
-                    <div class="col-md-4 col-xl-4 col-lg-5 text-start"><span>{{file.danh_muc.ten}}</span></div>
-                    <div class="col-md-2 col-xl-2 col-lg-2 d-flex justify-content-center align-items-center">
+                    <div class="col-md-2 text-start"><span class="fw-600 text-uppercase text-dark-gray">{{file.ngay_dang|date('d/m/Y')}}</span></div>
+                    <div class="col-md-6 text-start">{{file.ten}}</div>
+                    <div class="col-md-2 text-start"><span>{{file.danh_muc.ten}}</span></div>
+                    <div class="col-md-2  d-flex justify-content-start align-items-center">
                         {% if file.danh_muc.loai_danh_muc == 'nam-catalog'%}
                             <a target="_blank" href="{{file.file.url}}" />
                                 <span class="badge rounded-pill bg-base-color fs-12 ">Trang đơn<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
