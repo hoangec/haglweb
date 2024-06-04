@@ -431,6 +431,7 @@ $(function () {
                             orderable: false,
                         },
                     ],
+                    lengthChange: false,
                     paging: true,
                     pageLength: 10,
                     order: [[1, "desc"]],
