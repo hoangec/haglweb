@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/* font */
+@font-face {
+  font-family: roboto-regular;
+  src: url("fonts/opensans/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: cerebri-sans-regular;
+  src: url("fonts/CerebriSans-Regular.woff2") format("woff2"), url("fonts/CerebriSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --base-color: rgb(248, 159, 50);
   --primary-color: #213382 ;
