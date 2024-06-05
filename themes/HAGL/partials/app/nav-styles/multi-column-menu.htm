@@ -8,9 +8,9 @@
             <ul class="col">
                 {% for childItem in item.items|slice(0,4) %}
                     {% if childItem.viewBag.isHidden == 0 %}
-                    <li class="d-flex align-items-center  justify-content-center" style="min-width: 300px;">
+                    <li class="d-flex align-items-center  justify-content-center" style="min-width: 250px;">
                         <a class="flex-grow-1 py-0" href="{{childItem.url}}" >{{ childItem.title }}</a>
-                        <i class="fas fa-long-arrow-alt-right" ></i>
+                        <i class="fs-12 fas fa-long-arrow-alt-right me-40px" ></i>
                     </li>
                     {% endif %}
                 {% endfor %}
@@ -18,9 +18,9 @@
             <ul class="col">
                 {% for childItem in item.items|slice(4,8) %}
                      {% if childItem.viewBag.isHidden == 0 %}
-                    <li class="d-flex align-items-center  justify-content-center" style="min-width: 300px;">
+                    <li class="d-flex align-items-center  justify-content-center" style="min-width: 250px;">
                         <a class="flex-grow-1 py-0" href="{{childItem.url}}" >{{ childItem.title }}</a>
-                        <i class="fas fa-long-arrow-alt-right" ></i>
+                        <i class="fs-12 fas fa-long-arrow-alt-right me-40px" ></i>
                     </li>
                     {% endif %}
                 {% endfor %}
