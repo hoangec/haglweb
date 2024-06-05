@@ -5,6 +5,7 @@ code = "mainmenu"
 code = "topmenu"
 ==
 {% for item in mainMenu.menuItems %}
+    {% if item.viewBag.isHidden == 0 %}
     {% if item.items|length  > 0  %}
         {% if item.code == 'basic-menu' %}
             {% partial 'app/nav-styles/basic-menu' item = item%}
@@ -19,6 +20,7 @@ code = "topmenu"
         <li class="nav-item ">
           <a class="nav-link lg-ps-5px lg-pe-5px" href="{{item.url}}">{{item.title}}</a>
         </li>
+    {% endif %}
     {% endif %}
 {% endfor %}
 <div class="text-center d-md-none d-block mt-20px border-top d-flex flex-column  gap-2 justify-content-a p-20px ">

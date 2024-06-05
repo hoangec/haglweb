@@ -123,7 +123,7 @@ items:
         code: ''
         reference: san-pham/index
         viewBag:
-            isHidden: '0'
+            isHidden: '1'
             cssClass: ''
             isExternal: '0'
     -
