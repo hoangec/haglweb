@@ -7,7 +7,7 @@
         </div>
         <div class="row g-0">
             <div class="col-md-4 tab-style-07 d-flex align-items-start align-items-xl-center">
-                <ul class="nav nav-tabs justify-content-center border-0 text-left fs-22 md-fs-19 fw-500">
+                <ul class="nav nav-tabs justify-content-center border-0 text-left fs-22 md-fs-19 fw-500 sm-ps-25px sm-pe-25px" >
                     {% for noiDung in block.dsNoiDung%}
                     <li class="nav-item">
                         <a data-bs-toggle="tab" href="#tab_noiDung_{{noiDung.id}}" class="nav-link {{loop.first ? 'active' : ''}}">
@@ -20,7 +20,7 @@
                 </ul>
             </div>
             <div class="col-md-8">
-                <div class="tab-content h-100">
+                <div class="tab-content h-10 sm-ps-25px pe-25px">
                     {% for noiDung in block.dsNoiDung%}
                     <div class="tab-pane fade in {{loop.first ? 'active show' : ''}}" id="tab_noiDung_{{noiDung.id}}">
                         <div class="row align-items-center">
