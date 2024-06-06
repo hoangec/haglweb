@@ -13,7 +13,8 @@ columns:
         type: number
     nam_du_lieu:
         label: 'Năm dữ liệu'
-        type: text
+        type: date
+        format: Y-m-d
     quy_du_lieu:
         label: 'Quý dữ liệu'
         type: text

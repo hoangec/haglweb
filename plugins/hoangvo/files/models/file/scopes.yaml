@@ -4,3 +4,12 @@ scopes:
         modelClass: Hoangvo\Files\Models\DanhMuc
         conditions: danh_muc_id in (:value)
         nameFrom: ten
+    nam_du_lieu:
+        label: Lọc theo năm dữ liệu
+        type: text
+        conditions:
+            equals: nam_du_lieu = :value
+            contains: nam_du_lieu like %:value%
+        modelClass: Hoangvo\Files\Models\File
+        nameFrom: nam_du_lieu
+
