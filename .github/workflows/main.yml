@@ -21,6 +21,7 @@ jobs:
           port: 21
           exclude: |
             **/assets/src/**
+            **/meta/**
       - name: Dong bo file fu muc plugins
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
