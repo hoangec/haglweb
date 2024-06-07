@@ -15,7 +15,7 @@ jobs:
         with:
           server: haglgroup.vn
           username: haglgrou6661
-          password: ${{ h_ftp_password.ftp_password }}
+          password: ${{ secrets.haglgroup}}
           local-dir: ./themes/HAGL/
           server-dir: ./public_html/themes/HAGL/
           port: 21
@@ -26,7 +26,7 @@ jobs:
         with:
             server: haglgroup.vn
             username: haglgrou6661
-            password: ${{ h_ftp_password.ftp_password }}
+            password: ${{ secrets.haglgroup }}
             local-dir: ./plugins/hoangvo/
             server-dir: ./public_html/plugins/hoangvo/
             port: 21
@@ -35,7 +35,7 @@ jobs:
         with:
             server: haglgroup.vn
             username: haglgrou6661
-            password: ${{ h_ftp_password.ftp_password }}
+            password: ${{ secrets.haglgroup }}
             local-dir: ./app/blueprints/hgal
             server-dir: ./public_html/app/blueprints/hagl
             port: 21
@@ -44,7 +44,7 @@ jobs:
         with:
             server: haglgroup.vn
             username: haglgrou6661
-            password: ${{ h_ftp_password.ftp_password }}
+            password: ${{ secrets.haglgroup }}
             local-dir: ./app/blueprints/san-pham
             server-dir: ./public_html/app/blueprints/san-pham
             port: 21
@@ -53,7 +53,7 @@ jobs:
         with:
             server: haglgroup.vn
             username: haglgrou6661
-            password: ${{ h_ftp_password.ftp_password }}
+            password: ${{ secrets.haglgroup}}
             local-dir: ./app/blueprints/blog
             server-dir: ./public_html/app/blueprints/blog
             port: 21
