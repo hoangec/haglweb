@@ -36,8 +36,8 @@ jobs:
             server: haglgroup.vn
             username: haglgrou6661
             password: ${{ secrets.FTP_PASSWORD }}
-            local-dir: ./app/blueprints/hgal
-            server-dir: ./public_html/app/blueprints/hagl
+            local-dir: ./app/blueprints/hagl/
+            server-dir: ./public_html/app/blueprints/hagl/
             port: 21
       - name: Dong bo file fu muc app san-pham
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -45,8 +45,8 @@ jobs:
             server: haglgroup.vn
             username: haglgrou6661
             password: ${{ secrets.FTP_PASSWORD }}
-            local-dir: ./app/blueprints/san-pham
-            server-dir: ./public_html/app/blueprints/san-pham
+            local-dir: ./app/blueprints/san-pham/
+            server-dir: ./public_html/app/blueprints/san-pham/
             port: 21
       - name: Dong bo file fu muc app blog
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -54,7 +54,7 @@ jobs:
             server: haglgroup.vn
             username: haglgrou6661
             password: ${{ secrets.FTP_PASSWORD}}
-            local-dir: ./app/blueprints/blog
-            server-dir: ./public_html/app/blueprints/blog
+            local-dir: ./app/blueprints/blog/
+            server-dir: ./public_html/app/blueprints/blog/
             port: 21
 
