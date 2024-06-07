@@ -24,6 +24,10 @@ fields:
         type: mixin
         tab: Cấu hình page banner
         source: HAGLFields/PageBanner
+    pageStick:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageStick
     blockBuilder:
         type: mixin
         source:  Hagl\CoDong\BlockBuilder
