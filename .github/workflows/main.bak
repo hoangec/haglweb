@@ -1,0 +1,50 @@
+name: 🚀 Deploy to web server
+on:
+  - push
+  - workflow_dispatch
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+    #   - name: Dong bo file thu muc theme
+    #     uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    #     with:
+    #       server: haglgroup.vn
+    #       username: hagl
+    #       password: ${{ secrets.ftp_password }}
+    #       local-dir: ./themes/prismify-bootstrap-starter-kit/
+    #       server-dir: ./octobercms-files/themes/prismify-bootstrap-starter-kit/
+    #       port: 2121
+      - name: Dong bo thu muc theme hagl
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: haglgroup.vn
+          username: hagl
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./themes/HAGL/
+          server-dir: ./octobercms-files/themes/HAGL/
+          port: 2121
+          exclude: |
+            **/assets/src/**
+      - name: Dong bo file fu muc plugins
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+            server: haglgroup.vn
+            username: hagl
+            password: ${{ secrets.ftp_password }}
+            local-dir: ./plugins/hoangvo/
+            server-dir: ./octobercms-files/plugins/hoangvo/
+            port: 2121
+      - name: Dong bo file fu muc app
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+            server: haglgroup.vn
+            username: hagl
+            password: ${{ secrets.ftp_password }}
+            local-dir: ./app/
+            server-dir: ./octobercms-files/app/
+            port: 2121
