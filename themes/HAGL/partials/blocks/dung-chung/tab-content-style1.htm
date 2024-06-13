@@ -23,8 +23,8 @@
                 <div class="tab-content h-10 sm-ps-25px pe-25px">
                     {% for noiDung in block.dsNoiDung%}
                     <div class="tab-pane fade in {{loop.first ? 'active show' : ''}}" id="tab_noiDung_{{noiDung.id}}">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 ">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center align-items-center ">
                                 <img src="{{noiDung.image|media}}" alt="" class="border-radius-6px w-100" />
                             </div>
                             <div class="col-md-6 ps-20px pt-20px pb-20px pe-6">
