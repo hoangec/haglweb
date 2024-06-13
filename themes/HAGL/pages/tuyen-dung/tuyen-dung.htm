@@ -56,16 +56,17 @@ function onStart()
             <div class="col-lg-12">
                 <div class="p-20px rounded-4 bg-third-color position-relative overflow-hidden">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-5 g-0">
+                        <div class="col-lg-12 col-md-12 col-12 g-0">
                             <img class="rounded-3 object-fit-cover w-100"  src="{{tinTuyenDungChiTiet.anh_dai_dien|media}}">
                         </div>
-                        <div class="col-lg-8 col-md-8 col-7">
-                            <div class="h-100 d-flex align-items-start">
-                                <div class="d-flex flex-column gap-3">
+                        <hr class="mt-20px">
+                        <div class="col-lg-12 col-md-8 col-12 mt-20px d-flex justify-content-center ">
+                            <div class="h-100 ">
+                                <div class="d-flex flex-column gap-3 justify-content-center align-items-center">
                                     <h5 class="fs-20 text-uppercase fw-bolder mb-0 text-primary">
                                         {{tinTuyenDungChiTiet.tua_de}}
                                     </h5>
-                                    <div>
+                                    <div class="text-justify">
                                         <div class="text-black">Ngày đăng tuyển: <span class="fw-bold">{{tinTuyenDungChiTiet.ngay_dang_tuyen|date('d/m/Y')}}</span></div>
                                         <div class="text-black">Hình thức: <span class="fw-bold">{{tinTuyenDungChiTiet.hinh_thuc}}</span></div>
                                         <div class="text-black">Địa điểm làm việc: <span class="fw-bold">{{tinTuyenDungChiTiet.dia_diem_lam_viec}}</span></div>
