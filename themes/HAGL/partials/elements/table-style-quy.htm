@@ -25,7 +25,20 @@
             {% for tenFile, items in groupByNamItems %}
                 {% for file in items %}
                     {% set namDuLieu = 'Năm ' ~ file.nam_du_lieu|date('Y') %}
+                    {% set fileUrl = file.file.url ? file.file.url : file.attach_file|media %}
                     {% if file.quy_du_lieu == 1%}
+                        {% set duLieuQuy1 = '<a target="_blank" href="' ~ fileUrl ~ '" /><span class="badge rounded-pill bg-base-color fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                    {% endif %}
+                    {% if file.quy_du_lieu == 2 %}
+                        {% set duLieuQuy2 = '<a target="_blank" href="' ~ fileUrl ~ '" /><span class="badge rounded-pill bg-primary fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                    {% endif %}
+                    {% if file.quy_du_lieu == 3%}
+                        {% set duLieuQuy3 = '<a target="_blank" href="' ~ fileUrl ~ '" /><span class="badge rounded-pill bg-green fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                    {% endif %}
+                    {% if file.quy_du_lieu == 4%}
+                        {% set duLieuQuy4 = '<a target="_blank" href="' ~ fileUrl ~ '" /><span class="badge rounded-pill bg-red fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
+                    {% endif %}
+                    {# {% if file.quy_du_lieu == 1%}
                         {% set duLieuQuy1 = '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-base-color fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
                     {% endif %}
                     {% if file.quy_du_lieu == 2 %}
@@ -36,7 +49,7 @@
                     {% endif %}
                     {% if file.quy_du_lieu == 4%}
                         {% set duLieuQuy4 = '<a target="_blank" href="' ~ file.file.url ~ '" /><span class="badge rounded-pill bg-red fs-12 ">' ~ (file.ngay_dang|date('d/m/Y')) ~ '<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span></a>' %}
-                    {% endif %}
+                    {% endif %} #}
                 {% endfor %}
                 <tr>
                     <td class="text-start">{{ tenFile }}</td>

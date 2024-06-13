@@ -8,18 +8,16 @@ use System\Models\File as SystemFile;
 class File extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use \October\Rain\Database\Traits\Multisite;
-    protected $propagatable = [];
-    // use \October\Rain\Database\Traits\SoftDelete;
-    // public $implement = [
-    //     \RainLab\Translate\Behaviors\TranslatableModel::class
-    // ];
+    use \October\Rain\Database\Traits\SoftDelete;
+    public $implement = [
+        \RainLab\Translate\Behaviors\TranslatableModel::class
+    ];
 
-    // public $translatable = ['ten', 'file','attach_file'];
+    public $translatable = ['ten', 'file','attach_file'];
     /**
      * @var array dates to cast from the database.
      */
-    // protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at'];
 
     /**
      * @var string table in the database used by the model.

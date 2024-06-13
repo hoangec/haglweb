@@ -1,0 +1,9 @@
+import:
+    title: Import file cổ đông
+    modelClass: Hoangvo\Files\Models\FileImportModel
+    list: $/hoangvo/files/models/fileimportmodel/columns.yaml
+
+export:
+    title: Export file cổ đông
+    modelClass: Hoangvo\Files\Models\FileExportModel
+    list: $/hoangvo/files/models/fileexportmodel/columns.yaml

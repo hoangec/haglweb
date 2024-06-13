@@ -13,6 +13,12 @@ class DanhMuc extends Model
     const SORT_ORDER = 'thu_tu';
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
+
+    public $implement = [
+        \RainLab\Translate\Behaviors\TranslatableModel::class
+    ];
+
+    public $translatable = ['ten'];
     /**
      * @var bool timestamps are disabled.
      * Remove this line if timestamps are defined in the database table.

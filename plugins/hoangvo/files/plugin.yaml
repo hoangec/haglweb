@@ -19,3 +19,11 @@ navigation:
                 label: 'Danh sách file'
                 url: hoangvo/files/danhsachfiles
                 icon: icon-file
+            import-menu-item:
+                label: Import
+                url: hoangvo/files/fileimportexport/import
+                icon: icon-sitemap
+            export:-menu-item:
+                label: Export
+                url: hoangvo/files/fileimportexport/export
+                icon: icon-sitemap

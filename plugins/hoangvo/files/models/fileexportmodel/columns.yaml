@@ -8,6 +8,9 @@ columns:
     mo_ta:
         label: 'Mô tả'
         type: text
+    thu_tu:
+        label: 'Thứ tự'
+        type: number
     nam_du_lieu:
         label: 'Năm dữ liệu'
         type: date
@@ -25,18 +28,9 @@ columns:
         sortable: true
         select: ten
         relation: danh_muc
-    # file:
-    #     label: 'File đính kém'
-    #     type: text
-    # attach_file:
-    #     label: 'File đính kém từ thư viện'
-    #     type: text
-    # danh_muc_id:
-    #     label: danh_muc_id
-    #     type: number
-    anh_dai_dien:
-        label: Ảnh đại diện (file dạng catalog)
-        type: text
-    thu_tu:
-        label: 'Thứ tự'
+    danh_muc_id:
+        label: danh_muc_id
         type: number
+    anh_dai_dien:
+        label: anh_dai_dien
+        type: text

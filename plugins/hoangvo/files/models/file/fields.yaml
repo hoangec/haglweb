@@ -72,8 +72,13 @@ fields:
             extension: auto
         maxFiles: '1'
         span: auto
-        required: 1
+        # required: 1
         type: fileupload
+    attach_file:
+        label: 'File đính kèm từ thư viện'
+        mode: file
+        span: auto
+        type: mediafinder
     anh_dai_dien:
         label: 'Ảnh đại diện'
         mode: file
@@ -86,12 +91,13 @@ fields:
             action: show
             condition: 'value[nam-catalog]'
             field: _loai_danh_muc
-    file2:
-        label: 'File đính kèm 2'
-        mode: file
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
+
+    # file2:
+    #     label: 'File đính kèm 2'
+    #     mode: file
+    #     useCaption: true
+    #     thumbOptions:
+    #         mode: crop
+    #         extension: auto
+    #     span: auto
+    #     type: fileupload

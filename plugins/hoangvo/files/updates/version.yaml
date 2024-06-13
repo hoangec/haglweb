@@ -57,3 +57,12 @@ v1.0.19:
 v1.0.20:
     - 'Updated table hoangvo_files_danh_muc'
     - builder_table_update_hoangvo_files_danh_muc_5.php
+v1.0.21:
+    - 'Updated table hoangvo_files_file'
+    - builder_table_update_hoangvo_files_file_9.php
+v1.0.22:
+    - 'Updated table hoangvo_files_file'
+    - builder_table_update_hoangvo_files_file_10.php
+v1.0.23:
+    - 'Updated table hoangvo_files_file'
+    - builder_table_update_hoangvo_files_file_11.php
