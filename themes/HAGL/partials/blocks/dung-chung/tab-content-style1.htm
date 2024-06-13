@@ -10,7 +10,7 @@
                 <ul class="nav nav-tabs justify-content-center border-0 text-left fs-22 md-fs-19 fw-500 sm-ps-25px sm-pe-25px" >
                     {% for noiDung in block.dsNoiDung%}
                     <li class="nav-item">
-                        <a data-bs-toggle="tab" href="#tab_noiDung_{{noiDung.id}}" class="nav-link {{loop.first ? 'active' : ''}}">
+                        <a data-bs-toggle="tab" href="#tab_noiDung_{{noiDung.id}}" class="nav-link {{loop.first ? 'active' : ''}} pt-20px pb-20px">
                             <span><span class="me-10px fs-22 fw-500">{{loop.index < 10 ? '0'~loop.index : loop.index }}</span>{{noiDung.tuaDe}}</span>
                             <span class="number-box d-flex justify-content-center align-items-center rounded-circle h-70px w-70px bg-base-color text-white"><i class="bi bi-arrow-right icon-extra-medium"></i></span>
                             <span class="bg-hover bg-base-color"></span>
@@ -19,7 +19,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 d-flex align-items-center">
                 <div class="tab-content h-10 sm-ps-25px pe-25px">
                     {% for noiDung in block.dsNoiDung%}
                     <div class="tab-pane fade in {{loop.first ? 'active show' : ''}}" id="tab_noiDung_{{noiDung.id}}">
