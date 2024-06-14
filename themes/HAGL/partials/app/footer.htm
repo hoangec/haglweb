@@ -37,7 +37,9 @@ code = "mainmenu"
                 <span class="fs-20 text-primary  fw-600 d-block mb-5px">Sản phẩm</span>
                 <ul>
                     {% for menuItem in topMenu.menuItems %}
+                        {% if menuItem.viewBag.isHidden == 0 %}
                         <li><a class="text-black" href="{{menuItem.url}}">{{menuItem.title}}</a></li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>
