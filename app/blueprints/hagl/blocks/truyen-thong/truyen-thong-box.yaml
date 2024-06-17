@@ -16,11 +16,6 @@ fields:
         type: entries
         maxItems: 1
         source: Blog\Category 
-    soLuongHienThi:
-        label: Số lượng bài viết hiển thị
-        min: 3
-        default: 3
-        type: number
     image1:
         label: Ảnh minh hoạ 1
         type: mediafinder
