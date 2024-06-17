@@ -13,8 +13,9 @@
                     class="page-link"
                     href="javascript:;"
                     data-request="{{ handler }}"
-                    data-request-query="{ page: {{ paginator.currentPage - 1 }} }"
-                    data-request-update="{ _self: true }"
+                    data-request-data='{ page: {{ paginator.currentPage - 1 }}, "danh-muc-id": "{{danhmucId}}" }'
+                    data-target="#bai-viet-danh-muc-{{danhmuId}}"
+                    data-request-complete='scrollToTarget("{{sectionId}}")'
                     rel="prev"
                     aria-label="{{ 'system::lang.pagination.previous'|trans }}">&larr;</a>
             </li>
@@ -36,10 +37,10 @@
                                 href="javascript:;"
                                 data-request="{{ handler }}"
                                 data-request-data='{ "page": {{ page }}, "danh-muc-id": "{{danhmucId}}" }'
-                                data-request-update="{ _self: true }"
+                                data-target="#bai-viet-danh-muc-{{danhmuId}}"
                                 data-request-url="{{'truyen-thong'|page}}"
                                 data-request-message="Đang tải dữ liệu"
-                                data-request-complete='scrollToTarget("{{sectionId}}")'
+                                data-request-complete='console.log("{{sectionId}}"); scrollToTarget("{{sectionId}}");'
                             >{{ page }}</a>
                         </li>
                     {% endif %}
@@ -57,8 +58,9 @@
                     class="page-link"
                     href="javascript:;"
                     data-request="{{ handler }}"
-                    data-request-query='{ page: {{ paginator.currentPage + 1|default(1) }} , "danh-muc-id": "{{danhmucId}}" }'
-                    data-request-update="{ _self: true }"
+                    data-request-complete='scrollToTarget("{{sectionId}}")'
+                    data-request-data='{ page: {{ paginator.currentPage + 1|default(1) }} , "danh-muc-id": "{{danhmucId}}" }'
+                    data-target="#bai-viet-danh-muc-{{danhmuId}}"
                     rel="next"
                     aria-label="{{ 'system::lang.pagination.next'|trans }}">&rarr;</a>
             </li>

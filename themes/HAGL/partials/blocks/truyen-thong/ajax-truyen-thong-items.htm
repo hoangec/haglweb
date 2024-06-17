@@ -1,4 +1,4 @@
-<div  class="row gy-3">
+{# <div  class="row gy-3"> #}
     {% for tinTuc in  dsBaiVietPaginated %}
     <div class="col-md-4 col-12">
         {% partial 'elements/tin-tuc-card-classic' tinTuc = tinTuc %}
@@ -7,4 +7,4 @@
     <div class="col-12 mt-4 d-flex justify-content-center">
         {{ ajaxPager(dsBaiVietPaginated,{partial: 'elements/ajax-truyen-thong-pagination'}) }}
     </div>
-</div>
+{# </div> #}

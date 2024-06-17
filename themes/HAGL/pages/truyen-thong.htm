@@ -20,13 +20,23 @@ function onStart(){
     $this['categoryParam'] =  $this->param('category');
 }
 function onGetSuKien() {
-    $this['dsSuKienPaginated'] = EntryRecord::inSection('Blog\Event')->paginate(6);
+    $this['dsSuKienPaginated'] = EntryRecord::inSection('Blog\Event')->paginate(10);
 }
 function onGetBaiVietTheoDanhMuc() {
+
+    // $this['dsBaiVietPaginated'] = EntryRecord::inSection('Blog\Post')->whereRelation('categories','id',$danhMucId)->paginate();
     $danhMucId = Input::get('danh-muc-id');
-    $this['dsBaiVietPaginated'] = EntryRecord::inSection('Blog\Post')->whereHas('categories', function($query) use ($danhMucId) {
-            $query->where('id', $danhMucId);
-        })->paginate(6);
+    $data = EntryRecord::inSection('Blog\Post')->whereRelation('categories','id',$danhMucId)->paginate(6);
+    return ['#bai-viet-danh-muc-'.$danhMucId => $this->renderPartial('blocks/truyen-thong/ajax-truyen-thong-items',[
+            'dsBaiVietPaginated' => $data,
+            'danhmucId' => $danhMucId,
+            'handler' => 'onGetBaiVietTheoDanhMuc',
+            'sectionId' => "section-truyen-thong-".$danhMucId,
+        ])
+    ];
+    // return EntryRecord::inSection('Blog\Post')->whereHas('categories', function($query) use ($danhMucId) {
+    //         $query->where('id', $danhMucId);
+    //     })->paginate(6);
 }
 ?>
 ==
