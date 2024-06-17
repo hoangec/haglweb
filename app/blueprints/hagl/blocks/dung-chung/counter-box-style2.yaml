@@ -20,7 +20,7 @@ fields:
             fields:
                 soLieu:
                     label: Số liệu
-                    type: number
+                    type: text
                     span: row
                     spanClass: col-6
                 noiDung:
