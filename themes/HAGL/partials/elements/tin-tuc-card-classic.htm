@@ -1,11 +1,19 @@
- <div class="card bg-transparent border-0  h-100">
-    <div class="blog-image position-relative overflow-hidden border-radius-4px">
-        <a href="{{'tin-tuc'|page({ slug: tinTuc.slug })}}"><img src="{{tinTuc.banner.path}}" alt="" /></a>
+
+<a class="tin-tuc-item" href="{{ 'tin-tuc'|page({slug: tinTuc.slug}) }}">
+    <div class="card tin-tuc-card h-100">
+        <img src="{{ tinTuc.banner.path }}" class="card-img-top" alt="..." />
+        <div class="card-body d-fex flex-column">
+            <p class="card-date text-dark-gray">{{ tinTuc.published_at_date|date('j/m/Y') }}</p>
+            <h5 class="card-title">{{ tinTuc.title }}</h5>
+            <p class="card-text">{{ tinTuc.featured_text }}</p>
+            <div class="d-flex flex-wrap  ">
+                {% for category in tinTuc.categories %}
+                    <div class="d-inline-flex align-items-center justify-content-center border-radius-50px bg-very-light-gray h-40px me-5px ">
+                        <div class="overflow-hidden border-radius-50px w-30px  h-30px m-5px" style="background-color: {{category.color}};"></div>
+                        <span class="ms-0 me-10px fs-14 text-dark-gray fw-500" style=" white-space: nowrap;">{{category.title}}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    <div class="card-body px-0 pt-30px pb-30px">
-        <span class="fs-13 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Business </a><a href="#" class="blog-date text-dark-gray-hover">{{ tinTuc.published_at_date|date('j/m/Y') }}</a></span>
-        <a href="#" class="card-title mb-15px alt-font fw-500 lh-30 text-dark-gray d-inline-block w-95">{{tinTuc.title}}</a>
-        <p class="mb-15px w-95">{{ tinTuc.featured_text }}</p>
-        <a href="#" class="card-link alt-font fs-13 text-uppercase text-base-color fw-500">More reading<i class="bi bi-arrow-right icon-small"></i></a>
-    </div>
-</div>
+</a>

@@ -35,11 +35,11 @@
                                 class="page-link"
                                 href="javascript:;"
                                 data-request="{{ handler }}"
-                                data-request-data="{ page: {{ page }} }"
+                                data-request-data='{ "page": {{ page }}, "danh-muc-id": "{{danhmucId}}" }'
                                 data-request-update="{ _self: true }"
                                 data-request-url="{{'truyen-thong'|page}}"
                                 data-request-message="Đang tải dữ liệu"
-                                data-request-complete="scrollToTarget('su-kien-box')"
+                                data-request-complete='scrollToTarget("{{sectionId}}")'
                             >{{ page }}</a>
                         </li>
                     {% endif %}
@@ -57,7 +57,7 @@
                     class="page-link"
                     href="javascript:;"
                     data-request="{{ handler }}"
-                    data-request-query="{ page: {{ paginator.currentPage + 1|default(1) }} }"
+                    data-request-query='{ page: {{ paginator.currentPage + 1|default(1) }} , "danh-muc-id": "{{danhmucId}}" }'
                     data-request-update="{ _self: true }"
                     rel="next"
                     aria-label="{{ 'system::lang.pagination.next'|trans }}">&rarr;</a>

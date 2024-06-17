@@ -149,14 +149,14 @@ code = "topmenu"
                             </div>
                             <div class="header-language-icon icon">
                                 <div class="header-language dropdown">
-                                    {% if this.site.code == "vietnam" %}
+                                    {# {% if this.site.code == "vietnam" %}
                                             {% set diffSiteSelected = sitePicker.sites.where('code','english').first() %}
                                             <a href="{{diffSiteSelected.url}}" title="English"><span class="icon-country"><img class="w-20px" src="{{'assets/images/english-flag.svg'|theme}}" alt=""></span></a>
                                     {% endif %}
                                       {% if this.site.code == "english" %}
                                             {% set diffSiteSelected = sitePicker.sites.where('code','vietnam').first() %}
                                             <a href="{{diffSiteSelected.url}}" title="VietNam"><span class="icon-country"><img class="w-20px" src="{{'assets/images/vn.svg'|theme}}" alt=""></span></a>
-                                    {% endif %}
+                                    {% endif %} #}
                                 </div>
                             </div>
                         </div>

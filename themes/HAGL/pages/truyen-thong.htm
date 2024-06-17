@@ -20,7 +20,13 @@ function onStart(){
     $this['categoryParam'] =  $this->param('category');
 }
 function onGetSuKien() {
-    $this['dsSuKienPaginated'] = EntryRecord::inSection('Blog\Event')->paginate(2);
+    $this['dsSuKienPaginated'] = EntryRecord::inSection('Blog\Event')->paginate(6);
+}
+function onGetBaiVietTheoDanhMuc() {
+    $danhMucId = Input::get('danh-muc-id');
+    $this['dsBaiVietPaginated'] = EntryRecord::inSection('Blog\Post')->whereHas('categories', function($query) use ($danhMucId) {
+            $query->where('id', $danhMucId);
+        })->paginate(6);
 }
 ?>
 ==
