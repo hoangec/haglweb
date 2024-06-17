@@ -16,13 +16,21 @@
                                 {% endif %}
                             </ul>
                         </div>
-                        <div class="col-3 text-center d-flex  justify-content-end">
+                        {% if suKien.fileAttach %}
+                            <div class="col-3 text-center d-flex  justify-content-end">
                                 <a href="{{suKien.fileAttach.getPath()}}" target="_blank" class=" d-flex justify-content-center align-items-center border-radius-10px  w-150px h-150px btn btn-base-color btn-box-shadow btn-switch-text ">
-                                <span>
-                                    <span class="btn-double-text fw-700" data-text="Tải file">{{suKien.ngayBatDau|date('j/m/Y')}}</span>
-                                </span>
-                            </a>
-                        </div>
+                                    <span>
+                                        <span class="btn-double-text fw-700" data-text="Tải file">{{suKien.ngayBatDau|date('j/m/Y')}}</span>
+                                    </span>
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="col-3 text-center d-flex  justify-content-end">
+                                <div class=" d-flex justify-content-center align-items-center border-radius-10px  w-150px h-150px bg-base-color btn-box-shadow">
+                                    <span class="btn-double-text fw-700 text-white" >{{suKien.ngayBatDau|date('j/m/Y')}}</span>
+                                </div>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}
