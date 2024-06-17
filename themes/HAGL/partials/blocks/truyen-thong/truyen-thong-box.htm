@@ -13,7 +13,7 @@ handle = "Blog\Post"
                 <h2 class="fw-600 text-dark-gray mb-0  text-primary">{{block.tuaDe}}</h2>
             </div>
         </div>
-        {% set dsBaiVietPaginated = dsTinTuc.whereRelation('categories','slug',block.categories.slug).paginate({6}) %}
+        {% set dsBaiVietPaginated = dsTinTuc.whereRelation('categories','slug',block.categories.slug).paginate(6) %}
         {% set handler = "onGetBaiVietTheoDanhMuc"%}
         {% set danhmucId = block.categories.id%}
         {% set sectionId = "{{block.content_group}}-{{block.id}}" %}
