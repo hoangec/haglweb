@@ -10,9 +10,9 @@
                                 <li class="mb-5px">{{"Nội dung:"|_}} <span class="fw-400">{{suKien.noiDung}}</span></li>
                                 <li class="mb-5px">{{"Địa điểm:"|_}} <span class="fw-400">{{suKien.diaDiem}}</span></li>
                                 <li class="mb-5px">{{"Ngày bắt đầu:"|_}} <span class="fw-400">{{suKien.ngayBatDau|date('d/m/Y')}}</span></li>
-                                    <li class="mb-5px">{{"Thời gian:"|_}} <span class="fw-400">{{suKien.ngayBatDau|date('H:m')}}</span></li>
+                                <li class="mb-5px">{{"Thời gian:"|_}} <span class="fw-400">{{suKien.ngayBatDau|date('H:i')}}</span></li>
                                 {% if suKien.ngayKetThuc%}
-                                <li class="mb-5px">{{"Ngày kết thúc:"|_}} <span class="fw-400">{{suKien.ngayKetThuc|date('d/m/Y')}}</span></li>
+                                    <li class="mb-5px">{{"Ngày kết thúc:"|_}} <span class="fw-400">{{suKien.ngayKetThuc|date('d/m/Y - H:i')}}</span></li>
                                 {% endif %}
                             </ul>
                         </div>

@@ -19,12 +19,13 @@ fields:
         type: datepicker
         mode: datetime
         format: d/m/Y
+        useTimezone: false
     ngayKetThuc:
         label: Ngày kết thúc sự kiện
         type: datepicker
         mode: datetime
         format: d/m/Y
-        useTimezone: true
+        useTimezone: false
     noiDung:
         label: Nội dung
         type: text
