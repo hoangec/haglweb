@@ -76,7 +76,7 @@ class DanhMuc extends Model
         foreach($this->files as $file){
             $dsFiles->push($file);
         }
-        return $dsFiles;
+        return $dsFiles->sortByDesc('ngay_dang');
     }
 
     public function getAllFilesTheoQuy() {
