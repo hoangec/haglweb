@@ -1,7 +1,7 @@
 [collection dsSuKien]
 handle = "Blog\Event"
 ==
-{% set dsSuKienMoiNhat = dsSuKien.orderBy('published_at','desc').take(3).get()%}
+{% set dsSuKienMoiNhat = dsSuKien.orderBy('ngayBatDau','desc').take(3).get()%}
 <section class="p-0 bg-third-color border-bottom border-color-transparent-white-very-light background-position-left-bottom background-no-repeat overflow-hidden" >
     <div class="container-fluid">
         <div class="row justify-content-center" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>

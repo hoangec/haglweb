@@ -434,7 +434,10 @@ $(function () {
                     lengthChange: false,
                     paging: true,
                     pageLength: 10,
-                    order: [[1, "desc"]],
+                    order: [
+                        [1,"desc"],
+                        [3,"desc"]
+                    ],
                     rowGroup: {
                         dataSrc: 1,
                     },
