@@ -65,6 +65,6 @@ fields:
                     spanClass: col-md-6
                 soLuong:
                     label: Số lượng
-                    type: number
+                    type: text
                     span: row
                     spanClass: col-md-6
