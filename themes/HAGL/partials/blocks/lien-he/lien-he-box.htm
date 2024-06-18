@@ -30,14 +30,14 @@ handle = "HAGL\PageSettings"
                     <img src="{{lienHe.imageCty|media}}" class="card-img-top w-350px" alt="hagl logo">
                     <div class="card-body">
                         <h3 class="fs-24 fw-700 text-primary text-uppercase mb-10px">{{lienHe.tenCongTy}}</h3>
-                        <div class="fw-600"><i class="fa-solid fa-location-dot icon-small me-10px text-base-color"></i><a href="#" class="text-black">{{lienHe.diaChi}}</a></div>
-                        <div class="fw-600"><i class="fa-solid fa-money-check-dollar icon-small me-10px text-base-color"></i><a href="#" class="text-black">MST: {{lienHe.tax}}</a></div>
-                        <div class="fw-600"><i class="fa-solid fa-phone-volume icon-small me-10px text-base-color"></i><a class="text-black" href="tel:{{lienHe.dienThoai}}">Tel: {{lienHe.dienThoai}}</a></div>
+                        <div class="fw-600"><i class="fa-solid fa-location-dot icon-small me-10px text-base-color"></i><span class="text-black">{{lienHe.diaChi}}</span></div>
+                        <div class="fw-600"><i class="fa-solid fa-money-check-dollar icon-small me-10px text-base-color"></i><span class="text-black">MST: {{lienHe.tax}}</span></div>
+                        <div class="fw-600"><i class="fa-solid fa-phone-volume icon-small me-10px text-base-color"></i><span class="text-black">Tel: {{lienHe.dienThoai}}</span></div>
                         {% if lienHe.fax %}
-                        <div class="fw-600"><i class="feather icon-feather-printer icon-small me-10px text-base-color"></i><a class="text-black" href="tel:{{lienHe.fax}}">Fax: {{lienHe.fax}}</a></div>
+                        <div class="fw-600"><i class="feather icon-feather-printer icon-small me-10px text-base-color"></i><span class="text-black" >Fax: {{lienHe.fax}}</span></div>
                         {% endif %}
                         {% if lienHe.email %}
-                        <div class="fw-600"><i class="ti-email icon-small me-10px text-base-color"></i><a class="text-black" href="mail:{{lienHe.email}}">Email: {{lienHe.email}}</a></div>
+                        <div class="fw-600"><i class="ti-email icon-small me-10px text-base-color"></i><span class="text-black">Email: {{lienHe.email}}</span></div>
                         {% endif %}
                         {% if lienHe.web%}
                         <div class="fw-600"><i class="ti-world icon-small me-10px text-base-color"></i><span class="text-primary text-bolder">Website: {{lienHe.web}}</span></div>
