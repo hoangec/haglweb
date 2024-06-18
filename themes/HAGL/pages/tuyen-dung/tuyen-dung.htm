@@ -60,59 +60,80 @@ function onStart()
                             <img class="rounded-3 object-fit-cover w-100"  src="{{tinTuyenDungChiTiet.anh_dai_dien|media}}">
                         </div>
                         <hr class="mt-20px">
-                        <div class="col-lg-12 col-md-8 col-12 mt-20px d-flex justify-content-center ">
-                            <div class="h-100 ">
-                                <div class="d-flex flex-column gap-3 justify-content-center align-items-center">
-                                    <h5 class="fs-20 text-uppercase fw-bolder mb-0 text-primary">
-                                        {{tinTuyenDungChiTiet.tua_de}}
-                                    </h5>
-                                    <div class="text-justify">
-                                        <div class="text-black">Ngày đăng tuyển: <span class="fw-bold">{{tinTuyenDungChiTiet.ngay_dang_tuyen|date('d/m/Y')}}</span></div>
-                                        <div class="text-black">Hình thức: <span class="fw-bold">{{tinTuyenDungChiTiet.hinh_thuc}}</span></div>
-                                        <div class="text-black">Địa điểm làm việc: <span class="fw-bold">{{tinTuyenDungChiTiet.dia_diem_lam_viec}}</span></div>
-                                        <div class="d-flex flex-column flex-sm-row">
-                                            <div class="fs-6 text-black">
-                                                Số lượng tuyển:
-                                                <span class="fw-bold">{{tinTuyenDungChiTiet.so_luong}}</span>
-                                            </div>
-                                            {% if tinTuyenDungChiTiet.ngay_het_han %}
-                                            <span class="d-none d-sm-block px-2">|</span>
-                                            <div class="fs-6 text-black">
-                                                Ngày hết hạn:
-                                                {% if tinTuyenDungChiTiet.getSoNgayHetHan() > 0%}
-                                                <span><label class="fw-bold">{{tinTuyenDungChiTiet.getSoNgayHetHan()}}</label> ngày</span>
-                                                {% else %}
-                                                    <label class="fw-bold text-red ">Đã hết hạn</label>
-                                                {% endif %}
-
-                                            </div>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                    {# {{dd( tinTuyenDungChiTiet.getSoNgayHetHan())}} #}
-                                    {% if tinTuyenDungChiTiet.getSoNgayHetHan()  >= 0 %}
-                                    <div class="text-start">
-                                        <a href="#"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#ungTuyenModal"
-                                            class="btn btn-small btn-rounded btn-gradient-fast-pink-light-yellow d-table d-lg-inline-block xl-mb-15px"
-                                        >Ứng tuyển</a>
-                                    </div>
-                                    <div class="modal  fade" id="ungTuyenModal" tabindex="-1" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
-                                            <div class="modal-content">
-                                                <div class="modal-header p-10px">
-                                                    <h5 class="modal-title fs-25 fw-700 text-primary" id="exampleModalLabel">Ứng tuyển</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body nhan-su-modal">
-                                                    {% component 'ungTuyenForm' tuyenDungTuaDe = tinTuyenDungChiTiet.tua_de tuyenDungId = tinTuyenDungChiTiet.id %}
-                                                </div>
-                                                </div>
+                        <div class="col-lg-12">
+                            <div class="rounded-4 bg-very-light-gray py-5 px-5  ">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 ">
+                                        <div class="d-flex gap-3">
+                                            <div>
+                                            <img src="{{'assets/images/age-group.png'|theme}}" width="35" height="35"  alt=""></div>
+                                            <div>
+                                                <p class="mb-0 text-muted fs-15">ĐỘ TUỔI</p>
+                                                <h6 class=" text-black mb-3 fw-bolder text-uppercase fs-15">{{tinTuyenDungChiTiet.do_tuoi}}</h6>
                                             </div>
                                         </div>
                                     </div>
-                                    {% endif %}
+                                    <div class="col-xl-3 col-lg-4 ">
+                                        <div class="d-flex gap-3">
+                                            <div>
+                                            <img src="{{'assets/images/gender.png'|theme}}" width="35" height="35"  alt=""></div>
+                                            <div>
+                                                <p class="mb-0 text-muted fs-15">GIỚI TÍNH</p>
+                                                <h6 class="mb-3 fw-bolder text-black text-uppercase fs-15">{{tinTuyenDungChiTiet.gioi_tinh}}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 ">
+                                        <div class="d-flex gap-3">
+                                            <div>
+                                            <img src="{{'assets/images/experience.png'|theme}}"  width="35" height="35" alt=""></div>
+                                            <div>
+                                                <p class="mb-0 text-muted fs-15">KINH NGHIỆM</p>
+                                                <h6 class="fw-bolder text-black mb-3 text-uppercase fs-15">{{tinTuyenDungChiTiet.kinh_nghiem}}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 ">
+                                        <div class="d-flex gap-3">
+                                            <div>
+                                            <img src="{{'assets/images/publish.png'|theme}}" width="35" height="35" alt=""></div>
+                                            <div>
+                                                <p class="mb-0 text-muted fs-15">NGÀY ĐĂNG TUYỂN</p>
+                                                <h6 class="mb-3 fw-bolder text-black text-uppercase fs-15">{{tinTuyenDungChiTiet.ngay_dang_tuyen|date('d/m/Y')}}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 ">
+                                        <div class="d-flex gap-3">
+                                            <div>
+                                            <img src="{{'assets/images/vi-tri-nghe.png'|theme}}" width="35" height="35"  alt=""></div>
+                                            <div>
+                                                <p class="mb-0 text-muted fs-15">VỊ TRÍ</p>
+                                                <h6 class="mb-3 fw-bolder text-black  text-uppercase fs-15">{{tinTuyenDungChiTiet.thanh_phan}}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 ">
+                                        <div class="d-flex gap-3">
+                                            <div>
+                                            <img src="{{'assets/images/job-title.png'|theme}}" width="35" height="35" alt=""></div>
+                                            <div>
+                                                <p class="mb-0 text-muted fs-15">NGÀNH NGHỀ</p>
+                                                <h6 class="mb-3 fw-bold text-black text-black text-uppercase fs-15">{{tinTuyenDungChiTiet.getNganhNgheOptions[tinTuyenDungChiTiet.nganh_nghe]}}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 ">
+                                        <div class="d-flex gap-3">
+                                            <div>
+                                            <img src="{{'assets/images/location.png'|theme}}" width="35" height="35" alt=""></div>
+                                            <div>
+                                                <p class="mb-0 text-muted fs-15">NƠI LÀM VIỆC</p>
+                                                <h6 class="mb-3 text-black fw-bold text-uppercase fs-15">{{tinTuyenDungChiTiet.getNoiLamViecOptions[tinTuyenDungChiTiet.noi_lam_viec]}}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -136,88 +157,66 @@ function onStart()
             </div>
         </div>
         <div class="row mt-4 ">
-            <div class="col-lg-12">
-                <div class="rounded-4 bg-very-light-gray py-5 px-5  ">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 ">
-                            <div class="d-flex gap-3">
-                                <div>
-                                <img src="{{'assets/images/age-group.png'|theme}}" width="35" height="35"  alt=""></div>
-                                <div>
-                                    <p class="mb-0 text-muted fs-15">ĐỘ TUỔI</p>
-                                    <h6 class=" text-black mb-3 fw-bolder text-uppercase fs-15">{{tinTuyenDungChiTiet.do_tuoi}}</h6>
+            <div class="col-lg-12 col-md-8 col-12 mt-20px d-flex justify-content-center ">
+                <div class="h-100 ">
+                    <div class="d-flex flex-column gap-3 justify-content-center align-items-center">
+                        <h5 class="fs-20 text-uppercase fw-bolder mb-0 text-primary">
+                            {{tinTuyenDungChiTiet.tua_de}}
+                        </h5>
+                        <div class="text-center d-flex flex-column justify-content-center align-items-center">
+                            <div class="text-black">Ngày đăng tuyển: <span class="fw-bold">{{tinTuyenDungChiTiet.ngay_dang_tuyen|date('d/m/Y')}}</span></div>
+                            <div class="text-black">Hình thức: <span class="fw-bold">{{tinTuyenDungChiTiet.hinh_thuc}}</span></div>
+                            <div class="text-black">Địa điểm làm việc: <span class="fw-bold">{{tinTuyenDungChiTiet.dia_diem_lam_viec}}</span></div>
+                            <div class="d-flex flex-column flex-sm-row">
+                                <div class="fs-6 text-black">
+                                    Số lượng tuyển:
+                                    <span class="fw-bold">{{tinTuyenDungChiTiet.so_luong}}</span>
                                 </div>
+                                {% if tinTuyenDungChiTiet.ngay_het_han %}
+                                <span class="d-none d-sm-block px-2">|</span>
+                                <div class="fs-6 text-black">
+                                    Ngày hết hạn:
+                                    {% if tinTuyenDungChiTiet.getSoNgayHetHan() > 0%}
+                                    <span><label class="fw-bold">{{tinTuyenDungChiTiet.getSoNgayHetHan()}}</label> ngày</span>
+                                    {% else %}
+                                        <label class="fw-bold text-red ">Đã hết hạn</label>
+                                    {% endif %}
+
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 ">
-                            <div class="d-flex gap-3">
-                                <div>
-                                <img src="{{'assets/images/gender.png'|theme}}" width="35" height="35"  alt=""></div>
-                                <div>
-                                    <p class="mb-0 text-muted fs-15">GIỚI TÍNH</p>
-                                    <h6 class="mb-3 fw-bolder text-black text-uppercase fs-15">{{tinTuyenDungChiTiet.gioi_tinh}}</h6>
+
+                        {% if tinTuyenDungChiTiet.getSoNgayHetHan()  >= 0 %}
+                            <div class="text-start">
+                                <a href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#ungTuyenModal"
+                                    class="btn btn-small btn-rounded btn-gradient-fast-pink-light-yellow d-table d-lg-inline-block xl-mb-15px"
+                                >Ứng tuyển</a>
+                            </div>
+                            <div class="modal  fade" id="ungTuyenModal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header p-10px">
+                                            <h5 class="modal-title fs-25 fw-700 text-primary" id="exampleModalLabel">Ứng tuyển</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body nhan-su-modal">
+                                            {% component 'ungTuyenForm' tuyenDungTuaDe = tinTuyenDungChiTiet.tua_de tuyenDungId = tinTuyenDungChiTiet.id %}
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 ">
-                            <div class="d-flex gap-3">
-                                <div>
-                                <img src="{{'assets/images/experience.png'|theme}}"  width="35" height="35" alt=""></div>
-                                <div>
-                                    <p class="mb-0 text-muted fs-15">KINH NGHIỆM</p>
-                                    <h6 class="fw-bolder text-black mb-3 text-uppercase fs-15">{{tinTuyenDungChiTiet.kinh_nghiem}}</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 ">
-                            <div class="d-flex gap-3">
-                                <div>
-                                <img src="{{'assets/images/publish.png'|theme}}" width="35" height="35" alt=""></div>
-                                <div>
-                                    <p class="mb-0 text-muted fs-15">NGÀY ĐĂNG TUYỂN</p>
-                                    <h6 class="mb-3 fw-bolder text-black text-uppercase fs-15">{{tinTuyenDungChiTiet.ngay_dang_tuyen|date('d/m/Y')}}</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 ">
-                            <div class="d-flex gap-3">
-                                <div>
-                                <img src="{{'assets/images/vi-tri-nghe.png'|theme}}" width="35" height="35"  alt=""></div>
-                                <div>
-                                    <p class="mb-0 text-muted fs-15">VỊ TRÍ</p>
-                                    <h6 class="mb-3 fw-bolder text-black  text-uppercase fs-15">{{tinTuyenDungChiTiet.thanh_phan}}</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 ">
-                            <div class="d-flex gap-3">
-                                <div>
-                                <img src="{{'assets/images/job-title.png'|theme}}" width="35" height="35" alt=""></div>
-                                <div>
-                                    <p class="mb-0 text-muted fs-15">NGÀNH NGHỀ</p>
-                                    <h6 class="mb-3 fw-bold text-black text-black text-uppercase fs-15">{{tinTuyenDungChiTiet.getNganhNgheOptions[tinTuyenDungChiTiet.nganh_nghe]}}</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 ">
-                            <div class="d-flex gap-3">
-                                <div>
-                                <img src="{{'assets/images/location.png'|theme}}" width="35" height="35" alt=""></div>
-                                <div>
-                                    <p class="mb-0 text-muted fs-15">NƠI LÀM VIỆC</p>
-                                    <h6 class="mb-3 text-black fw-bold text-uppercase fs-15">{{tinTuyenDungChiTiet.getNoiLamViecOptions[tinTuyenDungChiTiet.noi_lam_viec]}}</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        {% endif %}
                 </div>
             </div>
         </div>
-        <div class="row mt-4">
+        {# <div class="row mt-4">
             <div class="col-lg-12">
                 <h6 class="text-primary fw-bold text-uppercase">Phúc lợi</h6>
             </div>
-            {# {{ dd(tinTuyenDungChiTiet.phuc_loi) }} #}
             {% set dsCheDo = tinTuyenDungChiTiet.phuc_loi|split(',')%}
             {% for cheDo in dsCheDo %}
             <li class="col-sm-3 d-flex align-items-center mb-1" style="list-style:none">
@@ -230,24 +229,24 @@ function onStart()
                 <p class="fw-bold text-black fs-16 ps-10px  mb-0 ms-2  ">{{tinTuyenDungChiTiet.getPhucLoiOptions[cheDo]}}</p>
             </li>
             {% endfor %}
-        </div>
-        <div class="row mt-4">
+        </div> #}
+        {# <div class="row mt-4">
             <div class="col-lg-12 tuyen-dung-mo-ta-cong-viec">
                 <h6 class="text-primary fw-bold text-uppercase mb-1">Mô tả công việc</h6>
                  {{tinTuyenDungChiTiet.mo_ta_cong_viec|raw}}
             </div>
-        </div>
-        <div class="row-mt-4">
+        </div> #}
+        {# <div class="row-mt-4">
              <div class="col-lg-12 mt-1 tuyen-dung-yeu-cau-cong-viec">
                 <h6 class="text-primary fw-bold text-uppercase mb-1">Yêu cầu</h6>
                  {{tinTuyenDungChiTiet.yeu_cau|raw}}
             </div>
-        </div>
-        <div class="row mt-4">
+        </div> #}
+        {# <div class="row mt-4">
             <div class="col-lg-12  tuyen-dung-lien-he">
                 <h6 class="text-primary fw-bold text-uppercase mb-1">Liện hệ:</h6>
                 <p>{{tinTuyenDungChiTiet.lien_he}}</p>
             </div>
-        </div>
+        </div> #}
     </div>
 </section>
