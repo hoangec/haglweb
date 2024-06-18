@@ -15,17 +15,17 @@ handle = "HAGL\PageSettings"
                     <img src="{{pageSettings.imageCty|media}}" class="card-img-top w-350px" alt="hagl logo">
                     <div class="card-body">
                         <h3 class="fs-24 fw-700 text-primary text-uppercase mb-10px">{{pageSettings.tenCongTy}}</h3>
-                        <div class="fw-600"><i class="fa-solid fa-location-dot icon-small me-10px text-base-color"></i><a href="#" class="text-black">{{pageSettings.diaChi}}</a></div>
-                        <div class="fw-600"><i class="fa-solid fa-money-check-dollar icon-small me-10px text-base-color"></i><a href="#" class="text-black">{{"MST:"|_}} {{pageSettings.tax}}</a></div>
-                        <div class="fw-600"><i class="fa-solid fa-phone-volume icon-small me-10px text-base-color"></i><a class="text-black" href="tel:{{pageSettings.dienThoai}}">Tel: {{pageSettings.dienThoai}}</a></div>
+                        <div class="fw-600"><i class="fa-solid fa-location-dot icon-small me-10px text-base-color"></i><span class="text-black">{{pageSettings.diaChi}}</span></div>
+                        <div class="fw-600"><i class="fa-solid fa-money-check-dollar icon-small me-10px text-base-color"></i><span class="text-black">{{"MST:"|_}} {{pageSettings.tax}}</span></div>
+                        <div class="fw-600"><i class="fa-solid fa-phone-volume icon-small me-10px text-base-color"></i><span class="text-black">Tel: {{pageSettings.dienThoai}}</span></div>
                         {% if pageSettings.fax %}
-                        <div class="fw-600"><i class="feather icon-feather-printer icon-small me-10px text-base-color"></i><a class="text-black" href="tel:{{pageSettings.fax}}">Fax: {{pageSettings.fax}}</a></div>
+                        <div class="fw-600"><i class="feather icon-feather-printer icon-small me-10px text-base-color"></i><span class="text-black">Fax: {{pageSettings.fax}}</span></div>
                         {% endif %}
                         {% if pageSettings.email %}
-                        <div class="fw-600"><i class="ti-email icon-small me-10px text-base-color"></i><a class="text-black" href="mail:{{pageSettings.email}}">Email: {{pageSettings.email}}</a></div>
+                        <div class="fw-600"><i class="ti-email icon-small me-10px text-base-color"></i><span class="text-black">Email: {{pageSettings.email}}</span></div>
                         {% endif %}
                         {% if pageSettings.web%}
-                        <div class="fw-600"><i class="ti-world icon-small me-10px text-base-color"></i><a class="text-primary text-bolder" href="{{pageSettings.web}}">Website: {{pageSettings.web}}</a></div>
+                        <div class="fw-600"><i class="ti-world icon-small me-10px text-base-color"></i><span class="text-primary text-bolder" >Website: {{pageSettings.web}}</span></div>
                         {% endif %}
                     </div>
                     <div class="text-center pt-15px pb-15px border-top border-color-extra-medium-gray">
