@@ -14,7 +14,7 @@ modelClass = "Hoangvo\HaglTuyenDung\Models\TinTuyenDung"
 scope = "scopeTinTheoQuocGiaFilter"
 scopeValue = "{{ :quoc_gia }}"
 displayColumn = "tua_de"
-noRecordsMessage = "No records found"
+noRecordsMessage = "Không co thông tin tuyển dụng"
 detailsPage = "tuyen-dung/tuyen-dung"
 detailsKeyColumn = "slug"
 detailsUrlParameter = "slug"
@@ -114,7 +114,7 @@ sortDirection = "desc"
                         <div class="col-xxl-6 col-xl-6 col-lg-8 col-6 pe-5">
                             <div class="d-flex flex-column gap-1 justify-content-center h-100">
                                 <a href="{{ 'tuyen-dung/tuyen-dung'|page({slug: tinTuyenDung.slug})}}/#tuyen-dung-chi-tiet " class="text-decoration-none">
-                                    <h5 class="text-truncate-2-row  fw-bolder fs-20  mb-0 text-dark " >{{tinTuyenDung.tua_de}}</h5>
+                                    <h5 class="fw-bolder fs-20  mb-0 text-dark " >{{tinTuyenDung.tua_de}}</h5>
                                 </a>
                                 <div class="fs-16">Số lượng tuyển : <span class="fw-bold">{{tinTuyenDung.so_luong}}</span> người</div>
                             </div>
