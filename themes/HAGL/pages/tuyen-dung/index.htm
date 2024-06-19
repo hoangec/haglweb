@@ -23,6 +23,15 @@ pageNumber = "{{ :page }}"
 sortColumn = "ngay_dang_tuyen"
 sortDirection = "desc"
 ==
+<?php
+use Tailor\Models\GlobalRecord;
+function onStart()
+{
+    $this['zalo_ho_tro'] = GlobalRecord::findForGlobal('HAGL\TuyenDung\Settings')->zalo_ho_tro;
+    $this['facebook'] = GlobalRecord::findForGlobal('HAGL\TuyenDung\Settings')->facebook_ho_tro;
+}
+?>
+==
 {% set breadcrumbs = [
     {
         'name':'HAGL',
@@ -48,7 +57,7 @@ sortDirection = "desc"
 
 
 {% put pageSticks %}
-    {% partial 'app/page-stick'  %}
+    {% partial 'app/page-stick'  zalo_ho_tro = zalo_ho_tro facebook = facebook %}
 {% endput %}
 <section class="ps-10 pe-10" id="dsTinTuyenDung">
     <div class="container-fluid">

@@ -1,6 +1,10 @@
 [staticMenu topMenu]
 code = "topmenu"
+
 [sitePicker]
+
+[global pageSetting]
+handle = "HAGL\PageSettings"
 ==
 {# <header class="d-print-none">
     <div class="container-fluid hagl-header">
@@ -112,9 +116,9 @@ code = "topmenu"
                 <div class="container-fluid ps-20px pe-20px">
                     <div class="col-auto col-xl-2 col-lg-2 me-lg-0 me-auto">
                         <a class="navbar-brand" href="{{'index'|page}}">
-                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="default-logo">
-                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="alt-logo">
-                            <img src="{{'/assets/images/hagl.png'|theme}}" data-at2x="{{'assets/images/hagl.png'|theme}}" alt="" class="mobile-logo">
+                            <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="" class="default-logo">
+                            <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="" class="alt-logo">
+                            <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="" class="mobile-logo">
                         </a>
                     </div>
                     <div class="col-auto col-xl-9 col-lg-9 menu-order hagl-nav d-flex justify-content-between position-static">
