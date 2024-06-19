@@ -413,6 +413,7 @@ $(function () {
                 });
             } else {
                 // khoi tao cac table
+                $.fn.dataTable.moment('DD/MM/YYYY');
                 dataTable = $(strTableId).DataTable({
                     dom: "lrtip",
                     columnDefs: [
@@ -426,10 +427,10 @@ $(function () {
                             visible: false,
                             searchable: true,
                         },
-                        // {
-                        //     targets: [0,2],
-                        //     orderable: false,
-                        // },
+                        {
+                            targets: [0,2],
+                            orderable: false,
+                        },
                     ],
                     lengthChange: false,
                     paging: true,
