@@ -427,7 +427,7 @@ $(function () {
                             searchable: true,
                         },
                         {
-                            targets: [0, 3],
+                            targets: [0,2],
                             orderable: false,
                         },
                     ],
