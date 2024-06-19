@@ -426,10 +426,10 @@ $(function () {
                             visible: false,
                             searchable: true,
                         },
-                        {
-                            targets: [0,2],
-                            orderable: false,
-                        },
+                        // {
+                        //     targets: [0,2],
+                        //     orderable: false,
+                        // },
                     ],
                     lengthChange: false,
                     paging: true,
