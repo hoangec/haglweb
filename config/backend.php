@@ -153,6 +153,7 @@ return [
         'require_number' => false,
         'require_nonalpha' => false,
         'expire_days' => false,
+        'allow_reset' => false
     ],
 
     /*

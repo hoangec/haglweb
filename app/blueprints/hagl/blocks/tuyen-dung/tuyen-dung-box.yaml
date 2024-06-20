@@ -31,6 +31,6 @@ fields:
                     spanClass: col-6
                 noiDung:
                     label: Nội dung
-                    type: text
+                    type: textarea
                     span: row
                     spanClass: col-6
