@@ -6,16 +6,14 @@ title = "Sản phâm chuối HAGL"
 handle = "Hagl\SanPham\Chuoi"
 
 [genericForm formDangKySanPham]
-group = "Đăng ky sản phẩm chuối"
+group = "Đăng ký sản phẩm chuối"
 rules[name] = "required"
-rules[formSanPhamName] = "required"
 rules[email] = "required|email"
 rules[phone] = "required"
 rules_messages[name.required] = "Nhập họ tên liên hệ"
 rules_messages[email.required] = "Nhập địa chỉ email hợp lệ"
 rules_messages[email.email] = "Nhập địa chỉ email hợp lệ"
 rules_messages[phone.required] = "Nhập số điện thoại hợp lệ"
-rules_messages[formSanPhamName.required] = "Sản phẩm không để trống"
 messages_success = "Đã đăng ký thành công"
 messages_errors = "Có lỗi xảy ra trong quá trình đăng ký"
 mail_enabled = 1

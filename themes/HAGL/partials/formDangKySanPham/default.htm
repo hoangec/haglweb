@@ -9,12 +9,12 @@
                 <input type="hidden" readonly id="formThiTruongID" name="formThiTruongID" class="form-control p-5px">
             </div>
         </div>
-        {# <div class="col-12 col-md-6">
+        <div class="col-12 col-md-12">
             <div class="form-group d-flex justify-content-start flex-column align-items-start mb-10px">
                 <label class="text-primary fw-500 fs-16" for="formSanPhamName">{{"Sản phẩm quan tâm"|_}}</label>
-                <input type="text" readonly id="formSanPhamName" name="formSanPhamName" class="form-control p-5px">
+                <input type="text" readonly id="formSanPhamName" name="formSanPhamName" value="{{ __SELF__.property('group') }}" class="form-control p-5px">
             </div>
-        </div> #}
+        </div>
         <div class="col-12 col-md-4">
             <div class="form-group d-flex justify-content-start flex-column align-items-start mb-10px">
                 <label class="text-primary fw-500 fs-16" for="name">{{"Họ tên:"|_}}</label>
