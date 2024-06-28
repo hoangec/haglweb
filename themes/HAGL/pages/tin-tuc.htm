@@ -102,7 +102,7 @@ handle = "Blog\Post"
                 <h4 class="text-primary fw-600" data-fancy-text='{ "opacity": [0, 1], "translateY": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["{{'Bài viết liên quan'|_}}"], "duration": 400, "delay": 0, "speed": 20, "easing": "easeOutQuad" }'></h4>
             </div>
         </div>
-        <div class="row row-cols-1 md-row-cols-4"  data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+        <div class="row sm-row-cols-1 lg-row-cols-4 gy-3"  data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
             {% for tinTuc in dsTinTheoCatelogies %}
                 {% partial 'elements/tin-tuc-card-basic' tinTuc=tinTuc%}
             {% endfor %}
