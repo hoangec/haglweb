@@ -27,8 +27,9 @@ danhMucId = {{block.dsDanhMuc.id}}
                     <div class="col-md-6 text-start">{{file.ten}}</div>
                     <div class="col-md-2 text-start"><span>{{file.danh_muc.ten}}</span></div>
                     <div class="col-md-2  d-flex justify-content-start align-items-center">
+                        {% set fileUrl = file.file.url ? file.file.url : file.attach_file|media %}
                         {% if file.danh_muc.loai_danh_muc == 'nam-catalog'%}
-                            <a target="_blank" href="{{file.file.url}}" />
+                            <a target="_blank" href="{{fileUrl}}" />
                                 <span class="badge rounded-pill bg-base-color fs-12 ">Trang đơn<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
                             </a>
                             {% if file.file2 %}
@@ -37,7 +38,7 @@ danhMucId = {{block.dsDanhMuc.id}}
                             </a>
                             {% endif %}
                         {% else %}
-                           <a target="_blank" href="{{file.file.url}}" />
+                           <a target="_blank" href="{{fileUrl}}" />
                                 <span class="badge rounded-pill bg-base-color fs-12 ">{{ file.ngay_dang|date('d/m/Y')}}<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
                             </a>
                             {% if file.file2 %}
