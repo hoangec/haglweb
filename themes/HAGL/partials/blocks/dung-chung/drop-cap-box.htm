@@ -1,0 +1,44 @@
+{% set chu_cai_dau = block.noiDung|slice(0, 1) %}
+{% set noi_dung_con_lai = block.noiDung|slice(1) %}
+{% if block.image != null %}
+    <section class="bg-very-light-gray">
+        <div class="container">
+            <!-- start dropcaps item -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-6 sm-mb-30px">
+                    <img src="https://via.placeholder.com/600x505" alt="" class="w-100 border-radius-6px">
+                </div>
+                <div class="col-12 col-lg-5 col-md-6 offset-lg-1 dropcap-style-01 last-paragraph-no-margin">
+                    <p><span class="first-letter text-dark-gray fw-700">{{chu_cai_dau}}</span>{{noi_dung_con_lai}}</p>
+                </div>
+            </div>
+            <!-- end dropcaps item -->
+        </div>
+    </section>
+{% else %}
+    <section class="pb-0 pt-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 dropcap-style-01" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <p class="mb-6"><span class="alt-font first-letter text-dark-gray">{{chu_cai_dau}}</span>{{noi_dung_con_lai}}</p>
+                        <div class="row">
+                            <div class="col-md-6 sm-mb-30px">
+                                <div class="border-radius-5px border-1 border border-color-light-medium-gray h-100 pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin">
+                                    <span class="fw-500 text-dark-gray mb-5px d-inline-block">A balanced diet is a cookie in hand</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="border-radius-5px border-1 border border-color-light-medium-gray h-100 pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin">
+                                    <span class="fw-500 text-dark-gray mb-5px d-inline-block">Nature is wears the bright colors</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- end section -->
+{% endif %}
+

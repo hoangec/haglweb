@@ -1,0 +1,41 @@
+url = "/thu-moi/:slug"
+layout = "thu-moi-layout"
+title = "Thư mời"
+meta_title = "Thư mời tham gia sự kiện HAGL"
+meta_description = "Thư mời tham gia sự kiện HAGL"
+
+[section pageThuMoi]
+handle = "Hagl\ThuMoi"
+
+[genericForm formThuMoi]
+group = "Đăng ký tham gia sự kiện"
+rules[name] = "required"
+rules[email] = "required|email"
+rules[phone] = "required"
+rules_messages[name] = "Xin vùi lòng nhập họ tên"
+rules_messages[email] = "Nhập một địa chỉ mail hợp lệ"
+rules_messages[phone] = "Nhập số điện thoại hợp lệ"
+messages_success = "Thông tin đăng ký thành công !"
+messages_errors = "Thông tin đăng ký không hợp lệ !"
+messages_partial = "formThuMoi/formDangKyFlashMessages"
+reset_form = 0
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "d-m-Y"
+==
+{# {% partial 'app/page-title' pageBanner = pageThuMoi.pageBanner type = "parallax-bg" %} #}
+{% framework %}
+{% framework extras %}
+{% for block in pageThuMoi.blocks %}
+    {% set blockType = block.type|split('_') %}
+    {% if blockType[0] == 'dung-chung' %}
+        {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
+    {% else %}
+        {% partial 'blocks/thu-moi/' ~ str_slug(block.type) block=block %}
+    {% endif %}
+{% endfor %}

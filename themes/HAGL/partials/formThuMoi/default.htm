@@ -1,0 +1,31 @@
+<form action="{{"thu-moi"|page}}" method="post" id="formThuMoi" class="row contact-form-style-02" data-request="{{ __SELF__ }}::onFormSubmit">
+    {{ form_token() }}
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+    <div class="col-md-6 mb-30px">
+        <input class="input-name border-radius-4px form-control required" type="text" name="name" placeholder="{{'Họ và tên *'|_}}">
+    </div>
+    <div class="col-md-6 mb-30px">
+        <input class="border-radius-4px form-control required" type="email" name="email" placeholder="{{'Email *'|_}}">
+    </div>
+    <div class="col-md-6 mb-30px">
+        <input class="input-name border-radius-4px form-control required" type="tel" name="phone" placeholder="{{'Số điện thoại *'|_}}">
+    </div>
+    <div class="col-md-6 mb-30px">
+        <input class="border-radius-4px form-control " type="text" name="company" placeholder="{{'Công ty'|_}}">
+    </div>
+    <div class="col-md-6 mb-30px">
+        <input class="border-radius-4px form-control " type="text" name="nation" placeholder="{{'Quốc gia'|_}}">
+    </div>
+    <div class="col-md-12 mb-30px">
+         <input class="border-radius-4px form-control " type="text" name="address" placeholder="{{'Địa chỉ'|_}}">
+    </div>
+    <div class="col-12 col-md-12 mb-10px justify-content-center d-flex ">
+        <div class="form-group ">
+            {% partial '@recaptcha' %}
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-small btn-base-color btn-box-shadow btn-round-edge primary-font loading fw-800" type="submit">{{"Xác nhận tham dự"|_}}</button>
+        {# <button class="btn btn-base-color btn-small btn-round-edge fw-900 sumbit" type="submit">{{"Xác nhận tham dự"|_}}</button> #}
+    </div>
+</form>

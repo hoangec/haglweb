@@ -44,3 +44,28 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\DungChung\FileTheoDanhMucBox
+            dung-chung_files-danh-muc-cong-bo-tt:
+                name: Block hiển thị danh sach file theo danh mục công bố thông tin
+                description: Block đặc biệt dùng hiển thị danh sách file cho mục công bố thông tin bao gồm năm và chia nhỏ thanh kỳ họp
+                icon: icon-text-image
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section_co_dong:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\FileTheoDanhMucBox

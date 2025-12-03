@@ -7,10 +7,10 @@
         <tr>
             <th class="align-middle text-start text-nowrap" data-priority="1">Văn bản</th>
             <th class="align-middle text-start" >Năm</th>
-            <th class="align-middle text-center" data-priority="2">Quý I</th>
-            <th class="align-middle text-center" data-priority="3">Quý II/<br />Bán niên</th>
-            <th class="align-middle text-center text-nowrap" data-priority="5">Quý III</th>
-            <th class="align-middle text-center" data-priority="5">Quý IV/<br>Cả năm</th>
+            <th class="align-middle text-center w-150px" data-priority="2">Quý I</th>
+            <th class="align-middle text-center w-150px" data-priority="3">Quý II/<br />Bán niên</th>
+            <th class="align-middle text-center w-150px text-nowrap" data-priority="5">Quý III</th>
+            <th class="align-middle text-center w-150px" data-priority="5">Quý IV/<br>Cả năm</th>
         </tr>
     </thead>
     <tbody>
@@ -54,10 +54,10 @@
                 <tr>
                     <td class="text-start">{{ tenFile }}</td>
                     <td class="text-center">{{ namDuLieu }}</td>
-                    <td class="text-center">{{ duLieuQuy1|raw }}</td>
-                    <td class="text-center">{{ duLieuQuy2|raw }}</td>
-                    <td class="text-center">{{ duLieuQuy3|raw }}</td>
-                    <td class="text-center">{{ duLieuQuy4|raw }}</td>
+                    <td class="text-center w-150px">{{ duLieuQuy1|raw }}</td>
+                    <td class="text-center w-150px">{{ duLieuQuy2|raw }}</td>
+                    <td class="text-center w-150px">{{ duLieuQuy3|raw }}</td>
+                    <td class="text-center w-150px">{{ duLieuQuy4|raw }}</td>
                 </tr>
                 {% set namDuLieu = ''%}
                 {% set duLieuQuy1 = ''%}

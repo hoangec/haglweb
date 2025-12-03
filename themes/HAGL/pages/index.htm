@@ -15,7 +15,14 @@ order = "created_at asc"
 [section haglHomePage]
 handle = "Hagl\HomePage"
 ==
-{% partial 'app/page-title' pageBanner = haglHomePage.pageBanner type = "gallery-bg" %}
+{# {% partial 'app/page-title' pageBanner = haglHomePage.pageBanner type = "gallery-bg" %} #}
+{% if haglHomePage.pageBanner.dsSider is not empty %}
+    {% set banner_type = "prallax-scroll-video" %}
+{% else %}
+    {% set banner_type = "gallery-bg" %}
+{% endif %}
+{# <h1>{{banner_type}}</h1> #}
+{% partial 'app/page-title' pageBanner = haglHomePage.pageBanner type = banner_type %}
 {# {% for block in haglHomePage.blocks %}
    {% partial 'blocks/' ~ str_slug(block.type) block=block %}
 {% endfor %} #}

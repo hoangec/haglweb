@@ -1,0 +1,44 @@
+<section class="section-dark p-0">
+    <div class="swiper lg-no-parallax full-screen md-h-600px sm-h-500px ipad-top-space-margin swiper-light-pagination" data-slider-options='{ "slidesPerView": 1, "loop": true, "parallax": true, "speed": 1000, "pagination": { "el": ".swiper-pagination-bullets", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 10000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
+        <div class="swiper-wrapper">
+            {% for slide in banner.dsSider %}
+            <!-- start slider item -->
+            <div class="swiper-slide overflow-hidden">
+                <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('{{slide.image|media}}');">
+                    <div class="container h-100" data-swiper-parallax="-500">
+                        <div class="row align-items-{{ slide.ndung_tua_de is empty ? 'end' : 'center' }} justify-content-center h-100 text-center">
+                            <div class="col-xl-7 col-lg-10 col-md-10 position-relative text-white">
+                                <span class=" fs-50 sm-fs-40 fw-700 text-shadow-extra-large ls-minus-2px mb-45px sm-mb-30px xs-mb-20px d-inline-block swiper-parallax-fancy-text" data-fancy-text='{ "effect": "rotate", "string": ["{{slide.ndung_tua_de}}"] }'></span>
+                                <div data-anime='{ "el": "childs", "translateY": [80, 0], "opacity": [0,1], "duration": 600, "delay": 1000, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                    {% if slide.la_lien_ket_video  %}
+                                    <a href="{{slide.link_lien_ket}}" class="{{ slide.ndung_tua_de is empty ? 'mb-15 sm-mb-17' : 'sm-mt-20px' }} text-center d-inline-flex  rounded-circle video-icon-box video-icon-medium popup-vimeo">
+                                        <span class="video-icon bg-base-color me-10px">
+                                            <i class="fa-solid fa-play text-white"></i>
+                                            <span class="video-icon-sonar">
+                                                <span class="video-icon-sonar-afr border border-2 border-color-base-color"></span>
+                                            </span>
+                                        </span>
+                                        <span class="text-white fs-20 sm-fs-20 fw-bold">{{slide.ndung_nut_lien_ket}}</span>
+                                    </a>
+                                    {% else %}
+                                        <a href="{{slide.link_lien_ket}}" target="_blank" class="btn btn-medium btn-rounded with-rounded btn-base-color btn-box-shadow box-shadow-extra-large {{ slide.ndung_tua_de is empty ? 'mb-15 sm-mb-17' : 'mt-20px sm-mt-0' }}">{{slide.ndung_nut_lien_ket}}<span class="bg-white text-base-color"><i class="fas fa-arrow-right"></i></span></a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {# <div class="position-absolute bottom-minus-45px" data-anime='{ "translateY": [150, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'><span class="alt-font number text-base-color opacity-3 fs-190 fw-600 ls-minus-5px">01</span></div> #}
+                    </div>
+                </div>
+            </div>
+            <!-- end slider item -->
+            {% endfor %}
+        </div>
+        <!-- start slider pagination -->
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
+        <!-- end slider pagination -->
+        <!-- start slider navigation -->
+        <!--<div class="slider-one-slide-prev-1 icon-extra-large text-white swiper-button-prev slider-navigation-style-06 d-none d-sm-inline-block"><i class="line-icon-Arrow-OutLeft"></i></div>
+            <div class="slider-one-slide-next-1 icon-extra-large text-white swiper-button-next slider-navigation-style-06 d-none d-sm-inline-block"><i class="line-icon-Arrow-OutRight"></i></div>-->
+        <!-- end slider navigation -->
+    </div>
+</section>

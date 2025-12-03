@@ -1,14 +1,19 @@
 
 /* Datatable */
-table.dataTable[table-type='table-quy'] td:nth-child(1) {
-    width: 40%;
-
+table.dataTable[table-type=table-quy] td:nth-child(1) {
+  width: 40%;
 }
 
-table.dataTable[table-type='table-quy'] th:nth-child(1) {
-    width: 40%;
-
+table.dataTable[table-type=table-quy] th:nth-child(1) {
+  width: 40%;
 }
+
+@media (max-width: 768px) {
+  table.dataTable[table-type=table-quy] th:nth-child(1) {
+    width: 40%;
+  }
+}
+
 
 /* Thiết lập chiều rộng cố định cho cột đầu tiên khi ở chế độ responsive */
 // @media (max-width: 768px) {

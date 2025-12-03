@@ -1,0 +1,35 @@
+ {# <div class="alert alert-success alert-dismissable bg-white">
+    <a href="#" class="close" data-bs-dismiss="alert" aria-label="close"><i class="feather icon-feather-x-circle"></i></a>
+    <strong>Success!</strong> Indicates a successful or positive action.
+</div> #}
+<div class="alert alert-{{ type }} alert-dismissible bg-white" role="alert">
+    <a href="#" class="close" data-bs-dismiss="alert" aria-label="close"><i class="feather icon-feather-x-circle"></i></a>
+    {% if type == "success" %}
+        {% if content %}
+            <strong>{{ content }}</strong>
+        {% endif %}
+    {% else %}
+        {% if title %}
+            <p class="fw-600">{{ title }}</p>
+        {% endif %}
+        {% if content %}
+            <p>{{ content }}</p>
+        {% endif %}
+        {% if list %}
+            <ul class="list-style-04  fw-500" >
+            {% for item in list %}
+                <li>{{ item }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+</div>
+
+{% if jscript %}
+    <script>
+        {% if errors %}
+            var errors = JSON.parse('{{ errors|raw }}');
+        {% endif %}
+        {{ jscript|raw }}
+    </script>
+{% endif %}

@@ -1,0 +1,69 @@
+[staticMenu topMenu]
+code = "topmenu"
+
+[sitePicker]
+
+[global pageSetting]
+handle = "HAGL\PageSettings"
+==
+
+<header class="pb-50px">
+    <!-- start navigation -->
+    {# <nav class="navbar navbar-expand-lg header-light bg-white  center-logo disable-fixed">
+        <div class="container-fluid">
+            <div class="col-auto col-lg-2 menu-logo">
+                <a class="navbar-brand py-0" href="{{'index'|page}}">
+                    <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="" class="default-logo">
+                    <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="" class="alt-logo">
+                    <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="" class="mobile-logo">
+                </a>
+            </div>
+            <div class="col-auto col-lg-8 menu-order">
+                <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                </div>
+            </div>
+            <div class="col-auto col-lg-2 text-end">
+                <div class="header-icon">
+                    <div class="header-button">
+                        <a href="demo-pizza-parlor-contact.html" class="btn btn-medium btn-rounded btn-black-transparent-light text-white btn-hover-animation-switch">
+                            <span>
+                                <span class="btn-text">Order online</span>
+                                <span class="btn-icon"><i class="feather icon-feather-shopping-bag"></i></span>
+                                <span class="btn-icon"><i class="feather icon-feather-shopping-bag"></i></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> #}
+    <!-- end navigation -->
+
+    <nav class="navbar navbar-light bg-light">
+      <div class="container d-flex justify-content-center align-items-center">
+        <a class="navbar-brand " href="{{'index'|page}}">
+            <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="Logo" class="default-logo img-fluid" >
+            <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="" class="alt-logo">
+            <img src="{{pageSetting.websiteLogo|media}}" data-at2x="{{pageSetting.websiteLogo|media}}" alt="" class="mobile-logo">
+        </a>
+        <div class="header-language-icon icon ms-30px" >
+            <div class="header-language dropdown">
+                 {% if this.site.code == "vietnam" %}
+                        {% set diffSiteSelected = sitePicker.sites.where('code','english').first() %}
+                        <a href="{{diffSiteSelected.url}}" title="English"><span class="icon-country"><img class="w-20px" src="{{'assets/images/english-flag.svg'|theme}}" alt=""></span></a>
+                {% endif %}
+                  {% if this.site.code == "english" %}
+                        {% set diffSiteSelected = sitePicker.sites.where('code','vietnam').first() %}
+                        <a href="{{diffSiteSelected.url}}" title="VietNam"><span class="icon-country"><img class="w-20px" src="{{'assets/images/vn.svg'|theme}}" alt=""></span></a>
+                {% endif %}
+            </div>
+          </div>
+      </div>
+    </nav>
+</header>

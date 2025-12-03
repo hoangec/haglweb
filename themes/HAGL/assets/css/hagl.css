@@ -386,6 +386,11 @@ table.dataTable[table-type=table-quy] th:nth-child(1) {
   width: 40%;
 }
 
+@media (max-width: 768px) {
+  table.dataTable[table-type=table-quy] th:nth-child(1) {
+    width: 40%;
+  }
+}
 /* Thiết lập chiều rộng cố định cho cột đầu tiên khi ở chế độ responsive */
 .px200 {
   width: 200px;

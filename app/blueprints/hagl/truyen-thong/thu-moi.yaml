@@ -1,0 +1,21 @@
+uuid: 30e7a17f-5bba-4a28-8eab-9ddee3fe4f85
+handle: Hagl\ThuMoi
+type: single
+name: Trang thư mời
+multisite: true
+
+navigation:
+    label: Thư mời
+    parent: Hagl\HomePage
+    icon: icon-user
+    order: 63
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    blockBuilder:
+        type: mixin
+        source:  Hagl\TruyenThong\ThuMoiBlockBuilder
+

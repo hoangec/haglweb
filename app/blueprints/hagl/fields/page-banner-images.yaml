@@ -16,8 +16,50 @@ fields:
                 noiDung:
                     label: Nội dung
                     type: textarea
+                show_link_btn:
+                    label: Su dung lien ket
+                    type: switch
+                noi_dung_btn:
+                    label: Noi dung nut lien ket
+                    type: text
+                link_lien_ket:
+                    label: Link
+                    type: text
                 images:
                     label: Danh sách ảnh
                     type: mediafinder
                     mode: image
                     maxItems: 5
+                _section2:
+                    type: section
+                    label: Sử dụng hiệu ứng slider có liên kết từng slide
+                    comment: Tạo những banner riêng lẽ mỗi slide sẽ được liên kết mở ra nội dụng là video hoặc một liên kết đén trang web khác.
+                dsSider:
+                    label: Danh sách slider
+                    type: repeater
+                    itemsExpanded: false
+                    form:
+                        fields:
+                            image:
+                                label: Ảnh nền
+                                type: mediafinder
+                                mode: image
+                                maxItems: 1
+                                span: row
+                                spanClass: col-md-6
+                                size: small
+                            link_lien_ket:
+                                label: Link liên kết
+                                type: text
+                                span: row
+                                spanClass: col-md-6
+                            la_lien_ket_video:
+                                label: Liên kết video
+                                type: switch
+                            ndung_nut_lien_ket:
+                                label: Nội dung nút liên kết
+                                type: text      
+                            ndung_tua_de:
+                                label: Nội dung tựa đề
+                                type: textarea
+                           

@@ -380,7 +380,7 @@ $(function () {
             var dataTable = null;
             if (tableType == "table-quy") {
                 dataTable = $(strTableId).DataTable({
-                    responsive: true,
+                    responsive: false,
                     rowGroup: {
                         dataSrc: 1,
                     },

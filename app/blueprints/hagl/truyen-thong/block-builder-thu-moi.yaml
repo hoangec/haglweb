@@ -1,0 +1,92 @@
+uuid: d3f0ebc3-25ef-463e-8686-c63d0f76ab25
+handle: Hagl\TruyenThong\ThuMoiBlockBuilder
+type: mixin
+name: Hagl Block Builder cho page thư mời
+
+fields:
+    blocks:
+        label: Blocks được thêm cho thư mời
+        type: repeater
+        displayMode: builder
+        span: adaptive
+        tab: Nội dung trang
+        groups:
+            dung-chung_video-box-style1:
+                name: Block hiển thị nội dung video style 1
+                description: Block hiển thị nội dung video với hình nền
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\VideoBoxStyle1
+            dung-chung_video-box-style2:
+                name: Block hiển thị nội dung video style 2
+                description: Block hiển thị nội dung video và chữ
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\VideoBoxStyle1
+            dung-chung_image-box-style1:
+                name: Block hiển thị ảnh và nội dung style 1
+                description: Block hiển thị ảnh và nội dung style 1
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+            dung-chung_image-box-style7:
+                name: Block hiển thị ảnh và nội dung style 7
+                description: Block hiển thị ảnh hết chiều rộng
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+            dung-chung_drop-cap-box:
+                name: Block hiển thị chữ kiểu dropcap
+                description: Block hiển thị chữ kiểu dropcap
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ImageBox
+            dung-chung_blockquote:
+                name: Block quote hiển thị trích dẫn câu nói
+                description: Block quote hiển thị trích dẫn câu nói
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\Quote
+            dung-chung_noi-dung-van-ban:
+                name: Block hiển thị nội dung văn bản
+                description: Block hiển thị nội dung văn bản
+                icon: icon-text-image
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\NoiDungVanBan
+            dung-chung_shape-divider:
+                name: Block hiển thị dấu phân cách mỗi section
+                description: Block hiển thị dấu phân cách mỗi section
+                icon: icon-text-h1
+                fields:
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\DungChung\ShapeDivider
+            dang-ky-thu-moi:
+                name: Block hiển thị section form đăng ký tham gia sự kiện
+                description: Block hiển thị section form đăng ký tham gia sự kiện
+                icon: octo-icon-picture
+                fields:
+                    tuaDe:
+                        label: Tựa đề
+                        type: text
+                        span: row
+                        spanClass: col-6
+                    noiDung:
+                        label: Nội dung
+                        type: text
+                        span: row
+                        spanClass: col-6

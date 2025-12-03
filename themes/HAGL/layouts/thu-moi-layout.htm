@@ -26,10 +26,8 @@
 
 </head>
     <body data-mobile-nav-style="classic"  class="app {{ 'layout-'~this.layout.id }} {{ 'page-'~this.page.id }}" lang="{{this.site.code}}">
-        {# <div class="page-loader"></div> #}
-        {% partial 'app/header' %}
+        {% partial 'app/header-thu-moi' %}
         {% partial 'app/content' %}
-        {% partial 'app/footer' %}
         {% partial 'app/scroll-top'%}
         {% placeholder pageSticks %}
         <!-- Template Javascript -->
@@ -40,3 +38,5 @@
         <script type="text/javascript" src="{{'assets/js/hagl.js'|theme}}"></script>
      </body>
 </html>
+
+

@@ -1,0 +1,9 @@
+uuid: 11f11b23-d78a-4018-b7b7-0fadbf00c101
+handle: Hagl\Blocks\NoiDungVanBan
+type: mixin
+name: Hiển thị nội dung văn bản
+
+fields:
+    noiDung:
+        label: Nội dung
+        type: richeditor

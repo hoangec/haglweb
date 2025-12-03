@@ -1,18 +1,31 @@
 <section class="page-title-gallery-background position-relative d-print-none pt-20">
     {# <div class="opacity-extra-medium bg-dark-gray"></div> #}
     <div class="container">
-        <div class="row align-items-end justify-content-end small-screen">
+        {# <div class="row align-items-end justify-content-end small-screen">
             <div class="col-xl-12 col-lg-12 col-sm-12 position-relative text-start hagl-page-titles ">
                 <h1 class="mb-15px text-white ">{{banner.tuaDe}}</h1>
                 <p class="mb-0 text-white ">{{banner.noiDung}}</p>
+                {% if banner.show_link_btn %}
+                    <div class="col btn-dual text-center mt-50px">
+                        <a href="{{banner.link_lien_ket}}" target="_blank" class="btn btn-extra-large fw-600 btn-rounded with-rounded btn-white btn-box-shadow d-table d-lg-inline-block lg-mb-15px md-mx-auto">{{banner.noi_dung_btn}}<span class="bg-base-color text-white"><i class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                {% endif %}
             </div>
-            {# <div class="down-section text-center">
+            <div class="down-section text-center">
                 <a href="#down-section" class="section-link">
                     <div class="d-flex justify-content-center align-items-center mx-auto rounded-circle h-55px w-55px fs-22 text-dark-gray bg-white">
                         <i class="feather icon-feather-arrow-down"></i>
                     </div>
                 </a>
-            </div> #}
+            </div>
+        </div> #}
+        <div class="row align-items-center justify-content-center h-100 text-center">
+            <div class="col-xl-7 col-lg-10 col-md-10 position-relative text-white">
+                <span class=" fs-70 xs-fs-60 fw-700 text-shadow-extra-large ls-minus-2px mb-45px sm-mb-30px xs-mb-20px d-inline-block swiper-parallax-fancy-text" data-fancy-text='{ "effect": "rotate", "string": ["{{banner.noiDung}}"] }'></span>
+                <div data-anime='{ "el": "childs", "translateY": [80, 0], "opacity": [0,1], "duration": 600, "delay": 1000, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <a href="{{banner.link_lien_ket}}" target="_blank" class="btn btn-extra-large btn-rounded with-rounded btn-base-color btn-box-shadow box-shadow-extra-large mt-20px sm-mt-0">{{banner.noi_dung_btn}}<span class="bg-white text-base-color"><i class="fas fa-arrow-right"></i></span></a>
+                </div>
+            </div>
         </div>
     </div>
 
