@@ -6,17 +6,17 @@
              <button class="fw-500 ky-btn {{dmCap2.id == danhMucCap2Active.id ? 'active'}}"
                 data-request="onChangeDanhMucCap2"
                 data-request-data="id: {{ dmCap2.id }}"
-                data-request-update="'elements/ajax-co-dong-dhdcd-table': '#dhdcd-files-table'"
+                data-request-update="'elements/ajax-co-dong-dhdcd-table': '#dhdcd-files-table-{{uid}}'"
             >{{dmCap2.nam_du_lieu}}</button>
         {% endfor %}
     </div>
     {%endif%}
 </div>
 
-<div id="dhdcd-files-table" class="{{ danhSachFile is not empty ? 'd-display' : 'd-none'}} bg-third-color border-radius-10px xs-p-10px p-20px lg-p-25px xxl-p-30px">
+<div id="dhdcd-files-table-{{uid}}" class="{{ danhSachFile is not empty ? 'd-display' : 'd-none'}} bg-third-color border-radius-10px xs-p-10px p-20px lg-p-25px xxl-p-30px">
      {% partial 'elements/ajax-co-dong-dhdcd-table' danhSachFile = danhSachFile %}
 </div>
-<div class="co-dong-empty-state {{danhSachFile is empty ? 'd-display' : 'd-none'}} " id="empty-state">
+<div class="co-dong-empty-state {{danhSachFile is empty ? 'd-display' : 'd-none'}} ">
     <i class="bi bi-folder-x"></i>
-    <h5>Không có dữ liệu</h5>
+    <p class="fw-30">Không có dữ liệu</p>
 </div>
