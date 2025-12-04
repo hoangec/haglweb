@@ -1275,3 +1275,252 @@ input[name=table-tim-kiem-input] {
   max-height: 500px;
   overflow-y: auto;
 }
+
+/*! css cho hien thi danh muc file dai hoi dong co dong */
+.year-slider-container {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.year-slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+/* Nút mũi tên bên trái */
+.arrow-btn-left {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid var(--arrow-color);
+  background-color: white;
+  color: var(--arrow-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Nút mũi tên bên phải */
+.arrow-btn-right {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid var(--arrow-color);
+  background-color: white;
+  color: var(--arrow-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-btn-left:hover,
+.arrow-btn-right:hover {
+  background-color: var(--arrow-hover-color);
+  border-color: var(--arrow-hover-color);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.2);
+}
+
+.arrow-btn-left:active,
+.arrow-btn-right:active {
+  transform: scale(0.95);
+}
+
+.arrow-btn-left.disabled,
+.arrow-btn-right.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* Slider chính ở giữa */
+.year-slider-main {
+  flex: 1;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient fade ở hai bên slider */
+/* Danh sách năm */
+.year-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 15px 20px;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Ẩn scrollbar */
+.year-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.year-btn {
+  flex: 0 0 auto;
+}
+
+.year-btn button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 50px;
+  border: 2px solid var(--base-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 110px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.year-btn button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.year-btn button.active {
+  background-color: var(--base-color);
+  color: white;
+  box-shadow: 0 4px 16px rgba(25, 135, 84, 0.25);
+  transform: scale(1.05);
+}
+
+/* Scroll indicator */
+.co-dong-scroll-indicator {
+  height: 4px;
+  background-color: var(--medium-gray);
+  border-radius: 2px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.co-dong-scroll-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--light-gray) 0%, var(--base-color) 100%);
+  width: 0%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .year-slider-wrapper {
+    gap: 10px;
+  }
+  .year-slider-main {
+    max-width: 600px;
+  }
+  .year-btn button {
+    min-width: 100px;
+    padding: 9px 20px;
+  }
+  .arrow-btn-left,
+  .arrow-btn-right {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 768px) {
+  .year-slider-wrapper {
+    gap: 8px;
+  }
+  .year-slider-main {
+    max-width: 450px;
+  }
+  .year-btn button {
+    min-width: 90px;
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+  .arrow-btn-left,
+  .arrow-btn-right {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .year-slider {
+    padding: 12px 15px;
+    gap: 8px;
+  }
+}
+@media (max-width: 576px) {
+  .year-slider-main {
+    max-width: 320px;
+  }
+  .year-btn button {
+    min-width: 85px;
+    padding: 7px 14px;
+    font-size: 1rem;
+  }
+  .arrow-btn-left,
+  .arrow-btn-right {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  .year-slider {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+}
+/* Phần nội dung còn lại */
+.ky-btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 2px solid var(--base-color);
+  transition: all 0.3s ease;
+}
+
+.ky-btn:hover,
+.ky-btn.active {
+  border-color: var(--base-color);
+  background-color: var(--base-color);
+  color: white;
+}
+
+.co-dong-table {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.co-dong-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+.co-dong-empty-state i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #dee2e6;
+}

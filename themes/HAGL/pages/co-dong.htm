@@ -13,6 +13,34 @@ js[] = "datatables/moment.min.js"
 js[] = "datatables/datetime-moment.js"
 css[] = "datatables/datatables.min.css"
 ==
+<?php
+function onChangeDanhMuc()
+{
+    $id = post('id');
+
+    $danhMucCap1 = \Hoangvo\Files\Models\DanhMuc::find($id);
+    $dsDanhMucCap2 = $danhMucCap1->ds_danh_muc_con->sortByDesc('thu_tu');
+    $danhMucCap2Active = $dsDanhMucCap2->first();
+    $danhSachFile = $danhMucCap2Active ? $danhMucCap2Active->getAllFiles() : $danhMucCap1->getAllFiles();
+    $this['danhMucCap1'] = $danhMucCap1;
+    $this['dsDanhMucCap2'] = $dsDanhMucCap2;
+    $this['danhMucCap2Active'] = $danhMucCap2Active;
+    $this['danhSachFile'] = $danhSachFile;
+}
+function onChangeDanhMucCap2()
+{
+    $id = post('id');
+
+    $danhMuc = \Hoangvo\Files\Models\DanhMuc::find($id);
+
+    // return [
+    //    'danhMuc' => $danhMuc
+    // ];
+    $this['danhSachFile'] = $danhMuc->getAllFiles();
+}
+?>
+==
+{% framework extras %}
 {% set breadcrumbs = [
     {
         'name':'HAGL',

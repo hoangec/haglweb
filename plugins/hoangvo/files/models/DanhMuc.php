@@ -79,6 +79,11 @@ class DanhMuc extends Model
         return $dsFiles->sortByDesc('ngay_dang');
     }
 
+    public function getLatestDanhMucCon()
+    {
+        return $this->ds_danh_muc_con()->orderBy('thu_tu', 'desc')->first();
+    }
+
     public function getAllFilesTheoQuy() {
         // dd($this->files->groupBy('ten'));
         // $dsFiles = new \October\Rain\Database\Collection();

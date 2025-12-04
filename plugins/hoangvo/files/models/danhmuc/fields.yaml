@@ -40,3 +40,11 @@ fields:
             extension: auto
         span: auto
         type: mediafinder
+    nam_du_lieu:
+        label: 'Năm dữ liệu'
+        span: auto
+        trigger:
+            action: show
+            field: loai_danh_muc
+            condition: 'value[nam]'
+        type: text

@@ -29,3 +29,5 @@ nbproject
 /vendor
 /plugins/lzaplata
 /plugins/rainlab
+/storage
+/tests

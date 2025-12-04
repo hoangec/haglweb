@@ -44,9 +44,9 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\DungChung\FileTheoDanhMucBox
-            dung-chung_files-danh-muc-cong-bo-tt:
-                name: Block hiển thị danh sach file theo danh mục công bố thông tin
-                description: Block đặc biệt dùng hiển thị danh sách file cho mục công bố thông tin bao gồm năm và chia nhỏ thanh kỳ họp
+            dung-chung_files-danh-muc-dhdcd:
+                name: Block hiển thị danh sach file theo danh mục ĐHĐ CĐ
+                description: Block đặc biệt dùng hiển thị danh sách file cho mục Đại Hội Đồng CĐ
                 icon: icon-text-image
                 fields:
                     content_group:

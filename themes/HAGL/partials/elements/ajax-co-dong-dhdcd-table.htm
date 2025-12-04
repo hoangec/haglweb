@@ -1,0 +1,20 @@
+
+ <table class="table co-dong-table table-hover table-striped" style="width:100%;">
+    <thead class="table-light">
+        <th class="align-middle text-start">{{'Văn bản'|_}}</th>
+        <th class="align-middle text-end">{{'Ngày phát hành'|_}}</th>
+    </thead>
+    <tbody>
+        {% for file in danhSachFile %}
+            <tr>
+                <td class="text-start">{{ file.ten }}</td>
+                <td class="text-end">
+                    {% set fileUrl = file.file.url ? file.file.url : file.attach_file|media %}
+                    <a target="_blank" href="{{fileUrl}}" />
+                        <span class="badge rounded-pill bg-base-color fs-12 ">{{ file.ngay_dang|date('d/m/Y')}}<i class="ms-5px feather icon-feather-download align-middle icon-small "></i></span>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

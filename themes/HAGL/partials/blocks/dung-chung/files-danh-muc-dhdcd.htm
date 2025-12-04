@@ -1,0 +1,194 @@
+{% set dsDanhMuc = block.dsDanhMuc.ds_danh_muc_con.sortByDesc('thu_tu') %}
+{% set danhMucCap1 = dsDanhMuc.first() %}
+{% set dsDanhMucCap2 = danhMucCap1.ds_danh_muc_con.sortByDesc('thu_tu') %}
+{% set danhMucCap2Active = dsDanhMucCap2.first() %}
+{% set danhSachFile = danhMucCap2Active.getAllFiles() %}
+
+<section class="bg-very-light-gray" id="section-table-{{block.dsDanhMuc.id}}">
+    <div class="{{ block.dsDanhMuc.loai_danh_muc == 'nam-catalog' ? 'container' : 'container'}}">
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <h3 class="text-primary fw-700 ls-minus-1px" style="">{{block.tuaDe}}</h3>
+                 {% if block.dsDanhMuc.loai_danh_muc != 'ptbv'%}
+                <a href="#section-danh-muc-files" onClick="scrollToTarget('section-danh-muc-files')" class="btn btn-large btn-base-color btn-rounded  btn-box-shadow fw-600 d-table d-lg-inline-block lg-mb-15px md-mx-auto">Quay về danh mục<i class="fa-solid fa-arrow-up"></i></a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-12">
+                <div class="year-slider-container">
+                    <div class="year-slider-wrapper">
+                        <!-- Nút mũi tên trái -->
+                        <div class="arrow-btn-left" id="prevBtn" title="Trượt sang trái">
+                            <i class="bi bi-chevron-left"></i>
+                        </div>
+                        <!-- Slider chính ở giữa -->
+                        <div class="year-slider-main">
+                            <div class="year-slider" id="yearSlider">
+                                {% for danhMucConCap1 in dsDanhMuc %}
+                                <div class="year-btn">
+                                    <button class="fw-500 btn-year {{danhMucCap1.id == danhMucConCap1.id ? 'active'}}"
+                                        data-request="onChangeDanhMuc"
+                                        data-request-data="id: {{ danhMucConCap1.id }}"
+                                        data-request-update="'elements/ajax-co-dong-dhdcd-content': '#content-area'"
+                                    >{{danhMucConCap1.nam_du_lieu}}</button>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <!-- Nút mũi tên phải -->
+                        <div class="arrow-btn-right" id="nextBtn" title="Trượt sang phải">
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Scroll indicator -->
+                    <div class="co-dong-scroll-indicator">
+                        <div class="co-dong-scroll-progress" id="scrollProgress"></div>
+                    </div>
+                </div>
+                <div id="content-area">
+                    {% partial 'elements/ajax-co-dong-dhdcd-content' danhMucCap1 = danhMucCap1 dsDanhMucCap2=dsDanhMucCap2 danhMucCap2Active=danhMucCap2Active danhSachFile=danhSachFile %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+// Slider variables
+let scrollPosition = 0;
+const yearSlider = document.getElementById('yearSlider');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const scrollProgress = document.getElementById('scrollProgress');
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateScrollProgress();
+    prevBtn.addEventListener('click', scrollLeft);
+    nextBtn.addEventListener('click', scrollRight);
+    // xu ly update cho scrôl indicator
+    yearSlider.addEventListener('scroll', function() {
+        updateScrollProgress();
+        updateArrowButtons();
+    });
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            scrollLeft();
+        } else if (e.key === 'ArrowRight') {
+            scrollRight();
+        }
+    });
+
+    // Mouse wheel navigation
+    yearSlider.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        yearSlider.scrollLeft += e.deltaY * 0.5;
+    });
+
+    // Touch events for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    yearSlider.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    yearSlider.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                scrollRight();
+            } else {
+                scrollLeft();
+            }
+        }
+    }
+
+});
+// js thuc hien xu ly nut nhan
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.btn-year')) {
+        const btn = e.target.closest('.btn-year');
+
+        document.querySelectorAll('.btn-year').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    if (e.target.closest('.ky-btn')) {
+        const btn = e.target.closest('.ky-btn');
+
+        document.querySelectorAll('.ky-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+});
+// Function to scroll left
+function scrollLeft() {
+    const itemWidth = document.querySelector('.year-btn').offsetWidth + 12;
+    scrollPosition = Math.max(0, scrollPosition - itemWidth * 3);
+    yearSlider.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+    });
+    // setTimeout(updateArrowButtons, 300);
+
+
+}
+
+// Function to scroll right
+function scrollRight() {
+    const itemWidth = document.querySelector('.year-btn').offsetWidth + 12;
+    const maxScroll = yearSlider.scrollWidth - yearSlider.clientWidth;
+    scrollPosition = Math.min(maxScroll, scrollPosition + itemWidth * 3);
+    yearSlider.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+    });
+    // setTimeout(updateArrowButtons, 300);
+}
+
+function updateSlider() {
+    slider.style.transform = `translateX(${scrollX}px)`;
+
+    const maxScroll =
+        slider.scrollWidth - slider.parentElement.clientWidth;
+
+    const percent = Math.min(100, Math.max(0, (Math.abs(scrollX) / maxScroll) * 100));
+
+    progress.style.width = percent + "%";
+}
+
+function updateScrollProgress() {
+    const scrollLeft = yearSlider.scrollLeft;
+    const maxScroll = yearSlider.scrollWidth - yearSlider.clientWidth;
+    const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
+    scrollProgress.style.width = `${progress}%`;
+}
+ function updateArrowButtons() {
+    scrollPosition = yearSlider.scrollLeft;
+    const maxScroll = yearSlider.scrollWidth - yearSlider.clientWidth;
+
+    if (scrollPosition <= 0) {
+        prevBtn.classList.add('disabled');
+    } else {
+        prevBtn.classList.remove('disabled');
+    }
+
+    if (scrollPosition >= maxScroll - 5) {
+        nextBtn.classList.add('disabled');
+    } else {
+        nextBtn.classList.remove('disabled');
+    }
+}
+</script>
