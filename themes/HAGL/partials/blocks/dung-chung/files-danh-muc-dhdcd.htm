@@ -1,10 +1,3 @@
-{% set uid = 'block-' ~ block.id %}
-{% set dsDanhMuc = block.dsDanhMuc.ds_danh_muc_con.sortByDesc('thu_tu') %}
-{% set danhMucCap1 = dsDanhMuc.first() %}
-{% set dsDanhMucCap2 = danhMucCap1.ds_danh_muc_con.sortByDesc('thu_tu') %}
-{% set danhMucCap2Active = dsDanhMucCap2.first() %}
-{% set danhSachFile = danhMucCap2Active.getAllFiles() %}
-
 <section class="bg-very-light-gray" id="section-table-{{block.dsDanhMuc.id}}">
     <div class="{{ block.dsDanhMuc.loai_danh_muc == 'nam-catalog' ? 'container' : 'container'}}">
         <div class="row justify-content-center mb-3">
@@ -15,128 +8,39 @@
                 {% endif %}
             </div>
         </div>
-        <div class="row  justify-content-center">
-            <div class="col-12">
-                <div class="year-slider-container">
-                    <div class="year-slider-wrapper">
-                        <!-- Nút mũi tên trái -->
-                        <div class="arrow-btn-left" id="prevBtn-{{uid}}" title="Trượt sang trái">
-                            <i class="bi bi-chevron-left"></i>
-                        </div>
-                        <!-- Slider chính ở giữa -->
-                        <div class="year-slider-main">
-                            <div class="year-slider" id="yearSlider-{{uid}}">
-                                {% for danhMucConCap1 in dsDanhMuc %}
-                                <div class="year-btn">
-                                    <button class="fw-500 btn-year {{danhMucCap1.id == danhMucConCap1.id ? 'active'}}"
-                                        data-request="onChangeDanhMuc"
-                                        data-request-data="id: {{ danhMucConCap1.id }}"
-                                        data-request-update="'elements/ajax-co-dong-dhdcd-content': '#content-area-{{uid}}'"
-                                    >{{danhMucConCap1.nam_du_lieu}}</button>
-                                </div>
-                                {% endfor %}
+        <div class="row">
+            <div class="col-12 {{block.dsDanhMuc.loai_danh_muc != 'nam-catalog' ? 'table-block' : ''}}" block-id={{block.id}}>
+                {% if block.dsDanhMuc.loai_danh_muc != 'nam-catalog'%}
+                <div class="bg-base-color border-radius-10px p-25px mb-10px">
+                    <div class="row" >
+                        <div class="col-sm-12 col-xs-12 col-lg-6 col-xxl-6">
+                            <div class="form-group">
+                                <label class="fw-700 fs-16px text-white">{{"Lọc theo kỳ"|_}}</label>
+                                <select id="table-loc-nam-{{block.id}}" class="form-select" aria-label="Default select example">
+                                    <option value="" selected>{{"Xem tất cả"|_}}</option>
+                                </select>
                             </div>
                         </div>
-
-                        <!-- Nút mũi tên phải -->
-                        <div class="arrow-btn-right" id="nextBtn-{{uid}}" title="Trượt sang phải">
-                            <i class="bi bi-chevron-right"></i>
+                        <div class="col-sm-12 col-xs-12 col-lg-6 col-xxl-6">
+                            <label class="fw-700 fs-16px text-white">{{"Tìm kiếm"|_}}</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Nhập từ khoá tìm kiếm" id="table-search-input-{{block.id}}" />
+                                <span class="input-group-btn"><button class="btn btn-search h-100" type="button" id="table-search-btn-{{block.id}}"><i class="fa fa-search fa-fw"></i></button></span>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Scroll indicator -->
-                    <div class="co-dong-scroll-indicator">
-                        <div class="co-dong-scroll-progress" id="scrollProgress-{{uid}}"></div>
-                    </div>
                 </div>
-                <div id="content-area-{{uid}}">
-                    {% partial 'elements/ajax-co-dong-dhdcd-content' uid=uid danhMucCap1 = danhMucCap1 dsDanhMucCap2=dsDanhMucCap2 danhMucCap2Active=danhMucCap2Active danhSachFile=danhSachFile %}
+                {% endif %}
+                <div class="bg-third-color border-radius-10px xs-p-10px p-20px lg-p-25px xxl-p-30px">
+                    {% if block.dsDanhMuc.loai_danh_muc == 'quy'%}
+                        {% partial 'elements/table-style-quy' danhSachFile = block.dsDanhMuc.getAllFilesTheoQuy() tableId = "table-rowgroup-"~block.id  %}
+                    {% elseif block.dsDanhMuc.loai_danh_muc == 'nam-catalog' %}
+                        {% partial 'elements/table-style-catalog' danhSachFile = block.dsDanhMuc.getAllFiles()  %}
+                    {% else %}
+                         {% partial 'elements/table-style-row-group-dhdcd' danhSachFile = block.dsDanhMuc.getAllFiles() tableId = "table-rowgroup-"~block.id  %}
+                    {% endif %}
                 </div>
             </div>
-
         </div>
     </div>
 </section>
-
-<script>
-(function() {
-
-    const uid = "{{ uid }}";
-
-    // Tất cả JS bên trong chạy trong scope RIÊNG
-    let scrollPosition = 0;
-
-    const yearSlider = document.getElementById('yearSlider-' + uid);
-    const prevBtn    = document.getElementById('prevBtn-' + uid);
-    const nextBtn    = document.getElementById('nextBtn-' + uid);
-    const scrollProgress = document.getElementById('scrollProgress-' + uid);
-
-    if (!yearSlider) return;
-
-    function updateScrollProgress() {
-        const maxScroll = yearSlider.scrollWidth - yearSlider.clientWidth;
-        scrollProgress.style.width =
-            (yearSlider.scrollLeft / maxScroll * 100) + "%";
-    }
-
-    function updateArrowButtons() {
-        scrollPosition = yearSlider.scrollLeft;
-        const maxScroll = yearSlider.scrollWidth - yearSlider.clientWidth;
-
-        if (scrollPosition <= 0) {
-            prevBtn.classList.add('disabled');
-        } else {
-            prevBtn.classList.remove('disabled');
-        }
-
-        if (scrollPosition >= maxScroll - 5) {
-            nextBtn.classList.add('disabled');
-        } else {
-            nextBtn.classList.remove('disabled');
-        }
-    }
-
-    function scrollLeft() {
-        const itemWidth = yearSlider.querySelector('.year-btn').offsetWidth + 12;
-        scrollPosition = Math.max(0, yearSlider.scrollLeft - itemWidth * 3);
-        yearSlider.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-    }
-
-    function scrollRight() {
-        const itemWidth = yearSlider.querySelector('.year-btn').offsetWidth + 12;
-        const maxScroll = yearSlider.scrollWidth - yearSlider.clientWidth;
-        scrollPosition = Math.min(maxScroll, yearSlider.scrollLeft + itemWidth * 3);
-        yearSlider.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-    }
-
-    // Gắn event
-    prevBtn.addEventListener('click', scrollLeft);
-    nextBtn.addEventListener('click', scrollRight);
-    yearSlider.addEventListener('scroll', function() {
-            updateScrollProgress();
-            updateArrowButtons();
-        });
-
-    updateScrollProgress();
-    updateArrowButtons();
-
-})();
-// js thuc hien xu ly nut nhan
-document.addEventListener('click', function(e) {
-    if (e.target.closest('.btn-year')) {
-        const btn = e.target.closest('.btn-year');
-
-        document.querySelectorAll('.btn-year').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-    }
-
-    if (e.target.closest('.ky-btn')) {
-        const btn = e.target.closest('.ky-btn');
-
-        document.querySelectorAll('.ky-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-    }
-
-});
-
-</script>

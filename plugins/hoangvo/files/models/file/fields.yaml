@@ -39,7 +39,6 @@ fields:
     nam_du_lieu:
         label: 'Năm dữ liệu'
         mode: date
-        format: 'Y'
         span: auto
         default: now
         type: datepicker
@@ -72,7 +71,6 @@ fields:
             extension: auto
         maxFiles: '1'
         span: auto
-        # required: 1
         type: fileupload
     attach_file:
         label: 'File đính kèm từ thư viện'
@@ -91,13 +89,3 @@ fields:
             action: show
             condition: 'value[nam-catalog]'
             field: _loai_danh_muc
-
-    # file2:
-    #     label: 'File đính kèm 2'
-    #     mode: file
-    #     useCaption: true
-    #     thumbOptions:
-    #         mode: crop
-    #         extension: auto
-    #     span: auto
-    #     type: fileupload
