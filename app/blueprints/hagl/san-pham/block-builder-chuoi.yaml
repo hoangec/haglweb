@@ -236,6 +236,158 @@ fields:
                     _mixin:
                         type: mixin
                         source: Hagl\Blocks\DungChung\ImageBox
+            blog-cafe-che-bien-style1-box:
+                name: Block section bài viết cafe chế biến style 1
+                description: Block hiển thị section bài viết cafe cho muc che bien style 1
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TruyenThong\TruyenThongBox
+             
+            blog-cafe-canh-tac-style1-box:
+                name: Block section bài viết cafe canh tác style 1
+                description: Block hiển thị section bài viết cafe cho mục canh tác style 1
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TruyenThong\TruyenThongBox
+            blog-cafe-thi-truong-style1-box:
+                name: Block section bài viết cafe thị trường style 1
+                description: Block hiển thị section bài viết cafe cho mục thị trường style 1
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\TruyenThong\TruyenThongBox
+            dac-tinh-san-pham-box:
+                name: Block hiển thị đặc tính sản phẩm
+                description: Block hiển thị thông tin đặc tính của sản phẩm
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\SanPham\TieuChuanSanPhamCard
+            mo-hinh-phat-trien-box:
+                name: Block hiển thị mô hình phát triển cây cà phề
+                description: Block hiển thị mô hình phát triển chuối 5 sao cây cà phê
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source: Hagl\Blocks\VerticalTimeLines
+            dung-chung_video-fullwidth-box:
+                name: Block section hiển thị video full màn hình
+                description: Block hiển thị nội dung video full màn hình play tại local
+                icon: octo-icon-picture
+                fields:
+                    content_group:
+                        label: Mã
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    id:
+                        label: ID
+                        type: text
+                        readOnly: true
+                        hidden: false
+                        span: row
+                        spanClass: col-6
+                    _section1:
+                        type: section
+                        label: Nội dung dữ liệu
+                    _mixin:
+                        type: mixin
+                        source:  Hagl\Blocks\DungChung\VideoFullWidthBox
+              
 
 
 

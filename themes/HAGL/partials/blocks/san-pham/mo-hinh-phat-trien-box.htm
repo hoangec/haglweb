@@ -1,0 +1,89 @@
+{# Khai báo 5 bước của chuỗi giá trị nông nghiệp "From Seed to Cup" làm giá trị mặc định #}
+{% set steps =  block.timeLines ?? [] %}
+
+<section id="mo-hinh-phat-trien" class="caphe-reveal caphe-timeline-section">
+  <div class="container">
+    <!-- Tiêu đề block dùng chung của Chế biến & Canh tác -->
+    <div class="caphe-category-label">{{ block.title }}</div>
+    <h2 class="caphe-processing-right-title">ĐỊNH HƯỚNG TRỌN CHUỖI ĐẦU TIÊN CỦA VIỆT NAM Ở QUY MÔ NÀY</h2>
+
+    <!-- Vùng hiển thị dòng thời gian Timeline -->
+    <div class="caphe-timeline-wrapper">
+      <!-- Đường trục dọc ở giữa (Sẽ đổi vị trí sang trái trên di động) -->
+      <div class="caphe-timeline-line"></div>
+
+      {% for step in steps %}
+        <!-- Từng bước phát triển so le trái/phải -->
+        <div class="caphe-timeline-item {% if loop.index % 2 == 0 %}caphe-timeline-right{% else %}caphe-timeline-left{% endif %} js-timeline-step" id="timeline-step-{{ loop.index }}">
+
+          <!-- Chấm tròn mốc thời gian trên trục -->
+          <div class="caphe-timeline-dot">
+            <div class="caphe-timeline-dot-inner">
+              <span class="caphe-timeline-dot-number">{{ loop.index }}</span>
+            </div>
+          </div>
+
+          <div class="row align-items-center w-100 g-0">
+            <!-- Cột hình ảnh của step -->
+            <div class="col-md-6 caphe-timeline-img-col">
+              <div class="caphe-timeline-img-box">
+                <img src="{{ step.image|media  }}" alt="{{ step.tuaDeChinh }}" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Cột nội dung mô tả của step -->
+            <div class="col-md-6 caphe-timeline-text-col">
+              <div class="caphe-timeline-text-box">
+                {# <h3 class="caphe-timeline-title">{{ step.tuaDeChinh }}</h3>
+                <span class="caphe-timeline-sub">{{ step.tuaDePhu }}</span>
+                <p class="caphe-timeline-desc">{{ step.noiDung | striptags}}</p> #}
+                 <!-- Làm nổi bật tuaDeChinh bằng font-size lớn hơn, font-weight 800 và màu sắc sang trọng -->
+                <h3 class="caphe-timeline-title" >{{ step.tuaDeChinh }}</h3>
+                <span class="caphe-timeline-sub">{{ step.tuaDePhu }}</span>
+                <p class="caphe-timeline-desc">{{ step.noiDung | striptags }}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<!-- Script xử lý hiệu ứng làm sáng (highlight) các bước khi cuộn màn hình xuống -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.js-timeline-step');
+
+    // Sử dụng Intersection Observer API để bắt sự kiện cuộn trang
+    if ('IntersectionObserver' in window) {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -25% 0px', // Kích hoạt khi phần tử cuộn tới 75% chiều cao khung hình
+        threshold: 0.15 // Kích hoạt khi ít nhất 15% diện tích phần tử xuất hiện
+      };
+
+      const timelineObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            // Tùy chọn: Gỡ bỏ class active khi cuộn ngược lên trên
+            entry.target.classList.remove('active');
+          }
+        });
+      }, observerOptions);
+
+      timelineItems.forEach(item => {
+        timelineObserver.observe(item);
+      });
+    } else {
+      // Fallback cho các trình duyệt cũ không hỗ trợ Intersection Observer
+      timelineItems.forEach(item => {
+        item.classList.add('active');
+      });
+    }
+  });
+</script>

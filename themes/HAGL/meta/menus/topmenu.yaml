@@ -1,9 +1,13 @@
 items:
     -
         title: Chuối
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: san-pham/chuoi
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -12,14 +16,10 @@ items:
                 en:
                     title: Banana
     -
-        title: 'Heo ăn chuối'
-        nesting: null
+        title: 'Cà phê'
         type: cms-page
-        url: null
         code: ''
-        reference: san-pham/heo-an-chuoi
-        cmsPage: null
-        replace: null
+        reference: san-pham/caphe
         viewBag:
             isHidden: '0'
             cssClass: ''

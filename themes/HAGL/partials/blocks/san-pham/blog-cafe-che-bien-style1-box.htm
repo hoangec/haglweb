@@ -1,0 +1,93 @@
+[collection dsTinTuc]
+handle = "Blog\Post"
+==
+{% set dsTinMoiNhat = [] %}
+{% set dsTinTheoCatelogies = dsTinTuc.whereRelation('categories','id',block.categories.id).latest().limit(2).get() %}
+
+<!-- SECTION 2: CHẾ BIẾN (FULL-WIDTH TRÀN VIỀN & SCROLL ZOOM) -->
+<section id="caphe-che-bien" class="caphe-reveal caphe-processing-row-container-fluid my-4 w-100 position-relative">
+  <!-- Swiss Design Horizontal Accent Grid Lines -->
+  <div class="caphe-art-grid-horizontal-accent" style="top: 30px;"></div>
+  {# <div class="caphe-art-grid-horizontal-accent" style="bottom: 30px;"></div> #}
+
+  <div class="container-fluid px-0">
+    <div class="row g-0 align-items-stretch position-relative">
+
+      <!-- Cột trái (40%): Ảnh tràn viền hoàn toàn có scroll zoom khi cuộn chuột -->
+      <div class="col-lg-5">
+        <div class="caphe-processing-left-banner">
+            <!-- Ảnh đại diện dạng tràn viền co giãn theo scroll -->
+            <img src="{{ block.image1 | media }}" class="caphe-scroll-zoom-img" alt="{{ block.tuaDe }}" id="caphe-processingZoomImg">
+            <div class="caphe-art-line-vertical-decor"></div>
+        </div>
+      </div>
+
+      <!-- Cột phải (60%): Nội dung với padding lớn -->
+      <div class="col-lg-7 caphe-processing-right-content d-flex flex-column justify-content-between position-relative">
+        <!-- Decorative background leaf -->
+        <div class="caphe-bg-leaf-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" opacity="1" fill="none" stroke="var(--color-brand, #4a9220)" stroke-width="1.2">
+            <path d="M400,50 Q480,180 400,300 Q320,180 400,50 Z" />
+            <path d="M400,50 Q550,220 400,400 Q250,220 400,50 Z" />
+            <path d="M400,50 L400,550" />
+            <path d="M400,150 Q450,160 500,180" />
+            <path d="M400,150 Q350,160 300,180" />
+            <path d="M400,250 Q470,270 520,300" />
+            <path d="M400,250 Q330,270 280,300" />
+            </svg>
+        </div>
+
+        <div>
+          <!-- Label chuyên mục -->
+          <div class="caphe-category-label">{{ block.tuaDe }}</div>
+
+          <!-- Heading chính -->
+          <h2 class="caphe-processing-right-title">{{ block.noiDung }}</h2>
+
+          <!-- Lưới bài viết 2 cột -->
+          <div class="row g-4 position-relative" style="z-index: 2;">
+            {% for post in dsTinTheoCatelogies %}
+            <div class="col-md-6">
+              <div class="caphe-classic-card">
+                <!-- Large mờ number for editorial look -->
+                {# <span class="caphe-card-number-serif">0{{ loop.index }}</span> #}
+                <div class="caphe-img-wrapper">
+                    <img src="{{post.banner.path}}" alt="{{ post.title }}" loading="lazy">
+                </div>
+                <div class="caphe-card-body-custom">
+                  {# <span class="caphe-card-category-tag">Coffee Story</span> #}
+                    <div class="caphe-card-categories-wrapper mb-3">
+                        {% for category in post.categories %}
+                            <!-- Thẻ badge danh mục (Nếu muốn click được, thay thế thẻ <span> bằng thẻ <a>) -->
+                            <span class="caphe-card-category-badge">{{ category.title }}</span>
+                        {% endfor %}
+                    </div>
+                    <h3 class="caphe-card-title-custom">
+                        <a href="{{'tin-tuc'| page({ slug: post.slug })}}" id="caphe-cheBienPostTitle-{{ post.id }}">{{ post.title }}</a>
+                    </h3>
+                    <p class="caphe-card-excerpt-custom">
+                        {{ post.featured_text  }}
+                    </p>
+                    <div class="caphe-card-footer-custom">
+                        <span class="caphe-card-dot-accent"></span> {{ post.published_at | date('d/m/Y') }}
+                    </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Đường kẻ ngang divider và nút bấm -->
+        <div class="d-flex flex-column align-items-end mt-4 position-relative" style="z-index: 2;">
+          <div style="width: 100%; border-bottom: 1px solid var(--border-color, #bcddbd); margin-bottom: 1rem;"></div>
+          <a href="{{'bai-viet-danh-muc'|page({'slug': block.categories.slug}) }}" class="caphe-btn-orange-more" id="caphe-btnCheBienMore">
+            NHIỀU HƠN <i class="fas fa-angle-double-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

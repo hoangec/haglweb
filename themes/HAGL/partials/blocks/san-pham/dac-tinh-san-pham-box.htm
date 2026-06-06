@@ -1,0 +1,303 @@
+{% set dsSanPhamHienThi = block.dsNoiDung %}
+
+<section id="dac-tinh-san-pham" class="caphe-reveal caphe-dac-tinh-section" style="background-image: url('{{ 'assets/images/cafe_backgroud.jpg' | theme }}');">
+
+  <!-- Hình chìm nghệ thuật watermark gọi từ assets của theme -->
+  <div class="caphe-dac-tinh-watermark">
+    <img src="{{ 'assets/images/cafe_art.png' | theme }}" alt="Botanical Art Watermark">
+  </div>
+
+  <div class="container" style="position: relative; z-index: 2;">
+
+    <!-- Tiêu đề block theo style chuẩn -->
+    <div class="caphe-category-label">Đặc tính giống</div>
+    <h2 class="caphe-processing-right-title">{{ block.tuaDe }}</h2>
+
+    {% if dsSanPhamHienThi is not empty %}
+      <div class="row g-5 justify-content-center caphe-dac-tinh-comparison-grid">
+        {% for sanPham in dsSanPhamHienThi %}
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            {% if loop.index == 1 %}
+              <!-- STYLE 1: ROBUSTA (BOLD & ROBUST THEME) -->
+              <div class="caphe-dac-tinh-contrast-card caphe-theme-dark">
+
+                <!-- Bố cục ảnh tròn, căn giữa nghệ thuật -->
+                <div class="caphe-contrast-img-wrapper caphe-shape-circle">
+                  <img src="{{ sanPham.image | media }}" alt="{{ sanPham.ten }}" loading="lazy">
+                </div>
+
+                <div class="caphe-contrast-card-body">
+                  <!-- Tag phụ -->
+                  <span class="caphe-contrast-tag-dark">Giống Cà Phê Vối</span>
+
+                  <!-- Tên giống -->
+                  <h3 class="caphe-contrast-name-dark">{{ sanPham.ten }}</h3>
+
+                  <!-- Phân cách nghệ thuật -->
+                  <div class="caphe-contrast-divider-dark"></div>
+
+                  <!-- Đặc tính chi tiết hiển thị trực tiếp từ đầu -->
+                  <div class="caphe-contrast-desc-dark">
+                    {{ sanPham.chiTiet | raw }}
+                  </div>
+                </div>
+
+              </div>
+            {% else %}
+              <!-- STYLE 2: ARABICA (DELICATE & COMPLEX THEME) -->
+              <div class="caphe-dac-tinh-contrast-card caphe-theme-light">
+
+                <!-- Bố cục ảnh vòm cổng, căn giữa tinh tế -->
+                <div class="caphe-contrast-img-wrapper caphe-shape-arch">
+                  <img src="{{ sanPham.image | media }}" alt="{{ sanPham.ten }}" loading="lazy">
+                </div>
+
+                <div class="caphe-contrast-card-body">
+                  <!-- Tag phụ -->
+                  <span class="caphe-contrast-tag-light">Giống Cà Phê Chè</span>
+
+                  <!-- Tên giống -->
+                  <h3 class="caphe-contrast-name-light">{{ sanPham.ten }}</h3>
+
+                  <!-- Phân cách nghệ thuật -->
+                  <div class="caphe-contrast-divider-light"></div>
+
+                  <!-- Đặc tính chi tiết hiển thị trực tiếp từ đầu -->
+                  <div class="caphe-contrast-desc-light">
+                    {{ sanPham.chiTiet | raw }}
+                  </div>
+                </div>
+
+              </div>
+            {% endif %}
+
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center text-muted py-5">Chưa có giống cà phê nào được chọn hiển thị.</p>
+    {% endif %}
+
+  </div>
+</section>
+
+{# <section id="dac-tinh-san-pham" class="caphe-reveal caphe-dac-tinh-section">
+  <div class="container">
+
+    <!-- Tiêu đề block theo style chuẩn -->
+    <div class="caphe-category-label">{{block.tuaDe}}</div>
+    <h2 class="caphe-processing-right-title">{{ block.noiDung }}</h2>
+
+    {% if dsSanPhamHienThi is not empty %}
+      <div class="row g-5 justify-content-center caphe-dac-tinh-comparison-grid">
+        {% for sanPham in dsSanPhamHienThi %}
+          <div class="col-lg-6 col-md-6 col-sm-12">
+
+            {% if loop.index == 1 %}
+              <!-- STYLE 1: ROBUSTA (BOLD & ROBUST THEME) -->
+              <div class="caphe-dac-tinh-contrast-card caphe-theme-dark">
+
+                <!-- Bố cục ảnh tròn, căn giữa nghệ thuật -->
+                <div class="caphe-contrast-img-wrapper caphe-shape-circle">
+                  <img src="{{ sanPham.image | media }}" alt="{{ sanPham.ten }}" loading="lazy">
+                </div>
+
+                <div class="caphe-contrast-card-body">
+                  <!-- Tag phụ -->
+                  <span class="caphe-contrast-tag-dark">Giống Cà Phê Vối</span>
+
+                  <!-- Tên giống -->
+                  <h3 class="caphe-contrast-name-dark">{{ sanPham.ten }}</h3>
+
+                  <!-- Phân cách nghệ thuật -->
+                  <div class="caphe-contrast-divider-dark"></div>
+
+                  <!-- Đặc tính chi tiết hiển thị trực tiếp từ đầu -->
+                  <div class="caphe-contrast-desc-dark">
+                    {{ sanPham.chiTiet | raw }}
+                  </div>
+                </div>
+
+              </div>
+            {% else %}
+              <!-- STYLE 2: ARABICA (DELICATE & COMPLEX THEME) -->
+              <div class="caphe-dac-tinh-contrast-card caphe-theme-light">
+
+                <!-- Bố cục ảnh vòm cổng, căn giữa tinh tế -->
+                <div class="caphe-contrast-img-wrapper caphe-shape-arch">
+                  <img src="{{ sanPham.image | media }}" alt="{{ sanPham.ten }}" loading="lazy">
+                </div>
+
+                <div class="caphe-contrast-card-body">
+                  <!-- Tag phụ -->
+                  <span class="caphe-contrast-tag-light">Giống Cà Phê Chè</span>
+
+                  <!-- Tên giống -->
+                  <h3 class="caphe-contrast-name-light">{{ sanPham.ten }}</h3>
+
+                  <!-- Phân cách nghệ thuật -->
+                  <div class="caphe-contrast-divider-light"></div>
+
+                  <!-- Đặc tính chi tiết hiển thị trực tiếp từ đầu -->
+                  <div class="caphe-contrast-desc-light">
+                    {{ sanPham.chiTiet | raw }}
+                  </div>
+                </div>
+
+              </div>
+            {% endif %}
+
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center text-muted py-5">Chưa có giống cà phê nào được chọn hiển thị.</p>
+    {% endif %}
+
+  </div>
+</section> #}
+
+
+{# <section id="dac-tinh-san-pham" class="caphe-reveal caphe-dac-tinh-section">
+  <div class="container">
+
+    <!-- Tiêu đề block theo style chuẩn của Chế biến & Canh tác -->
+    <div class="caphe-category-label">Đặc tính giống</div>
+    <h2 class="caphe-processing-right-title">{{ block.tuaDe }}</h2>
+
+    {% if dsSanPhamHienThi is not empty %}
+      <div class="row g-5 justify-content-center caphe-dac-tinh-grid">
+        {% for sanPham in dsSanPhamHienThi %}
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="caphe-dac-tinh-art-card">
+
+              <!-- Ảnh của sản phẩm variety với khung Arch nghệ thuật -->
+              <div class="caphe-dac-tinh-art-img-wrapper">
+                <img src="{{ sanPham.image | media }}" alt="{{ sanPham.ten }}" loading="lazy">
+              </div>
+
+              <!-- Nội dung chi tiết hiển thị trực tiếp -->
+              <div class="caphe-dac-tinh-art-body">
+
+                <!-- Phần số thứ tự & badge trang trí -->
+                <div class="caphe-dac-tinh-art-meta">
+                  <span class="caphe-dac-tinh-art-number">0{{ loop.index }}</span>
+                  <span class="caphe-dac-tinh-art-badge">Giống Cà Phê</span>
+                </div>
+
+                <!-- Tên giống cà phê -->
+                <h3 class="caphe-dac-tinh-art-name">{{ sanPham.ten }}</h3>
+
+                <!-- Đặc tính/Mô tả chi tiết hiển thị trực tiếp từ đầu -->
+                <div class="caphe-dac-tinh-art-desc">
+                  {{ sanPham.chiTiet | raw }}
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center text-muted py-5">Chưa có sản phẩm nào trong các danh mục được chọn.</p>
+    {% endif %}
+
+  </div>
+</section> #}
+
+
+
+{# {% set dsSanPhamHienThi = block.dsNoiDung %}
+
+<section id="dac-tinh-san-pham" class="caphe-reveal caphe-dac-tinh-section">
+  <div class="container">
+
+    <!-- Tiêu đề block theo style chuẩn của Chế biến & Canh tác -->
+    <div class="caphe-category-label">Đặc tính giống</div>
+    <h2 class="caphe-processing-right-title">{{ block.tuaDe }}</h2>
+
+    {% if dsSanPhamHienThi is not empty %}
+      <div class="row g-4 justify-content-center caphe-dac-tinh-grid">
+        {% for sanPham in dsSanPhamHienThi %}
+          <div class="col-lg-2-4 col-md-4 col-sm-6">
+            <div class="caphe-dac-tinh-card" id="sanpham-card-{{ loop.index }}">
+
+              <!-- Ảnh vuông của sản phẩm variety -->
+              <div class="caphe-img-zoom-wrapper">
+                <img src="{{ sanPham.image | media }}" alt="{{ sanPham.ten }}" loading="lazy">
+              </div>
+
+              <!-- Nội dung tóm tắt bên ngoài -->
+              <div class="caphe-dac-tinh-card-body">
+                <h3 class="caphe-dac-tinh-name">{{ sanPham.tuaDe }}</h3>
+                <button type="button" class="caphe-btn-view-details">
+                  Xem đặc tính <i class="fas fa-plus-circle"></i>
+                </button>
+              </div>
+
+              <!-- Lớp phủ chi tiết đặc tính khi click (Slide-up) -->
+              <div class="caphe-dac-tinh-details-overlay">
+                <div class="caphe-dac-tinh-details-header">
+                  <h4 class="caphe-dac-tinh-details-title">{{ sanPham.tuaDe }}</h4>
+                  <button type="button" class="caphe-btn-close-details" title="Đóng">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="caphe-dac-tinh-details-content">
+                  {{ sanPham.chiTiet | raw }}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center text-muted py-5">Chưa có sản phẩm nào trong các danh mục được chọn.</p>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- Script xử lý tương tác click Xem / Đóng chi tiết -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.caphe-dac-tinh-card');
+
+    cards.forEach(card => {
+      const viewBtn = card.querySelector('.caphe-btn-view-details');
+      const closeBtn = card.querySelector('.caphe-btn-close-details');
+
+      if (viewBtn) {
+        viewBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Đóng các card khác đang mở để giữ giao diện gọn gàng (Accordion behavior)
+          cards.forEach(c => {
+            if (c !== card) c.classList.remove('show-details');
+          });
+          card.classList.add('show-details');
+        });
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          card.classList.remove('show-details');
+        });
+      }
+    });
+
+    // Click ra ngoài card để đóng overlay
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.caphe-dac-tinh-card')) {
+        cards.forEach(card => {
+          card.classList.remove('show-details');
+        });
+      }
+    });
+  });
+</script> #}
+
+

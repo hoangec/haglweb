@@ -1,0 +1,1334 @@
+/* ====================================================================== */
+/* BỐ CỤC MỤC CHẾ BIẾN (FULL-WIDTH & EDGE-TO-EDGE SPLIT-SCREEN)          */
+/* ====================================================================== */
+.caphe-processing-row-container-fluid {
+  background-color: var(--bg-light, #eceff1); /* Sử dụng nền xám nhạt làm độ tương phản */
+  border-top: 1px solid var(--border-color, #6b9e6e);
+  border-bottom: 1px solid var(--border-color, #6b9e6e);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Cột Trái: Banner ảnh dọc lớn full-height */
+.caphe-processing-left-banner {
+  position: relative;
+  height: 100%;
+  min-height: 550px;
+  border-radius: 0; /* Tràn viền không có bo góc */
+  overflow: hidden;
+}
+
+/* Kỹ thuật zoom mượt mà khi cuộn chuột */
+.caphe-scroll-zoom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+/* Cột Phải: Padding rộng rãi, in đậm - dùng !important để tránh bị đè bởi layout .g-0 của theme chính */
+.caphe-processing-right-content {
+  padding: 2.5rem 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .caphe-processing-right-content {
+    padding: 4rem 4rem 4rem 5.5rem !important; /* Khoảng lề trái 5.5rem (~88px) tạo khoảng trống cân đối với ảnh */
+  }
+}
+
+@media (min-width: 1200px) {
+  .caphe-processing-right-content {
+    padding: 4.5rem 4.5rem 4.5rem 6.5rem !important; /* Tăng thêm khoảng cách lề trái trên màn hình lớn */
+  }
+}
+
+/* Label chuyên mục: — Coffee Insight */
+.caphe-category-label {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #337ab7; /* Xanh dương PrimeCoffee */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.caphe-category-label::before {
+  content: '';
+  width: 25px;
+  height: 1px;
+  background-color: #337ab7;
+  margin-right: 0.75rem;
+  display: inline-block;
+}
+
+.caphe-processing-right-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main, #232323);
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+}
+
+/* Thẻ Card bên phải (Classic Card) */
+/* Thẻ Card bên phải (Classic Card) */
+.caphe-classic-card {
+  position: relative; /* Cho phép định vị tuyệt đối số thứ tự */
+  background: #ffffff;
+  border: 1px solid var(--border-color, #bcddbd);
+  border-radius: 40px 6px 0 0;
+  overflow: hidden;
+  height: 100%;
+  /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.01); */
+    box-shadow: 0 6px 22px rgba(35, 35, 35, 0.08);
+  transition: var(--transition-smooth, all 0.4s cubic-bezier(0.25, 1, 0.5, 1));
+}
+
+
+.caphe-classic-card:hover {
+  /* box-shadow: 0 12px 30px rgba(74, 146, 32, 0.05);  */
+  box-shadow: 0 15px 35px rgba(74, 146, 32, 0.14);
+  border-color: var(--color-brand, #4a7c4e);
+  transform: translateY(-5px); /* Hiệu ứng nổi nhẹ */
+}
+
+
+/* Số thứ tự lớn mờ ở góc thẻ */
+.caphe-card-number-serif {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: rgba(74, 146, 32, 0.12); /* Màu mờ */
+  line-height: 1;
+  transition: var(--transition-smooth, all 0.4s cubic-bezier(0.25, 1, 0.5, 1));
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.caphe-classic-card:hover .caphe-card-number-serif {
+  color: var(--color-accent, #f89326);
+  opacity: 0.8;
+  transform: translateY(-3px);
+}
+
+/* Asymmetric Image Wrapper */
+.caphe-classic-card .caphe-img-wrapper {
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  background-color: #f5f5f5;
+  border-radius: 40px 6px 0 0; /* Cắt góc chéo nghệ thuật top-left */
+}
+
+.caphe-classic-card .caphe-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth, all 0.4s cubic-bezier(0.25, 1, 0.5, 1));
+}
+
+.caphe-classic-card:hover .caphe-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.caphe-classic-card .caphe-card-body-custom {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Nhãn chuyên mục nhỏ cho card */
+.caphe-card-category-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-accent, #f89326);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.caphe-classic-card .caphe-card-title-custom {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.caphe-classic-card .caphe-card-title-custom a {
+  color: var(--text-main, #232323);
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--color-brand, #4a9220) 0%, var(--color-brand, #4a9220) 100%);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.35s ease, color 0.3s ease;
+}
+
+.caphe-classic-card:hover .caphe-card-title-custom a {
+  color: var(--color-brand, #4a9220);
+  background-size: 100% 1px; /* Gạch chân mượt mà khi hover */
+}
+
+.caphe-card-category-badge {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 4px; /* Bo tròn nhẹ kiểu Artisan */
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  /* Màu sắc chủ đạo (Cam) */
+  color: var(--color-accent, #f89326);
+  background-color: rgba(248, 147, 38, 0.08); /* Nền cam nhạt mờ */
+  border: 1px solid rgba(248, 147, 38, 0.2); /* Viền cam mờ */
+}
+
+
+.excerpt-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;           /* Số dòng tối đa bạn muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;                /* Ẩn phần văn bản thừa */
+    text-overflow: ellipsis;         /* Hiển thị dấu ba chấm (...) */
+}
+
+.caphe-classic-card .caphe-card-excerpt-custom {
+  font-size: 0.85rem;
+  color: var(--text-muted, #58574B);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.caphe-classic-card .caphe-card-footer-custom {
+  font-size: 0.75rem;
+  color: var(--text-muted, #58574B);
+  opacity: 0.9;
+  border-top: 1px dashed var(--border-color, #6b9e6e);
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Dấu chấm cam trang trí ngày tháng */
+.caphe-card-dot-accent {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-accent, #f89326);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+
+
+/* Reveal scroll */
+.caphe-reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.caphe-reveal.caphe-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Đường lưới căn chỉnh phong cách Swiss Design */
+.caphe-art-grid-horizontal-accent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--border-color, #6b9e6e);
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+.caphe-art-line-vertical-decor {
+  position: absolute;
+  top: 0; /* Cách mép trên ảnh 15% */
+  bottom: 0; /* Cách mép dưới ảnh 15% */
+  right: 40px; /* Cách mép phải ảnh 40px */
+  width: 1px;
+  background-color: var(--border-color, #6b9e6e);
+  opacity: 0.5;
+  z-index: 3;
+  pointer-events: none; /* Tránh cản trở chuột cuộn trang */
+}
+
+/* Background outline leaf decoration */
+.caphe-bg-leaf-svg {
+  position: absolute;
+  /* Thay đổi vị trí nằm ở 1/3 chiều ngang */
+  left: 33.33%;
+  transform: translateX(-50%); /* Căn giữa tâm chiếc lá vào đúng vạch 1/3 */
+
+  bottom: 0; /* Giữ nguyên nằm sát đáy */
+  width: 320px;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+
+
+@media (max-width: 991px) {
+  .caphe-processing-left-banner {
+    min-height: 380px;
+  }
+  .caphe-bg-leaf-svg {
+    width: 220px;
+    right: -20px;
+  }
+}
+
+/* ====================================================================== */
+/* SECTION 1: CANH TÁC (MAGAZINE GRID BLOCK - PREFIXED)                  */
+/* ====================================================================== */
+
+/* Phân tách vùng chủ đề */
+.caphe-section-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 3.5rem 0 1.5rem;
+}
+
+.caphe-section-divider::before,
+.caphe-section-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color, #bcddbd);
+}
+
+.caphe-section-divider:not(:empty)::before {
+  margin-right: 1.5rem;
+}
+
+.caphe-section-divider:not(:empty)::after {
+  margin-left: 1.5rem;
+}
+
+.caphe-section-divider span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent, #f89326);
+}
+
+.caphe-section-title-classic {
+  font-size: 1.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2.2rem;
+  letter-spacing: -0.02em;
+}
+
+/* Thẻ nổi bật bên trái (Featured Card) */
+.caphe-featured-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color, #bcddbd);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 6px 20px rgba(35, 35, 35, 0.04);
+  transition: var(--transition-smooth, all 0.4s cubic-bezier(0.25, 1, 0.5, 1));
+}
+
+.caphe-featured-card:hover {
+  box-shadow: 0 15px 35px rgba(74, 146, 32, 0.08); /* Bóng đổ mờ xanh chủ đạo */
+  border-color: var(--color-brand, #4a9220);
+  transform: translateY(-4px);
+}
+
+.caphe-featured-card .caphe-card-body-custom {
+  padding: 1.75rem;
+}
+
+.caphe-featured-card .caphe-card-title-custom {
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.caphe-featured-card .caphe-card-title-custom a {
+  color: var(--text-main, #232323);
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--color-brand, #4a9220) 0%, var(--color-brand, #4a9220) 100%);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.35s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.caphe-featured-card:hover .caphe-card-title-custom a {
+  color: var(--color-brand, #4a9220);
+  background-size: 100% 1px; /* Gạch chân mượt mà khi di chuột */
+}
+
+.caphe-featured-card .caphe-card-excerpt {
+  font-size: 0.9rem;
+  color: var(--text-muted, #58574B);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.caphe-post-meta-custom {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-accent, #f89326);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 3 Bài viết xếp ngang dọc bên phải (.caphe-horizontal-post-item) */
+.caphe-horizontal-post-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border-color, #bcddbd);
+  transition: var(--transition-smooth, all 0.4s cubic-bezier(0.25, 1, 0.5, 1));
+}
+
+.caphe-horizontal-post-item:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.caphe-horizontal-post-item:first-child {
+  padding-top: 0;
+}
+
+.caphe-horizontal-post-item .caphe-post-thumbnail {
+  width: 145px;
+  height: 97px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 1.25rem;
+  aspect-ratio: 3/2;
+  border: 1px solid var(--border-color, #bcddbd);
+}
+
+.caphe-horizontal-post-item .caphe-post-content {
+  flex-grow: 1;
+}
+
+.caphe-horizontal-post-item .caphe-post-title-custom {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 0.4rem;
+}
+
+.caphe-horizontal-post-item .caphe-post-title-custom a {
+  color: var(--text-main, #232323);
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--color-brand, #4a9220) 0%, var(--color-brand, #4a9220) 100%);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.35s ease, color 0.3s ease;
+}
+
+.caphe-horizontal-post-item:hover .caphe-post-title-custom a {
+  color: var(--color-brand, #4a9220);
+  background-size: 100% 1px;
+}
+
+.caphe-horizontal-post-item .caphe-post-excerpt-custom {
+  font-size: 0.85rem;
+  color: var(--text-muted, #58574B);
+  margin-bottom: 0.5rem;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Nhóm danh mục kiểu badge chung cho cả hai phân mục */
+.caphe-card-categories-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.caphe-card-category-badge {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-block;
+  color: var(--color-brand, #4a9220);
+  background-color: rgba(74, 146, 32, 0.08);
+  border: 1px solid rgba(74, 146, 32, 0.18);
+}
+
+/* ====================================================================== */
+/* IMAGE ZOOM WRAPPER & HOVER ZOOM EFFECT                              */
+/* ====================================================================== */
+.caphe-img-zoom-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.caphe-featured-card .caphe-img-zoom-wrapper {
+  aspect-ratio: 16/10; /* Khống chế tỷ lệ ảnh ở cột trái tránh quá cao */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.caphe-img-zoom-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth, all 0.4s cubic-bezier(0.25, 1, 0.5, 1));
+}
+
+.caphe-featured-card:hover .caphe-img-zoom-wrapper img,
+.caphe-horizontal-post-item:hover .caphe-img-zoom-wrapper img {
+  transform: scale(1.05);
+}
+
+/* ====================================================================== */
+/* SHORT DIVIDER & ORANGE MORE BUTTON                                     */
+/* ====================================================================== */
+.caphe-short-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--border-color, #bcddbd);
+  margin: 1.5rem auto 1.2rem;
+  opacity: 0.8;
+}
+
+.caphe-btn-orange-more {
+  background-color: var(--color-accent, #f89326);
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth, all 0.4s cubic-bezier(0.25, 1, 0.5, 1));
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(248, 147, 38, 0.15);
+}
+
+.caphe-btn-orange-more:hover {
+  background-color: var(--color-brand, #4a9220);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(74, 146, 32, 0.25);
+}
+
+/* ====================================================================== */
+/* SECTION 4: THỊ TRƯỜNG STYLE 1 (GRID 5 ITEMS ASYMMETRIC)               */
+/* ====================================================================== */
+/* SECTION 4: THỊ TRƯỜNG STYLE 1 (STANDARDIZED WITH CANH TÁC & CHẾ BIẾN)  */
+/* ====================================================================== */
+
+.caphe-thi-truong-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+
+/* ====================================================================== */
+/* SECTION 5: ĐẶC TÍNH SẢN PHẨM (SPLIT CONTRAST LAYOUT FOR 2 ITEMS)      */
+/* ====================================================================== */
+
+.caphe-dac-tinh-section {
+  position: relative;
+  padding: 5rem 0;
+  border-top: 1px solid var(--border-color, #bcddbd);
+  border-bottom: 1px solid var(--border-color, #bcddbd);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.caphe-dac-tinh-watermark {
+  position: absolute;
+  right: 2rem;
+  top: 3.5rem; /* Ngang hàng với vùng label và title của block */
+  width: 320px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.caphe-dac-tinh-watermark img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caphe-dac-tinh-comparison-grid {
+  margin-top: 3rem;
+}
+
+.caphe-dac-tinh-contrast-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 3rem 2.5rem;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hover effects for both themes */
+.caphe-dac-tinh-contrast-card:hover {
+  transform: translateY(-8px);
+}
+
+/* THEME DARK: ROBUSTA */
+.caphe-dac-tinh-contrast-card.caphe-theme-dark {
+  background-color: #1c2e24; /* Deep Forest Dark Green */
+  border: 1px solid rgba(74, 146, 32, 0.3);
+  color: #eceff1;
+}
+
+.caphe-dac-tinh-contrast-card.caphe-theme-dark:hover {
+  box-shadow: 0 20px 45px rgba(28, 46, 36, 0.35);
+  border-color: var(--color-accent, #f89326);
+}
+
+.caphe-contrast-tag-dark {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-accent, #f89326);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.caphe-contrast-name-dark {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.caphe-contrast-divider-dark {
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent, #f89326);
+  margin: 0 auto 1.5rem;
+}
+
+.caphe-contrast-desc-dark {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #c9d6cf;
+  text-align: justify;
+}
+
+/* THEME LIGHT: ARABICA */
+.caphe-dac-tinh-contrast-card.caphe-theme-light {
+  background-color: #fbf9f6; /* Elegant Light Ivory */
+  border: 1px solid #bcddbd;
+  color: #4a5568;
+}
+
+.caphe-dac-tinh-contrast-card.caphe-theme-light:hover {
+  box-shadow: 0 20px 45px rgba(74, 146, 32, 0.12);
+  border-color: var(--color-brand, #4a9220);
+}
+
+.caphe-contrast-tag-light {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-brand, #4a9220);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.caphe-contrast-name-light {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f2b5c;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.caphe-contrast-divider-light {
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-brand, #4a9220);
+  margin: 0 auto 1.5rem;
+}
+
+.caphe-contrast-desc-light {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #5e6d77;
+  text-align: justify;
+}
+
+/* Image Wrappers and Frames */
+.caphe-contrast-img-wrapper {
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1/1; /* Square ratio for organic crops */
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 2.25rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.caphe-contrast-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.caphe-dac-tinh-contrast-card:hover .caphe-contrast-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* CIRCLE FRAME FOR ROBUSTA */
+.caphe-contrast-img-wrapper.caphe-shape-circle {
+  border-radius: 50%;
+  border: 3px solid var(--color-accent, #f89326);
+}
+
+/* ARCH FRAME FOR ARABICA */
+.caphe-contrast-img-wrapper.caphe-shape-arch {
+  border-radius: 100px 100px 12px 12px;
+  border: 2px solid var(--color-brand, #4a9220);
+}
+.caphe-contrast-desc-dark ul,
+.caphe-contrast-desc-light ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/* Định vị tương đối cho mỗi dòng để chèn bullet point mới */
+.caphe-contrast-desc-dark ul li,
+.caphe-contrast-desc-light ul li {
+  position: relative;
+  padding-left: 1.5rem; /* Dịch văn bản sang phải để nhường chỗ cho bullet */
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+/* Dấu gạch đầu dòng hình kim cương màu Cam cho Robusta (Khối tối) */
+.caphe-contrast-desc-dark ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.55rem; /* Căn chỉnh vị trí so với dòng chữ đầu tiên */
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent, #f89326);
+  transform: rotate(45deg); /* Xoay 45 độ tạo hình kim cương */
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(248, 147, 38, 0.4); /* Tạo hiệu ứng phát sáng nhẹ */
+}
+/* Dấu gạch đầu dòng hình kim cương màu Xanh cho Arabica (Khối sáng) */
+.caphe-contrast-desc-light ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-brand, #4a9220);
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+
+/* ====================================================================== */
+/* SECTION 7: HO-TO SEED TO CUP (TIMELINE / PROCESS STEPS)               */
+/* ====================================================================== */
+
+.caphe-timeline-section {
+  padding: 6rem 0;
+  background-color: #fbf9f6; /* Soft ivory background */
+  border-top: 1px solid var(--border-color, #bcddbd);
+  border-bottom: 1px solid var(--border-color, #bcddbd);
+  overflow: hidden;
+}
+
+.caphe-timeline-wrapper {
+  position: relative;
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+/* Vertical central line */
+.caphe-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-color, #bcddbd);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.caphe-timeline-item {
+  position: relative;
+  margin-bottom: 7rem; /* Generous spacing between steps */
+  opacity: 0.25; /* Low opacity when un-intersected */
+  transform: scale(0.96);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 2;
+}
+
+.caphe-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlighting Active Step */
+.caphe-timeline-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Central Dot Styling */
+.caphe-timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color, #bcddbd);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Inner thin circle (Double circle effect) */
+.caphe-timeline-dot::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 146, 32, 0.12); /* Subtle inner border */
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.caphe-timeline-dot-inner {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f4f7f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 2;
+}
+
+.caphe-timeline-dot-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-brand, #4a9220);
+  transition: all 0.4s ease;
+  line-height: 1;
+}
+
+/* Highlighting Active Step */
+.caphe-timeline-item.active .caphe-timeline-dot {
+  border-color: var(--color-accent, #f89326);
+  transform: translate(-50%, -50%) scale(1.18);
+  box-shadow: 0 0 20px rgba(248, 147, 38, 0.35), 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.caphe-timeline-item.active .caphe-timeline-dot::before {
+  border-color: rgba(248, 147, 38, 0.2);
+}
+
+.caphe-timeline-item.active .caphe-timeline-dot-inner {
+  background-color: var(--color-accent, #f89326);
+}
+
+.caphe-timeline-item.active .caphe-timeline-dot-number {
+  color: #ffffff;
+}
+
+/* Image and Number Layouts */
+.caphe-timeline-img-box {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color, #bcddbd);
+  background-color: #f5f5f5;
+  transition: all 0.6s ease;
+}
+
+.caphe-timeline-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(50%) blur(1px); /* Muted state */
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.caphe-timeline-item.active .caphe-timeline-img-box img {
+  filter: grayscale(0%) blur(0);
+  transform: scale(1.04);
+}
+
+.caphe-timeline-number {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Box Layouts */
+.caphe-timeline-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caphe-timeline-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent, #0f2b5c);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.caphe-timeline-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #f89326;
+  margin-bottom: 0px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.caphe-timeline-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #5e6d77;
+  text-align: justify;
+}
+
+/* LEFT TIMELINE ITEM */
+.caphe-timeline-left .row {
+  flex-direction: row;
+}
+
+.caphe-timeline-left .caphe-timeline-text-box {
+  padding-left: 5rem;
+}
+
+.caphe-timeline-left .caphe-timeline-img-box {
+  border-radius: 40px 10px 40px 10px; /* Elegant leaf shape border radius */
+}
+
+/* RIGHT TIMELINE ITEM */
+.caphe-timeline-right .row {
+  flex-direction: row-reverse;
+}
+
+.caphe-timeline-right .caphe-timeline-text-box {
+  padding-right: 5rem;
+  text-align: right;
+}
+
+.caphe-timeline-right .caphe-timeline-desc {
+  text-align: right;
+}
+
+.caphe-timeline-right .caphe-timeline-img-box {
+  border-radius: 10px 40px 10px 40px;
+}
+
+.caphe-timeline-right .caphe-timeline-number {
+  left: 1.5rem;
+  right: auto;
+}
+
+/* RESPONSIVE TIMELINE */
+@media (max-width: 991px) {
+  .caphe-timeline-left .caphe-timeline-text-box {
+    padding-left: 3rem;
+  }
+  .caphe-timeline-right .caphe-timeline-text-box {
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .caphe-timeline-line {
+    left: 24px;
+    transform: none;
+  }
+
+  .caphe-timeline-dot {
+    left: 24px;
+    top: 2.5rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .caphe-timeline-item {
+    margin-bottom: 5rem;
+  }
+
+  .caphe-timeline-left .row,
+  .caphe-timeline-right .row {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+
+  .caphe-timeline-img-col,
+  .caphe-timeline-text-col {
+    width: 100%;
+  }
+
+  .caphe-timeline-img-box {
+    margin-left: 4rem;
+    width: calc(100% - 4rem);
+    aspect-ratio: 16/10;
+  }
+
+  .caphe-timeline-text-box {
+    padding: 1.5rem 0 0 4rem !important;
+    text-align: left !important;
+  }
+
+  .caphe-timeline-desc {
+    text-align: justify !important;
+  }
+
+  .caphe-timeline-right .caphe-timeline-number {
+    right: 1.5rem;
+    left: auto;
+  }
+}
+
+
+/* .caphe-timeline-section {
+  padding: 6rem 0;
+  background-color: #fbf9f6;
+  border-top: 1px solid var(--border-color, #bcddbd);
+  border-bottom: 1px solid var(--border-color, #bcddbd);
+  overflow: hidden;
+}
+
+.caphe-timeline-wrapper {
+  position: relative;
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+.caphe-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-color, #bcddbd);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.caphe-timeline-item {
+  position: relative;
+  margin-bottom: 7rem;
+  opacity: 0.25;
+  transform: scale(0.96);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 2;
+}
+
+.caphe-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.caphe-timeline-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.caphe-timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid var(--border-color, #bcddbd);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.caphe-timeline-dot-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-brand, #4a9220);
+  transition: all 0.4s ease;
+}
+
+.caphe-timeline-item.active .caphe-timeline-dot {
+  border-color: var(--color-accent, #f89326);
+  background-color: var(--color-accent, #f89326);
+  box-shadow: 0 0 15px rgba(248, 147, 38, 0.6);
+}
+
+.caphe-timeline-item.active .caphe-timeline-dot-inner {
+  background-color: #ffffff;
+  transform: scale(1.2);
+}
+
+.caphe-timeline-img-box {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color, #bcddbd);
+  background-color: #f5f5f5;
+  transition: all 0.6s ease;
+}
+
+.caphe-timeline-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(50%) blur(1px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.caphe-timeline-item.active .caphe-timeline-img-box img {
+  filter: grayscale(0%) blur(0);
+  transform: scale(1.04);
+}
+
+.caphe-timeline-number {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.caphe-timeline-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caphe-timeline-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent, #f89326);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.caphe-timeline-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f2b5c;
+  margin-bottom: 1.25rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.caphe-timeline-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #5e6d77;
+  text-align: justify;
+}
+
+.caphe-timeline-left .row {
+  flex-direction: row;
+}
+
+.caphe-timeline-left .caphe-timeline-text-box {
+  padding-left: 5rem;
+}
+
+.caphe-timeline-left .caphe-timeline-img-box {
+  border-radius: 40px 10px 40px 10px;
+}
+
+.caphe-timeline-right .row {
+  flex-direction: row-reverse;
+}
+
+.caphe-timeline-right .caphe-timeline-text-box {
+  padding-right: 5rem;
+  text-align: right;
+}
+
+.caphe-timeline-right .caphe-timeline-desc {
+  text-align: right;
+}
+
+.caphe-timeline-right .caphe-timeline-img-box {
+  border-radius: 10px 40px 10px 40px;
+}
+
+.caphe-timeline-right .caphe-timeline-number {
+  left: 1.5rem;
+  right: auto;
+}
+
+@media (max-width: 991px) {
+  .caphe-timeline-left .caphe-timeline-text-box {
+    padding-left: 3rem;
+  }
+  .caphe-timeline-right .caphe-timeline-text-box {
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .caphe-timeline-line {
+    left: 24px;
+    transform: none;
+  }
+
+  .caphe-timeline-dot {
+    left: 24px;
+    top: 2.5rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .caphe-timeline-item {
+    margin-bottom: 5rem;
+  }
+
+  .caphe-timeline-left .row,
+  .caphe-timeline-right .row {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+
+  .caphe-timeline-img-col,
+  .caphe-timeline-text-col {
+    width: 100%;
+  }
+
+  .caphe-timeline-img-box {
+    margin-left: 4rem;
+    width: calc(100% - 4rem);
+    aspect-ratio: 16/10;
+  }
+
+  .caphe-timeline-text-box {
+    padding: 1.5rem 0 0 4rem !important;
+    text-align: left !important;
+  }
+
+  .caphe-timeline-desc {
+    text-align: justify !important;
+  }
+
+  .caphe-timeline-right .caphe-timeline-number {
+    right: 1.5rem;
+    left: auto;
+  }
+} */
+

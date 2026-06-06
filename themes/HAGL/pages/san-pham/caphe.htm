@@ -1,0 +1,42 @@
+url = "/san-pham/caphe"
+layout = "default"
+title = "Sản phẩm cà phê HAGL"
+
+[section pageSanPhamCaPhe]
+handle = "Hagl\SanPham\Caphe"
+
+[genericForm formDangKySanPham]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<?php
+use Tailor\Models\GlobalRecord;
+function onInit()
+{
+    $sanPhamSetting = GlobalRecord::findForGlobal('SanPham\Settings');
+    $this->page->components['formDangKySanPham']->setProperty('messages_success', $sanPhamSetting->thongDiepOnSuccess);
+    // $email = [$sanPhamSetting->thongDiepOnSuccess => $sanPhamSetting->thongDiepOnSuccess ];
+    // $this->page->components['formDangKySanPham']->setProperty('mail_recipients', $email);
+}
+?>
+==
+{% framework extras %}
+{% partial 'app/page-title' pageBanner = pageSanPhamCaPhe.pageBanner type = "parallax-bg" %}
+{% if pageSanPhamCaPhe.dsMenuItems %}
+    {% partial 'app/page-submenu' menuItems = pageSanPhamCaPhe.dsMenuItems  %}
+{% endif %}
+{% for block in pageSanPhamCaPhe.blocks %}
+    {% set blockType = block.type|split('_') %}
+    {% if blockType[0] == 'dung-chung' %}
+        {% partial 'blocks/dung-chung/' ~ blockType[1] block=block %}
+    {% else %}
+        {% partial 'blocks/san-pham/' ~ str_slug(block.type) block=block %}
+    {% endif %}
+{% endfor %}

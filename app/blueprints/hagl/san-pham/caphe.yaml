@@ -1,0 +1,33 @@
+uuid: 9315f557-d144-4821-8573-b66a9e8c7a28
+handle: Hagl\SanPham\Caphe
+type: single
+name: Trang sản phẩm cà phê
+multisite: true
+
+navigation:
+    parent: SanPham\SanPham
+    icon: icon-pencil-square
+    order: 74
+extraNavigation:
+    _page_san_pham_section:
+        itemType: section
+        label: Thiết lập trang sản phẩm cà phê
+        order: 71
+
+    _page_gioi_thieu_ruler:
+        itemType: ruler
+        order: 80
+
+fields:
+    pageSetting:
+        type: mixin
+        tab: Cấu hình page banner
+        source: HAGLFields/PageBanner
+    pageSubmenus:
+        type: mixin
+        tab: Sub menu trên page
+        source: HAGLFields/PageSubmenu
+    blockBuilder:
+        type: mixin
+        source: Hagl\SanPham\Chuoi\BlockBuilder
+

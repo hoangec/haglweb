@@ -1,0 +1,118 @@
+[collection dsTinTuc]
+handle = "Blog\Post"
+==
+{% set dsTinThiTruong = dsTinTuc.whereRelation('categories','id',block.categories.id).latest().limit(5).get() %}
+{% set featuredPosts = dsTinThiTruong.slice(0, 2) %}
+{% set bottomPosts = dsTinThiTruong.slice(2, 3) %}
+
+<section id="caphe-thi-truong" class="caphe-reveal py-4">
+  <div class="container">
+    <!-- Hàng 1: Cột tiêu đề/nút + 2 Card nổi bật không excerpt -->
+    <div class="row g-4 mb-4">
+        <!-- Cột tiêu đề và nút 'Nhiều hơn' / 'Xem tất cả' -->
+        <div class="col-lg-4 col-md-12 d-flex flex-column justify-content-center align-items-start pr-lg-4">
+            <div class="caphe-category-label">{{ block.tuaDe }}</div>
+            <h2 class="caphe-processing-right-title">{{ block.noiDung }}</h2>
+            <a href="{{'bai-viet-danh-muc'|page({'slug': block.categories.slug}) }}" class="caphe-btn-orange-more mt-2">
+            {{ block.buttonText | default('XEM TẤT CẢ') }} <i class="fas fa-angle-double-right"></i>
+            </a>
+        </div>
+
+        <!-- Card nổi bật 1 -->
+        <div class="col-lg-4 col-md-6">
+            {% if featuredPosts[0] is defined %}
+            {% set post = featuredPosts[0] %}
+            <div class="caphe-featured-card">
+                <div class="caphe-img-zoom-wrapper">
+                    <a href="{{'tin-tuc'| page({ slug: post.slug })}}">
+                        <img src="{{ post.banner.path }}" alt="{{ post.title }}" loading="lazy">
+                    </a>
+                </div>
+                <div class="caphe-card-body-custom">
+                    <div class="caphe-card-categories-wrapper">
+                    {% for category in featuredPost.categories %}
+                        <span class="caphe-card-category-badge">{{ category.title }}</span>
+                    {% endfor %}
+                    </div>
+
+                    <h3 class="caphe-card-title-custom">
+                        <a href="{{'tin-tuc'| page({ slug: post.slug })}}" id="caphe-featPostTitle-{{ post.id }}">{{ post.title }}</a>
+                    </h3>
+                    <p class="caphe-card-excerpt">
+                        {{ post.featured_text }}
+                    </p>
+                    <div class="caphe-post-meta-custom">
+                        <i class="far fa-calendar-alt me-1"></i> {{ post.published_at | date('d/m/Y') }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Card nổi bật 2 -->
+        <div class="col-lg-4 col-md-6">
+            {% if featuredPosts[1] is defined %}
+            {% set post = featuredPosts[1] %}
+            <div class="caphe-featured-card">
+                <div class="caphe-img-zoom-wrapper">
+                    <a href="{{'tin-tuc'| page({ slug: post.slug })}}">
+                        <img src="{{ post.banner.path }}" alt="{{ post.title }}" loading="lazy">
+                    </a>
+                </div>
+                <div class="caphe-card-body-custom">
+                    <div class="caphe-card-categories-wrapper">
+                    {% for category in featuredPost.categories %}
+                        <span class="caphe-card-category-badge">{{ category.title }}</span>
+                    {% endfor %}
+                    </div>
+
+                    <h3 class="caphe-card-title-custom">
+                        <a href="{{'tin-tuc'| page({ slug: post.slug })}}" id="caphe-featPostTitle-{{ post.id }}">{{ post.title }}</a>
+                    </h3>
+                    <p class="caphe-card-excerpt">
+                        {{ post.featured_text }}
+                    </p>
+                    <div class="caphe-post-meta-custom">
+                        <i class="far fa-calendar-alt me-1"></i> {{ post.published_at | date('d/m/Y') }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Hàng 2: 3 Card bài viết có excerpt ở bên dưới -->
+    <div class="row g-4">
+      {% for post in bottomPosts %}
+        <div class="col-lg-4 col-md-6">
+            <div class="caphe-featured-card">
+                <div class="caphe-img-zoom-wrapper">
+                    <a href="{{'tin-tuc'| page({ slug: post.slug })}}">
+                        <img src="{{ post.banner.path }}" alt="{{ post.title }}" loading="lazy">
+                    </a>
+                </div>
+                <div class="caphe-card-body-custom">
+                    <!-- Nhóm danh mục kiểu badge -->
+                    <div class="caphe-card-categories-wrapper">
+                    {% for category in featuredPost.categories %}
+                        <span class="caphe-card-category-badge">{{ category.title }}</span>
+                    {% endfor %}
+                    </div>
+
+                    <h3 class="caphe-card-title-custom">
+                        <a href="{{'tin-tuc'| page({ slug: post.slug })}}" id="caphe-featPostTitle-{{ post.id }}">{{ post.title }}</a>
+                    </h3>
+                    <p class="caphe-card-excerpt">
+                        {{ post.featured_text }}
+                    </p>
+                    <div class="caphe-post-meta-custom">
+                        <i class="far fa-calendar-alt me-1"></i> {{ post.published_at | date('d/m/Y') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

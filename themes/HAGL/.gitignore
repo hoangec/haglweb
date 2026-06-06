@@ -1,3 +1,4 @@
 /node_modules
 composer.lock
 package-lock.json
+octobercms-files/themes/HAGL/assets/css/hagl.css

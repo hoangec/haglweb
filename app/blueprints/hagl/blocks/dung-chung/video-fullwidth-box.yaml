@@ -1,0 +1,19 @@
+uuid: bd461142-5d68-40e9-ac4e-f1295c1471db
+handle: Hagl\Blocks\DungChung\VideoFullWidthBox
+type: mixin
+name: Nội dung section hiển thị ảnh.
+multisite: sync
+
+fields:
+    tuaDe:
+        label: Tựa đề
+        type: text        
+    noiDung:
+        lable: Nội dung
+        type: textarea
+    video:
+        label: Chọn file video
+        type: mediafinder
+        mode: file
+        maxItems: 1
+        size: small
