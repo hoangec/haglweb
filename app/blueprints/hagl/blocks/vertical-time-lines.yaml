@@ -7,12 +7,18 @@ fields:
    title:
         label: Tựa đề
         type: text
+   noiDung:
+        label: Nội dung
+        type: text
    timeLines:
         label: Mốc thời gian
         type: repeater
         itemsExpanded: false
         form:
             fields:
+                title: 
+                    label: Tựa đề
+                    type: text
                 image:
                     label: Ảnh đại diện
                     type: mediafinder

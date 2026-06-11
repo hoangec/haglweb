@@ -11,6 +11,12 @@ fields:
         mode: image
         maxFiles: 1
 
+    is_pinned:
+        tab: Manage
+        label: Ghim bài
+        type: switch
+        default: false
+
     author:
         tab: Manage
         label: Author
@@ -18,6 +24,7 @@ fields:
         type: entries
         maxItems: 1
         source: Blog\Author
+    
 
     categories:
         tab: Manage

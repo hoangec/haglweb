@@ -40,7 +40,7 @@
                  <!-- Làm nổi bật tuaDeChinh bằng font-size lớn hơn, font-weight 800 và màu sắc sang trọng -->
                 <h3 class="caphe-timeline-title" >{{ step.tuaDeChinh }}</h3>
                 <span class="caphe-timeline-sub">{{ step.tuaDePhu }}</span>
-                <p class="caphe-timeline-desc">{{ step.noiDung | striptags }}</p>
+                <p class="caphe-timeline-desc">{{ step.noiDung | raw }}</p>
               </div>
             </div>
           </div>

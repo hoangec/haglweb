@@ -1,9 +1,39 @@
 [collection dsTinTuc]
 handle = "Blog\Post"
 ==
-{% set dsTinCanhTac = dsTinTuc.whereRelation('categories','id',block.categories.id).latest().limit(4).get() %}
+{# {% set dsTinCanhTac = dsTinTuc.whereRelation('categories','id',block.categories.id)..latest().limit(4).get() %} #}
+
+{% set featuredPost = dsTinTuc
+    .whereRelation('categories', 'id', block.categories.id)
+    .where('is_pinned', true)
+    .first()
+%}
+
+{# Query base theo category #}
+{% set baseQuery = dsTinTuc
+    .whereRelation('categories', 'id', block.categories.id)
+%}
+
+{# Nếu có featuredPost thì loại nó ra #}
+{% if featuredPost %}
+    {% set regularPosts = baseQuery
+        .where('id', '!=', featuredPost.id)
+        .latest()
+        .limit(3)
+        .get()
+    %}
+{% else %}
+    {% set regularPosts = baseQuery
+        .latest()
+        .limit(4)
+        .get()
+    %}
+    {% set featuredPost = regularPosts.first() %}
+{% endif %}
+
+{#
 {% set featuredPost = dsTinCanhTac.first() %}
-{% set regularPosts = dsTinCanhTac.slice(1, 3) %}
+{% set regularPosts = dsTinCanhTac.slice(1, 3) %} #}
 
 <section id="caphe-canh-tac" class="caphe-reveal py-2">
   <div class="container">
@@ -73,7 +103,7 @@ handle = "Blog\Post"
         <div class="d-flex flex-column align-items-center mt-2">
             <div class="caphe-short-divider"></div>
             <a href="{{'bai-viet-danh-muc'|page({'slug': block.categories.slug}) }}" class="caphe-btn-orange-more">
-                NHIỀU HƠN <i class="fas fa-angle-double-right"></i>
+                {{"NHIỀU HƠN"|_}} <i class="fas fa-angle-double-right"></i>
             </a>
         </div>
       </div>
